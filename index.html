@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima - San Antonio de Belén</title>
+    <!-- Importamos iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 30px;
+            width: 90%;
+            max-width: 850px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 1.8rem; }
+        .header p { opacity: 0.8; margin: 5px 0; }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px 5px 20px 5px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,0.3) transparent;
+        }
+        /* Estilo de la barra de desplazamiento para Chrome/Safari */
+        .scroll-container::-webkit-scrollbar { height: 6px; }
+        .scroll-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
+
+        .hour-card {
+            background: rgba(255, 255, 255, 0.15);
+            min-width: 110px;
+            padding: 20px 10px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .hour-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.2); }
+        
+        .hour-card .time { font-size: 0.9rem; font-weight: bold; margin-bottom: 10px; display: block; }
+        .hour-card i { font-size: 2rem; margin: 10px 0; display: block; color: #ffeb3b; }
+        .hour-card .temp { font-size: 1.4rem; font-weight: bold; display: block; }
+        .hour-card .details { font-size: 0.75rem; margin-top: 10px; opacity: 0.9; line-height: 1.4; }
+        
+        .rain-chance { color: #81d4fa; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <h1>San Antonio de Belén</h1>
+        <p>Heredia, Costa Rica • Próximas 24 Horas</p>
+    </div>
+
+    <div id="loader" style="text-align: center;">Cargando pronóstico...</div>
+    <div id="forecast" class="scroll-container"></div>
+</div>
+
+<script>
+    // Función para asignar un icono según el código de clima de la API
+    function getWeatherIcon(code) {
+        // Códigos WMO: https://open-meteo.com/en/docs
+        if (code === 0) return 'bi-sun'; // Despejado
+        if (code >= 1 && code <= 3) return 'bi-cloud-sun'; // Parcialmente nublado
+        if (code >= 45 && code <= 48) return 'bi-cloud-fog'; // Niebla
+        if (code >= 51 && code <= 55) return 'bi-cloud-drizzle'; // Llovizna
+        if (code >= 61 && code <= 65) return 'bi-cloud-rain-heavy'; // Lluvia
+        if (code >= 80 && code <= 82) return 'bi-cloud-rain'; // Chubascos
+        if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain'; // Tormenta
+        return 'bi-cloud'; // Por defecto nube
+    }
+
+    async function fetchWeather() {
+        const lat = 9.9781;
+        const lon = -84.1879;
+        // Pedimos temperatura, humedad, viento y CÓDIGO DE CLIMA
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            renderForecast(data.hourly);
+        } catch (error) {
+            document.getElementById('loader').innerText = "Error al obtener datos.";
+        }
+    }
+
+    function renderForecast(hourly) {
+        const container = document.getElementById('forecast');
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+
+        const now = new Date();
+        const currentHour = now.getHours();
+        
+        // Buscamos el índice de la hora actual
+        const startIndex = hourly.time.findIndex(t => new Date(t) >= now);
+
+        for (let i = startIndex; i < startIndex + 24; i++) {
+            const date = new Date(hourly.time[i]);
+            const hourLabel = date.getHours() + ":00";
+            const temp = Math.round(hourly.temperature_2m[i]);
+            const hum = hourly.relative_humidity_2m[i];
+            const wind = hourly.wind_speed_10m[i];
+            const code = hourly.weather_code[i];
+
+            const hourCard = document.createElement('div');
+            hourCard.className = 'hour-card';
+            hourCard.innerHTML = `
+                <span class="time">${hourLabel}</span>
+                <i class="bi ${getWeatherIcon(code)}"></i>
+                <span class="temp">${temp}°C</span>
+                <div class="details">
+                    <div><i class="bi bi-droplets" style="font-size:0.8rem; color:white;"></i> ${hum}%</div>
+                    <div><i class="bi bi-wind" style="font-size:0.8rem; color:white;"></i> ${wind}km/h</div>
+                </div>
+            `;
+            container.appendChild(hourCard);
+        }
+    }
+
+    fetchWeather();
+</script>
+
+</body>
+</html>
