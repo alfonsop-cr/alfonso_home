@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima - San Antonio de Belén</title>
-    <!-- Importamos iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         body {
@@ -39,26 +38,27 @@
             scrollbar-width: thin;
             scrollbar-color: rgba(255,255,255,0.3) transparent;
         }
-        /* Estilo de la barra de desplazamiento para Chrome/Safari */
         .scroll-container::-webkit-scrollbar { height: 6px; }
         .scroll-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
 
         .hour-card {
             background: rgba(255, 255, 255, 0.15);
-            min-width: 110px;
+            min-width: 120px;
             padding: 20px 10px;
             border-radius: 20px;
             text-align: center;
             transition: transform 0.3s;
         }
         .hour-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.2); }
-        
+
         .hour-card .time { font-size: 0.9rem; font-weight: bold; margin-bottom: 10px; display: block; }
-        .hour-card i { font-size: 2rem; margin: 10px 0; display: block; color: #ffeb3b; }
+        .hour-card .weather-icon { font-size: 2rem; margin: 10px 0; display: block; color: #ffeb3b; }
         .hour-card .temp { font-size: 1.4rem; font-weight: bold; display: block; }
-        .hour-card .details { font-size: 0.75rem; margin-top: 10px; opacity: 0.9; line-height: 1.4; }
-        
+        .hour-card .details { font-size: 0.75rem; margin-top: 10px; opacity: 0.9; line-height: 1.5; }
+        .hour-card .details i { font-size: 0.8rem; margin: 0; display: inline; color: inherit; }
+
         .rain-chance { color: #81d4fa; font-weight: bold; }
+        .humidity { opacity: 0.85; }
     </style>
 </head>
 <body>
@@ -74,24 +74,21 @@
 </div>
 
 <script>
-    // Función para asignar un icono según el código de clima de la API
     function getWeatherIcon(code) {
-        // Códigos WMO: https://open-meteo.com/en/docs
-        if (code === 0) return 'bi-sun'; // Despejado
-        if (code >= 1 && code <= 3) return 'bi-cloud-sun'; // Parcialmente nublado
-        if (code >= 45 && code <= 48) return 'bi-cloud-fog'; // Niebla
-        if (code >= 51 && code <= 55) return 'bi-cloud-drizzle'; // Llovizna
-        if (code >= 61 && code <= 65) return 'bi-cloud-rain-heavy'; // Lluvia
-        if (code >= 80 && code <= 82) return 'bi-cloud-rain'; // Chubascos
-        if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain'; // Tormenta
-        return 'bi-cloud'; // Por defecto nube
+        if (code === 0) return 'bi-sun';
+        if (code >= 1 && code <= 3) return 'bi-cloud-sun';
+        if (code >= 45 && code <= 48) return 'bi-cloud-fog';
+        if (code >= 51 && code <= 55) return 'bi-cloud-drizzle';
+        if (code >= 61 && code <= 65) return 'bi-cloud-rain-heavy';
+        if (code >= 80 && code <= 82) return 'bi-cloud-rain';
+        if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
+        return 'bi-cloud';
     }
 
     async function fetchWeather() {
         const lat = 9.9781;
         const lon = -84.1879;
-        // Pedimos temperatura, humedad, viento y CÓDIGO DE CLIMA
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2`;
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2`;
 
         try {
             const response = await fetch(url);
@@ -108,9 +105,6 @@
         loader.style.display = 'none';
 
         const now = new Date();
-        const currentHour = now.getHours();
-        
-        // Buscamos el índice de la hora actual
         const startIndex = hourly.time.findIndex(t => new Date(t) >= now);
 
         for (let i = startIndex; i < startIndex + 24; i++) {
@@ -118,6 +112,7 @@
             const hourLabel = date.getHours() + ":00";
             const temp = Math.round(hourly.temperature_2m[i]);
             const hum = hourly.relative_humidity_2m[i];
+            const rain = hourly.precipitation_probability[i];
             const wind = hourly.wind_speed_10m[i];
             const code = hourly.weather_code[i];
 
@@ -125,11 +120,12 @@
             hourCard.className = 'hour-card';
             hourCard.innerHTML = `
                 <span class="time">${hourLabel}</span>
-                <i class="bi ${getWeatherIcon(code)}"></i>
+                <i class="bi ${getWeatherIcon(code)} weather-icon"></i>
                 <span class="temp">${temp}°C</span>
                 <div class="details">
-                    <div><i class="bi bi-droplets" style="font-size:0.8rem; color:white;"></i> ${hum}%</div>
-                    <div><i class="bi bi-wind" style="font-size:0.8rem; color:white;"></i> ${wind}km/h</div>
+                    <div class="rain-chance"><i class="bi bi-cloud-rain"></i> Lluvia ${rain}%</div>
+                    <div class="humidity">HR ${hum}%</div>
+                    <div><i class="bi bi-wind"></i> ${wind}km/h</div>
                 </div>
             `;
             container.appendChild(hourCard);
