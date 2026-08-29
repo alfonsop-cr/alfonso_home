@@ -1,9 +1,11 @@
-name: Actualizar MONEX
+name: Actualizar tipos de cambio
 
 on:
   schedule:
-    # 13:15 Costa Rica (UTC-6) lun-vie, después de la sesión 12:00-13:00
+    # 13:15 CR: después de la sesión MONEX
     - cron: "15 19 * * 1-5"
+    # 17:45 CR: ventanilla BAC de la tarde
+    - cron: "45 23 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -17,16 +19,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Leer cuadro 770 del BCCR
-        run: python scripts/update_monex.py
-      - name: Publicar monex.json si cambió
+      - name: Leer MONEX y ventanilla BAC
+        run: |
+          python scripts/update_monex.py || true
+          python scripts/update_bac.py || true
+      - name: Publicar JSON si cambió
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add monex.json
+          git add monex.json bac.json
           if git diff --staged --quiet; then
             echo "Sin cambios"
           else
-            git commit -m "Update official MONEX session from BCCR cuadro 770"
+            git commit -m "Update official MONEX and BAC ventanilla rates"
             git push
           fi
