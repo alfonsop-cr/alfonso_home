@@ -99,14 +99,16 @@
     </div>
 </div>
 <script>
-    function getWeatherIcon(code) {
+    // Icono alineado con el % de lluvia que se muestra (precipitation_probability).
+    // Tormenta y niebla siguen el weather_code; el resto no pone lluvia si el % es bajo.
+    function getWeatherIcon(code, rain) {
+        if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
+        if (code >= 45 && code <= 48 && rain < 40) return 'bi-cloud-fog';
+        if (rain >= 60) return 'bi-cloud-rain-heavy';
+        if (rain >= 40) return 'bi-cloud-rain';
+        if (rain >= 20) return 'bi-cloud-drizzle';
         if (code === 0) return 'bi-sun';
         if (code >= 1 && code <= 3) return 'bi-cloud-sun';
-        if (code >= 45 && code <= 48) return 'bi-cloud-fog';
-        if (code >= 51 && code <= 55) return 'bi-cloud-drizzle';
-        if (code >= 61 && code <= 65) return 'bi-cloud-rain-heavy';
-        if (code >= 80 && code <= 82) return 'bi-cloud-rain';
-        if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
         return 'bi-cloud';
     }
     function colon(n) {
@@ -141,7 +143,7 @@
             const hourCard = document.createElement('div');
             hourCard.className = 'hour-card';
             hourCard.innerHTML = '<span class="time">' + hourLabel + '</span>' +
-                '<i class="bi ' + getWeatherIcon(code) + ' weather-icon"></i>' +
+                '<i class="bi ' + getWeatherIcon(code, rain) + ' weather-icon"></i>' +
                 '<span class="temp">' + temp + '°C</span>' +
                 '<div class="details">' +
                 '<div class="rain-chance"><i class="bi bi-cloud-rain"></i> Lluvia ' + rain + '%</div>' +
