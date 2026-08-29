@@ -68,8 +68,10 @@
         .monex .eyebrow { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
         .monex .rate { font-size: 2rem; font-weight: 700; margin: 6px 0 2px; }
         .monex .rate-caption { font-size: 0.85rem; opacity: 0.85; }
-        .monex .minmax { display: flex; justify-content: center; gap: 28px; margin-top: 12px; font-size: 0.9rem; }
-        .monex .minmax span { opacity: 0.75; font-size: 0.75rem; display: block; }
+        .monex .bac-rates { display: flex; justify-content: center; gap: 28px; margin-top: 14px; font-size: 0.9rem; }
+        .monex .bac-rates span { opacity: 0.75; font-size: 0.75rem; display: block; }
+        .monex .bac-note { margin-top: 6px; font-size: 0.72rem; opacity: 0.7; }
+        .monex .bac-note a { color: #81d4fa; text-decoration: none; }
         .monex .session { margin-top: 10px; font-size: 0.8rem; opacity: 0.85; }
         .monex .fuente { margin-top: 8px; font-size: 0.75rem; opacity: 0.7; }
         .monex .fuente a { color: #81d4fa; text-decoration: none; }
@@ -87,12 +89,13 @@
         <div class="eyebrow">USD / CRC · MONEX</div>
         <div class="rate" id="monex-rate">…</div>
         <div class="rate-caption">Promedio ponderado</div>
-        <div class="minmax">
-            <div><span>Mín</span><strong id="monex-min">—</strong></div>
-            <div><span>Máx</span><strong id="monex-max">—</strong></div>
+        <div class="bac-rates">
+            <div><span>Compra BAC</span><strong id="bac-compra">—</strong></div>
+            <div><span>Venta BAC</span><strong id="bac-venta">—</strong></div>
         </div>
+        <div class="bac-note">Ventanilla <a id="bac-fuente" href="https://gee.bccr.fi.cr/IndicadoresEconomicos/Cuadros/frmConsultaTCVentanilla.aspx" target="_blank" rel="noopener">BAC San José</a></div>
         <div class="session" id="monex-session"></div>
-        <div class="fuente">Fuente: <a id="monex-fuente" href="https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1" target="_blank" rel="noopener">BCCR / MONEX</a></div>
+        <div class="fuente">Fuente MONEX: <a id="monex-fuente" href="https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1" target="_blank" rel="noopener">BCCR / MONEX</a></div>
     </div>
 </div>
 <script>
@@ -154,17 +157,29 @@
             if (!res.ok) throw new Error('monex.json');
             const d = await res.json();
             document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
-            document.getElementById('monex-min').textContent = colon(d.minimo);
-            document.getElementById('monex-max').textContent = colon(d.maximo);
-            document.getElementById('monex-session').textContent = 'Sesión ' + (d.fechaTexto || d.fecha);
+            document.getElementById('monex-session').textContent = 'Sesión MONEX ' + (d.fechaTexto || d.fecha);
             if (d.fuenteUrl) document.getElementById('monex-fuente').href = d.fuenteUrl;
         } catch (e) {
             document.getElementById('monex-rate').textContent = 'No disponible';
             document.getElementById('monex-session').textContent = 'No se pudo leer el dato oficial';
         }
     }
+    async function fetchBac() {
+        try {
+            const res = await fetch('./bac.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('bac.json');
+            const d = await res.json();
+            document.getElementById('bac-compra').textContent = colon(d.compra);
+            document.getElementById('bac-venta').textContent = colon(d.venta);
+            if (d.fuenteUrl) document.getElementById('bac-fuente').href = d.fuenteUrl;
+        } catch (e) {
+            document.getElementById('bac-compra').textContent = '—';
+            document.getElementById('bac-venta').textContent = '—';
+        }
+    }
     fetchWeather();
     fetchMonex();
+    fetchBac();
 </script>
 </body>
 </html>
