@@ -15,6 +15,8 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 24px 0;
+            box-sizing: border-box;
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
@@ -29,7 +31,6 @@
         .header { text-align: center; margin-bottom: 30px; }
         .header h1 { margin: 0; font-size: 1.8rem; }
         .header p { opacity: 0.8; margin: 5px 0; }
-
         .scroll-container {
             display: flex;
             overflow-x: auto;
@@ -40,7 +41,6 @@
         }
         .scroll-container::-webkit-scrollbar { height: 6px; }
         .scroll-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
-
         .hour-card {
             background: rgba(255, 255, 255, 0.15);
             min-width: 120px;
@@ -50,29 +50,51 @@
             transition: transform 0.3s;
         }
         .hour-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.2); }
-
         .hour-card .time { font-size: 0.9rem; font-weight: bold; margin-bottom: 10px; display: block; }
         .hour-card .weather-icon { font-size: 2rem; margin: 10px 0; display: block; color: #ffeb3b; }
         .hour-card .temp { font-size: 1.4rem; font-weight: bold; display: block; }
         .hour-card .details { font-size: 0.75rem; margin-top: 10px; opacity: 0.9; line-height: 1.5; }
         .hour-card .details i { font-size: 0.8rem; margin: 0; display: inline; color: inherit; }
-
         .rain-chance { color: #81d4fa; font-weight: bold; }
         .humidity { opacity: 0.85; }
+        .monex {
+            margin-top: 8px;
+            padding: 18px 16px 16px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            text-align: center;
+        }
+        .monex .eyebrow { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
+        .monex .rate { font-size: 2rem; font-weight: 700; margin: 6px 0 2px; }
+        .monex .rate-caption { font-size: 0.85rem; opacity: 0.85; }
+        .monex .minmax { display: flex; justify-content: center; gap: 28px; margin-top: 12px; font-size: 0.9rem; }
+        .monex .minmax span { opacity: 0.75; font-size: 0.75rem; display: block; }
+        .monex .session { margin-top: 10px; font-size: 0.8rem; opacity: 0.85; }
+        .monex .fuente { margin-top: 8px; font-size: 0.75rem; opacity: 0.7; }
+        .monex .fuente a { color: #81d4fa; text-decoration: none; }
     </style>
 </head>
 <body>
-
 <div class="card">
     <div class="header">
         <h1>San Antonio de Belén</h1>
         <p>Heredia, Costa Rica • Próximas 24 Horas</p>
     </div>
-
     <div id="loader" style="text-align: center;">Cargando pronóstico...</div>
     <div id="forecast" class="scroll-container"></div>
+    <div class="monex" id="monex">
+        <div class="eyebrow">USD / CRC · MONEX</div>
+        <div class="rate" id="monex-rate">…</div>
+        <div class="rate-caption">Promedio ponderado</div>
+        <div class="minmax">
+            <div><span>Mín</span><strong id="monex-min">—</strong></div>
+            <div><span>Máx</span><strong id="monex-max">—</strong></div>
+        </div>
+        <div class="session" id="monex-session"></div>
+        <div class="fuente">Fuente: <a id="monex-fuente" href="https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1" target="_blank" rel="noopener">BCCR / MONEX</a></div>
+    </div>
 </div>
-
 <script>
     function getWeatherIcon(code) {
         if (code === 0) return 'bi-sun';
@@ -84,56 +106,65 @@
         if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
         return 'bi-cloud';
     }
-
+    function colon(n) {
+        return '₡' + Number(n).toFixed(2).replace('.', ',');
+    }
     async function fetchWeather() {
         const lat = 9.9781;
         const lon = -84.1879;
-        const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2`;
-
+        const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2';
         try {
             const response = await fetch(url);
             const data = await response.json();
             renderForecast(data.hourly);
         } catch (error) {
-            document.getElementById('loader').innerText = "Error al obtener datos.";
+            document.getElementById('loader').innerText = 'Error al obtener datos.';
         }
     }
-
     function renderForecast(hourly) {
         const container = document.getElementById('forecast');
         const loader = document.getElementById('loader');
         loader.style.display = 'none';
-
         const now = new Date();
         const startIndex = hourly.time.findIndex(t => new Date(t) >= now);
-
         for (let i = startIndex; i < startIndex + 24; i++) {
             const date = new Date(hourly.time[i]);
-            const hourLabel = date.getHours() + ":00";
+            const hourLabel = date.getHours() + ':00';
             const temp = Math.round(hourly.temperature_2m[i]);
             const hum = hourly.relative_humidity_2m[i];
             const rain = hourly.precipitation_probability[i];
             const wind = hourly.wind_speed_10m[i];
             const code = hourly.weather_code[i];
-
             const hourCard = document.createElement('div');
             hourCard.className = 'hour-card';
-            hourCard.innerHTML = `
-                <span class="time">${hourLabel}</span>
-                <i class="bi ${getWeatherIcon(code)} weather-icon"></i>
-                <span class="temp">${temp}°C</span>
-                <div class="details">
-                    <div class="rain-chance"><i class="bi bi-cloud-rain"></i> Lluvia ${rain}%</div>
-                    <div class="humidity">Humedad ${hum}%</div>
-                    <div><i class="bi bi-wind"></i> ${wind}km/h</div>
-                </div>
-            `;
+            hourCard.innerHTML = '<span class="time">' + hourLabel + '</span>' +
+                '<i class="bi ' + getWeatherIcon(code) + ' weather-icon"></i>' +
+                '<span class="temp">' + temp + '°C</span>' +
+                '<div class="details">' +
+                '<div class="rain-chance"><i class="bi bi-cloud-rain"></i> Lluvia ' + rain + '%</div>' +
+                '<div class="humidity">Humedad ' + hum + '%</div>' +
+                '<div><i class="bi bi-wind"></i> ' + wind + 'km/h</div>' +
+                '</div>';
             container.appendChild(hourCard);
         }
     }
-
+    async function fetchMonex() {
+        try {
+            const res = await fetch('./monex.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('monex.json');
+            const d = await res.json();
+            document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
+            document.getElementById('monex-min').textContent = colon(d.minimo);
+            document.getElementById('monex-max').textContent = colon(d.maximo);
+            document.getElementById('monex-session').textContent = 'Sesión ' + (d.fechaTexto || d.fecha);
+            if (d.fuenteUrl) document.getElementById('monex-fuente').href = d.fuenteUrl;
+        } catch (e) {
+            document.getElementById('monex-rate').textContent = 'No disponible';
+            document.getElementById('monex-session').textContent = 'No se pudo leer el dato oficial';
+        }
+    }
     fetchWeather();
+    fetchMonex();
 </script>
-
 </body>
 </html>
