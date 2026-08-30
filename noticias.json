@@ -11,26 +11,11 @@
         "Smith salió de Costa Rica el 17 de junio, días antes de los allanamientos. Se casó con López Vega el 17 de febrero, un mes antes de su extradición a Estados Unidos (20 de marzo). CRHoy, con el expediente, la vincula a manejo de activos y efectivo. Teletica indica que no está claro si viajaba con Mullins, también buscada. Noticia en desarrollo."
       ],
       "fuentes": [
-        {
-          "medio": "CRHoy",
-          "url": "https://crhoy.com/nacionales/detienen-a-esposa-de-pecho-de-rata-en-el-juan-santamaria/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/sucesos/migracion-detiene-a-esposa-de-alias-pecho-de-rata/KPYTYNNXCJAAZJIW7JEF6ZPJ3U/story/"
-        },
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/migracion-detiene-a-la-esposa-de-alias-pecho-de-rata/"
-        },
-        {
-          "medio": "Teletica",
-          "url": "https://www.teletica.com/sucesos/detienen-a-esposa-de-pecho-de-rata-en-el-aeropuerto-juan-santamaria_416360"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/esposa-de-pecho-de-rata-cayo-en-el-aeropuerto-juan/UQCA6C4I4VE2BJ3ZXCXBXZLATU/story/"
-        }
+        {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/detienen-a-esposa-de-pecho-de-rata-en-el-juan-santamaria/"},
+        {"medio": "La Nación", "url": "https://www.nacion.com/sucesos/migracion-detiene-a-esposa-de-alias-pecho-de-rata/KPYTYNNXCJAAZJIW7JEF6ZPJ3U/story/"},
+        {"medio": "El Observador", "url": "https://observador.cr/migracion-detiene-a-la-esposa-de-alias-pecho-de-rata/"},
+        {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/detienen-a-esposa-de-pecho-de-rata-en-el-aeropuerto-juan-santamaria_416360"},
+        {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/esposa-de-pecho-de-rata-cayo-en-el-aeropuerto-juan/UQCA6C4I4VE2BJ3ZXCXBXZLATU/story/"}
       ]
     }
   ]
