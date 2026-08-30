@@ -31,6 +31,27 @@
           "url": "https://www.nacion.com/sucesos/crimenes/asesinan-a-hombre-afuera-de-un-bar-en-guanacaste/JY6VVB6RUZB6JGID72WMHIMRPM/story/"
         }
       ]
+    },
+    {
+      "titulo": "Cinco muertes de tránsito entre la tarde del sábado y la madrugada del domingo",
+      "resumen": [
+        "La Cruz Roja reportó a CRHoy cinco accidentes mortales, aparte de los dos homicidios de esa misma ventana: en Hatillo 2, un hombre murió en la colisión de un vehículo y una motocicleta (5:31 p.m. del sábado); en Santa Cruz de Guanacaste, un hombre de 40 años fue atropellado (10:47 p.m.); en Brasil de Santa Ana, un hombre de 28 años fue atropellado (2:18 a.m. del domingo); en La Uruca, un adulto murió al caer de una bicimoto (2:53 a.m.); y en Lepanto de Puntarenas, un hombre de 50 años chocó la motocicleta contra un poste (4:12 a.m.). El OIJ hace el levantamiento en todos los casos.",
+        "En Brasil de Santa Ana, pasadas las 2:00 a.m., Flores (28) y López (44) intentaban cruzar hacia Ciudad Colón cuando un vehículo los impactó. Flores murió; López fue llevado al San Juan de Dios. El conductor, Sánchez (56), se dio a la fuga; testigos lo siguieron y la Policía lo localizó minutos después en Ciudad Colón. Quedó detenido bajo dirección funcional del Ministerio Público. La Teja identificó a la víctima de La Uruca como Hernández, de 40 años: no llevaba casco y, según el OIJ, perdió el control e impactó contra una piedra."
+      ],
+      "fuentes": [
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/accidentes-y-hechos-violentos-dejan-siete-fallecidos-entre-sabado-y-domingo/"
+        },
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/hombre-sufrio-tragica-muerte-al-caer-de-bicimoto/XUSZ2HX23NGBLIJ2NWWL4WH2CE/story/"
+        },
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/motociclista-persigue-a-conductor-que-se-dio-a-la-fuga-tras-atropellar-y-matar-a-peaton_416357"
+        }
+      ]
     }
   ]
 }
