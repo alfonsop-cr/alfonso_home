@@ -34,6 +34,20 @@
       ]
     },
     {
+      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
+      "agregado": "2026-08-30T13:01:20-06:00",
+      "resumen": [
+        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021.",
+        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
+        }
+      ]
+    },
+    {
       "titulo": "Níger: el Ejército retoma la base aérea; decenas de amotinados muertos o detenidos; Tchiani sigue sin aparecer",
       "agregado": "2026-08-30T13:01:20-06:00",
       "resumen": [
@@ -60,20 +74,6 @@
         {
           "medio": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next"
-        }
-      ]
-    },
-    {
-      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
-      "agregado": "2026-08-30T13:01:20-06:00",
-      "resumen": [
-        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021.",
-        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
         }
       ]
     },
@@ -135,6 +135,27 @@
       ]
     },
     {
+      "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
+      "agregado": "2026-08-30T09:53:10-06:00",
+      "resumen": [
+        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. Al Jazeera cifró el domingo 7 heridos en Qusra. En Jalud atacaron a una familia palestina y a un equipo de NBC, según Wafa y Al Jazeera. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. Al Jazeera reportó el domingo que no constaban detenciones pese a las imágenes."
+      ],
+      "fuentes": [
+        {
+          "medio": "France 24",
+          "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/whats-behind-netanyahus-condemnation-of-settler-pogroms"
+        }
+      ]
+    },
+    {
       "titulo": "Islandia rechaza reabrir negociaciones de adhesión a la UE",
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
@@ -156,27 +177,6 @@
         {
           "medio": "El País",
           "url": "https://elpais.com/internacional/2026-08-30/el-no-de-islandia-debilita-a-la-ue-ante-trump-y-las-fuerzas-antieuropeas.html"
-        }
-      ]
-    },
-    {
-      "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
-      "agregado": "2026-08-30T09:53:10-06:00",
-      "resumen": [
-        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. Al Jazeera cifró el domingo 7 heridos en Qusra. En Jalud atacaron a una familia palestina y a un equipo de NBC, según Wafa y Al Jazeera. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. Al Jazeera reportó el domingo que no constaban detenciones pese a las imágenes."
-      ],
-      "fuentes": [
-        {
-          "medio": "France 24",
-          "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/30/whats-behind-netanyahus-condemnation-of-settler-pogroms"
         }
       ]
     },
