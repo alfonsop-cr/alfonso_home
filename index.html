@@ -3,151 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ignacio Santos</title>
+    <title>Alfonso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         * { box-sizing: border-box; }
         body {
-            font-family: "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
+            font-family: "IBM Plex Sans", sans-serif;
+            background: #121820;
+            color: #f3f1ea;
             margin: 0;
             min-height: 100vh;
-            padding: 28px 20px 48px;
         }
+        a { color: #8ec8e8; }
         .page {
-            max-width: 1180px;
+            max-width: 1080px;
             margin: 0 auto;
+            padding: 32px 28px 72px;
         }
-        .page-header { text-align: left; margin-bottom: 22px; }
-        .page-header h1 { margin: 0; font-size: 2rem; font-weight: 700; letter-spacing: 0.01em; }
-        .page-header .fecha {
-            margin: 8px 0 0;
-            opacity: 0.85;
-            font-size: 0.95rem;
+        .masthead {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid #f3f1ea22;
+            padding-bottom: 20px;
+            margin-bottom: 32px;
         }
-        .top-row {
+        .masthead h1 {
+            font-family: Fraunces, serif;
+            font-size: 42px;
+            font-weight: 560;
+            margin: 0;
+            line-height: 1.1;
+            color: #f3f1ea;
+        }
+        .masthead .place {
+            margin: 6px 0 0;
+            font-size: 13px;
+            color: #9aa3ad;
+        }
+        .masthead-right { text-align: right; }
+        #fecha-cr {
+            font-size: 13px;
+            color: #9aa3ad;
+        }
+        #hora-cr {
+            font-size: 28px;
+            font-weight: 500;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.2;
+            color: #f3f1ea;
+        }
+        .ahora {
             display: grid;
-            grid-template-columns: minmax(260px, 320px) 1fr;
-            gap: 20px;
-            align-items: stretch;
+            grid-template-columns: 260px 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
         }
         .news-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 22px;
+            gap: 48px 40px;
         }
         @media (max-width: 800px) {
-            .top-row { grid-template-columns: 1fr; }
+            .ahora { grid-template-columns: 1fr; }
             .news-row { grid-template-columns: 1fr; }
         }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            padding: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        .fx-panel {
+            background: #1a2330;
+            border-radius: 12px;
+            padding: 20px 22px;
         }
-        .weather-card .weather-title {
+        .monex { text-align: left; }
+        .monex .eyebrow {
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #9aa3ad;
+        }
+        .monex .rate {
+            font-size: 36px;
+            font-weight: 500;
+            color: #e8b86d;
+            margin: 6px 0 2px;
+            font-variant-numeric: tabular-nums;
+        }
+        .monex .rate-caption {
+            font-size: 13px;
+            color: #9aa3ad;
+        }
+        .monex .bac-rates {
+            display: flex;
+            justify-content: flex-start;
+            gap: 28px;
+            margin-top: 14px;
+            font-size: 13px;
+        }
+        .monex .bac-rates span {
+            color: #9aa3ad;
+            font-size: 11px;
+            display: block;
+        }
+        .monex .bac-note,
+        .monex .session,
+        .monex .fuente {
+            margin-top: 8px;
+            font-size: 11px;
+            color: #9aa3ad;
+        }
+        .monex .bac-note { margin-top: 6px; }
+        .monex .session { margin-top: 10px; }
+        .monex a { color: #8ec8e8; text-decoration: none; }
+        .weather-title {
             margin: 0 0 16px;
             font-size: 1.15rem;
-            font-weight: 600;
-            text-align: center;
+            font-weight: 500;
         }
-        .scroll-container {
+        .timeline {
             display: flex;
             overflow-x: auto;
-            gap: 15px;
-            padding: 10px 5px 20px 5px;
+            gap: 4px;
+            padding: 4px 0 12px;
             scrollbar-width: thin;
-            scrollbar-color: rgba(255,255,255,0.3) transparent;
+            scrollbar-color: #9aa3ad transparent;
         }
-        .scroll-container::-webkit-scrollbar { height: 6px; }
-        .scroll-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.3); border-radius: 10px; }
-        .hour-card {
-            background: rgba(255, 255, 255, 0.15);
-            min-width: 120px;
-            padding: 20px 10px;
-            border-radius: 20px;
+        .timeline::-webkit-scrollbar { height: 6px; }
+        .timeline::-webkit-scrollbar-thumb { background: #9aa3ad; border-radius: 10px; }
+        .hour-slot {
+            min-width: 56px;
+            flex-shrink: 0;
             text-align: center;
-            transition: transform 0.3s;
+            opacity: 0.72;
+            padding: 4px 2px 8px;
         }
-        .hour-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.2); }
-        .hour-card .time { font-size: 0.9rem; font-weight: bold; margin-bottom: 10px; display: block; }
-        .hour-card .weather-icon { font-size: 2rem; margin: 10px 0; display: block; color: #ffeb3b; }
-        .hour-card .temp { font-size: 1.4rem; font-weight: bold; display: block; }
-        .hour-card .details { font-size: 0.75rem; margin-top: 10px; opacity: 0.9; line-height: 1.5; }
-        .hour-card .details i { font-size: 0.8rem; margin: 0; display: inline; color: inherit; }
-        .rain-chance { color: #81d4fa; font-weight: bold; }
-        .humidity { opacity: 0.85; }
-        .fx-card { display: flex; flex-direction: column; justify-content: center; }
-        .monex { padding: 8px 4px 0; text-align: center; }
-        .monex .eyebrow { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.8; }
-        .monex .rate { font-size: 2rem; font-weight: 700; margin: 6px 0 2px; }
-        .monex .rate-caption { font-size: 0.85rem; opacity: 0.85; }
-        .monex .bac-rates { display: flex; justify-content: center; gap: 28px; margin-top: 14px; font-size: 0.9rem; }
-        .monex .bac-rates span { opacity: 0.75; font-size: 0.75rem; display: block; }
-        .monex .bac-note { margin-top: 6px; font-size: 0.72rem; opacity: 0.7; }
-        .monex .bac-note a { color: #81d4fa; text-decoration: none; }
-        .monex .session { margin-top: 10px; font-size: 0.8rem; opacity: 0.85; }
-        .monex .fuente { margin-top: 8px; font-size: 0.75rem; opacity: 0.7; }
-        .monex .fuente a { color: #81d4fa; text-decoration: none; }
-        .news-card h2 {
-            margin: 0 0 18px;
-            font-size: 1.2rem;
-            font-weight: 600;
+        .hour-slot.current {
+            opacity: 1;
+            border-bottom: 2px solid #e8b86d;
+        }
+        .hour-slot .time {
+            font-size: 12px;
+            color: #9aa3ad;
+            display: block;
+        }
+        .hour-slot .weather-icon {
+            font-size: 1.35rem;
+            margin: 6px 0;
+            display: block;
+            color: #e8b86d;
+        }
+        .hour-slot .temp {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+        }
+        .rain-chance {
+            color: #7eb8d4;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+        .hour-slot .details {
+            font-size: 11px;
+            color: #9aa3ad;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+        .hour-slot .details i { font-size: 0.8rem; }
+        .news-col h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+        .kicker {
+            margin: 4px 0 8px;
+            font-size: 13px;
+            color: #9aa3ad;
         }
         .news-subheading {
-            margin: 22px 0 16px;
+            margin: 22px 0 8px;
             font-size: 1.05rem;
-            font-weight: 600;
+            font-weight: 500;
         }
         .hecho {
-            padding: 16px 0;
-            border-top: 1px solid rgba(255,255,255,0.15);
+            padding: 18px 0;
+            border-top: 1px solid #f3f1ea22;
         }
         .hecho:first-child { border-top: none; padding-top: 0; }
         .hecho h3 {
             margin: 0 0 10px;
             font-size: 1.05rem;
-            font-weight: 650;
+            font-weight: 500;
             line-height: 1.35;
         }
         .hecho p {
             margin: 0 0 8px;
             font-size: 0.92rem;
             line-height: 1.5;
-            opacity: 0.92;
+            color: #f3f1ea;
         }
         .hecho p:last-of-type { margin-bottom: 12px; }
-        .fuentes { display: flex; flex-wrap: wrap; gap: 8px; }
-        .fuentes a {
-            color: #81d4fa;
-            text-decoration: none;
-            font-size: 0.78rem;
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.18);
-            border-radius: 999px;
-            padding: 4px 10px;
+        .fuentes {
+            font-size: 12px;
+            line-height: 1.5;
         }
-        .fuentes a:hover { background: rgba(255,255,255,0.2); }
-        #loader { text-align: center; }
+        .fuentes a {
+            color: #8ec8e8;
+            text-decoration: none;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+        .fuentes a + a::before {
+            content: " · ";
+            color: #9aa3ad;
+        }
+        #loader { color: #9aa3ad; }
     </style>
 </head>
 <body>
 <div class="page">
-    <header class="page-header">
-        <h1>Ignacio Santos</h1>
-        <p class="fecha" id="fecha-texto"></p>
+    <header class="masthead">
+        <div class="masthead-left">
+            <h1>Alfonso</h1>
+            <p class="place">San Antonio de Belén</p>
+        </div>
+        <div class="masthead-right">
+            <div id="fecha-cr"></div>
+            <div id="hora-cr"></div>
+        </div>
     </header>
-    <div class="top-row">
-        <div class="card fx-card">
+    <div class="ahora">
+        <div class="fx-panel">
             <div class="monex" id="monex">
-                <div class="eyebrow">USD / CRC · MONEX</div>
+                <div class="eyebrow">USD/CRC</div>
                 <div class="rate" id="monex-rate">…</div>
-                <div class="rate-caption">Promedio ponderado</div>
+                <div class="rate-caption">Promedio ponderado · MONEX</div>
                 <div class="bac-rates">
                     <div><span>Compra BAC</span><strong id="bac-compra">—</strong></div>
                     <div><span>Venta BAC</span><strong id="bac-venta">—</strong></div>
@@ -157,19 +249,21 @@
                 <div class="fuente">Fuente MONEX: <a id="monex-fuente" href="https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1" target="_blank" rel="noopener">BCCR / MONEX</a></div>
             </div>
         </div>
-        <div class="card weather-card">
-            <h2 class="weather-title">San Antonio de Belén / Próximas 24 Horas</h2>
+        <div class="weather">
+            <h2 class="weather-title">Belén · 24 h</h2>
             <div id="loader">Cargando pronóstico...</div>
-            <div id="forecast" class="scroll-container"></div>
+            <div id="forecast" class="timeline"></div>
         </div>
     </div>
     <div class="news-row">
-        <section class="card news-card">
+        <section class="news-col">
             <h2>Ignacio Santos</h2>
+            <p class="kicker">Costa Rica</p>
             <div id="noticias"></div>
         </section>
-        <section class="card news-card">
+        <section class="news-col">
             <h2>Leo Laporte</h2>
+            <p class="kicker">Inteligencia artificial</p>
             <div id="leo-hechos"></div>
             <h3 class="news-subheading">Columnas / análisis</h3>
             <div id="leo-columnas"></div>
@@ -191,6 +285,21 @@
     }
     function colon(n) {
         return '₡' + Number(n).toFixed(2).replace('.', ',');
+    }
+    function updateClock() {
+        const now = new Date();
+        const opts = { timeZone: 'America/Costa_Rica' };
+        document.getElementById('fecha-cr').textContent = now.toLocaleDateString('es-CR', Object.assign({
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        }, opts)).replace(',', '');
+        document.getElementById('hora-cr').textContent = now.toLocaleTimeString('es-CR', Object.assign({
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        }, opts));
     }
     async function fetchWeather() {
         const lat = 9.9781;
@@ -218,17 +327,23 @@
             const rain = hourly.precipitation_probability[i];
             const wind = hourly.wind_speed_10m[i];
             const code = hourly.weather_code[i];
-            const hourCard = document.createElement('div');
-            hourCard.className = 'hour-card';
-            hourCard.innerHTML = '<span class="time">' + hourLabel + '</span>' +
+            const isCurrent = (i === startIndex);
+            const slot = document.createElement('div');
+            slot.className = isCurrent ? 'hour-slot current' : 'hour-slot';
+            let html = '<span class="time">' + hourLabel + '</span>' +
                 '<i class="bi ' + getWeatherIcon(code, rain) + ' weather-icon"></i>' +
-                '<span class="temp">' + temp + '°C</span>' +
-                '<div class="details">' +
-                '<div class="rain-chance"><i class="bi bi-cloud-rain"></i> Lluvia ' + rain + '%</div>' +
-                '<div class="humidity">Humedad ' + hum + '%</div>' +
-                '<div><i class="bi bi-wind"></i> ' + wind + 'km/h</div>' +
-                '</div>';
-            container.appendChild(hourCard);
+                '<span class="temp">' + temp + '°C</span>';
+            if (rain >= 40) {
+                html += '<div class="rain-chance">' + rain + '%</div>';
+            }
+            if (isCurrent) {
+                html += '<div class="details">' +
+                    '<div class="humidity">Humedad ' + hum + '%</div>' +
+                    '<div><i class="bi bi-wind"></i> ' + wind + 'km/h</div>' +
+                    '</div>';
+            }
+            slot.innerHTML = html;
+            container.appendChild(slot);
         }
     }
     async function fetchMonex() {
@@ -291,9 +406,6 @@
             const res = await fetch('./noticias.json', { cache: 'no-store' });
             if (!res.ok) throw new Error('noticias.json');
             const d = await res.json();
-            if (d.fechaTexto) {
-                document.getElementById('fecha-texto').textContent = d.fechaTexto;
-            }
             renderHechos(document.getElementById('noticias'), d.hechos);
         } catch (e) {
             document.getElementById('noticias').textContent = 'No se pudieron cargar las noticias.';
@@ -310,6 +422,8 @@
             document.getElementById('leo-hechos').textContent = 'No se pudieron cargar las noticias.';
         }
     }
+    updateClock();
+    setInterval(updateClock, 15000);
     fetchWeather();
     fetchMonex();
     fetchBac();
