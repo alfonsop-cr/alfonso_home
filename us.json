@@ -1,0 +1,95 @@
+{
+  "fecha": "2026-08-30",
+  "fechaTexto": "domingo 30 de agosto de 2026",
+  "autor": "US News",
+  "hechos": [
+    {
+      "titulo": "La NASA lanza el telescopio espacial Nancy Grace Roman desde Florida",
+      "resumen": [
+        "La NASA despegó el domingo a las 7:26 a.m. (hora del Este) desde el Centro Espacial Kennedy, en Florida, el telescopio Nancy Grace Roman a bordo de un cohete Falcon Heavy de SpaceX. El observatorio, de unos 4.300 millones de dólares y del tamaño de un autobús, viaja hacia el punto de Lagrange L2, a unos 1,6 millones de kilómetros, un trayecto de más de tres meses. Su campo de visión es al menos 100 veces más amplio que el del Hubble y buscará pistas sobre la materia oscura, la energía oscura y planetas fuera del sistema solar.",
+        "Los dos propulsores laterales reutilizables aterrizaron de nuevo en Cabo Cañaveral y el telescopio se separó del cohete según lo previsto. El presidente Donald Trump llamó después del despegue al administrador de la NASA, Jared Isaacman, para felicitar al equipo. Reuters señala que la Administración intentó recortar o eliminar el financiamiento del proyecto y que el Congreso lo preservó; el lanzamiento se adelantó unos nueve meses al calendario original."
+      ],
+      "fuentes": [
+        {"medio": "AP", "url": "https://apnews.com/article/nasa-nancy-grace-roman-space-telescope-2a8e59d0b4e4884966a3b50a159ab8c9"},
+        {"medio": "Reuters", "url": "https://www.reuters.com/science/nasa-launches-powerful-new-roman-space-telescope-florida-2026-08-30/"},
+        {"medio": "NPR", "url": "https://www.npr.org/2026/08/30/nx-s1-5948814/launch-nancy-grace-roman-space-telescope-nasa"},
+        {"medio": "CBS", "url": "https://www.cbsnews.com/news/nasa-launches-roman-space-telescope-explore-hidden-universe/"},
+        {"medio": "NBC", "url": "https://www.nbcnews.com/science/space/nasa-space-telescope-launch-nancy-grace-roman-rcna593182"},
+        {"medio": "CNN", "url": "https://www.cnn.com/2026/08/30/science/nancy-grace-roman-space-telescope-launch"}
+      ]
+    },
+    {
+      "titulo": "EE.UU. envía a República Centroafricana a deportados de terceros países, incluido un afgano con protección judicial",
+      "resumen": [
+        "El sábado aterrizó en Bangui, capital de la República Centroafricana, un vuelo de deportación de Estados Unidos con decenas de personas que no son de ese país, según AP, NPR y el grupo Human Rights First. En el avión iban 12 afganos, 8 iraníes y varias personas de Nepal y Nicaragua. Es el segundo vuelo de este tipo a ese país desde junio.",
+        "Entre los deportados hay un afgano de poco más de 20 años a quien un juez de inmigración de EE.UU. había protegido de ser devuelto a Afganistán por temor a persecución talibán. Sus hermanos colaboraron con el Ejército estadounidense; uno vive en EE.UU. y otro, piloto entrenado por Washington, fue asesinado por los talibanes. CBS, con documentos internos, reportó que en unos 10 días la Administración envió a más de 100 deportados de Afganistán, Cuba, Nicaragua y otros países a ocho naciones africanas. El DHS dijo el domingo que, si alguien se niega a volver a su país, el gobierno debe hallar otra nación “segura”."
+      ],
+      "fuentes": [
+        {"medio": "AP", "url": "https://apnews.com/article/central-african-republic-afghan-deportation-united-states-687d053499ccdbf6a26f091219ae10fe"},
+        {"medio": "NPR", "url": "https://www.npr.org/2026/08/30/nx-s1-5949230/trump-administration-deports-afghan-central-african-republic"},
+        {"medio": "CBS", "url": "https://www.cbsnews.com/news/ice-deportations-afghanistan-cuba-africa/"}
+      ]
+    },
+    {
+      "titulo": "El acuerdo petrolero de Trump con Venezuela sigue sin texto público ni plazos claros",
+      "resumen": [
+        "Tras el anuncio del viernes por la noche, AP detalló el sábado lo que se sabe y lo que no del pacto que Trump llamó “el mayor acuerdo petrolero de la historia mundial”. Venezuela y un operador privado no identificado formarían una empresa con derechos sobre 17 campos, con un potencial declarado de 65.000 millones de barriles. El gobierno de Delcy Rodríguez estima 100.000 millones de dólares en inversión y más de 209.000 millones en impuestos. Un funcionario estadounidense, de forma anónima, dijo que EE.UU. tendría el 55% de la producción efectiva de esa empresa, con compras destinadas a la reserva estratégica y a usos militares.",
+        "No se ha publicado el texto del acuerdo ni la identidad del operador privado, ni quién pagará la infraestructura. Expertos citados por AP advierten que el deterioro del sector venezolano haría improbable un efecto rápido en el precio de la gasolina en EE.UU., que AAA situó el sábado en unos 4,08 dólares el galón. Senadores republicanos celebraron el pacto; demócratas como Tim Kaine y Chris Van Hollen lo criticaron. Chevron y Exxon Mobil declinaron comentar."
+      ],
+      "fuentes": [
+        {"medio": "AP", "url": "https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f"},
+        {"medio": "Reuters", "url": "https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/"}
+      ]
+    },
+    {
+      "titulo": "Google Maps muestra “Lake America” en EE.UU. y Canadá responde al cambio de nombre del lago Ontario",
+      "resumen": [
+        "El sábado Google dijo en un blog que, para usuarios en Estados Unidos, Google Maps pasó a llamar “Lake America” al lago Ontario, en línea con la orden ejecutiva de Trump de la semana pasada. En Canadá el mapa sigue diciendo Lake Ontario; fuera de ambos países aparecen los dos nombres. El premier de Ontario, Doug Ford, inauguró el sábado un letrero bilingüe junto a la frontera: “Lake Ontario — Now and Always”. La gobernadora de Nueva York, Kathy Hochul, afirmó que su estado no usará el nuevo nombre.",
+        "El cambio forma parte de la escalada comercial con Canadá: Trump impuso aranceles del 50% a una amplia gama de importaciones canadienses y el primer ministro Mark Carney prometió responder “dólar por dólar”. En Truth Social, Trump insistió el domingo en que Canadá “nos ha estado estafando durante años”."
+      ],
+      "fuentes": [
+        {"medio": "NPR", "url": "https://www.npr.org/2026/08/30/nx-s1-5949254/lake-ontario-america-doug-ford-trump-sign-google"}
+      ]
+    },
+    {
+      "titulo": "Jueza de California: el gobierno no puede deportar a estudiantes por criticar a Israel",
+      "resumen": [
+        "La jueza federal Noël Wise, en San José, California, falló el viernes que el gobierno de Trump viola la Primera y la Quinta Enmienda al revocar visas e iniciar deportaciones de estudiantes no ciudadanos por su activismo pro palestino o sus críticas a Israel. El caso lo impulsó The Stanford Daily, cuyo director dijo que reporteros extranjeros no deberían temer la deportación por escribir una nota. El Departamento de Justicia no respondió el sábado a una consulta de AP.",
+        "Wise escribió que la libertad de expresión es “ilusoria” si solo se puede alabar al gobierno, y que en el periódico estudiantes con estatus legal han dimitido, rechazado encargos o pedido anonimato por miedo migratorio. El fallo se suma a un criterio similar de un juez en Boston. Reuters y AP coinciden en que la jueza invalidó partes de las normas de inmigración usadas desde marzo de 2025, a partir del arresto del graduado de Columbia Mahmoud Khalil."
+      ],
+      "fuentes": [
+        {"medio": "AP", "url": "https://apnews.com/article/israel-protests-deportations-ideological-d3694ba08ab714eb9441ca51a83fa57f"},
+        {"medio": "Reuters", "url": "https://www.reuters.com/legal/government/judge-deals-blow-trump-moves-deport-pro-palestinian-activists-2026-08-29/"}
+      ]
+    },
+    {
+      "titulo": "Republicanos se inquietan: Talarico satura la TV en Texas y MAGA Inc. aún no gasta por Paxton",
+      "resumen": [
+        "CNN informó el domingo que, desde junio, los demócratas han gastado unos 31,5 millones de dólares en publicidad en la carrera al Senado de Texas frente a unos 4,7 millones del lado republicano, según AdImpact. Casi todo el gasto demócrata (unos 31,3 millones) es de la campaña de James Talarico; Ken Paxton ha invertido poco más de 150.000 dólares en anuncios. El sábado Talarico estrenó su primer anuncio negativo contra Paxton por acusaciones de corrupción.",
+        "MAGA Inc., el super PAC ligado a Trump, no ha abierto su caja de más de 400 millones de dólares en Texas, pese a advertencias de líderes del Senado GOP. El viernes un grupo pro Paxton lanzó un blitz de 800.000 dólares. Trump encabezó el jueves un acto en Houston, pero fue para el Comité Nacional Republicano, no para la campaña de Paxton. CNN corrigió que las encuestas no muestran un líder claro."
+      ],
+      "fuentes": [
+        {"medio": "CNN", "url": "https://www.cnn.com/talarico-paxton-senate-race-fundraising"}
+      ]
+    },
+    {
+      "titulo": "El portaaviones USS Abraham Lincoln pasa frente a Singapur de regreso a casa",
+      "resumen": [
+        "Periodistas de AP avistaron el domingo, poco después de la 1 a.m. hora local, al portaaviones USS Abraham Lincoln cruzando aguas cercanas a Singapur, de vuelta a Estados Unidos tras apoyar la guerra contra Irán. El buque acumula más de 250 días seguidos en el mar, un récord, y ha habido reportes de deterioro de la salud mental de la tripulación y faltantes de comida y productos de higiene. Autoridades de Tailandia dijeron que hará escala allí para descanso antes de regresar a su base en EE.UU."
+      ],
+      "fuentes": [
+        {"medio": "AP", "url": "https://apnews.com/article/thailand-singapore-us-aircraft-carrier-lincoln-port-visit-79d29834422823c3a5b52f3c01f5d050"}
+      ]
+    },
+    {
+      "titulo": "Bessent llega al G20 en Carolina del Norte con aranceles, Irán y la deuda de EE.UU. en la mesa",
+      "resumen": [
+        "El secretario del Tesoro, Scott Bessent, se prepara para la reunión de ministros de Finanzas y banqueros centrales del G20 el lunes y martes en Asheville, Carolina del Norte. Reuters describe un escenario de incertidumbre por los aranceles de Trump, la guerra comercial con Canadá, el cierre del estrecho de Ormuz por la guerra con Irán y la presión para que otros países corten lazos económicos con Teherán. El viernes Bessent impuso restricciones a un banco de Egipto, miembro del G20, por vínculos con Irán a través de sucursales en Emiratos.",
+        "La deuda pública de EE.UU. superó los 40 billones de dólares el 19 de agosto. El Tesoro duplicó las recompras de bonos de largo plazo a al menos 4.000 millones por operación tras una subida de rendimientos. Tras el fallo de la Corte Suprema de febrero que tumbó aranceles globales amparados en una ley de emergencias, la Administración los ha reconstruido con otras bases legales; en julio unos 60 socios, entre ellos todos los del G20 y la UE, recibieron aranceles del 10% o 12,5%."
+      ],
+      "fuentes": [
+        {"medio": "Reuters", "url": "https://www.reuters.com/world/china/us-treasurys-bessent-faces-g20-diplomacy-test-amid-tariffs-iran-war-bond-turmoil-2026-08-30/"}
+      ]
+    }
+  ]
+}

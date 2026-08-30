@@ -22,6 +22,7 @@
             max-width: 1080px;
             margin: 0 auto;
             padding: 32px 28px 72px;
+            min-width: 0;
         }
         .masthead {
             display: flex;
@@ -63,16 +64,66 @@
             margin-bottom: 40px;
             min-width: 0;
         }
-        .news-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px 40px;
+        .news {
+            --bg: #121820;
+            --text: #f3f1ea;
+            --muted: #9aa3ad;
+            --line: rgba(243,241,234,0.12);
+            --accent: #e8b86d;
             min-width: 0;
         }
-        .news-col { min-width: 0; }
+        .tablist {
+            display: flex;
+            gap: 28px;
+            align-items: flex-end;
+            padding: 0 0 14px;
+            border-bottom: 1px solid var(--line);
+            overflow-x: auto;
+            overflow-y: visible;
+            scrollbar-width: thin;
+        }
+        .tab {
+            background: none;
+            border: 0;
+            padding: 0 0 10px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--muted);
+            white-space: nowrap;
+            flex: 0 0 auto;
+            position: relative;
+            cursor: pointer;
+            border-radius: 0;
+        }
+        .tab[aria-selected="true"] {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .tab[aria-selected="true"]::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -1px;
+            transform: translateX(-50%);
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #e8b86d;
+        }
+        .tab:hover {
+            color: var(--text);
+        }
+        .news-panel {
+            min-width: 0;
+            padding-top: 20px;
+        }
+        .news-empty {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 0;
+        }
         @media (max-width: 800px) {
             .ahora { grid-template-columns: 1fr; }
-            .news-row { grid-template-columns: 1fr; }
             .masthead {
                 flex-direction: column;
                 align-items: flex-start;
@@ -85,7 +136,6 @@
             .masthead h1 { font-size: 32px; }
             #hora-cr { font-size: 24px; }
             .monex .rate { font-size: 32px; }
-            .news-col h2 { font-size: 20px; }
             .hecho h3 { font-size: 16px; }
             .fuentes { overflow-wrap: anywhere; }
         }
@@ -195,12 +245,6 @@
             min-height: 14px;
             margin-top: 4px;
         }
-        .news-col h2 {
-            margin: 0;
-            font-family: Fraunces, serif;
-            font-size: 22px;
-            font-weight: 560;
-        }
         .news-subheading {
             margin: 22px 0 8px;
             font-size: 1.05rem;
@@ -277,17 +321,29 @@
             <div id="forecast" class="timeline"></div>
         </div>
     </div>
-    <div class="news-row">
-        <section class="news-col">
-            <h2>Costa Rica News</h2>
-            <div id="noticias"></div>
-        </section>
-        <section class="news-col">
-            <h2>AI News</h2>
-            <div id="leo-hechos"></div>
-            <h3 class="news-subheading">Columnas / análisis</h3>
-            <div id="leo-columnas"></div>
-        </section>
+    <div class="news">
+        <div class="tablist" role="tablist" aria-label="Noticias">
+            <button type="button" class="tab" role="tab" id="tab-cr" aria-controls="panel-cr" aria-selected="true" tabindex="0">Costa Rica News</button>
+            <button type="button" class="tab" role="tab" id="tab-ai" aria-controls="panel-ai" aria-selected="false" tabindex="-1">AI News</button>
+            <button type="button" class="tab" role="tab" id="tab-us" aria-controls="panel-us" aria-selected="false" tabindex="-1">US News</button>
+            <button type="button" class="tab" role="tab" id="tab-world" aria-controls="panel-world" aria-selected="false" tabindex="-1">World News</button>
+        </div>
+        <div class="news-panel">
+            <div id="panel-cr" role="tabpanel" aria-labelledby="tab-cr">
+                <div id="noticias"></div>
+            </div>
+            <div id="panel-ai" role="tabpanel" aria-labelledby="tab-ai" hidden>
+                <div id="leo-hechos"></div>
+                <h3 class="news-subheading">Columnas / análisis</h3>
+                <div id="leo-columnas"></div>
+            </div>
+            <div id="panel-us" role="tabpanel" aria-labelledby="tab-us" hidden>
+                <div id="us-hechos"></div>
+            </div>
+            <div id="panel-world" role="tabpanel" aria-labelledby="tab-world" hidden>
+                <div id="world-hechos"></div>
+            </div>
+        </div>
     </div>
 </div>
 <script>
@@ -411,7 +467,14 @@
     }
     function renderHechos(container, items) {
         container.replaceChildren();
-        (items || []).forEach(function (hecho) {
+        if (!items || !items.length) {
+            const empty = document.createElement('p');
+            empty.className = 'news-empty';
+            empty.textContent = 'Todavía no hay briefing.';
+            container.appendChild(empty);
+            return;
+        }
+        items.forEach(function (hecho) {
             const article = document.createElement('article');
             article.className = 'hecho';
             let html = '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
@@ -451,13 +514,60 @@
             document.getElementById('leo-hechos').textContent = 'No se pudieron cargar las noticias.';
         }
     }
+    async function fetchFeed(path, targetId) {
+        try {
+            const res = await fetch(jsonUrl(path), { cache: 'no-store' });
+            if (!res.ok) throw new Error(path);
+            const d = await res.json();
+            renderHechos(document.getElementById(targetId), d.hechos);
+        } catch (e) {
+            document.getElementById(targetId).textContent = 'No se pudieron cargar las noticias.';
+        }
+    }
+    function loadTab(id) {
+        if (id === 'cr') fetchNoticias();
+        else if (id === 'ai') fetchLeo();
+        else if (id === 'us') fetchFeed('./us.json', 'us-hechos');
+        else if (id === 'world') fetchFeed('./world.json', 'world-hechos');
+    }
+    function setupNewsTabs() {
+        const tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+        function selectTab(tab, skipFetch) {
+            const panelId = tab.getAttribute('aria-controls');
+            const id = panelId.replace('panel-', '');
+            tabs.forEach(function (t) {
+                const on = (t === tab);
+                t.setAttribute('aria-selected', on ? 'true' : 'false');
+                t.tabIndex = on ? 0 : -1;
+            });
+            document.querySelectorAll('[role="tabpanel"]').forEach(function (p) {
+                p.hidden = (p.id !== panelId);
+            });
+            if (!skipFetch) loadTab(id);
+        }
+        tabs.forEach(function (tab, i) {
+            tab.addEventListener('click', function () { selectTab(tab); });
+            tab.addEventListener('keydown', function (e) {
+                let next = -1;
+                if (e.key === 'ArrowRight') next = (i + 1) % tabs.length;
+                else if (e.key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+                else if (e.key === 'Home') next = 0;
+                else if (e.key === 'End') next = tabs.length - 1;
+                if (next === -1) return;
+                e.preventDefault();
+                selectTab(tabs[next]);
+                tabs[next].focus();
+            });
+        });
+        const initial = tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0] || tabs[0];
+        if (initial) selectTab(initial);
+    }
     updateClock();
     setInterval(updateClock, 15000);
+    setupNewsTabs();
     fetchWeather();
     fetchMonex();
     fetchBac();
-    fetchNoticias();
-    fetchLeo();
 </script>
 </body>
 </html>
