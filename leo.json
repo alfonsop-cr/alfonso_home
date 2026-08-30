@@ -6,8 +6,8 @@
     {
       "titulo": "Sony Music Publishing y Warner Chappell demandan a Anthropic",
       "resumen": [
-        "Sony Music Publishing y Warner Chappell demandaron a Anthropic en el Northern District of California por \u201cdecenas de miles\u201d de obras usadas para entrenar Claude. Piden hasta $150.000 por obra y hasta $25.000 por cada instancia de metadatos de copyright eliminados; The Verge dice que el m\u00e1ximo estatutario podr\u00eda llegar a miles de millones.",
-        "Nombran como demandados individuales a Dario Amodei y Benjamin Mann; alegan torrenting de libros pirateados y scraping de letras (MusixMatch, LyricFind). A TechCrunch, Anthropic dijo: \u201cNo estamos de acuerdo con las pretensiones de los editores e intentaremos defendernos con firmeza en los tribunales.\u201d The Verge actualiz\u00f3 el 30 ago: demand\u00f3 Sony Music Publishing, no Sony Music Entertainment."
+        "Sony Music Publishing, Warner Chappell y otros editores demandaron a Anthropic y a los cofundadores Dario Amodei y Benjamin Mann en el Distrito Norte de California. Piden hasta $150.000 por obra (decenas de miles de canciones) y hasta $25.000 por cada metadato de copyright eliminado; The Verge dice que el techo podr\u00eda ser de varios miles de millones.",
+        "Acusan torrent, scraping y descarga de obras para entrenar Claude, incluyendo letras de MusixMatch y LyricFind. A TechCrunch, Anthropic dijo que no est\u00e1 de acuerdo y se defender\u00e1 en tribunal. The Verge aclar\u00f3 el 30 ago: demand\u00f3 Sony Music Publishing, no Sony Music Entertainment."
       ],
       "fuentes": [
         {
@@ -21,32 +21,28 @@
       ]
     },
     {
-      "titulo": "OpenAI corta modelos a Cursor tras la compra de SpaceX",
-      "resumen": [
-        "OpenAI notific\u00f3 a SpaceX que cerrar\u00e1 el contrato que alimenta Cursor (corte propuesto: 12 nov 2026, el m\u00e1ximo de aviso post cambio de control). Dice no confiar en que SpaceX respete los t\u00e9rminos de servicio, citando problemas previos con empresas de Musk. Los modelos futuros, incluida Astra, no ir\u00e1n a Cursor.",
-        "Reuters: Anthropic dijo horas despu\u00e9s que aumentar\u00e1 c\u00f3mputo de Claude en Cursor. Musk en X el s\u00e1bado: \u201ccouldn\u2019t care less.\u201d"
-      ],
-      "fuentes": [
-        {
-          "medio": "OpenAI",
-          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/"
-        }
-      ]
-    },
-    {
       "titulo": "Grok Bot ahora se integra con X",
       "resumen": [
         "SpaceXAI public\u00f3 que Grok Bot tiene una integraci\u00f3n m\u00e1s estrecha con X: al conectar la cuenta crean un developer account si no existe, y los usuarios de pago reciben cr\u00e9ditos de X API para arrancar.",
-        "Primera versi\u00f3n: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X. El post dice que seguir\u00e1n ampli\u00e1ndola."
+        "Primera versi\u00f3n: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X."
       ],
       "fuentes": [
         {
           "medio": "SpaceXAI",
           "url": "https://x.ai/news/grok-bot-and-x"
+        }
+      ]
+    },
+    {
+      "titulo": "Meta prueba robots en sus data centers",
+      "resumen": [
+        "Ars (sindicato de un reportaje de Wired) describe pruebas de Meta: brazos Kinova, robots Watney de dos brazos para cableado en Altoona, robots ABB de cuatro ruedas en New Albany (Ohio) y un \u201cdedo\u201d para pulsar power en Mac Minis.",
+        "Un t\u00e9cnico estima que un bot de cables podr\u00eda cubrir ~80% de algunas cargas. Meta no comenta los tests; el vocero Francis Brennan dice que necesitan m\u00e1s trabajadores, no menos."
+      ],
+      "fuentes": [
+        {
+          "medio": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/"
         }
       ]
     }
@@ -55,8 +51,8 @@
     {
       "titulo": "Los robots humanoides de China adelantan en Beijing",
       "resumen": [
-        "Newsletter The Stepback de The Verge sobre los World Humanoid Robot Games (cinco d\u00edas en Beijing). Un humanoide corri\u00f3 los 100 m en 9,39 s (por debajo del r\u00e9cord de Bolt) y otro salt\u00f3 2,88 m de pie. Tambi\u00e9n hubo piernas rotas, choques contra colchonetas e incluso un robot que se incendio.",
-        "China domin\u00f3 el medallero (AgiBot y Tien Kung). 641 de 666 equipos eran chinos; Tesla, Boston Dynamics y Figure no compitieron. EE.UU. sigue adelante en modelos frontera y chips; China prioriza IA embodied. No es un anuncio de producto nuevo."
+        "Newsletter The Stepback (The Verge) sobre los World Humanoid Robot Games. Un humanoide corri\u00f3 100 m en 9,39 s y otro salt\u00f3 2,88 m de pie; tambi\u00e9n hubo incendios y ca\u00eddas. 641 de 666 equipos eran chinos (AgiBot, Tien Kung); Tesla, Boston Dynamics y Figure no compitieron.",
+        "EE.UU. sigue adelante en modelos frontera y chips; China prioriza IA embodied. No es un anuncio de producto nuevo."
       ],
       "fuentes": [
         {
@@ -66,26 +62,28 @@
       ]
     },
     {
-      "titulo": "Nvidia: la ventaja ya no es solo la GPU",
+      "titulo": "En TechBBQ, Europa debate qui\u00e9n controla la IA",
       "resumen": [
-        "An\u00e1lisis post-earnings de TechCrunch sobre el stack Vera Rubin frente al chip Jalape\u00f1o de OpenAI. No es un lanzamiento de producto nuevo."
+        "Cr\u00f3nica de TechCrunch desde Copenhague: el tema no era qu\u00e9 construir, sino qui\u00e9n controla modelos e infraestructura. El corte de Mythos y Fable de Anthropic fuera de Europa este a\u00f1o empuj\u00f3 a startups a preguntarse si \u201calquilan\u201d poder a EE.UU. y China.",
+        "Meredith Whittaker (Signal) critic\u00f3 agentes en el sistema operativo como aparato de recolecci\u00f3n de datos. Emad Mostaque (Stability AI): \u201cthe person that controls the AI controls the country.\u201d Columna, no un anuncio."
       ],
       "fuentes": [
         {
           "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
+          "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/"
         }
       ]
     },
     {
-      "titulo": "M\u00fasicos persiguen a quien hace pasar m\u00fasica IA por humana",
+      "titulo": "Vijay Pande: IA para ensayos cl\u00ednicos y datos biol\u00f3gicos",
       "resumen": [
-        "Feature de The Verge sobre callout culture en EDM: productores como H4RRIS se\u00f1alan a pares que niegan usar gen AI (Suno y similares) mientras hay temas IA en charts. Columna/reportaje, no un fallo ni un anuncio de lab."
+        "Entrevista de TechCrunch al ex-a16z (health) que pas\u00f3 a un fondo chico (VZVC) con agentes de IA en vez de associates. Argumenta que la IA puede mejorar el ~20% de \u00e9xito de fase 1 a 3, y que los datos biol\u00f3gicos no se scrapean como el texto.",
+        "Espera atlas / modelos fundacionales open-source en biolog\u00eda. Entrevista/columna, no un anuncio de lab."
       ],
       "fuentes": [
         {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/entertainment/985866/h4rris-nihil-young-edm-suno-ai"
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/"
         }
       ]
     }
