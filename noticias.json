@@ -1,209 +1,407 @@
 {
- "fecha": "2026-08-30",
- "fechaTexto": "domingo 30 de agosto de 2026",
- "autor": "Ignacio Santos",
- "hechos": [
-  {
-   "titulo": "Muere ahogado el c\u00f3nsul alem\u00e1n Mario Genz en R\u00edo Cuarto",
-   "resumen": [
-    "Mario Genz, c\u00f3nsul de Alemania en Costa Rica, de 53 a\u00f1os, falleci\u00f3 la tarde del s\u00e1bado 29 de agosto en el Centro Recreativo La Laguna, R\u00edo Cuarto de Alajuela. La Cruz Roja report\u00f3 la emergencia a las 2:23 p.m.; Bomberos indic\u00f3 que estuvo sumergido al menos 30 minutos. La reanimaci\u00f3n por m\u00e1s de una hora no tuvo resultado; fue declarado sin vida en el lugar.",
-    "La ADI de R\u00edo Cuarto dijo que era buzo certificado y visitante frecuente. Canciller\u00eda expres\u00f3 condolencias. Repretel y El Mundo CR recogen que volc\u00f3 un kayak; La Teja lo describe hallado en el agua. Teletica, a media tarde, a\u00fan no ten\u00eda confirmaci\u00f3n de la Embajada."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/muere-consul-de-alemania-en-costa-rica-mario-genz/H7QEMSKYI5EILBO65C2BFGC6ZM/story/"},
-    {"medio": "El Observador", "url": "https://observador.cr/cancilleria-lamenta-muerte-de-consul-de-alemania-ahogado-en-laguna-de-rio-cuarto/"},
-    {"medio": "El Observador", "url": "https://observador.cr/buzo-profesional-y-corredor-asi-era-mario-genz-el-consul-de-alemania-que-fallecio-ahogado-en-rio-cuarto/"},
-    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/hombre-que-murio-en-centro-recreativo-era-el-consul-de-alemania/"},
-    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/funcionario-consular-de-alemania-muere-en-laguna-de-alajuela_416337"},
-    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/mario-genz-consul-de-alemania-en-costa-rica-muere/U3ODZRALQBA7TJQKTNFAQU7YWA/story/"},
-    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/consul-de-alemania-muere-ahogado-tras-volcar-en-un-kayak-en-alajuela/"},
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/muere-consul-de-alemania-en-costa-rica-tras-caer-de-un-kayak-en-rio-cuarto/"}
-   ]
-  },
-  {
-   "titulo": "Incendio en bodegas del centro de San Jos\u00e9; Bomberos lo da por controlado",
-   "resumen": [
-    "La noche del s\u00e1bado 29, a unos 100 m al oeste de la Armer\u00eda Polini, Bomberos combati\u00f3 un incendio en bodegas del centro de San Jos\u00e9. El aviso fue a las 8:27 p.m. El Observador, pasadas las 11 p.m., lo dio por controlado: unos 4.100 m\u00b2 afectados y 6.200 m\u00b2 salvados, m\u00e1s de 100 bomberos, drone t\u00e9rmico y plataformas. El fuego se extendi\u00f3 a edificios usados como guarder\u00edas, que fueron evacuadas. No se reportaron heridos.",
-    "Las cifras iniciales variaron: CRHoy habl\u00f3 de ~3.250 m\u00b2 y unos 70 bomberos; Teletica, de unos 2.000 m\u00b2 y que a las 11:30 p.m. a\u00fan no estaba controlado; La Teja y Repretel, de ~1.200 m\u00b2. Causa no informada."
-   ],
-   "fuentes": [
-    {"medio": "El Observador", "url": "https://observador.cr/bomberos-logran-controlar-gran-incendio-en-almacenes-y-bodegas-en-san-jose-fuego-afecto-4-100-m2/"},
-    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/incendio-consume-mas-de-3-000-metros-cuadrados-en-san-jose/"},
-    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/bomberos-atiende-incendio-de-grandes-proporciones-en-el-corazon-de-san-jose_416348"},
-    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/voraz-incendio-consume-enorme-bodega-en-el-centro/RDODMZDEAFGLFAWFUR7L47UEMM/story/"},
-    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/incendio-de-gran-magnitud-consume-bodega-en-san-jose/"}
-   ]
-  },
-  {
-   "titulo": "Onda tropical N.\u00b0 38 refuerza lluvias en Caribe y Zona Norte",
-   "resumen": [
-    "El IMN report\u00f3 el ingreso de la onda 38 al Caribe la ma\u00f1ana del s\u00e1bado 29. Acumulados del viernes: 260 mm en Caribe norte. Este s\u00e1bado: Caribe 50\u201380 mm (posibles m\u00e1s de 100 mm en 6\u201312 h); Zona Norte 30\u201350 mm. Atenci\u00f3n en Turrialba, Sarapiqu\u00ed y Pococ\u00ed por suelos saturados. CNE: alerta naranja en Zona Norte, Caribe y Turrialba; amarilla en Central, Pac\u00edfico central y sur. El Observador a\u00f1adi\u00f3 que 46 personas segu\u00edan en dos albergues."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/onda-tropical-n-38-aumenta-las-lluvias-este-sabado/UP5GDNLLCRBEZB7YVR4DEQRRBQ/story/"},
-    {"medio": "El Observador", "url": "https://observador.cr/caribe-y-la-zona-norte-seguiran-bajo-lluvias-fuertes-este-fin-de-semana-por-onda-tropical/"}
-   ]
-  },
-  {
-   "titulo": "El Ni\u00f1o y lluvias ponen en vilo al banano del Caribe",
-   "resumen": [
-    "Corbana (Erick Bola\u00f1os) alerta por inundaciones (hasta 36 h en algunas fincas), sigatoka negra y derrumbes que impiden el acceso y el traslado por Ruta 32. El IMN proyecta 10\u201315% m\u00e1s de lluvia en el Caribe el resto del a\u00f1o y +0,5\u20131 \u00b0C. El 15\u201316 de agosto, Matina, Gu\u00e1cimo y Siquirres registraron hasta 280 mm en dos d\u00edas. Las exportaciones a junio iban +5%; el impacto del segundo semestre es a\u00fan incierto."
-   ],
-   "fuentes": [
-    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/plagas-e-inundaciones-por-el-nino-mantienen-en-vilo-a-productores-de-banano/"}
-   ]
-  },
-  {
-   "titulo": "Asamblea sesiona en Lim\u00f3n por el D\u00eda de la Persona Negra",
-   "resumen": [
-    "El s\u00e1bado 29 la Asamblea hizo la sesi\u00f3n extraordinaria n.\u00b0 20 en la Casa de la Cultura de Lim\u00f3n, con cu\u00f3rum completo (presidenta Yara Jim\u00e9nez). La alcaldesa Ana Matarrita agradeci\u00f3 proyectos del Gobierno de Laura Fern\u00e1ndez y de Rodrigo Chaves y dijo que en esa \u201cnueva era\u201d no hay espacio para \u201cla obstaculizaci\u00f3n mezquina\u201d.",
-    "Villalta (FA) pidi\u00f3 atender lluvias en Pococ\u00ed y Gu\u00e1cimo y fiscalizar APM Mo\u00edn. Gordienko (PUSC) habl\u00f3 de Ruta 32, seguridad, hospital y aeropuerto. Mangell McLean (PLN) reclam\u00f3 empleo antes de hablar de 4x3. La diputada Kattia Calvo (Pueblo Soberano) ret\u00f3 a ambientalistas del Pretil por las rutas alternas."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/politica/asamblea-legislativa-sesiona-en-limon-por-el-dia/E7AHABZ7DNAENNMIT7ZG4M67PU/story/"},
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/alcaldesa-el-gobierno-de-la-continuidad-acabo-con-decadas-de-olvido-en-limon/"},
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/kattia-calvo-desafia-a-ambientalistas-del-pretil-por-rutas-alternas-en-limon-ya-quiero-verlos-tirados-de-panza/"},
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/mangell-mclean-reclama-empleo-para-limon-y-advierte-primero-hay-que-tener-trabajo-para-hablar-de-4x3/"}
-   ]
-  },
-  {
-   "titulo": "Gremios cuestionan el proyecto de Esquivel para quitar la colegiatura obligatoria",
-   "resumen": [
-    "El expediente 25.747 (Pueblo Soberano, Marta Esquivel) har\u00eda voluntaria la colegiatura salvo ciertas \u00e1reas de salud, derecho e ingenier\u00eda, y except\u00faa a funcionarios p\u00fablicos. El s\u00e1bado, el Colegio de Ciencias Econ\u00f3micas pidi\u00f3 un an\u00e1lisis integral (\u00e9tica, fiscalizaci\u00f3n, inter\u00e9s p\u00fablico). Anny Chaves (Fecoprou) dijo que el ejercicio \u201cqueda degradado a una mera actividad mercantil\u201d."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/politica/colegio-de-ciencias-economicas-se-pronuncia-sobre/2G6RQ7HKTFCLNN4X2A3AZHBAKY/story/"},
-    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/gremios-profesionales-rechazan-eliminacion-de-colegiatura-obligatoria/"}
-   ]
-  },
-  {
-   "titulo": "CEN-CINAI niega cierres y despidos; anuncia ajustes temporales de horario",
-   "resumen": [
-    "Un comunicado institucional dijo que desde setiembre 2026 no podr\u00e1 seguir contratando personal y que habr\u00e1 ajustes temporales para no suspender del todo el servicio. Circul\u00f3 alarma de cierres (por ejemplo Venecia de San Carlos). El s\u00e1bado a las 8:00 p.m. la directora Mar\u00eda Marta Carballo desminti\u00f3 cierres y despidos, anunci\u00f3 ajustes de horarios ampliados o nocturnos por unos d\u00edas y dijo que esperan regularizar en la segunda semana de setiembre."
-   ],
-   "fuentes": [
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/falta-de-presupuesto-en-cen-cinai-causa-incertidumbre-por-posibles-despidos-y-cierre-de-servicios/"},
-    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/cen-cinai-niega-cierre-de-servicios-y-despidos-ante-dudas-por-ajustes-presupuestarios/"}
-   ]
-  },
-  {
-   "titulo": "OIJ compra software forense Cellebrite, distinto de Pegasus",
-   "resumen": [
-    "El OIJ contrat\u00f3 Cellebrite Inseyets, v\u00eda Sicop, para extraer datos de celulares incautados con orden judicial. Compras de setiembre 2025: casi US$700.000; en agosto 2026 otro contrato en tr\u00e1mite por US$382.700. A diferencia de Pegasus, requiere el aparato f\u00edsico y se usa en cadena de custodia del Poder Judicial."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/oij-compra-software-israeli-para-desbloquear/WKRLJMYZYFDX3LIS4S4YYQZK6M/story/"}
-   ]
-  },
-  {
-   "titulo": "MP suma 57 procedimientos disciplinarios contra fiscales en seis a\u00f1os",
-   "resumen": [
-    "El Ministerio P\u00fablico dijo a Amelia Rueda que entre 2020 y 2026 abri\u00f3 57 procesos disciplinarios por no pedir pr\u00f3rroga de prisi\u00f3n preventiva. 19 fueron al Tribunal Administrativo Sancionador; en sede del MP se imputaron 24 sanciones, que son privadas. Un caso reciente: cuatro imputados por intento de homicidio contra un miembro de Los Maruja (Cartago, 2025) quedaron libres por omisi\u00f3n de la fiscal\u00eda."
-   ],
-   "fuentes": [
-    {"medio": "Amelia Rueda", "url": "https://ameliarueda.com/noticia/en-seis-anos-ministerio-publico-suma-57-procedimientos-disciplinarios-contra-fiscales-omitir-prorrogas-prision-preventiva-noticias-costa-rica"}
-   ]
-  },
-  {
-   "titulo": "Proyecto para limitar alzas de alquileres baratos si el salario queda bajo la inflaci\u00f3n",
-   "resumen": [
-    "El expediente 23.301 (Jonathan Acu\u00f1a, FA, 2022) recibi\u00f3 nuevo plazo cuatrienal. Si el alquiler es menor al salario m\u00ednimo de ocupaci\u00f3n no calificada (\u00a2373.092,30 en 2026) y ese salario creci\u00f3 menos que la inflaci\u00f3n, el tope del aumento ser\u00eda el crecimiento salarial, no el IPC. No aplica a alquileres en d\u00f3lares."
-   ],
-   "fuentes": [
-    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/el-explicador/proyecto-de-ley-pretende-limitar-aumentos-de/B7H7IVB4YJHBBNJOBSS7Z6YS5M/story/"}
-   ]
-  },
-  {
-   "titulo": "CRECEX pide no restringir a transportistas extranjeros",
-   "resumen": [
-    "CRECEX (Rodney Salazar) pidi\u00f3 al Gobierno no imponer barreras por nacionalidad, por menos oferta y m\u00e1s costos para el comercio exterior. CCTU (Marjorie Lizano) reclama reciprocidad. El gremio afirma que placas extranjeras mueven el 72% de la carga originada en Costa Rica; Delfino advierte que ese dato no est\u00e1 verificado de forma independiente. El contexto es la negociaci\u00f3n CR\u2013Panam\u00e1 (COMEX) y SIECA."
-   ],
-   "fuentes": [
-    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/crecex-pide-evitar-restricciones-a-transportistas-extranjeros-ante-reclamos-del-sector-por-mayor-reciprocidad"}
-   ]
-  },
-  {
-   "titulo": "427.000 ni\u00f1os ticos con un mes extra de estr\u00e9s t\u00e9rmico, seg\u00fan estudio",
-   "resumen": [
-    "Un estudio de la Vrije Universiteit Brussel en Science Advances estima que 427.000 ni\u00f1os de 0 a 9 a\u00f1os en Costa Rica tienen un mes adicional de estr\u00e9s t\u00e9rmico por cambio clim\u00e1tico. Los expuestos a 5 meses o m\u00e1s de calor extremo pasaron de 54.000 a 108.000. Ariana Yock (Hospital Nacional de Ni\u00f1os) advirti\u00f3 deshidrataci\u00f3n e hipertermia m\u00e1s r\u00e1pida en menores."
-   ],
-   "fuentes": [
-    {"medio": "El Observador", "url": "https://observador.cr/cambio-climatico-expone-a-427-000-ninos-costarricenses-a-un-mes-adicional-de-estres-termico-segun-estudio-internacional/"}
-   ]
-  },
-  {
-   "titulo": "Ri\u00f1a en Guarar\u00ed deja un muerto de 18 a\u00f1os; hay detenido",
-   "resumen": [
-    "En la madrugada del s\u00e1bado, en Guarar\u00ed de San Francisco de Heredia, muri\u00f3 Le\u00f3n, de 18 a\u00f1os, por heridas de arma blanca. Salazar, de 28, result\u00f3 herido con objeto contundente. Detuvieron a Narv\u00e1ez, de 29 a\u00f1os. El OIJ investiga."
-   ],
-   "fuentes": [
-    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/rina-en-guarari-dejo-un-muerto-y-un-herido-la-madrugada-del-sabado_416331"},
-    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/la-madrugada-termino-en-violencia-en-guarari-dos/S7LXMOIJPFCKNIO27U3RW5PIUY/story/"}
-   ]
-  },
-  {
-   "titulo": "Ataque a una casa en Aranjuez, Puntarenas, deja un menor de 15 a\u00f1os muerto",
-   "resumen": [
-    "El viernes 28 cerca de las 8:00 p.m., dos hombres dispararon contra una vivienda en Aranjuez, Puntarenas; desde adentro se habr\u00eda respondido. Un menor de 15 a\u00f1os muri\u00f3 al ingresar al hospital de Puntarenas. Result\u00f3 herido Madrigal, de 49 a\u00f1os. Sospechosos: Lobo, de 20 (herido, hospitalizado) y un menor de 17 a\u00f1os detenido. El OIJ investiga. La nota se public\u00f3 el s\u00e1bado."
-   ],
-   "fuentes": [
-    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/ataque-a-balazos-contra-casa-deja-a-menor-de-15-anos-muerto_416332"}
-   ]
-  },
-  {
-   "titulo": "OIJ identifica a Romero, de 18 a\u00f1os, asesinado a balazos en Matina",
-   "resumen": [
-    "La Teja report\u00f3 el s\u00e1bado la identificaci\u00f3n: Romero, 18 a\u00f1os, muerto el viernes 28 cerca de las 8:22 p.m. en barrio Goly, Matina. Estaba en una motocicleta estacionada; dos hombres a pie le dispararon cuatro veces (tres en la cabeza, una en el t\u00f3rax) y huyeron. El OIJ busca a los dos sospechosos."
-   ],
-   "fuentes": [
-    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/identifican-a-muchacho-asesinado-en-matina-esto/757SL32NHJEZXIXS562NPN2F2M/story/"}
-   ]
-  },
-  {
-   "titulo": "Setena mantiene la viabilidad ambiental del embarcadero de Puerto Viejo; hay recurso",
-   "resumen": [
-    "La Comisi\u00f3n Plenaria de Setena (20 de agosto, 6-0) rechaz\u00f3 anular la viabilidad ambiental de octubre 2024 del Embarcadero Vecinal (MOPT) en Puerto Viejo. El abogado Walter Brenes interpuso el 27 de agosto revocatoria con apelaci\u00f3n: el informe CIMAT habr\u00eda ingresado al expediente en abril 2026 y hay discrepancia de \u00e1rea 820 vs 1.040 m\u00b2."
-   ],
-   "fuentes": [
-    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/setena-mantiene-viabilidad-ambiental-del-embarcadero-de-puerto-viejo-decision-es-impugnada"}
-   ]
-  },
-  {
-   "titulo": "PGR pidi\u00f3 desde marzo un peritaje del OIJ en Gandoca-Manzanillo",
-   "resumen": [
-    "La Procuradur\u00eda pidi\u00f3 el 9 de marzo a la Sala IV un peritaje de Biolog\u00eda e Ingenier\u00eda Forense del OIJ sobre bosque y bosque anegado en el refugio (ejecuci\u00f3n de la sentencia 2019-012745). La Sala confirm\u00f3 a Delfino que recibi\u00f3 el escrito, pero los magistrados a\u00fan no lo conocen. Siguen las medidas cautelares de 2025."
-   ],
-   "fuentes": [
-    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/pgr-pidio-desde-marzo-peritaje-del-oij-para-precisar-delimitacion-de-bosques-en-gandoca-manzanillo"}
-   ]
-  },
-  {
-   "titulo": "Hilton detalla Marav\u00e9 Manuel Antonio (LXR) para 2029",
-   "resumen": [
-    "Hilton y Ocean Cove anunciaron m\u00e1s de 16 ha, 198 m de costa y 173 alojamientos (57 de hotel y 116 residencias LXR, primer LXR Residences en Latinoam\u00e9rica). Apertura en 2029. Dise\u00f1o: Carazo Arquitectura."
-   ],
-   "fuentes": [
-    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/hilton-manuel-antonio-costa-rica/"}
-   ]
-  },
-  {
-   "titulo": "Nueva ruta ch\u00e1rter Rockford (Illinois)\u2013Guanacaste para 2027",
-   "resumen": [
-    "Del 5 de febrero al 2 de abril de 2027 habr\u00e1 un vuelo semanal Boeing 737-800NG de TUI Airways (189 pasajeros), comercializado por Apple Vacations. El ICT report\u00f3 1.853.430 turistas a\u00e9reos de enero a julio; Guanacaste concentr\u00f3 el 67,2% del crecimiento neto."
-   ],
-   "fuentes": [
-    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/nuevo-vuelo-guanacaste-illinois/"},
-    {"medio": "El Observador", "url": "https://observador.cr/aeropuerto-de-guanacaste-incorpora-nueva-ruta-desde-rockford-illinois-para-2027/"}
-   ]
-  },
-  {
-   "titulo": "CNFL anuncia corte el\u00e9ctrico el domingo en el distrito Hospital",
-   "resumen": [
-    "La CNFL anunci\u00f3 mantenimiento preventivo el domingo 30 de agosto, de 7:00 a.m. a 4:30 p.m., en el cant\u00f3n central de San Jos\u00e9, distrito Hospital. Unos 184 servicios podr\u00edan verse afectados."
-   ],
-   "fuentes": [
-    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/cnfl-anuncia-suspension-electrica-este-domingo/"}
-   ]
-  }
- ]
+  "fecha": "2026-08-30",
+  "fechaTexto": "domingo 30 de agosto de 2026",
+  "autor": "Ignacio Santos",
+  "hechos": [
+    {
+      "titulo": "Muere ahogado el cónsul alemán Mario Genz en Río Cuarto",
+      "resumen": [
+        "Mario Genz, cónsul de Alemania en Costa Rica, de 53 años, falleció la tarde del sábado 29 de agosto en el Centro Recreativo La Laguna, Río Cuarto de Alajuela. La Cruz Roja reportó la emergencia a las 2:23 p.m.; Bomberos indicó que estuvo sumergido al menos 30 minutos. La reanimación por más de una hora no tuvo resultado; fue declarado sin vida en el lugar.",
+        "La ADI de Río Cuarto dijo que era buzo certificado y visitante frecuente, y que se encontraba nadando al momento de la emergencia. Cancillería expresó condolencias. Repretel y El Mundo CR recogen que volcó un kayak; La Teja lo describe hallado en el agua."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/muere-consul-de-alemania-en-costa-rica-mario-genz/H7QEMSKYI5EILBO65C2BFGC6ZM/story/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/cancilleria-lamenta-muerte-de-consul-de-alemania-ahogado-en-laguna-de-rio-cuarto/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/buzo-profesional-y-corredor-asi-era-mario-genz-el-consul-de-alemania-que-fallecio-ahogado-en-rio-cuarto/"
+        },
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/hombre-que-murio-en-centro-recreativo-era-el-consul-de-alemania/"
+        },
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/funcionario-consular-de-alemania-muere-en-laguna-de-alajuela_416337"
+        },
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/mario-genz-consul-de-alemania-en-costa-rica-muere/U3ODZRALQBA7TJQKTNFAQU7YWA/story/"
+        },
+        {
+          "medio": "Repretel",
+          "url": "https://www.repretel.com/noticia/consul-de-alemania-muere-ahogado-tras-volcar-en-un-kayak-en-alajuela/"
+        },
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/muere-consul-de-alemania-en-costa-rica-tras-caer-de-un-kayak-en-rio-cuarto/"
+        }
+      ]
+    },
+    {
+      "titulo": "Incendio en bodegas del centro de San José; Bomberos lo da por controlado",
+      "resumen": [
+        "La noche del sábado 29, Bomberos combatió un incendio en un edificio de dos plantas con almacenes y bodegas en San José centro, a 100 metros al sur de la esquina suroeste del Parque Central (calle 4, entre avenidas 6 y 8; también se ubicó a unos 100 m al oeste de la Armería Polini). El aviso fue minutos antes de las 8:30 p.m. El jefe de batallón Mauricio Montero reportó unos 4.100 m² afectados y 6.200 m² salvados, más de 100 bomberos, 20 unidades, cisternas, plataformas y un dron con cámara térmica. El Observador, pasadas las 11 p.m., lo dio por controlado. El fuego se extendió a edificios usados como guarderías, que fueron evacuadas. No se reportaron heridos.",
+        "Las cifras iniciales variaron: CRHoy habló de ~3.250 m² y unos 70 bomberos; Teletica, de unos 2.000 m² y que a las 11:30 p.m. aún no estaba controlado; La Teja y Repretel, de ~1.200 m². Causa no informada."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/bomberos-atienden-incendio-en-cuarteria-en-el/H6FOS3FPIBBTRH35QOUCQD37E4/story/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/bomberos-logran-controlar-gran-incendio-en-almacenes-y-bodegas-en-san-jose-fuego-afecto-4-100-m2/"
+        },
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/incendio-consume-mas-de-3-000-metros-cuadrados-en-san-jose/"
+        },
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/bomberos-atiende-incendio-de-grandes-proporciones-en-el-corazon-de-san-jose_416348"
+        },
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/voraz-incendio-consume-enorme-bodega-en-el-centro/RDODMZDEAFGLFAWFUR7L47UEMM/story/"
+        },
+        {
+          "medio": "Repretel",
+          "url": "https://www.repretel.com/noticia/incendio-de-gran-magnitud-consume-bodega-en-san-jose/"
+        }
+      ]
+    },
+    {
+      "titulo": "Fiscalía Anticorrupción investiga a un exsubdirector del MEP contratado por la empresa que ganó una licitación de ₡4.250 millones",
+      "resumen": [
+        "La Fiscalía de Anticorrupción abrió una causa penal por el delito de prohibiciones posteriores al servicio del cargo contra el caso de Esteban Arroyo, exsubdirector de Recursos Tecnológicos del MEP. Arroyo participó entre julio de 2025 y marzo de 2026 en la preparación técnica de una contratación de ₡4.250 millones por 7.000 equipos de cómputo para 500 centros educativos, adjudicada a Corporación ACS Sabanilla S.A. Salió del MEP el 7 de mayo de 2026 y un mes después fue contratado por esa compañía; CRHoy documentó su participación en al menos cuatro reuniones en el MEP (13 de junio, 14 de julio, 11 y 17 de agosto), cuando el contrato quedó en firme.",
+        "El ministro Leonardo Sánchez ordenó una investigación interna, preservar la documentación, impedir que Arroyo gestione ante el MEP y evaluar la continuidad del contrato. ACS Sabanilla dijo que no se pronunciará hasta conocer el criterio del Ministerio. CRHoy reportó la apertura de la causa el domingo 30 a las 2:31 a.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/fiscalia-investiga-caso-de-exfuncionario-del-mep-contratado-por-empresa-que-gano-concurso/"
+        }
+      ]
+    },
+    {
+      "titulo": "La onda tropical N.º 38 ya salió; el IMN mantiene lluvias este domingo",
+      "resumen": [
+        "El IMN reportó el domingo 30 que la onda tropical 38 salió el sábado, pero persiste la inestabilidad. Alisios moderados atraen humedad al Caribe: lluvias en esa vertiente y en la Zona Norte desde la mañana, y lloviznas al este del Valle Central. A las 7:00 a.m. había abundante nubosidad marítima frente a Limón y Cahuita. Por la tarde, aguaceros fuertes con tormenta en Pacífico Central y Sur (posible extensión a la noche) y chubascos posibles en Nicoya.",
+        "El sábado la onda había ingresado por el Caribe; acumulados del viernes: 260 mm en Caribe norte. La CNE mantiene alerta naranja en Zona Norte, Caribe y Turrialba, y amarilla en Central, Pacífico central y sur. Teletica recogió a la alcaldesa de Limón, Ana Matarrita: unas 1.500 familias han recibido atención por inundaciones en las últimas semanas. El Observador había apuntado 46 personas en dos albergues."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/onda-tropical-dejo-a-costa-rica-con-inestabilidad-esto-proyecta-el-imn-para-este-domingo/"
+        },
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/nacional/onda-tropical-38-provoca-lluvias-intensas-y-mantiene-al-pais-en-alerta_416343"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/onda-tropical-n-38-aumenta-las-lluvias-este-sabado/UP5GDNLLCRBEZB7YVR4DEQRRBQ/story/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/caribe-y-la-zona-norte-seguiran-bajo-lluvias-fuertes-este-fin-de-semana-por-onda-tropical/"
+        }
+      ]
+    },
+    {
+      "titulo": "El Wolaba Parade llenó Puerto Viejo pese a la lluvia: Teletica estima unos 6.000 asistentes",
+      "resumen": [
+        "El sábado 29 se realizó la XII edición del Wolaba Parade en Puerto Viejo de Talamanca, en la antesala del Día de la Persona Negra. El desfile arrancó a las 11:00 a.m. y siguió bajo la lluvia de la onda 38. Teletica estimó cerca de 6.000 asistentes; La Nación contó 35 agrupaciones, entre ellas el Equipo Nacional de Esgrima del Caribe Sur, escuelas y los bomberos de Bribri. CRHoy también reportó la participación de Bomberos.",
+        "La Nación indicó que la edición se dedicó a seis negocios pioneros de la zona (el comisariato de Manuel León, abierto en 1924, y locales turísticos desde los años 70). Fuerza Pública, Tránsito y seguridad privada cubrieron el evento."
+      ],
+      "fuentes": [
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/nacional/miles-de-personas-disfrutan-del-wolaba-parade-en-puerto-viejo-de-talamanca_416346"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/viva/un-wolaba-parade-empapado-pero-feliz-asi-se-vivio/IZFDEE3DCFAFJCWJBFFMQGG6GM/story/"
+        },
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/caribe-sur-celebro-un-colorido-wolaba-parade-este-sabado/"
+        }
+      ]
+    },
+    {
+      "titulo": "Asamblea sesiona en Limón por el Día de la Persona Negra",
+      "resumen": [
+        "El sábado 29 la Asamblea hizo la sesión extraordinaria n.º 20 en la Casa de la Cultura de Limón, con cuórum completo (presidenta Yara Jiménez). La alcaldesa Ana Matarrita agradeció proyectos del Gobierno de Laura Fernández y de Rodrigo Chaves y dijo que en esa “nueva era” no hay espacio para “la obstaculización mezquina”.",
+        "Villalta (FA) pidió atender lluvias en Pococí y Guácimo y fiscalizar APM Moín. Gordienko (PUSC) habló de Ruta 32, seguridad, hospital y aeropuerto. Mangell McLean (PLN) reclamó empleo antes de hablar de 4x3. La diputada Kattia Calvo (Pueblo Soberano) retó a ambientalistas del Pretil por las rutas alternas."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/politica/asamblea-legislativa-sesiona-en-limon-por-el-dia/E7AHABZ7DNAENNMIT7ZG4M67PU/story/"
+        },
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/alcaldesa-el-gobierno-de-la-continuidad-acabo-con-decadas-de-olvido-en-limon/"
+        },
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/kattia-calvo-desafia-a-ambientalistas-del-pretil-por-rutas-alternas-en-limon-ya-quiero-verlos-tirados-de-panza/"
+        },
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/mangell-mclean-reclama-empleo-para-limon-y-advierte-primero-hay-que-tener-trabajo-para-hablar-de-4x3/"
+        }
+      ]
+    },
+    {
+      "titulo": "Más gremios rechazan el proyecto de Esquivel para quitar la colegiatura obligatoria",
+      "resumen": [
+        "El expediente 25.747 (Pueblo Soberano, Marta Esquivel) haría voluntaria la colegiatura salvo ciertas áreas de salud, derecho e ingeniería, y exceptúa a funcionarios públicos. El sábado, el Colegio de Veterinarios y la Unión de Fiscalías de Colegios Profesionales advirtieron riesgos para usuarios, salud pública y fiscalización ética; el Colegio de Abogados dijo que trasladaría los riesgos a la ciudadanía y el de Contadores Públicos alertó por la fe pública.",
+        "El Colegio de Ciencias Económicas pidió un análisis integral. Anny Chaves (Fecoprou) reiteró que el ejercicio “queda degradado a una mera actividad mercantil”."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/politica/colegio-de-veterinarios-y-union-de-fiscalias-de/UCFQF63USFF6BF55GHYII62ZFU/story/"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/politica/colegio-de-ciencias-economicas-se-pronuncia-sobre/2G6RQ7HKTFCLNN4X2A3AZHBAKY/story/"
+        },
+        {
+          "medio": "La República",
+          "url": "https://www.larepublica.net/gremios-profesionales-rechazan-eliminacion-de-colegiatura-obligatoria/"
+        }
+      ]
+    },
+    {
+      "titulo": "FILCR 2026 cierra este domingo en la Antigua Aduana; ya superó 22.000 visitas",
+      "resumen": [
+        "La Feria Internacional del Libro 2026 termina el domingo 30 de agosto en la Antigua Aduana, con entrada gratuita. El Observador reportó el sábado más de 22.000 asistentes en siete días y unos 4.000 estudiantes de visita gracias a un acuerdo con el MEP; hay 129 stands y 68 editoriales, librerías y emprendimientos.",
+        "La Nación detalló la agenda del domingo: cómic europeo a las 11:00 a.m., taller gráfico a las 2:00 p.m. con Maurane Mazars y Edo Brenes, concierto de Luis Enrique Mejía Godoy a las 4:00 p.m. y premiación del VI Concurso Centroamericano de Cómic a las 4:30 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/ultimos-dias-de-la-feria-internacional-del-libro-evento-ya-convoco-a-mas-de-22-000-personas-en-la-aduana/"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/viva/la-feria-del-libro-llega-a-su-recta-final-que/RARAAT7RAZEVHGLL3H2VJGEROM/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "CEN-CINAI niega cierres y despidos; anuncia ajustes temporales de horario",
+      "resumen": [
+        "Un comunicado institucional dijo que desde setiembre 2026 no podrá seguir contratando personal y que habrá ajustes temporales para no suspender del todo el servicio. Circuló alarma de cierres (por ejemplo Venecia de San Carlos). El sábado a las 8:00 p.m. la directora María Marta Carballo desmintió cierres y despidos, anunció ajustes de horarios ampliados o nocturnos por unos días y dijo que esperan regularizar en la segunda semana de setiembre."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/falta-de-presupuesto-en-cen-cinai-causa-incertidumbre-por-posibles-despidos-y-cierre-de-servicios/"
+        },
+        {
+          "medio": "El Mundo CR",
+          "url": "https://elmundo.cr/costa-rica/cen-cinai-niega-cierre-de-servicios-y-despidos-ante-dudas-por-ajustes-presupuestarios/"
+        }
+      ]
+    },
+    {
+      "titulo": "Dekra abre seis estaciones este domingo para la revisión técnica",
+      "resumen": [
+        "Dekra habilitó el domingo 30 de agosto una jornada extraordinaria de ITV en seis estaciones, con cita previa (dekra.cr o 4000-1100). Horario: Heredia, Alajuela, Alajuelita, Santo Domingo y Nicoya de 6:00 a.m. a 2:00 p.m.; San Carlos de 7:00 a.m. a 3:00 p.m. La gerente Maureen Ramírez dijo que el domingo es más conveniente para quienes no pueden ir entre semana."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/dekra-habilitara-seis-estaciones-este-domingo-para-inspeccion-vehicular/"
+        }
+      ]
+    },
+    {
+      "titulo": "CNFL anuncia corte eléctrico el domingo en el distrito Hospital",
+      "resumen": [
+        "La CNFL anunció mantenimiento preventivo el domingo 30 de agosto, de 7:00 a.m. a 4:30 p.m., en el cantón central de San José, distrito Hospital. Unos 184 servicios podrían verse afectados."
+      ],
+      "fuentes": [
+        {
+          "medio": "Repretel",
+          "url": "https://www.repretel.com/noticia/cnfl-anuncia-suspension-electrica-este-domingo/"
+        }
+      ]
+    },
+    {
+      "titulo": "El Niño y lluvias ponen en vilo al banano del Caribe",
+      "resumen": [
+        "Corbana (Erick Bolaños) alerta por inundaciones (hasta 36 h en algunas fincas), sigatoka negra y derrumbes que impiden el acceso y el traslado por Ruta 32. El IMN proyecta 10–15% más de lluvia en el Caribe el resto del año y +0,5–1 °C. El 15–16 de agosto, Matina, Guácimo y Siquirres registraron hasta 280 mm en dos días. Las exportaciones a junio iban +5%; el impacto del segundo semestre es aún incierto."
+      ],
+      "fuentes": [
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/plagas-e-inundaciones-por-el-nino-mantienen-en-vilo-a-productores-de-banano/"
+        }
+      ]
+    },
+    {
+      "titulo": "OIJ compra software forense Cellebrite, distinto de Pegasus",
+      "resumen": [
+        "El OIJ contrató Cellebrite Inseyets, vía Sicop, para extraer datos de celulares incautados con orden judicial. Compras de setiembre 2025: casi US$700.000; en agosto 2026 otro contrato en trámite por US$382.700. A diferencia de Pegasus, requiere el aparato físico y se usa en cadena de custodia del Poder Judicial."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/oij-compra-software-israeli-para-desbloquear/WKRLJMYZYFDX3LIS4S4YYQZK6M/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "MP suma 57 procedimientos disciplinarios contra fiscales en seis años",
+      "resumen": [
+        "El Ministerio Público dijo a Amelia Rueda que entre 2020 y 2026 abrió 57 procesos disciplinarios por no pedir prórroga de prisión preventiva. 19 fueron al Tribunal Administrativo Sancionador; en sede del MP se imputaron 24 sanciones, que son privadas. Un caso reciente: cuatro imputados por intento de homicidio contra un miembro de Los Maruja (Cartago, 2025) quedaron libres por omisión de la fiscalía."
+      ],
+      "fuentes": [
+        {
+          "medio": "Amelia Rueda",
+          "url": "https://ameliarueda.com/noticia/en-seis-anos-ministerio-publico-suma-57-procedimientos-disciplinarios-contra-fiscales-omitir-prorrogas-prision-preventiva-noticias-costa-rica"
+        }
+      ]
+    },
+    {
+      "titulo": "Proyecto para limitar alzas de alquileres baratos si el salario queda bajo la inflación",
+      "resumen": [
+        "El expediente 23.301 (Jonathan Acuña, FA, 2022) recibió nuevo plazo cuatrienal. Si el alquiler es menor al salario mínimo de ocupación no calificada (₡373.092,30 en 2026) y ese salario creció menos que la inflación, el tope del aumento sería el crecimiento salarial, no el IPC. No aplica a alquileres en dólares."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/el-explicador/proyecto-de-ley-pretende-limitar-aumentos-de/B7H7IVB4YJHBBNJOBSS7Z6YS5M/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "CRECEX pide no restringir a transportistas extranjeros",
+      "resumen": [
+        "CRECEX (Rodney Salazar) pidió al Gobierno no imponer barreras por nacionalidad, por menos oferta y más costos para el comercio exterior. CCTU (Marjorie Lizano) reclama reciprocidad. El gremio afirma que placas extranjeras mueven el 72% de la carga originada en Costa Rica; Delfino advierte que ese dato no está verificado de forma independiente. El contexto es la negociación CR–Panamá (COMEX) y SIECA."
+      ],
+      "fuentes": [
+        {
+          "medio": "Delfino",
+          "url": "https://delfino.cr/2026/08/crecex-pide-evitar-restricciones-a-transportistas-extranjeros-ante-reclamos-del-sector-por-mayor-reciprocidad"
+        }
+      ]
+    },
+    {
+      "titulo": "427.000 niños ticos con un mes extra de estrés térmico, según estudio",
+      "resumen": [
+        "Un estudio de la Vrije Universiteit Brussel en Science Advances estima que 427.000 niños de 0 a 9 años en Costa Rica tienen un mes adicional de estrés térmico por cambio climático. Los expuestos a 5 meses o más de calor extremo pasaron de 54.000 a 108.000. Ariana Yock (Hospital Nacional de Niños) advirtió deshidratación e hipertermia más rápida en menores."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/cambio-climatico-expone-a-427-000-ninos-costarricenses-a-un-mes-adicional-de-estres-termico-segun-estudio-internacional/"
+        }
+      ]
+    },
+    {
+      "titulo": "Riña en Guararí deja un muerto de 18 años; hay detenido",
+      "resumen": [
+        "En la madrugada del sábado, en Guararí de San Francisco de Heredia, murió León, de 18 años, por heridas de arma blanca. Salazar, de 28, resultó herido con objeto contundente. Detuvieron a Narváez, de 29 años. El OIJ investiga."
+      ],
+      "fuentes": [
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/rina-en-guarari-dejo-un-muerto-y-un-herido-la-madrugada-del-sabado_416331"
+        },
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/la-madrugada-termino-en-violencia-en-guarari-dos/S7LXMOIJPFCKNIO27U3RW5PIUY/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "Ataque a una casa en Aranjuez, Puntarenas, deja un menor de 15 años muerto",
+      "resumen": [
+        "El viernes 28 cerca de las 8:00 p.m., dos hombres dispararon contra una vivienda en Aranjuez, Puntarenas; desde adentro se habría respondido. Un menor de 15 años murió al ingresar al hospital de Puntarenas. Resultó herido Madrigal, de 49 años. Sospechosos: Lobo, de 20 (herido, hospitalizado) y un menor de 17 años detenido. El OIJ investiga. La nota se publicó el sábado."
+      ],
+      "fuentes": [
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/ataque-a-balazos-contra-casa-deja-a-menor-de-15-anos-muerto_416332"
+        }
+      ]
+    },
+    {
+      "titulo": "OIJ identifica a Romero, de 18 años, asesinado a balazos en Matina",
+      "resumen": [
+        "La Teja reportó el sábado la identificación: Romero, 18 años, muerto el viernes 28 cerca de las 8:22 p.m. en barrio Goly, Matina. Estaba en una motocicleta estacionada; dos hombres a pie le dispararon cuatro veces (tres en la cabeza, una en el tórax) y huyeron. El OIJ busca a los dos sospechosos."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/identifican-a-muchacho-asesinado-en-matina-esto/757SL32NHJEZXIXS562NPN2F2M/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "Setena mantiene la viabilidad ambiental del embarcadero de Puerto Viejo; hay recurso",
+      "resumen": [
+        "La Comisión Plenaria de Setena (20 de agosto, 6-0) rechazó anular la viabilidad ambiental de octubre 2024 del Embarcadero Vecinal (MOPT) en Puerto Viejo. El abogado Walter Brenes interpuso el 27 de agosto revocatoria con apelación: el informe CIMAT habría ingresado al expediente en abril 2026 y hay discrepancia de área 820 vs 1.040 m²."
+      ],
+      "fuentes": [
+        {
+          "medio": "Delfino",
+          "url": "https://delfino.cr/2026/08/setena-mantiene-viabilidad-ambiental-del-embarcadero-de-puerto-viejo-decision-es-impugnada"
+        }
+      ]
+    },
+    {
+      "titulo": "PGR pidió desde marzo un peritaje del OIJ en Gandoca-Manzanillo",
+      "resumen": [
+        "La Procuraduría pidió el 9 de marzo a la Sala IV un peritaje de Biología e Ingeniería Forense del OIJ sobre bosque y bosque anegado en el refugio (ejecución de la sentencia 2019-012745). La Sala confirmó a Delfino que recibió el escrito, pero los magistrados aún no lo conocen. Siguen las medidas cautelares de 2025."
+      ],
+      "fuentes": [
+        {
+          "medio": "Delfino",
+          "url": "https://delfino.cr/2026/08/pgr-pidio-desde-marzo-peritaje-del-oij-para-precisar-delimitacion-de-bosques-en-gandoca-manzanillo"
+        }
+      ]
+    },
+    {
+      "titulo": "Hilton detalla Maravé Manuel Antonio (LXR) para 2029",
+      "resumen": [
+        "Hilton y Ocean Cove anunciaron más de 16 ha, 198 m de costa y 173 alojamientos (57 de hotel y 116 residencias LXR, primer LXR Residences en Latinoamérica). Apertura en 2029. Diseño: Carazo Arquitectura."
+      ],
+      "fuentes": [
+        {
+          "medio": "La República",
+          "url": "https://www.larepublica.net/hilton-manuel-antonio-costa-rica/"
+        }
+      ]
+    },
+    {
+      "titulo": "Nueva ruta chárter Rockford (Illinois)–Guanacaste para 2027",
+      "resumen": [
+        "Del 5 de febrero al 2 de abril de 2027 habrá un vuelo semanal Boeing 737-800NG de TUI Airways (189 pasajeros), comercializado por Apple Vacations. El ICT reportó 1.853.430 turistas aéreos de enero a julio; Guanacaste concentró el 67,2% del crecimiento neto."
+      ],
+      "fuentes": [
+        {
+          "medio": "La República",
+          "url": "https://www.larepublica.net/nuevo-vuelo-guanacaste-illinois/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/aeropuerto-de-guanacaste-incorpora-nueva-ruta-desde-rockford-illinois-para-2027/"
+        }
+      ]
+    }
+  ]
 }
