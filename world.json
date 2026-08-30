@@ -4,36 +4,47 @@
   "autor": "World News",
   "hechos": [
     {
-      "titulo": "Nepal y Tíbet: cerca de 800 muertos y más de 3.000 desaparecidos; alertas en el Bhotekoshi",
+      "titulo": "Nepal y Tíbet: cerca de 800 muertos y más de 3.000 desaparecidos; rescatistas llegan a un túnel",
       "resumen": [
-        "AP reportó el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino, tras el colapso glaciar del miércoles. The Guardian cifró 797 muertos combinados (781 en Nepal) y 3.048 desaparecidos; Al Jazeera coincidió en 781 en Nepal. Siguen las alertas por crecida del Bhotekoshi y hay riesgo residual de un lago de barrera.",
-        "Nepal empezó entierros masivos con muestras de ADN. El Ejército logró meter un tubo de aire en un túnel de Trishuli 3A, donde más de 100 trabajadores podrían seguir atrapados; unos 933 operarios de hidroeléctricas figuran entre los desaparecidos. China reportó 261 extranjeros desaparecidos en el Tíbet."
+        "AP cifró el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino. Reuters, The Guardian y Al Jazeera coincidieron en 781 muertos en Nepal (797 combinados) y 3.048 desaparecidos. Siguen las alertas por crecida del Bhotekoshi; China dijo que el lago de barrera se había drenado en gran parte, pero drones detectaron un nuevo derrumbe que formó otra presa y una poza.",
+        "El Ejército aerollevó maquinaria pesada el domingo y los rescatistas llegaron a la entrada de un túnel en el complejo Upper Trishuli —donde el viernes se habló de unos 350 atrapados— para despejar escombros antes de entrar con oxígeno y cámaras. En Trishuli 3A ya se había metido un tubo de aire. Unos 10.000 soldados operan en cinco hidroeléctricas. En Chitwan se enterraron 96 cuerpos no identificados el sábado y se preveían más de 100 el domingo, con muestras de ADN."
       ],
       "fuentes": [
-        {"medio": "AP", "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303"},
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nepal-china-flood-disaster-whats-the-latest-toll-how-many-are-missing"}
+        { "medio": "AP", "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303" },
+        { "medio": "Reuters", "url": "https://www.reuters.com/world/china/china-identifies-countries-261-foreigners-missing-himalayan-mudslide-2026-08-30/" },
+        { "medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors" }
       ]
     },
     {
       "titulo": "Ferry Filojet volcado frente a Kyrenia: 7 muertos, 237 rescatados y 23 desaparecidos",
       "resumen": [
-        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a pocas millas de la costa del norte de Chipre. El primer ministro de la autoproclamada República Turca del Norte de Chipre, Ünal Üstel, y el líder turcochipriota Tufan Erhürman confirmaron 237 rescatados, 7 muertos y 23 desaparecidos; el operativo de búsqueda seguía abierto."
+        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a pocas millas de la costa del norte de Chipre. El líder turcochipriota Tufan Erhürman confirmó 237 rescatados, 7 muertos y 23 desaparecidos; el operativo de búsqueda seguía abierto. Reuters y France 24 no actualizaron esas cifras al cierre de esta ventana."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/"},
-        {"medio": "France 24", "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus"}
+        { "medio": "Reuters", "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/" },
+        { "medio": "France 24", "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus" }
       ]
     },
     {
       "titulo": "Ataque ruso a depósito de municiones en Myla, cerca de Kiev: 38 muertos",
       "resumen": [
-        "Zelenski elevó el domingo a 38 los muertos por el ataque con drones del viernes por la noche a un depósito de las fuerzas de defensa en Myla (distrito de Bucha), con 20 heridos —dos de ellos niños— y 4 desaparecidos. Unas 380-400 personas fueron evacuadas; la mayoría de las víctimas mortales eran residentes de un geriátrico. Kiev investiga negligencia por almacenar explosivos junto a viviendas.",
-        "Rusia anunció que prepara ataques masivos a la infraestructura energética ucraniana. En la última semana, según Zelenski, Moscú lanzó casi 2.000 drones de ataque, más de 1.600 bombas aéreas y 31 misiles."
+        "Zelenski mantuvo el domingo en 38 los muertos por el ataque con drones del viernes por la noche a un depósito de las fuerzas de defensa en Myla (distrito de Bucha), con 20 heridos —dos de ellos niños— y 4 desaparecidos. Reuters reportó desde el pueblo que la mayoría de los incendios ya estaban extinguidos y que la contaminación con munición sin detonar es amplia. Kiev investiga negligencia por almacenar explosivos junto a viviendas; la mayoría de las víctimas mortales eran residentes de un geriátrico.",
+        "En la última semana, según Zelenski, Moscú lanzó casi 2.000 drones de ataque, más de 1.600 bombas aéreas y 31 misiles."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/kyiv-region-strike-death-toll-rises-38-zelenskiy-says-2026-08-30/"},
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c86xwqez4npo"}
+        { "medio": "Reuters", "url": "https://www.reuters.com/world/europe/kyiv-region-strike-death-toll-rises-38-zelenskiy-says-2026-08-30/" },
+        { "medio": "BBC", "url": "https://www.bbc.com/news/articles/c86xwqez4npo" }
+      ]
+    },
+    {
+      "titulo": "Zaporizhzhia: la central nuclear lleva más de una semana sin red externa y tiene diésel para 10 días",
+      "resumen": [
+        "El OIEA dijo el sábado que la planta de Zaporizhzhia, ocupada por Rusia desde 2022 y la mayor de Europa, lleva más de una semana sin energía externa —perdió la línea Ferosplavna-1 el 20 de agosto— y funciona con generadores diésel para refrigerar sus seis reactores apagados y las piscinas de combustible. El combustible en el sitio alcanza para unos 10 días, el mínimo regulatorio; Grossi advirtió de un apagón total si no se restaura la red o llegan más envíos.",
+        "El organismo negocia un alto el fuego local para reparar las líneas. Ucrania lo describió como el 27.º blackout de la planta desde 2022. El OIEA también reportó tres incidentes con drones esa semana, con dos empleados heridos."
+      ],
+      "fuentes": [
+        { "medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/ukrainian-nuclear-power-plant-without-external-power-for-over-a-week" },
+        { "medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/ukraine-war-briefing-nuclear-plant-lost-power" }
       ]
     },
     {
@@ -42,20 +53,21 @@
         "El referéndum del sábado dio 52,8% no y 47,2% sí, con participación del 82,5%, la más alta desde 2009, según RÚV. La primera ministra Kristrún Frostadóttir dijo el domingo que no reabrirá la cuestión en este mandato, que termina en 2028, y que reforzará el vínculo con el Espacio Económico Europeo. Bruselas dijo respetar el resultado."
       ],
       "fuentes": [
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum"},
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c70le8ed1plo"},
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/"}
+        { "medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum" },
+        { "medio": "BBC", "url": "https://www.bbc.com/news/articles/c70le8ed1plo" },
+        { "medio": "Reuters", "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/" }
       ]
     },
     {
-      "titulo": "Níger da por contenido el motín en Niamey; decenas de soldados muertos o detenidos",
+      "titulo": "Níger: Niamey en calma tras el motín; Tchiani sigue sin aparecer",
       "resumen": [
-        "El gobierno militar afirmó el sábado por la noche que contuvo el motín iniciado hacia la medianoche en la Base 101 del aeropuerto Diori Hamani, con disparos también hacia el palacio presidencial y el canal estatal. La televisión oficial dijo que decenas de soldados fueron muertos o detenidos. El embajador ruso Viktor Voropáyev indicó que se pidió apoyo al Africa Corps. La Alianza de Estados del Sahel dijo que el intento fue contenido y fallido; el paradero de Abdourahamane Tchiani no estaba confirmado."
+        "AP reportó el domingo la capital en calma, con retenes y camiones militares entre el aeropuerto y el distrito presidencial, un día después de que la junta diera por contenido el motín iniciado hacia la medianoche en la Base 101. Decenas de soldados fueron muertos o detenidos y exhibidos en televisión. El líder Abdourahamane Tchiani aún no había hecho declaraciones ni aparición pública.",
+        "El embajador ruso Viktor Voropáyev dijo que el Africa Corps intervino a petición de Niamey; analistas citados por AP atribuyen a esa fuerza el vuelco en la retoma de la base. La Alianza de Estados del Sahel calificó el intento de contenido y fallido."
       ],
       "fuentes": [
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next"},
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/gunfire-blasts-heard-several-areas-niger-capital-niamey-witness-says-2026-08-29/"},
-        {"medio": "DW", "url": "https://www.dw.com/en/niger-attacks-gunfire-explosions/a-78554001"}
+        { "medio": "AP", "url": "https://apnews.com/article/niger-russia-niamey-mutiny-tchiani-africa-corps-f0b808785a177e51ecee71c786624558" },
+        { "medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next" },
+        { "medio": "Reuters", "url": "https://www.reuters.com/world/gunfire-blasts-heard-several-areas-niger-capital-niamey-witness-says-2026-08-29/" }
       ]
     },
     {
@@ -64,37 +76,38 @@
         "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. Murió en el lugar una mujer italiana de 22 años; cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. La policía cantonal no tenía el domingo por la tarde información sobre el autor o autores ni el móvil; la cacería seguía abierta, con apoyo policial en Alemania."
       ],
       "fuentes": [
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland"},
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c9qr750je1go"}
+        { "medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland" },
+        { "medio": "BBC", "url": "https://www.bbc.com/news/articles/c9qr750je1go" }
       ]
     },
     {
       "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
       "resumen": [
-        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. En Jalud atacaron a una familia palestina y a un equipo de prensa extranjero, según Wafa. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación."
+        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. En Jalud atacaron a una familia palestina y a un equipo de prensa extranjero, según Wafa. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. No hubo actualización material el domingo en agencias permitidas."
       ],
       "fuentes": [
-        {"medio": "France 24", "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"}
+        { "medio": "France 24", "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages" },
+        { "medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra" }
       ]
     },
     {
       "titulo": "Zambia: el opositor Brian Mundubile y 17 más, acusados de traición",
       "resumen": [
-        "El abogado de Mundubile anunció el sábado por la noche que el líder opositor, que obtuvo el 38% en la presidencial del 13 de agosto frente al 60% del presidente Hakainde Hichilema, fue imputado por traición junto a 17 personas, entre ellas su compañero de fórmula Makebi Zulu. Ambos se habían refugiado en un edificio de la ONU en Lusaka tras una redada mortal y fueron entregados bajo presión del Gobierno. Hichilema jura el 1 de septiembre."
+        "El abogado de Mundubile anunció el sábado por la noche que el líder opositor, que obtuvo el 38% en la presidencial del 13 de agosto frente al 60% del presidente Hakainde Hichilema, fue imputado por traición junto a 17 personas, entre ellas su compañero de fórmula Makebi Zulu. Ambos se habían refugiado en un edificio de la ONU en Lusaka tras una redada mortal y fueron entregados bajo presión del Gobierno. Hichilema jura el 1 de septiembre. No constaba comparecencia judicial el domingo."
       ],
       "fuentes": [
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c20lwqpx70qo"}
+        { "medio": "BBC", "url": "https://www.bbc.com/news/articles/c20lwqpx70qo" }
       ]
     },
     {
-      "titulo": "Guinea-Bisáu vota un referéndum para reforzar la presidencia; la oposición llama al boicot",
+      "titulo": "Guinea-Bisáu vota el referéndum presidencial con afluencia desigual; la oposición boicotea",
       "resumen": [
-        "La junta militar sometió el domingo a referéndum una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. La oposición pidió boicot por considerarlo una legitimación del golpe de noviembre. Los colegios cierran a las 17:00 GMT; los primeros resultados provisionales se esperan el martes. Hay elecciones generales previstas para el 6 de diciembre."
+        "La junta militar sometió el domingo a referéndum una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. El general Horta N'Tam votó y pidió a los jóvenes que salieran; la CNE dijo que no había incidentes. AFP constató afluencia desigual —tímida por la lluvia, mayor a mediodía y otra vez baja por la tarde— y el PAIGC llamó al boicot. Colegios hasta las 17:00 GMT; primeros resultados provisionales el martes. Hay elecciones generales previstas para el 6 de diciembre."
       ],
       "fuentes": [
-        {"medio": "DW", "url": "https://www.dw.com/en/guinea-bissau-votes-to-reshape-presidency/a-78562523"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/guinea-bissau-votes-on-a-stronger-presidency-whats-at-stake"}
+        { "medio": "France 24", "url": "https://www.france24.com/fr/info-en-continu/20260830-r%C3%A9f%C3%A9rendum-en-guin%C3%A9e-bissau-d%C3%A9but-du-vote-pour-passer-%C3%A0-un-r%C3%A9gime-pr%C3%A9sidentiel-fort" },
+        { "medio": "DW", "url": "https://www.dw.com/en/guinea-bissau-votes-to-reshape-presidency/a-78562523" },
+        { "medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/guinea-bissau-votes-on-a-stronger-presidency-whats-at-stake" }
       ]
     }
   ]
