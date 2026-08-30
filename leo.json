@@ -10,8 +10,14 @@
         "Acusan torrent, scraping y descarga de obras para entrenar Claude, incluyendo letras de MusixMatch y LyricFind. A TechCrunch, Anthropic dijo que no está de acuerdo y se defenderá en tribunal. The Verge aclaró el 30 ago: demandó Sony Music Publishing, no Sony Music Entertainment."
       ],
       "fuentes": [
-        { "medio": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright" },
-        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/" }
+        {
+          "medio": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
+        },
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
+        }
       ]
     },
     {
@@ -21,7 +27,10 @@
         "Primera versión: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X."
       ],
       "fuentes": [
-        { "medio": "SpaceXAI", "url": "https://x.ai/news/grok-bot-and-x" }
+        {
+          "medio": "SpaceXAI",
+          "url": "https://x.ai/news/grok-bot-and-x"
+        }
       ]
     },
     {
@@ -31,7 +40,10 @@
         "Un técnico estima que un bot de cables podría cubrir ~80% de algunas cargas. Meta no comenta los tests; el vocero Francis Brennan dice que necesitan más trabajadores, no menos."
       ],
       "fuentes": [
-        { "medio": "Ars Technica", "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/" }
+        {
+          "medio": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/"
+        }
       ]
     },
     {
@@ -41,7 +53,23 @@
         "GE Vernova está agotada hasta 2030 por demanda de IA. TechCrunch recuerda demandas de la NAACP por turbinas de Colossus en Memphis sin permisos, y un estudio en Virginia que estima 3,4 a 6,5 muertes prematuras extra al año por un solo sitio."
       ],
       "fuentes": [
-        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/" }
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/"
+        }
+      ]
+    },
+    {
+      "titulo": "Caterpillar lleva a obras y canteras lo que aprendió automatizando minas",
+      "resumen": [
+        "El CTO Jaime Mineart dijo a TechCrunch en Ai4 (Las Vegas) que Caterpillar quiere llevar a jobsites, canteras y construcción la autonomía que ya vende en minería (camiones, perforación, loaders, dozers y un command center). El Cat AI Assistant, con voz junto a la máquina, ya lo usan técnicos y clientes; se apoya en 1,6 millones de activos conectados y más de 16 petabytes de datos.",
+        "Planea gastar $100 millones en cinco años para entrenar a 118.000 empleados en IA, autonomía y robótica. El revenue del 2T llegó a $20.500 millones; la división de generación (data centers) subió 72% a $3.100 millones."
+      ],
+      "fuentes": [
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/"
+        }
       ]
     }
   ],
@@ -53,7 +81,10 @@
         "EE.UU. sigue adelante en modelos frontera y chips; China prioriza IA embodied. No es un anuncio de producto nuevo."
       ],
       "fuentes": [
-        { "medio": "The Verge", "url": "https://www.theverge.com/tech/986167/china-humanoid-robot-games-race" }
+        {
+          "medio": "The Verge",
+          "url": "https://www.theverge.com/tech/986167/china-humanoid-robot-games-race"
+        }
       ]
     },
     {
@@ -63,7 +94,10 @@
         "Meredith Whittaker (Signal) criticó agentes en el sistema operativo como aparato de recolección de datos. Emad Mostaque (Stability AI): “the person that controls the AI controls the country.” Columna, no un anuncio."
       ],
       "fuentes": [
-        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/" }
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/"
+        }
       ]
     },
     {
@@ -73,7 +107,10 @@
         "Espera atlas / modelos fundacionales open-source en biología. Entrevista/columna, no un anuncio de lab."
       ],
       "fuentes": [
-        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/" }
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/"
+        }
       ]
     }
   ]
