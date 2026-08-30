@@ -137,7 +137,6 @@
         .monex a { color: #8ec8e8; text-decoration: none; }
         .weather {
             min-width: 0;
-            overflow: hidden;
         }
         .weather-title {
             margin: 0 0 4px;
@@ -152,18 +151,14 @@
             color: #9aa3ad;
         }
         .timeline {
-            display: flex;
-            overflow-x: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
             gap: 4px;
+            overflow: visible;
             padding: 4px 0 12px;
-            scrollbar-width: thin;
-            scrollbar-color: #9aa3ad transparent;
         }
-        .timeline::-webkit-scrollbar { height: 6px; }
-        .timeline::-webkit-scrollbar-thumb { background: #9aa3ad; border-radius: 10px; }
         .hour-slot {
-            min-width: 56px;
-            flex-shrink: 0;
+            min-width: 0;
             text-align: center;
             opacity: 0.72;
             padding: 4px 2px 8px;
@@ -174,6 +169,11 @@
         }
         .hour-slot .time {
             font-size: 12px;
+            color: #9aa3ad;
+            display: block;
+        }
+        .hour-slot .ahora-label {
+            font-size: 11px;
             color: #9aa3ad;
             display: block;
         }
@@ -336,22 +336,27 @@
         loader.style.display = 'none';
         const now = new Date();
         let startIndex = hourly.time.findIndex(t => new Date(t) > now);
-        if (startIndex === -1) startIndex = Math.max(0, hourly.time.length - 24);
+        if (startIndex === -1) startIndex = Math.max(0, hourly.time.length - 25);
         else startIndex = Math.max(0, startIndex - 1);
         const nowHum = hourly.relative_humidity_2m[startIndex];
         const nowWind = hourly.wind_speed_10m[startIndex];
         document.getElementById('now-meta').textContent = nowHum + '% humedad · ' + nowWind + ' km/h';
-        for (let i = startIndex; i < startIndex + 24; i++) {
+        const offsets = [0, 3, 6, 12, 18, 24];
+        offsets.forEach(function (offset, n) {
+            const i = startIndex + offset;
+            if (i >= hourly.time.length) return;
             const date = new Date(hourly.time[i]);
-            const hourLabel = new Intl.DateTimeFormat('es-CR', { timeZone: 'America/Costa_Rica', hour: 'numeric', hour12: false }).format(date).replace(/\D/g,'') + ':00';
+            let hourLabel = new Intl.DateTimeFormat('es-CR', { timeZone: 'America/Costa_Rica', hour: '2-digit', hour12: false }).format(date);
+            if (hourLabel.indexOf(':') === -1) hourLabel = hourLabel.replace(/\D/g, '') + ':00';
             const temp = Math.round(hourly.temperature_2m[i]);
             const rain = hourly.precipitation_probability[i];
             const code = hourly.weather_code[i];
-            const isCurrent = (i === startIndex);
+            const isCurrent = (n === 0);
             const slot = document.createElement('div');
             slot.className = isCurrent ? 'hour-slot current' : 'hour-slot';
-            let html = '<span class="time">' + hourLabel + '</span>' +
-                '<i class="bi ' + getWeatherIcon(code, rain) + ' weather-icon"></i>' +
+            let html = '<span class="time">' + hourLabel + '</span>';
+            if (isCurrent) html += '<span class="ahora-label">ahora</span>';
+            html += '<i class="bi ' + getWeatherIcon(code, rain) + ' weather-icon"></i>' +
                 '<span class="temp">' + temp + '°C</span>';
             if (rain >= 40) {
                 html += '<div class="rain-chance">' + rain + '%</div>';
@@ -360,7 +365,7 @@
             }
             slot.innerHTML = html;
             container.appendChild(slot);
-        }
+        });
     }
     async function fetchMonex() {
         try {
