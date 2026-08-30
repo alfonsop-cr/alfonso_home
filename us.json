@@ -4,7 +4,119 @@
   "autor": "US News",
   "hechos": [
     {
+      "titulo": "El USDA cierra dos proyectos de investigación sobre cyclospora, según Politico",
+      "agregado": "2026-08-30T10:57:23-06:00",
+      "resumen": [
+        "Reuters, citando a Politico el domingo, informó que la Administración Trump cierra dos de los tres proyectos del USDA que estudian cyclospora, un parásito alimentario que ha enfermado a miles este verano. El Congreso recortó fondos para dos de ellos; el tercero se mudaría de Maryland a Iowa y los científicos se han negado a reubicarse. Reuters no pudo verificar el reporte de inmediato; la Casa Blanca y el USDA no respondieron a Reuters.",
+        "Un portavoz del USDA dijo a Politico que “ninguna investigación se ha interrumpido” y que el Congreso no asignó fondos para esos dos proyectos BARC en la ley de agricultura de 2026. Reuters había reportado esta semana más de 17.000 casos confirmados de ciclosporiasis del CDC en 48 estados y el Distrito de Columbia."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/usda-cyclospora-research-projects-shelved-amid-funding-cuts-relocations-politico-2026-08-30/"
+        }
+      ]
+    },
+    {
+      "titulo": "Bessent recibe al G20 en Asheville en medio de aranceles, Irán y la deuda",
+      "agregado": "2026-08-30T09:53:52-06:00",
+      "resumen": [
+        "El secretario del Tesoro, Scott Bessent, presionará el lunes y martes en Asheville, Carolina del Norte, a ministros de Finanzas y gobernadores de bancos centrales del G20 para reducir desequilibrios comerciales, impulsar el crecimiento y cortar lazos con Irán, mientras intenta calmar temores sobre la deuda y los bonos de EE.UU. Las sesiones ministeriales siguen a la reunión de viceministros del fin de semana."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/china/us-treasurys-bessent-faces-g20-diplomacy-test-amid-tariffs-iran-war-bond-turmoil-2026-08-30/"
+        }
+      ]
+    },
+    {
+      "titulo": "EE.UU. deporta a un afgano con protección judicial a la República Centroafricana",
+      "agregado": "2026-08-30T09:53:52-06:00",
+      "resumen": [
+        "El sábado aterrizó en Bangui un vuelo de deportación estadounidense con docenas de personas, entre ellas 12 afganos y 8 iraníes, según Human Rights First. Entre los expulsados figura un afgano de unos 20 años a quien un juez de inmigración concedió la retención de expulsión hacia Afganistán por temor a persecución talibán; sus hermanos colaboraron con el Ejército de EE.UU. y uno de ellos, piloto entrenado por Washington, fue asesinado por los talibanes.",
+        "CBS, con documentos internos, reportó que en unos 10 días ICE envió a más de 100 personas a ocho países africanos que no son el suyo. El DHS dijo el domingo que si alguien rechaza volver a su país de origen, la ley obliga a hallar otra nación."
+      ],
+      "fuentes": [
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/central-african-republic-afghan-deportation-united-states-687d053499ccdbf6a26f091219ae10fe"
+        },
+        {
+          "medio": "NPR",
+          "url": "https://www.npr.org/2026/08/30/nx-s1-5949230/trump-administration-deports-afghan-central-african-republic"
+        },
+        {
+          "medio": "CBS",
+          "url": "https://www.cbsnews.com/news/ice-deportations-afghanistan-cuba-africa/"
+        }
+      ]
+    },
+    {
+      "titulo": "El acuerdo petrolero de Trump con Venezuela sigue sin texto público",
+      "agregado": "2026-08-30T09:53:52-06:00",
+      "resumen": [
+        "Trump anunció el viernes un acuerdo que, según él, da a EE.UU. control mayoritario de más de 65.000 millones de barriles de reservas venezolanas. Un recuento de la AP el sábado señaló que la Casa Blanca no ha publicado el texto. Un funcionario estadounidense dijo que Washington tendría el 55% de la producción efectiva de una nueva empresa privada, con derecho a comprar crudo a costo para la reserva estratégica y uso militar.",
+        "El domingo Trump dijo en redes que el crudo venezolano se usará para rellenar la Reserva Estratégica de Petróleo y que el proceso comenzará pronto. Reuters advierte que no está claro cuán rápido llegará el suministro; el acuerdo requiere inversión e infraestructura. Expertos citados por AP advierten que es improbable un efecto inmediato en la gasolina."
+      ],
+      "fuentes": [
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/business/energy/trump-says-us-will-refill-strategic-petroleum-reserve-using-venezuelan-oil-2026-08-30/"
+        }
+      ]
+    },
+    {
+      "titulo": "Google Maps muestra “Lake America” a usuarios en EE.UU.; Ford responde con un cartel",
+      "agregado": "2026-08-30T09:53:52-06:00",
+      "resumen": [
+        "Google dijo el sábado que Maps muestra “Lake America” en Estados Unidos y “Lake Ontario” en Canadá, tras la orden ejecutiva de Trump y el cambio en el GNIS federal. Fuera de ambos países aparecen los dos nombres. El premier de Ontario, Doug Ford, inauguró el sábado un cartel bilingüe: “Lake Ontario — Now and Always”. La gobernadora de Nueva York, Kathy Hochul, rechazó el nuevo nombre.",
+        "Steven Cheung, de la Casa Blanca, celebró el domingo que el cambio en Maps es “oficial”. Trump escribió en Truth Social que Canadá “nos ha estado estafando durante años”."
+      ],
+      "fuentes": [
+        {
+          "medio": "NPR",
+          "url": "https://www.npr.org/2026/08/30/nx-s1-5949254/lake-ontario-america-doug-ford-trump-sign-google"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/us/google-maps-will-show-lake-america-us-not-lake-ontario-2026-08-30/"
+        },
+        {
+          "medio": "CBS",
+          "url": "https://www.cbsnews.com/news/lake-america-trump-order-google-maps-lake-ontario/"
+        }
+      ]
+    },
+    {
+      "titulo": "Jueza de San José: no se puede deportar a estudiantes por criticar a Israel",
+      "agregado": "2026-08-30T09:53:52-06:00",
+      "resumen": [
+        "La jueza federal Noël Wise falló el viernes en San José que el gobierno viola la Primera Enmienda al silenciar críticas a Israel y a la guerra en Gaza como parte de su esfuerzo por deportar a no ciudadanos que, según Washington, alteraron campus universitarios. El fallo favorece a The Stanford Daily, cuyo director dijo que reporteros internacionales temían que un artículo acarreara la expulsión.",
+        "Wise se apoyó en un fallo previo en Boston. El Departamento de Justicia no comentó el sábado."
+      ],
+      "fuentes": [
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/israel-protests-deportations-ideological-d3694ba08ab714eb9441ca51a83fa57f"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/legal/government/judge-deals-blow-trump-moves-deport-pro-palestinian-activists-2026-08-29/"
+        }
+      ]
+    },
+    {
       "titulo": "NASA lanza el telescopio espacial Nancy Grace Roman desde Florida",
+      "agregado": "2026-08-30T09:53:52-06:00",
       "resumen": [
         "El telescopio espacial Nancy Grace Roman, de unos 4.300 millones de dólares, despegó el domingo a las 7:26 a.m. ET desde el Centro Espacial Kennedy a bordo de un Falcon Heavy de SpaceX. El observatorio, del tamaño de un autobús, viajará unos tres meses hasta el punto de Lagrange L2, a unos 1,6 millones de kilómetros de la Tierra, para estudiar la energía oscura y la materia oscura y buscar exoplanetas. Su campo de visión es más de 100 veces mayor que el de Hubble y el lanzamiento se adelantó unos nueve meses.",
         "El Congreso preservó el proyecto pese a recortes que la Administración Trump propuso en ambos mandatos. Tras el despegue, los controladores de Goddard recibieron telemetría y los paneles solares se desplegaron. El presidente Trump llamó al administrador de la NASA, Jared Isaacman, durante la rueda de prensa posterior para felicitar al equipo."
@@ -37,104 +149,8 @@
       ]
     },
     {
-      "titulo": "EE.UU. deporta a un afgano con protección judicial a la República Centroafricana",
-      "resumen": [
-        "El sábado aterrizó en Bangui un vuelo de deportación estadounidense con docenas de personas, entre ellas 12 afganos y 8 iraníes, según Human Rights First. Entre los expulsados figura un afgano de unos 20 años a quien un juez de inmigración concedió la retención de expulsión hacia Afganistán por temor a persecución talibán; sus hermanos colaboraron con el Ejército de EE.UU. y uno de ellos, piloto entrenado por Washington, fue asesinado por los talibanes.",
-        "CBS, con documentos internos, reportó que en unos 10 días ICE envió a más de 100 personas a ocho países africanos que no son el suyo. El DHS dijo el domingo que si alguien rechaza volver a su país de origen, la ley obliga a hallar otra nación."
-      ],
-      "fuentes": [
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/central-african-republic-afghan-deportation-united-states-687d053499ccdbf6a26f091219ae10fe"
-        },
-        {
-          "medio": "NPR",
-          "url": "https://www.npr.org/2026/08/30/nx-s1-5949230/trump-administration-deports-afghan-central-african-republic"
-        },
-        {
-          "medio": "CBS",
-          "url": "https://www.cbsnews.com/news/ice-deportations-afghanistan-cuba-africa/"
-        }
-      ]
-    },
-    {
-      "titulo": "Trump anuncia que denunciará a Kristen Welker de NBC ante la FCC",
-      "resumen": [
-        "El presidente Trump escribió el domingo en Truth Social que Kristen Welker, presentadora de Meet the Press, será reportada a la Comisión Federal de Comunicaciones (FCC) para “reprensión o castigo” por decir que su récord de respaldos electorales es mixto. Trump afirmó que sus avales alcanzan el 100% en el Senado y el 98% en la Cámara. NBC no respondió de inmediato.",
-        "En otro mensaje, Trump se quejó de “encuestas falsas” y escribió “FCC to the rescue!”. El presidente de la FCC, Brendan Carr, no respondió a CNN. Disney y ABC demandaron este mes a la FCC; la agencia también investiga a Comcast, matriz de NBC."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/business/media-telecom/trump-says-nbcs-welker-will-be-reported-fcc-2026-08-30/"
-        },
-        {
-          "medio": "CNN",
-          "url": "https://www.cnn.com/2026/08/30/politics/trump-kristen-welker-fcc-nbc"
-        }
-      ]
-    },
-    {
-      "titulo": "El acuerdo petrolero de Trump con Venezuela sigue sin texto público",
-      "resumen": [
-        "Trump anunció el viernes un acuerdo que, según él, da a EE.UU. control mayoritario de más de 65.000 millones de barriles de reservas venezolanas. Un recuento de la AP el sábado señaló que la Casa Blanca no ha publicado el texto. Un funcionario estadounidense dijo que Washington tendría el 55% de la producción efectiva de una nueva empresa privada, con derecho a comprar crudo a costo para la reserva estratégica y uso militar.",
-        "El domingo Trump dijo en redes que el crudo venezolano se usará para rellenar la Reserva Estratégica de Petróleo y que el proceso comenzará pronto. Reuters advierte que no está claro cuán rápido llegará el suministro; el acuerdo requiere inversión e infraestructura. Expertos citados por AP advierten que es improbable un efecto inmediato en la gasolina."
-      ],
-      "fuentes": [
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/venezuela-oil-trump-deal-unknown-questions-reserves-c229bc39b6e1a3d5dd16f7f9e67fef3f"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/business/energy/trump-says-us-will-refill-strategic-petroleum-reserve-using-venezuelan-oil-2026-08-30/"
-        }
-      ]
-    },
-    {
-      "titulo": "Google Maps muestra “Lake America” a usuarios en EE.UU.; Ford responde con un cartel",
-      "resumen": [
-        "Google dijo el sábado que Maps muestra “Lake America” en Estados Unidos y “Lake Ontario” en Canadá, tras la orden ejecutiva de Trump y el cambio en el GNIS federal. Fuera de ambos países aparecen los dos nombres. El premier de Ontario, Doug Ford, inauguró el sábado un cartel bilingüe: “Lake Ontario — Now and Always”. La gobernadora de Nueva York, Kathy Hochul, rechazó el nuevo nombre.",
-        "Steven Cheung, de la Casa Blanca, celebró el domingo que el cambio en Maps es “oficial”. Trump escribió en Truth Social que Canadá “nos ha estado estafando durante años”."
-      ],
-      "fuentes": [
-        {
-          "medio": "NPR",
-          "url": "https://www.npr.org/2026/08/30/nx-s1-5949254/lake-ontario-america-doug-ford-trump-sign-google"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/us/google-maps-will-show-lake-america-us-not-lake-ontario-2026-08-30/"
-        },
-        {
-          "medio": "CBS",
-          "url": "https://www.cbsnews.com/news/lake-america-trump-order-google-maps-lake-ontario/"
-        }
-      ]
-    },
-    {
-      "titulo": "Jueza de San José: no se puede deportar a estudiantes por criticar a Israel",
-      "resumen": [
-        "La jueza federal Noël Wise falló el viernes en San José que el gobierno viola la Primera Enmienda al silenciar críticas a Israel y a la guerra en Gaza como parte de su esfuerzo por deportar a no ciudadanos que, según Washington, alteraron campus universitarios. El fallo favorece a The Stanford Daily, cuyo director dijo que reporteros internacionales temían que un artículo acarreara la expulsión.",
-        "Wise se apoyó en un fallo previo en Boston. El Departamento de Justicia no comentó el sábado."
-      ],
-      "fuentes": [
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/israel-protests-deportations-ideological-d3694ba08ab714eb9441ca51a83fa57f"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/legal/government/judge-deals-blow-trump-moves-deport-pro-palestinian-activists-2026-08-29/"
-        }
-      ]
-    },
-    {
       "titulo": "Talarico satura la TV en Texas; MAGA Inc. aún no gasta por Paxton",
+      "agregado": "2026-08-30T09:53:52-06:00",
       "resumen": [
         "CNN informó el domingo que, desde junio, los demócratas han gastado unos 31,5 millones de dólares en anuncios en la carrera senatorial de Texas frente a 4,7 millones republicanos. El representante estatal James Talarico concentra casi todo ese gasto; la campaña de Ken Paxton ha invertido poco más de 150.000 dólares en TV. MAGA Inc., con más de 400 millones, no ha abierto la cartera.",
         "El sábado Talarico estrenó su primer anuncio negativo. El domingo Paxton dijo en Fox News que más apoyo externo “está en camino” y que se verán anuncios. Un grupo pro-Paxton anunció el viernes un blitz de 800.000 dólares. Las encuestas no muestran un líder claro."
@@ -147,27 +163,20 @@
       ]
     },
     {
-      "titulo": "Bessent recibe al G20 en Asheville en medio de aranceles, Irán y la deuda",
+      "titulo": "Trump anuncia que denunciará a Kristen Welker de NBC ante la FCC",
+      "agregado": "2026-08-30T09:53:52-06:00",
       "resumen": [
-        "El secretario del Tesoro, Scott Bessent, presionará el lunes y martes en Asheville, Carolina del Norte, a ministros de Finanzas y gobernadores de bancos centrales del G20 para reducir desequilibrios comerciales, impulsar el crecimiento y cortar lazos con Irán, mientras intenta calmar temores sobre la deuda y los bonos de EE.UU. Las sesiones ministeriales siguen a la reunión de viceministros del fin de semana."
+        "El presidente Trump escribió el domingo en Truth Social que Kristen Welker, presentadora de Meet the Press, será reportada a la Comisión Federal de Comunicaciones (FCC) para “reprensión o castigo” por decir que su récord de respaldos electorales es mixto. Trump afirmó que sus avales alcanzan el 100% en el Senado y el 98% en la Cámara. NBC no respondió de inmediato.",
+        "En otro mensaje, Trump se quejó de “encuestas falsas” y escribió “FCC to the rescue!”. El presidente de la FCC, Brendan Carr, no respondió a CNN. Disney y ABC demandaron este mes a la FCC; la agencia también investiga a Comcast, matriz de NBC."
       ],
       "fuentes": [
         {
           "medio": "Reuters",
-          "url": "https://www.reuters.com/world/china/us-treasurys-bessent-faces-g20-diplomacy-test-amid-tariffs-iran-war-bond-turmoil-2026-08-30/"
-        }
-      ]
-    },
-    {
-      "titulo": "El USDA cierra dos proyectos de investigación sobre cyclospora, según Politico",
-      "resumen": [
-        "Reuters, citando a Politico el domingo, informó que la Administración Trump cierra dos de los tres proyectos del USDA que estudian cyclospora, un parásito alimentario que ha enfermado a miles este verano. El Congreso recortó fondos para dos de ellos; el tercero se mudaría de Maryland a Iowa y los científicos se han negado a reubicarse. Reuters no pudo verificar el reporte de inmediato; la Casa Blanca y el USDA no respondieron a Reuters.",
-        "Un portavoz del USDA dijo a Politico que “ninguna investigación se ha interrumpido” y que el Congreso no asignó fondos para esos dos proyectos BARC en la ley de agricultura de 2026. Reuters había reportado esta semana más de 17.000 casos confirmados de ciclosporiasis del CDC en 48 estados y el Distrito de Columbia."
-      ],
-      "fuentes": [
+          "url": "https://www.reuters.com/business/media-telecom/trump-says-nbcs-welker-will-be-reported-fcc-2026-08-30/"
+        },
         {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/usda-cyclospora-research-projects-shelved-amid-funding-cuts-relocations-politico-2026-08-30/"
+          "medio": "CNN",
+          "url": "https://www.cnn.com/2026/08/30/politics/trump-kristen-welker-fcc-nbc"
         }
       ]
     }
