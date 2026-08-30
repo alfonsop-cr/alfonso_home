@@ -10,30 +10,12 @@
         "En Irving de La Cruz, Guanacaste, Venegas, de 46 años, murió a balazos. La Cruz Roja recibió la alerta a las 11:12 p.m. La Nación, con el OIJ, reportó el domingo a las 11:02 a.m. que salió de un bar en barrio Irvin después de las 10:00 p.m.; varios sujetos en motocicleta le dispararon en la cabeza, el tórax, la espalda y los glúteos y huyeron. El OIJ investiga. CRHoy lo incluyó en un recuento de siete muertes de la Cruz Roja entre la tarde del sábado y la madrugada del domingo (sin contar Alajuelita)."
       ],
       "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/noche-de-sabado-y-madrugada-de-domingo-deja-tres-asesinatos-en-costa-rica/"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/entraron-a-su-casa-para-matarlo-forzaron-la-puerta/HYGIVLA455GT7KNSEOPKV2FT74/story/"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/hombre-de-30-anos-muere-tras-recibir-un-balazo-en/MQMTGEJKVJCH5KQV7GXZ5R64IA/story/"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/de-un-balazo-en-la-cabeza-asesinan-a-hombre-en-la/BLWXTAZP7BG7PPNFSMQFMNI6QE/story/"
-        },
-        {
-          "medio": "CRHoy",
-          "url": "https://crhoy.com/nacionales/accidentes-y-hechos-violentos-dejan-siete-fallecidos-entre-sabado-y-domingo/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/sucesos/crimenes/asesinan-a-hombre-afuera-de-un-bar-en-guanacaste/JY6VVB6RUZB6JGID72WMHIMRPM/story/"
-        }
+        {"medio": "El Observador", "url": "https://observador.cr/noche-de-sabado-y-madrugada-de-domingo-deja-tres-asesinatos-en-costa-rica/"},
+        {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/entraron-a-su-casa-para-matarlo-forzaron-la-puerta/HYGIVLA455GT7KNSEOPKV2FT74/story/"},
+        {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/hombre-de-30-anos-muere-tras-recibir-un-balazo-en/MQMTGEJKVJCH5KQV7GXZ5R64IA/story/"},
+        {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/de-un-balazo-en-la-cabeza-asesinan-a-hombre-en-la/BLWXTAZP7BG7PPNFSMQFMNI6QE/story/"},
+        {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/accidentes-y-hechos-violentos-dejan-siete-fallecidos-entre-sabado-y-domingo/"},
+        {"medio": "La Nación", "url": "https://www.nacion.com/sucesos/crimenes/asesinan-a-hombre-afuera-de-un-bar-en-guanacaste/JY6VVB6RUZB6JGID72WMHIMRPM/story/"}
       ]
     }
   ]
