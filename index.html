@@ -70,6 +70,11 @@
         @media (max-width: 800px) {
             .ahora { grid-template-columns: 1fr; }
             .news-row { grid-template-columns: 1fr; }
+            .masthead {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .masthead-right { text-align: left; }
         }
         .fx-panel {
             background: #1a2330;
@@ -116,10 +121,21 @@
         .monex .bac-note { margin-top: 6px; }
         .monex .session { margin-top: 10px; }
         .monex a { color: #8ec8e8; text-decoration: none; }
+        .weather {
+            min-width: 0;
+            overflow: hidden;
+        }
         .weather-title {
-            margin: 0 0 16px;
-            font-size: 1.15rem;
+            margin: 0 0 4px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
             font-weight: 500;
+            color: #9aa3ad;
+        }
+        #now-meta {
+            margin: 0 0 16px;
+            font-size: 13px;
+            color: #9aa3ad;
         }
         .timeline {
             display: flex;
@@ -154,26 +170,21 @@
             color: #e8b86d;
         }
         .hour-slot .temp {
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 17px;
+            font-weight: 600;
             display: block;
         }
         .rain-chance {
             color: #7eb8d4;
             font-size: 11px;
+            min-height: 14px;
             margin-top: 4px;
         }
-        .hour-slot .details {
-            font-size: 11px;
-            color: #9aa3ad;
-            margin-top: 6px;
-            line-height: 1.4;
-        }
-        .hour-slot .details i { font-size: 0.8rem; }
         .news-col h2 {
             margin: 0;
-            font-size: 1.25rem;
-            font-weight: 500;
+            font-family: Fraunces, serif;
+            font-size: 22px;
+            font-weight: 560;
         }
         .kicker {
             margin: 4px 0 8px;
@@ -251,6 +262,7 @@
         </div>
         <div class="weather">
             <h2 class="weather-title">Belén · 24 h</h2>
+            <div id="now-meta"></div>
             <div id="loader">Cargando pronóstico...</div>
             <div id="forecast" class="timeline"></div>
         </div>
@@ -319,13 +331,14 @@
         loader.style.display = 'none';
         const now = new Date();
         const startIndex = hourly.time.findIndex(t => new Date(t) >= now);
+        const nowHum = hourly.relative_humidity_2m[startIndex];
+        const nowWind = hourly.wind_speed_10m[startIndex];
+        document.getElementById('now-meta').textContent = nowHum + '% humedad · ' + nowWind + ' km/h';
         for (let i = startIndex; i < startIndex + 24; i++) {
             const date = new Date(hourly.time[i]);
-            const hourLabel = date.getHours() + ':00';
+            const hourLabel = new Intl.DateTimeFormat('es-CR', { timeZone: 'America/Costa_Rica', hour: 'numeric', hour12: false }).format(date).replace(/\D/g,'') + ':00';
             const temp = Math.round(hourly.temperature_2m[i]);
-            const hum = hourly.relative_humidity_2m[i];
             const rain = hourly.precipitation_probability[i];
-            const wind = hourly.wind_speed_10m[i];
             const code = hourly.weather_code[i];
             const isCurrent = (i === startIndex);
             const slot = document.createElement('div');
@@ -335,12 +348,8 @@
                 '<span class="temp">' + temp + '°C</span>';
             if (rain >= 40) {
                 html += '<div class="rain-chance">' + rain + '%</div>';
-            }
-            if (isCurrent) {
-                html += '<div class="details">' +
-                    '<div class="humidity">Humedad ' + hum + '%</div>' +
-                    '<div><i class="bi bi-wind"></i> ' + wind + 'km/h</div>' +
-                    '</div>';
+            } else {
+                html += '<div class="rain-chance"></div>';
             }
             slot.innerHTML = html;
             container.appendChild(slot);
