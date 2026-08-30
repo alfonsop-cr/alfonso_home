@@ -4,36 +4,10 @@
   "autor": "World News",
   "hechos": [
     {
-      "titulo": "Ferry Filojet volcado frente a Kyrenia: el saldo se mantiene en al menos 8 muertos; el pecio se hundió",
-      "agregado": "2026-08-30T13:01:20-06:00",
-      "resumen": [
-        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo de muertos no subió respecto al mediodía: Reuters, AP, BBC y France 24/AFP coinciden en al menos 8 fallecidos. AP mantiene 237 rescatados y la búsqueda de otros 22; Reuters y la agencia chipriota TAK cifran 17 desaparecidos. France 24/AFP precisó que 161 rescatados fueron hospitalizados y 76 volvieron a casa. El ministro de Transportes turcochipriota dijo que el barco se hundió por completo a unos 514 metros, lo que complica el acceso.",
-        "Las autoridades turcochipriotas detuvieron al capitán y a siete tripulantes. BBC relató que la salida, prevista el sábado, se retrasó por mal tiempo y que el primer ministro Ünal Üstel dijo a TRT que dos olas golpearon el catamarán. Supervivientes dijeron a medios locales, según AFP, que hubo una explosión o rotura en la proa, que faltaban chalecos y que el capitán habría sido de los primeros en abandonar el barco. El operativo de búsqueda seguía abierto, con unidades de Turquía; Erdogan ofreció condolencias y el Gobierno chipriota reconocido internacionalmente ofreció ayuda."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/"
-        },
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/cyprus-turkey-ferry-capsize-girne-tasucu-northern-e7753be49f345d1b1f1579013b241e9e"
-        },
-        {
-          "medio": "BBC",
-          "url": "https://www.bbc.com/news/articles/c770jyd4l7lo"
-        },
-        {
-          "medio": "France 24",
-          "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus"
-        }
-      ]
-    },
-    {
       "titulo": "Guinea-Bisáu cierra el referéndum con baja afluencia; el recuento sigue sin cifra oficial ni incidentes graves",
       "agregado": "2026-08-30T13:01:20-06:00",
       "resumen": [
-        "Los colegios cerraron a las 17:00 GMT (11:00 hora de Costa Rica) y AFP constató el inicio del despojo en Bissau. No hay cifra oficial de participación: AFP y AP describen afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y el PAIGC llamó al boycot. AFP no reportó incidentes graves post-cierre. Primeros resultados provisionales, el martes.",
+        "Los colegios cerraron a las 17:00 GMT (11:00 hora de Costa Rica) y AFP, en un despacho actualizado por la tarde, constató el inicio del despojo en varios barrios de Bissau. No hay cifra oficial de participación: AFP describe afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y, según periodistas locales, mixta o débil en Tombali, Quinara (sur) y el este. El PAIGC llamó al boycot. AFP no reportó incidentes graves post-cierre. Primeros resultados provisionales, el martes.",
         "La junta sometió una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. El general Horta N'Tam votó y pidió a los jóvenes que salieran. Hay unos 915.000 inscritos y elecciones generales previstas para el 6 de diciembre."
       ],
       "fuentes": [
@@ -66,37 +40,11 @@
       ]
     },
     {
-      "titulo": "Nepal y Tíbet: 804 muertos y más de 3.000 desaparecidos; el Ejército aerolanza maquinaria a los túneles",
-      "agregado": "2026-08-30T13:01:20-06:00",
-      "resumen": [
-        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters habla de más de 780 muertos y cerca de 800 en total. Siguen las alertas por crecida del Bhotekoshi; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. En Chitwan continúan los enterramientos masivos de cuerpos no identificados.",
-        "Reuters reportó que el Ejército aerolanzó el domingo maquinaria pesada en helicóptero hacia un complejo hidroeléctrico para alcanzar a trabajadores atrapados; unos 10.000 soldados operan en cinco proyectos, con especialistas de India y China. En Trishuli 3A, el Ejército perforó el sábado la parte alta de un túnel, inyectó aire y envió una cámara; la lluvia nocturna inundó la excavación y el domingo se reanudó el desescombro. Malasia anunció un equipo de búsqueda y 1 millón de dólares en ayuda."
-      ],
-      "fuentes": [
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303"
-        },
-        {
-          "medio": "The Guardian",
-          "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/china/nepal-steps-up-rescue-effort-reach-hundreds-trapped-tunnels-2026-08-30/"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/30/nepal-rescuers-drill-into-tunnels-in-bid-to-reach-trapped-workers"
-        }
-      ]
-    },
-    {
       "titulo": "Níger: el Ejército retoma la base aérea; decenas de amotinados muertos o detenidos; Tchiani sigue sin aparecer",
       "agregado": "2026-08-30T13:01:20-06:00",
       "resumen": [
         "Niamey amaneció en calma el domingo tras el motín iniciado hacia la medianoche en la Base 101. AP y France 24 reportaron que decenas de soldados fueron muertos o detenidos y que algunos fueron exhibidos en televisión estatal; no se precisaron cargos. Tchiani aún no había hecho declaraciones ni aparición pública. AP vio retenes y camiones militares entre el aeropuerto y el distrito presidencial.",
-        "El embajador ruso Viktor Voropáyev dijo que el Africa Corps intervino a petición de Niamey. AP reportó que el domingo llegó una delegación argelina con cuatro cazas y un avión de transporte, descrita por el consejo de gobierno como apoyo estratégico. La Alianza de Estados del Sahel calificó el intento de contenido y fallido."
+        "El embajador ruso Viktor Voropáyev dijo que el Africa Corps intervino a petición de Niamey; la Cancillería rusa lo confirmó el domingo, según BBC. AP reportó que el domingo llegó una delegación argelina con cuatro cazas y un avión de transporte, descrita por el consejo de gobierno como apoyo estratégico. La Alianza de Estados del Sahel calificó el intento de contenido y fallido."
       ],
       "fuentes": [
         {
@@ -121,7 +69,7 @@
       "titulo": "Moscú anuncia que prepara «ataques masivos» contra la energía de Ucrania",
       "agregado": "2026-08-30T12:02:00-06:00",
       "resumen": [
-        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendiado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial. El mismo día, Ozon dijo que un dron ucraniano incendió un centro logístico en la región fronteriza de Bélgorod. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
+        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendiado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial. El mismo día, Ozon dijo que un dron ucraniano incendio un centro logístico en la región fronteriza de Bélgorod y que temía varios heridos. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
       ],
       "fuentes": [
         {
@@ -174,7 +122,7 @@
       "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
-        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. En Jalud atacaron a una familia palestina y a un equipo de prensa extranjero, según Wafa. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. No hubo actualización material el domingo en agencias permitidas."
+        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. Al Jazeera cifró el domingo 7 heridos en Qusra. En Jalud atacaron a una familia palestina y a un equipo de NBC, según Wafa y Al Jazeera. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. Al Jazeera reportó el domingo que no constaban detenciones pese a las imágenes."
       ],
       "fuentes": [
         {
@@ -184,6 +132,10 @@
         {
           "medio": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/whats-behind-netanyahus-condemnation-of-settler-pogroms"
         }
       ]
     },
@@ -212,7 +164,7 @@
       "titulo": "Tiroteo en un rave en Aarau, Suiza: muere una italiana de 22 años y hay 5 heridos",
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
-        "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. Murió en el lugar una mujer italiana de 22 años; cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. La policía cantonal reiteró que no tenía información sobre el autor o autores ni el móvil; la cacería seguía abierta."
+        "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. Murió en el lugar una mujer italiana de 22 años; cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. En una rueda de prensa vespertina, la policía cantonal dijo que la cacería seguía «a toda velocidad», sin datos sobre el autor o autores ni el móvil; descartó que volvieran a ser una amenaza y consideró poco probable un atentado porque el rave ya se estaba cerrando."
       ],
       "fuentes": [
         {
@@ -226,6 +178,10 @@
         {
           "medio": "DW",
           "url": "https://www.dw.com/en/swiss-police-report-several-victims-in-aarau-shooting/a-78561106"
+        },
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/switzerland-shooting-rave-aargau-843e1c1cc57e1a0cb379851007ea6ba8"
         }
       ]
     },
@@ -243,6 +199,58 @@
         {
           "medio": "Reuters",
           "url": "https://www.reuters.com/world/africa/zambian-opposition-leader-mundubile-charged-with-treason-lawyer-says-2026-08-30/"
+        }
+      ]
+    },
+    {
+      "titulo": "Ferry Filojet volcado frente a Kyrenia: 8 muertos; Reuters cifra 18 desaparecidos y 241 rescatados",
+      "agregado": "2026-08-30T09:30:00-06:00",
+      "resumen": [
+        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo de muertos se mantiene en al menos 8 (Reuters, AP, BBC, France 24/AFP). Reuters actualizó a 18 desaparecidos y 241 rescatados; AP mantiene 237 rescatados y la búsqueda de otros 22. France 24/AFP precisa que 161 rescatados fueron hospitalizados y 76 volvieron a casa, y la agencia chipriota TAK sigue en 17 desaparecidos. El pecio se hundió por completo a unos 514 metros, lo que complica el acceso.",
+        "Las autoridades turcochipriotas detuvieron al capitán y a siete tripulantes. BBC relató que la salida, prevista el sábado, se retrasó por mal tiempo y que el primer ministro Ünal Üstel dijo a TRT que dos olas golpearon el catamarán. Supervivientes dijeron a medios locales, según AFP, que hubo una explosión o rotura en la proa, que faltaban chalecos y que el capitán habría sido de los primeros en abandonar el barco. El operativo de búsqueda seguía abierto, con unidades de Turquía; Erdogan ofreció condolencias y el Gobierno chipriota reconocido internacionalmente ofreció ayuda."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/"
+        },
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/cyprus-turkey-ferry-capsize-girne-tasucu-northern-e7753be49f345d1b1f1579013b241e9e"
+        },
+        {
+          "medio": "BBC",
+          "url": "https://www.bbc.com/news/articles/c770jyd4l7lo"
+        },
+        {
+          "medio": "France 24",
+          "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus"
+        }
+      ]
+    },
+    {
+      "titulo": "Nepal y Tíbet: 804 muertos y más de 3.000 desaparecidos; rescatistas llegan a la boca de un túnel",
+      "agregado": "2026-08-30T09:30:00-06:00",
+      "resumen": [
+        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters habla de 781 muertos en Nepal (cerca de 800 en total). Siguen las alertas por crecida del Bhotekoshi; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. Reuters añadió que drones detectaron un nuevo deslizamiento que formó otra presa. En Chitwan enterraron 96 cuerpos no identificados el sábado y planeaban más de 100 el domingo, con muestras de ADN.",
+        "Reuters reportó que el Ejército aerolanzó maquinaria pesada y que los rescatistas alcanzaron el domingo la entrada de un túnel y empezaron a despejar escombros; el Ejército publicó la foto de dos hombres extraídos de la boca. Un asesor en el sitio estimó 35-40 personas en el túnel 3A, cifra no confirmada. The Guardian: se inyecta aire por una tubería y sigue la excavación. Unos 10.000 soldados operan en cinco proyectos, con especialistas de India y China. Malasia anunció un equipo de búsqueda y 1 millón de dólares en ayuda."
+      ],
+      "fuentes": [
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303"
+        },
+        {
+          "medio": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/china/nepal-steps-up-rescue-effort-reach-hundreds-trapped-tunnels-2026-08-30/"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/nepal-rescuers-drill-into-tunnels-in-bid-to-reach-trapped-workers"
         }
       ]
     }
