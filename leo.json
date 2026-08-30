@@ -6,44 +6,32 @@
     {
       "titulo": "Sony Music Publishing y Warner Chappell demandan a Anthropic",
       "resumen": [
-        "Sony Music Publishing, Warner Chappell y otros editores demandaron a Anthropic y a los cofundadores Dario Amodei y Benjamin Mann en el Distrito Norte de California. Piden hasta $150.000 por obra (decenas de miles de canciones) y hasta $25.000 por cada metadato de copyright eliminado; The Verge dice que el techo podr\u00eda ser de varios miles de millones.",
-        "Acusan torrent, scraping y descarga de obras para entrenar Claude, incluyendo letras de MusixMatch y LyricFind. A TechCrunch, Anthropic dijo que no est\u00e1 de acuerdo y se defender\u00e1 en tribunal. The Verge aclar\u00f3 el 30 ago: demand\u00f3 Sony Music Publishing, no Sony Music Entertainment."
+        "Sony Music Publishing, Warner Chappell y otros editores demandaron a Anthropic y a los cofundadores Dario Amodei y Benjamin Mann en el Distrito Norte de California. Piden hasta $150.000 por obra (decenas de miles de canciones) y hasta $25.000 por cada metadato de copyright eliminado; The Verge dice que el techo podría ser de varios miles de millones.",
+        "Acusan torrent, scraping y descarga de obras para entrenar Claude, incluyendo letras de MusixMatch y LyricFind. A TechCrunch, Anthropic dijo que no está de acuerdo y se defenderá en tribunal. The Verge aclaró el 30 ago: demandó Sony Music Publishing, no Sony Music Entertainment."
       ],
       "fuentes": [
-        {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
-        },
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
-        }
+        { "medio": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright" },
+        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/" }
       ]
     },
     {
       "titulo": "Grok Bot ahora se integra con X",
       "resumen": [
-        "SpaceXAI public\u00f3 que Grok Bot tiene una integraci\u00f3n m\u00e1s estrecha con X: al conectar la cuenta crean un developer account si no existe, y los usuarios de pago reciben cr\u00e9ditos de X API para arrancar.",
-        "Primera versi\u00f3n: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X."
+        "SpaceXAI publicó que Grok Bot tiene una integración más estrecha con X: al conectar la cuenta crean un developer account si no existe, y los usuarios de pago reciben créditos de X API para arrancar.",
+        "Primera versión: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X."
       ],
       "fuentes": [
-        {
-          "medio": "SpaceXAI",
-          "url": "https://x.ai/news/grok-bot-and-x"
-        }
+        { "medio": "SpaceXAI", "url": "https://x.ai/news/grok-bot-and-x" }
       ]
     },
     {
       "titulo": "Meta prueba robots en sus data centers",
       "resumen": [
-        "Ars (sindicato de un reportaje de Wired) describe pruebas de Meta: brazos Kinova, robots Watney de dos brazos para cableado en Altoona, robots ABB de cuatro ruedas en New Albany (Ohio) y un \u201cdedo\u201d para pulsar power en Mac Minis.",
-        "Un t\u00e9cnico estima que un bot de cables podr\u00eda cubrir ~80% de algunas cargas. Meta no comenta los tests; el vocero Francis Brennan dice que necesitan m\u00e1s trabajadores, no menos."
+        "Ars (sindicato de un reportaje de Wired) describe pruebas de Meta: brazos Kinova, robots Watney de dos brazos para cableado en Altoona, robots ABB de cuatro ruedas en New Albany (Ohio) y un “dedo” para pulsar power en Mac Minis.",
+        "Un técnico estima que un bot de cables podría cubrir ~80% de algunas cargas. Meta no comenta los tests; el vocero Francis Brennan dice que necesitan más trabajadores, no menos."
       ],
       "fuentes": [
-        {
-          "medio": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/"
-        }
+        { "medio": "Ars Technica", "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/" }
       ]
     }
   ],
@@ -51,40 +39,31 @@
     {
       "titulo": "Los robots humanoides de China adelantan en Beijing",
       "resumen": [
-        "Newsletter The Stepback (The Verge) sobre los World Humanoid Robot Games. Un humanoide corri\u00f3 100 m en 9,39 s y otro salt\u00f3 2,88 m de pie; tambi\u00e9n hubo incendios y ca\u00eddas. 641 de 666 equipos eran chinos (AgiBot, Tien Kung); Tesla, Boston Dynamics y Figure no compitieron.",
+        "Newsletter The Stepback (The Verge) sobre los World Humanoid Robot Games. Un humanoide corrió 100 m en 9,39 s y otro saltó 2,88 m de pie; también hubo incendios y caídas. 641 de 666 equipos eran chinos (AgiBot, Tien Kung); Tesla, Boston Dynamics y Figure no compitieron.",
         "EE.UU. sigue adelante en modelos frontera y chips; China prioriza IA embodied. No es un anuncio de producto nuevo."
       ],
       "fuentes": [
-        {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/tech/986167/china-humanoid-robot-games-race"
-        }
+        { "medio": "The Verge", "url": "https://www.theverge.com/tech/986167/china-humanoid-robot-games-race" }
       ]
     },
     {
-      "titulo": "En TechBBQ, Europa debate qui\u00e9n controla la IA",
+      "titulo": "En TechBBQ, Europa debate quién controla la IA",
       "resumen": [
-        "Cr\u00f3nica de TechCrunch desde Copenhague: el tema no era qu\u00e9 construir, sino qui\u00e9n controla modelos e infraestructura. El corte de Mythos y Fable de Anthropic fuera de Europa este a\u00f1o empuj\u00f3 a startups a preguntarse si \u201calquilan\u201d poder a EE.UU. y China.",
-        "Meredith Whittaker (Signal) critic\u00f3 agentes en el sistema operativo como aparato de recolecci\u00f3n de datos. Emad Mostaque (Stability AI): \u201cthe person that controls the AI controls the country.\u201d Columna, no un anuncio."
+        "Crónica de TechCrunch desde Copenhague: el tema no era qué construir, sino quién controla modelos e infraestructura. El corte de Mythos y Fable de Anthropic fuera de Europa este año empujó a startups a preguntarse si “alquilan” poder a EE.UU. y China.",
+        "Meredith Whittaker (Signal) criticó agentes en el sistema operativo como aparato de recolección de datos. Emad Mostaque (Stability AI): “the person that controls the AI controls the country.” Columna, no un anuncio."
       ],
       "fuentes": [
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/"
-        }
+        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/" }
       ]
     },
     {
-      "titulo": "Vijay Pande: IA para ensayos cl\u00ednicos y datos biol\u00f3gicos",
+      "titulo": "Vijay Pande: IA para ensayos clínicos y datos biológicos",
       "resumen": [
-        "Entrevista de TechCrunch al ex-a16z (health) que pas\u00f3 a un fondo chico (VZVC) con agentes de IA en vez de associates. Argumenta que la IA puede mejorar el ~20% de \u00e9xito de fase 1 a 3, y que los datos biol\u00f3gicos no se scrapean como el texto.",
-        "Espera atlas / modelos fundacionales open-source en biolog\u00eda. Entrevista/columna, no un anuncio de lab."
+        "Entrevista de TechCrunch al ex-a16z (health) que pasó a un fondo chico (VZVC) con agentes de IA en vez de associates. Argumenta que la IA puede mejorar el ~20% de éxito de fase 1 a 3, y que los datos biológicos no se scrapean como el texto.",
+        "Espera atlas / modelos fundacionales open-source en biología. Entrevista/columna, no un anuncio de lab."
       ],
       "fuentes": [
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/"
-        }
+        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/" }
       ]
     }
   ]
