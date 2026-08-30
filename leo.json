@@ -4,6 +4,20 @@
   "autor": "Leo Laporte",
   "hechos": [
     {
+      "titulo": "Texas congela el gasto estatal en cámaras Flock de vigilancia con IA",
+      "agregado": "2026-08-30T14:49:00-06:00",
+      "resumen": [
+        "The Verge informa que el gobernador de Texas, Greg Abbott, congeló el gasto estatal en las cámaras de vigilancia con IA de Flock, justo antes de una investigación de Texas Tribune que cifra en más de $30 millones lo invertido, financiado sobre todo con un recargo de $1 en pólizas de seguro alegadamente contra el robo de catalizadores.",
+        "Hay al menos seis casos en Texas de oficiales suspendidos o imputados por mal uso del sistema. Ciudades del estado y del país están cancelando contratos; la oposición demócrata y el diputado republicano Keith Self también presionan por privacidad."
+      ],
+      "fuentes": [
+        {
+          "medio": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986541/texas-governor-abbott-flock-cameras"
+        }
+      ]
+    },
+    {
       "titulo": "Caterpillar lleva a obras y canteras lo que aprendió automatizando minas",
       "agregado": "2026-08-30T12:57:25-06:00",
       "resumen": [
