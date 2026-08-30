@@ -4,90 +4,97 @@
   "autor": "World News",
   "hechos": [
     {
-      "titulo": "Nepal y el Tíbet: más de 750 muertos y unos 3.000 desaparecidos; nuevas alertas de crecida",
+      "titulo": "Nepal y Tíbet: cerca de 800 muertos y más de 3.000 desaparecidos; alertas en el Bhotekoshi",
       "resumen": [
-        "Las autoridades nepalíes y chinas siguieron el domingo las labores de búsqueda tras el colapso glaciar del miércoles en la frontera Himalaya, que arrastró agua, hielo, lodo y escombros por los valles de Nepal y el condado tibetano de Gyirong. AP informó el domingo que Nepal elevó el saldo a 788 muertos y 2.502 desaparecidos, mientras China reportó 16 muertos y 546 desaparecidos en el Tíbet, entre ellos cientos de extranjeros. The Guardian situó el recuento combinado en más de 750 muertos y 3.048 desaparecidos. Nepal pidió ayuda técnica para rescatar a trabajadores atrapados en túneles de centrales hidroeléctricas; el ministro de Finanzas estimó la reconstrucción en 4.000 a 5.000 millones de dólares.",
-        "El domingo, Nepal advirtió de posibles nuevas inundaciones al subir el caudal del río Bhotekoshi y envió alertas a teléfonos móviles. Un lago formado aguas arriba por el deslave, vigilado por ambos países, había drenado en gran parte, según medios estatales chinos, pero las autoridades pidieron precaución. Más de 3.700 personas han sido rescatadas en Nepal. India y China enviaron expertos en túneles; Malasia anunció un equipo de búsqueda y un millón de dólares en ayuda."
+        "AP reportó el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino, tras el colapso glaciar del miércoles. The Guardian cifró 797 muertos combinados (781 en Nepal) y 3.048 desaparecidos; Al Jazeera coincidió en 781 en Nepal. Siguen las alertas por crecida del Bhotekoshi y hay riesgo residual de un lago de barrera.",
+        "Nepal empezó entierros masivos con muestras de ADN. El Ejército logró meter un tubo de aire en un túnel de Trishuli 3A, donde más de 100 trabajadores podrían seguir atrapados; unos 933 operarios de hidroeléctricas figuran entre los desaparecidos. China reportó 261 extranjeros desaparecidos en el Tíbet."
       ],
       "fuentes": [
-        {"medio": "AP", "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303", "publicado": "2026-08-30"},
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors", "publicado": "2026-08-30"},
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/china/nepal-needs-help-technical-areas-not-search-rescue-foreign-minister-says-2026-08-29/", "publicado": "2026-08-29"}
+        {"medio": "AP", "url": "https://apnews.com/article/nepal-china-flood-galchhi-warning-afec20e612514ca3598c65b29f485303"},
+        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/nepal-tibet-floods-china-search-rescue-operations-looking-for-survivors"},
+        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nepal-china-flood-disaster-whats-the-latest-toll-how-many-are-missing"}
       ]
     },
     {
-      "titulo": "Al menos siete muertos y 23 desaparecidos al volcar un ferry frente al norte de Chipre",
+      "titulo": "Ferry Filojet volcado frente a Kyrenia: 7 muertos, 237 rescatados y 23 desaparecidos",
       "resumen": [
-        "Un catamarán privado con unos 267 ocupantes (259 pasajeros y 8 tripulantes) volcó el domingo poco después de salir de Kyrenia (Girne), en el norte de Chipre, rumbo a Taşucu, en Mersin (Turquía). El líder turcochipriota Tufan Erhürman dijo que 237 personas fueron rescatadas con vida, siete murieron y 23 seguían desaparecidas. El ferry Filojet zarpó a las 12:30 hora local y empezó a hacer agua a unas cuatro millas náuticas de la costa; la causa no estaba clara.",
-        "Guardacostas turcochipriotas y turcos, embarcaciones civiles y helicópteros participaron en el rescate. Imágenes mostraron a pasajeros con chalecos sobre el casco volcado. El primer ministro de la autoproclamada República Turca del Norte de Chipre, Ünal Üstel, dijo que la operación de búsqueda era la prioridad. Chipre está dividida desde 1974; solo Turquía reconoce a las autoridades del norte."
+        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a pocas millas de la costa del norte de Chipre. El primer ministro de la autoproclamada República Turca del Norte de Chipre, Ünal Üstel, y el líder turcochipriota Tufan Erhürman confirmaron 237 rescatados, 7 muertos y 23 desaparecidos; el operativo de búsqueda seguía abierto."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/", "publicado": "2026-08-30"},
-        {"medio": "Deutsche Welle", "url": "https://www.dw.com/en/ferry-carrying-over-260-people-capsizes-off-cyprus/a-78562769", "publicado": "2026-08-30"},
-        {"medio": "France 24", "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus", "publicado": "2026-08-30 14:08"},
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates", "publicado": "2026-08-30"}
+        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/boat-with-around-270-people-capsizes-off-north-cyprus-media-says-2026-08-30/"},
+        {"medio": "France 24", "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus"}
       ]
     },
     {
-      "titulo": "Islandia rechaza reabrir las negociaciones de adhesión a la Unión Europea",
+      "titulo": "Ataque ruso a depósito de municiones en Myla, cerca de Kiev: 38 muertos",
       "resumen": [
-        "Los islandeses votaron el sábado contra reanudar las conversaciones de adhesión a la UE. El recuento publicado el domingo por la radiotelevisión pública RÚV dio 52,8% al no y 47,2% al sí, con una participación del 82,5%, la más alta desde 2009. La primera ministra Kristrún Frostadóttir, que impulsó la consulta, dijo que su Gobierno no reabrirá las negociaciones en este mandato y que Islandia reforzará el vínculo existente con el Espacio Económico Europeo. Solo Reikiavik votó a favor; el resto del país, en contra.",
-        "La pregunta era si Islandia debía reanudar las negociaciones, no si debía ingresar de inmediato: un sí habría llevado a un acuerdo que luego se sometería a un segundo referéndum. Islandia pidió el ingreso en 2009 y suspendió las charlas en 2013. El debate se centró en la pesca (cerca del 40% de las exportaciones), la soberanía y el coste de la vida. La Comisión Europea dijo respetar el resultado. Un diplomático de la UE describió el desenlace a Reuters como un revés claro para Bruselas."
+        "Zelenski elevó el domingo a 38 los muertos por el ataque con drones del viernes por la noche a un depósito de las fuerzas de defensa en Myla (distrito de Bucha), con 20 heridos —dos de ellos niños— y 4 desaparecidos. Unas 380-400 personas fueron evacuadas; la mayoría de las víctimas mortales eran residentes de un geriátrico. Kiev investiga negligencia por almacenar explosivos junto a viviendas.",
+        "Rusia anunció que prepara ataques masivos a la infraestructura energética ucraniana. En la última semana, según Zelenski, Moscú lanzó casi 2.000 drones de ataque, más de 1.600 bombas aéreas y 31 misiles."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/", "publicado": "2026-08-30"},
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c70le8ed1plo", "publicado": "2026-08-30"},
-        {"medio": "AP", "url": "https://apnews.com/article/iceland-european-union-election-referendum-accession-fish-d29f8d4e140894fe22db17005e9c2a2e", "publicado": "2026-08-30"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum", "publicado": "2026-08-30"},
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/iceland-eu-accession-talks-referendum-result", "publicado": "2026-08-30"},
-        {"medio": "Deutsche Welle", "url": "https://www.dw.com/en/iceland-eu-referendum-european-union/a-78560633", "publicado": "2026-08-30"}
+        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/kyiv-region-strike-death-toll-rises-38-zelenskiy-says-2026-08-30/"},
+        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c86xwqez4npo"}
       ]
     },
     {
-      "titulo": "Un ataque ruso a un depósito de municiones cerca de Kiev deja al menos 37 muertos",
+      "titulo": "Islandia rechaza reabrir negociaciones de adhesión a la UE",
       "resumen": [
-        "Un dron ruso impactó en la noche del viernes un almacén de municiones en Myla, distrito de Bucha, al oeste de Kiev, y provocó una detonación en cadena de proyectiles, minas y drones. El presidente Volodímir Zelenski dijo el sábado que al menos 37 personas murieron, decenas resultaron heridas y casi 400 fueron evacuadas. El estallido dañó viviendas, un centro para ancianos y personas con discapacidad, y unos 130 hogares, según autoridades locales. Entre los muertos estaba el alcalde de un pueblo vecino que acudió a ayudar.",
-        "Zelenski denunció negligencia por almacenar explosivos junto a zonas residenciales y anunció causas penales. Es el segundo caso similar en dos meses: en julio, un golpe a un depósito en Vyshneve mató a unas 10 personas. El Ministerio de Defensa de Rusia dijo haber apuntado a un depósito con componentes de drones de largo alcance. Oleadas de drones rusos siguieron sobre Kiev el sábado; funcionarios reportaron además la muerte de una niña de 14 años en Boryspil y de una niña de 2 años en la capital."
+        "El referéndum del sábado dio 52,8% no y 47,2% sí, con participación del 82,5%, la más alta desde 2009, según RÚV. La primera ministra Kristrún Frostadóttir dijo el domingo que no reabrirá la cuestión en este mandato, que termina en 2028, y que reforzará el vínculo con el Espacio Económico Europeo. Bruselas dijo respetar el resultado."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/russian-strike-kyiv-area-warehouse-causes-detonation-killing-27-2026-08-29/", "publicado": "2026-08-29"},
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c86xwqez4npo", "publicado": "2026-08-29"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/russian-attack-on-warehouse-near-ukraines-kyiv-kills-at-least-27", "publicado": "2026-08-29"}
+        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum"},
+        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c70le8ed1plo"},
+        {"medio": "Reuters", "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/"}
       ]
     },
     {
-      "titulo": "El Gobierno militar de Níger dice haber contenido un motín en Niamey",
+      "titulo": "Níger da por contenido el motín en Niamey; decenas de soldados muertos o detenidos",
       "resumen": [
-        "Soldados amotinados atacaron el sábado de madrugada el aeropuerto internacional Diori Hamani y la presidencia en Niamey, con horas de disparos y explosiones. La televisión estatal quedó brevemente fuera del aire. El Ministerio de Defensa dijo que las fuerzas leales iban retomando los sitios; testigos y fuentes de seguridad señalaron que el aeropuerto siguió contestado durante el día. La Alianza de Estados del Sahel (Níger, Malí y Burkina Faso) afirmó el sábado por la noche que el motín había sido sofocado.",
-        "Al Jazeera, citando autoridades y televisión estatal, reportó el domingo que el motín estaba contenido y que decenas de soldados habían muerto o sido detenidos. El ataque partió de la Base 101, en el recinto del aeropuerto, y habría involucrado a tropas del suroeste (Ouallam, Téra y Dosso), zona con bajas frecuentes frente a grupos vinculados al Estado Islámico. El gobernante militar Abdourahamane Tiani, en el poder desde el golpe de 2023, no hizo aparición pública el sábado. El embajador ruso dijo que se pidió apoyo del Africa Corps."
+        "El gobierno militar afirmó el sábado por la noche que contuvo el motín iniciado hacia la medianoche en la Base 101 del aeropuerto Diori Hamani, con disparos también hacia el palacio presidencial y el canal estatal. La televisión oficial dijo que decenas de soldados fueron muertos o detenidos. El embajador ruso Viktor Voropáyev indicó que se pidió apoyo al Africa Corps. La Alianza de Estados del Sahel dijo que el intento fue contenido y fallido; el paradero de Abdourahamane Tchiani no estaba confirmado."
       ],
       "fuentes": [
-        {"medio": "Reuters", "url": "https://www.reuters.com/world/gunfire-blasts-heard-several-areas-niger-capital-niamey-witness-says-2026-08-29/", "publicado": "2026-08-29"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next", "publicado": "2026-08-30"}
+        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next"},
+        {"medio": "Reuters", "url": "https://www.reuters.com/world/gunfire-blasts-heard-several-areas-niger-capital-niamey-witness-says-2026-08-29/"},
+        {"medio": "DW", "url": "https://www.dw.com/en/niger-attacks-gunfire-explosions/a-78554001"}
       ]
     },
     {
-      "titulo": "Tiroteo en una rave en Aarau, Suiza: una mujer de 22 años muerta y cinco heridos",
+      "titulo": "Tiroteo en un rave en Aarau, Suiza: muere una italiana de 22 años y hay 5 heridos",
       "resumen": [
-        "La policía del cantón de Argovia busca a uno o varios sospechosos tras un tiroteo hacia las 02:30 del domingo en el rave techno anual en el hipódromo de Schachen, en Aarau, a unos 46 km al oeste de Zúrich. Una mujer de 22 años, de nacionalidad italiana según el Ministerio de Exteriores de Italia y la BBC, murió en el lugar. Cuatro hombres y una mujer de entre 24 y 27 años, residentes en Suiza, fueron hospitalizados con heridas de leves a graves. El móvil y el número de autores no estaban claros.",
-        "La policía desplegó un dispositivo amplio, acordonó el hipódromo y zonas cercanas, y pidió vídeos a testigos. Agentes alemanes de Friburgo colaboraron en la búsqueda. El portavoz Bernhard Graser dijo que no había indicios de que los autores siguieran en Aarau ni de que representaran un nuevo peligro inmediato, y que el hecho de que la fiesta estuviera terminando no apuntaba a un atentado terrorista. Los tiroteos públicos son raros en Suiza pese a la alta tenencia de armas."
+        "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. Murió en el lugar una mujer italiana de 22 años; cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. La policía cantonal no tenía el domingo por la tarde información sobre el autor o autores ni el móvil; la cacería seguía abierta, con apoyo policial en Alemania."
       ],
       "fuentes": [
-        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c9qr750je1go", "publicado": "2026-08-30"},
-        {"medio": "AP", "url": "https://apnews.com/article/switzerland-shooting-rave-aargau-843e1c1cc57e1a0cb379851007ea6ba8", "publicado": "2026-08-30"},
-        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland", "publicado": "2026-08-30"},
-        {"medio": "Deutsche Welle", "url": "https://www.dw.com/en/manhunt-underway-after-woman-killed-in-swiss-rave-shooting/a-78561106", "publicado": "2026-08-30"}
+        {"medio": "The Guardian", "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland"},
+        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c9qr750je1go"}
       ]
     },
     {
-      "titulo": "Netanyahu condena violencia de colonos en Qusra, Cisjordania ocupada",
+      "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
       "resumen": [
-        "El sábado, colonos israelíes rodearon una vivienda palestina en Qusra, al sur de Nablus, en un episodio de semanas de asedio a casas en Ras al-Ain. Al Jazeera reportó que al menos cuatro palestinos quedaron atrapados, que colonos lanzaron piedras e incendiaron terrenos, y que el Ejército israelí declaró zona militar cerrada. El alcalde Abdel Azim Wadi dijo a AP que dos personas inhalaron gas lacrimógeno y otras dos resultaron heridas por piedras, y que el asedio a esa casa había cesado.",
-        "El primer ministro Benjamín Netanyahu condenó el sábado en X los actos de una 'minoría de alborotadores' en Qusra y Jalud. El Ejército dijo haber retirado a 'alborotadores israelíes' de una vivienda y confiscado vehículos. El Ministerio de Exteriores israelí calificó la violencia de vergonzosa. En Jalud, un equipo de NBC News denunció una agresión de colonos encapuchados. Las declaraciones oficiales no mencionaron detenciones."
+        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. En Jalud atacaron a una familia palestina y a un equipo de prensa extranjero, según Wafa. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación."
       ],
       "fuentes": [
-        {"medio": "AP", "url": "https://apnews.com/article/mideast-iran-israel-palestinians-august-29-2026-5e7021c30aa5d6e327a3578282a7cb07", "publicado": "2026-08-29"},
-        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra", "publicado": "2026-08-29"}
+        {"medio": "France 24", "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"},
+        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"}
+      ]
+    },
+    {
+      "titulo": "Zambia: el opositor Brian Mundubile y 17 más, acusados de traición",
+      "resumen": [
+        "El abogado de Mundubile anunció el sábado por la noche que el líder opositor, que obtuvo el 38% en la presidencial del 13 de agosto frente al 60% del presidente Hakainde Hichilema, fue imputado por traición junto a 17 personas, entre ellas su compañero de fórmula Makebi Zulu. Ambos se habían refugiado en un edificio de la ONU en Lusaka tras una redada mortal y fueron entregados bajo presión del Gobierno. Hichilema jura el 1 de septiembre."
+      ],
+      "fuentes": [
+        {"medio": "BBC", "url": "https://www.bbc.com/news/articles/c20lwqpx70qo"}
+      ]
+    },
+    {
+      "titulo": "Guinea-Bisáu vota un referéndum para reforzar la presidencia; la oposición llama al boicot",
+      "resumen": [
+        "La junta militar sometió el domingo a referéndum una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. La oposición pidió boicot por considerarlo una legitimación del golpe de noviembre. Los colegios cierran a las 17:00 GMT; los primeros resultados provisionales se esperan el martes. Hay elecciones generales previstas para el 6 de diciembre."
+      ],
+      "fuentes": [
+        {"medio": "DW", "url": "https://www.dw.com/en/guinea-bissau-votes-to-reshape-presidency/a-78562523"},
+        {"medio": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/8/29/guinea-bissau-votes-on-a-stronger-presidency-whats-at-stake"}
       ]
     }
   ]
