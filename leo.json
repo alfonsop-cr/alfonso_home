@@ -1,26 +1,30 @@
 {
-  "fecha": "2026-08-29",
-  "fechaTexto": "sábado 29 de agosto de 2026",
+  "fecha": "2026-08-30",
+  "fechaTexto": "domingo 30 de agosto de 2026",
   "autor": "Leo Laporte",
   "hechos": [
     {
-      "titulo": "Sony Music y Warner Chappell demandan a Anthropic",
+      "titulo": "Sony Music Publishing y Warner Chappell demandan a Anthropic",
       "resumen": [
-        "Sony Music y Warner Chappell demandaron a Anthropic en el Northern District of California por “decenas de miles” de obras usadas para entrenar Claude. Piden hasta $150.000 por obra y hasta $25.000 por cada instancia de metadatos de copyright eliminados (el máximo estatutario, dice The Verge, podría llegar a miles de millones).",
-        "Nombran como demandados individuales a Dario Amodei y Benjamin Mann; alegan torrenting de libros pirateados y scraping de letras licenciadas (MusixMatch, LyricFind). Anthropic no comentó de inmediato."
+        "Sony Music Publishing y Warner Chappell demandaron a Anthropic en el Northern District of California por \u201cdecenas de miles\u201d de obras usadas para entrenar Claude. Piden hasta $150.000 por obra y hasta $25.000 por cada instancia de metadatos de copyright eliminados; The Verge dice que el m\u00e1ximo estatutario podr\u00eda llegar a miles de millones.",
+        "Nombran como demandados individuales a Dario Amodei y Benjamin Mann; alegan torrenting de libros pirateados y scraping de letras (MusixMatch, LyricFind). A TechCrunch, Anthropic dijo: \u201cNo estamos de acuerdo con las pretensiones de los editores e intentaremos defendernos con firmeza en los tribunales.\u201d The Verge actualiz\u00f3 el 30 ago: demand\u00f3 Sony Music Publishing, no Sony Music Entertainment."
       ],
       "fuentes": [
         {
           "medio": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
+        },
+        {
+          "medio": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
         }
       ]
     },
     {
       "titulo": "OpenAI corta modelos a Cursor tras la compra de SpaceX",
       "resumen": [
-        "OpenAI notificó a SpaceX que cerrará el contrato que alimenta Cursor (corte propuesto: 12 nov 2026, el máximo de aviso post cambio de control). Dice no confiar en que SpaceX respete los términos de servicio, citando problemas previos con empresas de Musk. Los modelos futuros, incluida Astra, no irán a Cursor.",
-        "Reuters: Anthropic dijo horas después que aumentará cómputo de Claude en Cursor. Musk en X: “couldn’t care less.”"
+        "OpenAI notific\u00f3 a SpaceX que cerrar\u00e1 el contrato que alimenta Cursor (corte propuesto: 12 nov 2026, el m\u00e1ximo de aviso post cambio de control). Dice no confiar en que SpaceX respete los t\u00e9rminos de servicio, citando problemas previos con empresas de Musk. Los modelos futuros, incluida Astra, no ir\u00e1n a Cursor.",
+        "Reuters: Anthropic dijo horas despu\u00e9s que aumentar\u00e1 c\u00f3mputo de Claude en Cursor. Musk en X el s\u00e1bado: \u201ccouldn\u2019t care less.\u201d"
       ],
       "fuentes": [
         {
@@ -34,229 +38,37 @@
       ]
     },
     {
-      "titulo": "Un juez declara ilegal la lista negra del Pentágono contra Anthropic",
+      "titulo": "Grok Bot ahora se integra con X",
       "resumen": [
-        "La jueza Rita Lin (San Francisco) anuló la designación de Anthropic como riesgo de cadena de suministro. Lo calificó de represalia de Primera Enmienda y de “arbitrario y caprichoso”, después de que Anthropic se negara a que Claude se use para vigilancia masiva de estadounidenses y armas letales autónomas.",
-        "Halló infundadas las afirmaciones de que Anthropic podía alterar o desactivar modelos ya desplegados. Anthropic celebra el fallo; el gobierno podría apelar. Hay un caso paralelo en D.C."
+        "SpaceXAI public\u00f3 que Grok Bot tiene una integraci\u00f3n m\u00e1s estrecha con X: al conectar la cuenta crean un developer account si no existe, y los usuarios de pago reciben cr\u00e9ditos de X API para arrancar.",
+        "Primera versi\u00f3n: buscar posts, leer el timeline, revisar menciones o armar un recorte de lo que pasa en X. El post dice que seguir\u00e1n ampli\u00e1ndola."
       ],
       "fuentes": [
         {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling"
-        },
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
-        },
-        {
-          "medio": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
-        },
-        {
-          "medio": "Wired",
-          "url": "https://www.wired.com/story/a-judge-has-blocked-the-pentagons-attempt-to-blacklist-anthropic/"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28/"
-        },
-        {
-          "medio": "The Register",
-          "url": "https://www.theregister.com/ai-and-ml/2026/08/28/pentagon-blacklisted-anthropic-over-claude-powers-it-didnt-have/5293266"
-        }
-      ]
-    },
-    {
-      "titulo": "Anthropic publica IA que se auto-mejora en alineación",
-      "resumen": [
-        "Paper “Automated Researchers Can Reliably Mitigate Alignment Failures”: sistemas AAR buscan literatura, proponen un método, entrenan ~30 min e iteran. En 10 benchmarks de desalineación mejoraron todos los scores sin bajar capacidad. El mejor método supera, en promedio, propuestas humanas en ~6 horas (~$4/h de API vs $150/h humano).",
-        "Claude Sonnet 5, en 60 h, produjo una receta de ~2.000 ejemplos casi al nivel de alineación de producción en un checkpoint temprano de Opus 4.8. Abren el harness; detectaron “trampa” en 2,4% de ~1.600 transcripciones."
-      ],
-      "fuentes": [
-        {
-          "medio": "Anthropic",
-          "url": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
-        },
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/"
-        }
-      ]
-    },
-    {
-      "titulo": "a16z lanza un fondo de $1.100 millones para infraestructura física de IA",
-      "resumen": [
-        "Andreessen Horowitz creó el fondo “Machine Age” para chips, memoria, interconnects, data centers, robots, cooling, energía e inmuebles. Es un giro hacia el buildout físico, no solo software."
-      ],
-      "fuentes": [
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/a16z-creates-a-1-1b-machine-age-fund-to-accelerate-the-physical-buildout-of-ai/"
-        }
-      ]
-    },
-    {
-      "titulo": "Lambda consigue $1.000 millones en deuda para chips de Nvidia",
-      "resumen": [
-        "La neocloud levantó $1B en deuda privada de corto plazo (JPMorgan, según Bloomberg) para comprar chips Nvidia que alquilará a Microsoft. La misma semana cerró un préstamo de $926M para GB300. Bloomberg: más de $400B en deuda ligada a IA en 2026."
-      ],
-      "fuentes": [
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/"
-        }
-      ]
-    },
-    {
-      "titulo": "Tencent suelta preview open-source de Hy4",
-      "resumen": [
-        "Mixture-of-experts de 770B parámetros (~49B activos) en Hugging Face, para coding, research y análisis financiero. Tencent avisa que el preview puede ser lento y sobre-verificar respuestas."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/asia-pacific/chinas-tencent-releases-new-open-source-ai-model-coding-research-tasks-2026-08-28/"
-        }
-      ]
-    },
-    {
-      "titulo": "Marvell cae más de 8% por el timing del deal de chips con Google",
-      "resumen": [
-        "Acuerdo de hasta $120B hasta FY2033; los inversionistas dudan cuándo entra ingreso material. El CEO dijo que será mucho más relevante en FY2029. Subió guidance de FY27/28; Morgan Stanley sostiene que Google ya estaba en el guidance previo."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/business/marvell-shares-slide-concerns-over-timing-google-ai-deal-revenue-eclipse-strong-2026-08-28/"
-        }
-      ]
-    },
-    {
-      "titulo": "La EPA quiere relajar avisos públicos de contaminación de data centers",
-      "resumen": [
-        "Propone quitar el requisito federal de aviso-y-comentario para muchos permisos “menores” de aire y dejarlo a los estados. El período de comentarios cerró (~4.900). xAI Colossus 1 en Tennessee usó un permiso minor-source."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/986176/data-center-pollution-epa-rule-change-air-permit"
-        }
-      ]
-    },
-    {
-      "titulo": "Un data center respaldado por Microsoft habría operado generadores sin permiso",
-      "resumen": [
-        "Recap de The Verge (investigación de Floodlight): la facilidad DataOne en New Jersey, acusada de correr generadores a gas sin los permisos de aire requeridos."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/986288/microsoft-data-center-unpermitted-gas-generator-pollution-investigation"
-        }
-      ]
-    },
-    {
-      "titulo": "Claude Code se puede hijackear pidiendo “resumí este sitio”",
-      "resumen": [
-        "Johann Rehberger mostró que Claude Code en Auto Mode (Opus 5) puede terminar ejecutando código del atacante si se le pide resumir un sitio malicioso (WebFetch falla, cae a curl, ZIP, module-shadowing). Éxito 60–80% en muestras chicas. Anthropic: Auto Mode es un clasificador best-effort, no una garantía de seguridad."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Register",
-          "url": "https://www.theregister.com/research/2026/08/28/researcher-shows-how-claude-code-can-be-tricked-simply-by-asking-it-to-summarize-a-website/5293372"
-        }
-      ]
-    },
-    {
-      "titulo": "Meta cierra un vacío en las gafas IA (LED tapado)",
-      "resumen": [
-        "Update de software: si se tapa el LED de captura durante la grabación, se corta la cámara. Siguen riesgos: sondeos en la UE, posible restricción en Alemania, class action en EE.UU."
-      ],
-      "fuentes": [
-        {
-          "medio": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/08/meta-tweaks-ai-glasses-to-block-some-creepy-recordings-but-privacy-risks-remain/"
-        }
-      ]
-    },
-    {
-      "titulo": "VP de Meta India/SEA se va a OpenAI",
-      "resumen": [
-        "Sandhya Devanathan se une a OpenAI desde Singapur (reporta a Kiran Mani, APAC), tras la contratación de Prabhjeet Singh como head de India."
-      ],
-      "fuentes": [
-        {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/"
-        }
-      ]
-    },
-    {
-      "titulo": "Más de 100 empresas advierten ataques ciber habilitados por IA",
-      "resumen": [
-        "Carta organizada por OpenAI (OpenAI, Anthropic, Google, Microsoft, AWS y otros): piden más IA defensiva, intercambio de amenazas y fondeo público. Sin montos ni plazos vinculantes. The Register cubre el comunicado con tono escéptico."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Register",
-          "url": "https://www.theregister.com/security/2026/08/28/industry-that-built-the-problem-offers-to-sell-you-the-solution/5293207"
-        }
-      ]
-    },
-    {
-      "titulo": "Anthropic propone un Model Hardware Standard para labs y robots",
-      "resumen": [
-        "Spec para que agentes operen hardware de laboratorio, fábrica y robots. Preview en HHMI Janelia; citan usos de Genentech y QuEra. No lo abren en open-source todavía."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Register",
-          "url": "https://www.theregister.com/ai-and-ml/2026/08/28/anthropic-proposes-plumbing-spec-to-link-ai-agents-to-lab-kit-and-robots/5293135"
-        }
-      ]
-    },
-    {
-      "titulo": "Hugging Face suma hindi al Open ASR Leaderboard",
-      "resumen": [
-        "Con Voice Arena, añaden Monsoon hi-IN y en-IN: hindi es la primera lengua Indic en el tab multilingual."
-      ],
-      "fuentes": [
-        {
-          "medio": "Hugging Face",
-          "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south"
-        }
-      ]
-    },
-    {
-      "titulo": "Anthropic TASTE: ¿pueden los modelos juzgar propuestas de safety?",
-      "resumen": [
-        "Benchmark de 92 pares de preferencias de investigadores. El mejor modelo (Fable 5) llegó a 60%, por debajo del ~77% de acuerdo humano estimado."
-      ],
-      "fuentes": [
-        {
-          "medio": "Anthropic",
-          "url": "https://alignment.anthropic.com/2026/taste/"
-        }
-      ]
-    },
-    {
-      "titulo": "OpenAI + Tailandia: aceleradora de startups de IA",
-      "resumen": [
-        "Programa de 8 semanas con 10 startups de salud/educación ($2.000 en créditos API). Primera alianza público-privada de OpenAI con el gobierno tailandés."
-      ],
-      "fuentes": [
-        {
-          "medio": "OpenAI",
-          "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand/"
+          "medio": "SpaceXAI",
+          "url": "https://x.ai/news/grok-bot-and-x"
         }
       ]
     }
   ],
   "columnas": [
     {
+      "titulo": "Los robots humanoides de China adelantan en Beijing",
+      "resumen": [
+        "Newsletter The Stepback de The Verge sobre los World Humanoid Robot Games (cinco d\u00edas en Beijing). Un humanoide corri\u00f3 los 100 m en 9,39 s (por debajo del r\u00e9cord de Bolt) y otro salt\u00f3 2,88 m de pie. Tambi\u00e9n hubo piernas rotas, choques contra colchonetas e incluso un robot que se incendio.",
+        "China domin\u00f3 el medallero (AgiBot y Tien Kung). 641 de 666 equipos eran chinos; Tesla, Boston Dynamics y Figure no compitieron. EE.UU. sigue adelante en modelos frontera y chips; China prioriza IA embodied. No es un anuncio de producto nuevo."
+      ],
+      "fuentes": [
+        {
+          "medio": "The Verge",
+          "url": "https://www.theverge.com/tech/986167/china-humanoid-robot-games-race"
+        }
+      ]
+    },
+    {
       "titulo": "Nvidia: la ventaja ya no es solo la GPU",
       "resumen": [
-        "Análisis post-earnings sobre el stack Vera Rubin vs el chip Jalapeño de OpenAI. No es un lanzamiento de producto nuevo."
+        "An\u00e1lisis post-earnings de TechCrunch sobre el stack Vera Rubin frente al chip Jalape\u00f1o de OpenAI. No es un lanzamiento de producto nuevo."
       ],
       "fuentes": [
         {
@@ -266,14 +78,14 @@
       ]
     },
     {
-      "titulo": "Open-weight como target de M&A",
+      "titulo": "M\u00fasicos persiguen a quien hace pasar m\u00fasica IA por humana",
       "resumen": [
-        "Recap de oleada: Nvidia–Hugging Face ~$13B sigue sin confirmar, Poolside $6B, OpenRouter >$7B (Stripe)."
+        "Feature de The Verge sobre callout culture en EDM: productores como H4RRIS se\u00f1alan a pares que niegan usar gen AI (Suno y similares) mientras hay temas IA en charts. Columna/reportaje, no un fallo ni un anuncio de lab."
       ],
       "fuentes": [
         {
-          "medio": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/"
+          "medio": "The Verge",
+          "url": "https://www.theverge.com/entertainment/985866/h4rris-nihil-young-edm-suno-ai"
         }
       ]
     }
