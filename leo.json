@@ -33,6 +33,16 @@
       "fuentes": [
         { "medio": "Ars Technica", "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/" }
       ]
+    },
+    {
+      "titulo": "SpaceX fundirá aspas de turbinas de gas para acelerar data centers de IA",
+      "resumen": [
+        "Musk confirmó el sábado que una fundición secreta de SpaceX en Bastrop, Texas, servirá para fundir aspas y álabes de turbinas de gas, el cuello de botella de la generación para data centers. Dice que Tesla y SpaceX apuntan a 100 GW/año de solar, pero el gas seguirá años, y que fundir in-house puede adelantar turbinas hasta 18 meses.",
+        "GE Vernova está agotada hasta 2030 por demanda de IA. TechCrunch recuerda demandas de la NAACP por turbinas de Colossus en Memphis sin permisos, y un estudio en Virginia que estima 3,4 a 6,5 muertes prematuras extra al año por un solo sitio."
+      ],
+      "fuentes": [
+        { "medio": "TechCrunch", "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/" }
+      ]
     }
   ],
   "columnas": [
