@@ -304,6 +304,9 @@
     function colon(n) {
         return '₡' + Number(n).toFixed(2).replace('.', ',');
     }
+    function jsonUrl(path) {
+        return path + '?t=' + Date.now();
+    }
     function updateClock() {
         const now = new Date();
         const opts = { timeZone: 'America/Costa_Rica' };
@@ -374,7 +377,7 @@
     }
     async function fetchMonex() {
         try {
-            const res = await fetch('./monex.json', { cache: 'no-store' });
+            const res = await fetch(jsonUrl('./monex.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('monex.json');
             const d = await res.json();
             document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
@@ -387,7 +390,7 @@
     }
     async function fetchBac() {
         try {
-            const res = await fetch('./bac.json', { cache: 'no-store' });
+            const res = await fetch(jsonUrl('./bac.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('bac.json');
             const d = await res.json();
             document.getElementById('bac-compra').textContent = colon(d.compra);
@@ -429,7 +432,7 @@
     }
     async function fetchNoticias() {
         try {
-            const res = await fetch('./noticias.json', { cache: 'no-store' });
+            const res = await fetch(jsonUrl('./noticias.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('noticias.json');
             const d = await res.json();
             renderHechos(document.getElementById('noticias'), d.hechos);
@@ -439,7 +442,7 @@
     }
     async function fetchLeo() {
         try {
-            const res = await fetch('./leo.json', { cache: 'no-store' });
+            const res = await fetch(jsonUrl('./leo.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('leo.json');
             const d = await res.json();
             renderHechos(document.getElementById('leo-hechos'), d.hechos);
