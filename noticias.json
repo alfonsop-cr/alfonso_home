@@ -1,360 +1,209 @@
 {
-  "fecha": "2026-08-29",
-  "fechaTexto": "sábado 29 de agosto de 2026",
-  "autor": "Ignacio Santos",
-  "hechos": [
-    {
-      "titulo": "Hacienda cierra el portillo de subfacturación de vehículos importados",
-      "resumen": [
-        "El viernes salió en La Gaceta el Decreto N.º 45920-H. Aduanas comparará la factura (con flete y seguro) con el valor hacendario del mismo modelo y se tributará sobre el monto mayor. Si el modelo no está en la lista de Tributación, el importador debe aportar ficha técnica. Personas físicas no inscritas como vendedores podrán importar solo una unidad al año.",
-        "Hacienda estima evasión de ¢20.000 millones. El viceministro de Ingresos, Víctor Carvajal, dijo que con esa cifra se podrían dar unos 2.000 bonos de vivienda de ¢9,7 millones. Rodrigo Chaves citó un Land Cruiser 2025 declarado en $8.000 (precio ~$140.000) y un Ferrari con diferencia tributaria superior a ¢67 millones. Aivema niega que sus agremiados estén ligados a esos casos."
-      ],
-      "fuentes": [
-        {
-          "medio": "CRHoy",
-          "url": "https://crhoy.com/economia/hacienda-cambia-calculo-del-impuesto-a-la-importacion-de-carros/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/economia/tras-dos-anos-hacienda-cierra-portillo-para/AS2USHLBDNAY3GZLGJWKZFSU5U/story/"
-        },
-        {
-          "medio": "El Financiero",
-          "url": "https://www.elfinancierocr.com/finanzas/hacienda-endurece-controles-a-importacion-de/A6MLHSZHNBBNNEP5FPYZRAV4G4/story/"
-        },
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/subfacturacion-de-vehiculos-importados-impacto-recaudacion-tributaria-en-20-000-millones-argumenta-hacienda/"
-        },
-        {
-          "medio": "El Mundo CR",
-          "url": "https://elmundo.cr/costa-rica/gobierno-anuncia-decreto-para-cobrar-impuestos-a-vehiculos-de-lujo-segun-su-valor-de-mercado/"
-        }
-      ]
-    },
-    {
-      "titulo": "Hacienda baja a ¢4,04 billones las necesidades de financiamiento de 2026",
-      "resumen": [
-        "Tras la revisión semestral, Hacienda y el BCCR recortaron el requerimiento de ¢4,2 a ¢4,04 billones (¢160.000 millones menos). ¢3,87 billones saldrían del mercado interno y ¢170.000 millones de fuentes externas. El viceministro de Egresos, Luis Antonio Molina, dijo que al 25 de agosto ya se habían captado ¢3,4 billones (89% del monto ajustado), más ¢1,3 billones en gestión de pasivos."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Financiero",
-          "url": "https://www.elfinancierocr.com/finanzas/hacienda-reduce-a-404-billones-las-necesidades-de/DNRHE7K4ONAMXI6P7VG6PON2QM/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Pueblo Soberano usa su mayoría para bloquear investigaciones en la Asamblea",
-      "resumen": [
-        "La Nación documenta que, entre mayo y agosto, la bancada oficialista rechazó u obstruyó al menos 16 mociones en tres comisiones, archivó 10 expedientes heredados y se negó a crear comisiones provinciales. Gonzalo Ramírez preside Seguridad y Narcotráfico y Control del Ingreso y el Gasto Públicos; al tomar esta última ordenó archivar investigaciones abiertas.",
-        "Entre lo bloqueado: cuentas a Rodrigo Chaves, Mario Zamora y Manuel Jiménez Steller por cambios en PCD, Fronteras y Guardacostas (Némesis, Riverside, Leviatán, Clarividente); un informe de inteligencia sobre posible vínculo de 122 oficiales de Fuerza Pública con crimen organizado en la zona sur; el decreto de secreto de Estado; y denuncias del exgerente del INS sobre presunta intromisión de Chaves y Tradeco en Barranca-Limonal."
-      ],
-      "fuentes": [
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/politica/pueblo-soberano-impone-red-de-cuido-legislativa/AD65K7LC6FHGNOXS5MMIOTFDSE/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Gremios rechazan el proyecto de Marta Esquivel para eliminar la colegiatura obligatoria (exp. 25.747)",
-      "resumen": [
-        "La diputada de Pueblo Soberano presentó el jueves un proyecto para ejercer con título universitario sin colegiarse, con excepciones (medicina clínica, derecho en sede jurisdiccional/RAC/notariado, y ciertas ingenierías si hay riesgo a vida, salud, ambiente o seguridad). Exonera a funcionarios públicos que no ejercen en privado y elimina aranceles y timbres forzosos.",
-        "Colegio de Abogados, Colegio de Contadores Públicos, Colegio de Médicos y Fecoprou pidieron rechazarlo. Los abogados advierten un “cierre técnico” (unos 37.000 agremiados). Los colegios se reúnen el 2 de setiembre."
-      ],
-      "fuentes": [
-        {
-          "medio": "La República (proyecto)",
-          "url": "https://www.larepublica.net/marta-esquivel-propone-eliminar-colegiatura-obligatoria-para-varias-profesiones/"
-        },
-        {
-          "medio": "La República (gremios)",
-          "url": "https://www.larepublica.net/gremios-profesionales-rechazan-eliminacion-de-colegiatura-obligatoria/"
-        },
-        {
-          "medio": "La Nación (abogados)",
-          "url": "https://www.nacion.com/politica/colegio-de-abogados-se-opone-a-proyecto-que-busca/JPJ4ZZT7SVFTFCRBKHJBQB4OTE/story/"
-        },
-        {
-          "medio": "La Nación (contadores)",
-          "url": "https://www.nacion.com/politica/colegio-de-contadores-publicos-se-opone-a-eliminar/BH22D2GJBNAZDBAPOFV7YH4CRE/story/"
-        },
-        {
-          "medio": "Teletica (proyecto)",
-          "url": "https://www.teletica.com/politica/proyecto-plantea-eliminar-colegiatura-obligatoria-a-medicos-y-abogados-del-sector-publico_416287"
-        },
-        {
-          "medio": "Teletica (gremios)",
-          "url": "https://www.teletica.com/politica/profunda-preocupacion-entre-colegios-por-proyecto-para-eliminar-incorporacion-obligatoria_416307"
-        },
-        {
-          "medio": "El Mundo CR",
-          "url": "https://elmundo.cr/costa-rica/marta-esquivel-los-colegios-profesionales-son-para-los-que-ejercen-actividad-privada-no-para-funcionarios-publicos/"
-        },
-        {
-          "medio": "Delfino",
-          "url": "https://delfino.cr/2026/08/que-hizo-el-congreso-esta-semana-del-24-al-27-de-agosto-de-2026"
-        }
-      ]
-    },
-    {
-      "titulo": "Cuatro homicidios a balazos: dos en Turrialba, uno en Matina y un cadáver el sábado en Siquirres",
-      "resumen": [
-        "El viernes ~6:30 p.m. murieron dos hombres (Zamora, 30, y Ortiz, 23) con múltiples disparos cerca del cementerio de Turrialba. A las 8:22 p.m., en Matina, un joven de ~20 años apareció muerto al costado de la iglesia católica, con impactos en cabeza y tórax. El sábado, el OIJ halló en una finca bananera de Reventazón, Siquirres, el cuerpo de un hombre de 47 años, apellido Jirón, reportado desaparecido el viernes; tenía cuatro disparos en la cabeza. Sin móvil ni detenidos publicados."
-      ],
-      "fuentes": [
-        {
-          "medio": "CRHoy Turrialba",
-          "url": "https://crhoy.com/nacionales/matan-a-balazos-a-dos-hombres-frente-a-cementerio-de-turrialba/"
-        },
-        {
-          "medio": "CRHoy Matina",
-          "url": "https://crhoy.com/nacionales/asesinan-a-joven-a-balazos-a-un-costado-de-iglesia-en-matina/"
-        },
-        {
-          "medio": "La Nación Turrialba",
-          "url": "https://www.nacion.com/sucesos/dos-hombres-mueren-baleados-cerca-del-cementerio/HD2ZODWGZBAJNIL6MC7XEAWCIM/story/"
-        },
-        {
-          "medio": "La Nación Siquirres",
-          "url": "https://www.nacion.com/sucesos/hallan-cuerpo-de-hombre-con-disparos-en-la-cabeza/PTQJVLE3HFEDJGO3RUMB3CIUUI/story/"
-        },
-        {
-          "medio": "Telediario",
-          "url": "https://www.telediario.cr/en-alerta/doble-homicidio-turrialba-hombres-mueren-ataque-balazos"
-        }
-      ]
-    },
-    {
-      "titulo": "Operación “Cacería” en Cartago: 4 de 14 más buscados ya están bajo custodia",
-      "resumen": [
-        "El ministro Gerald Campos confirmó el viernes las detenciones de Jeremy Quirós Quesada (Corredores) y Anthony Alexander Serrano Chaves (se entregó en Orosi). El jueves habían detenido a Carolina Loría Solís, de “Los Gery”, en Tejar de El Guarco; La Teja indica que tiene pendiente una condena de 10 años por tráfico y no se presentó a la lectura de sentencia. Faltan 10 de la lista."
-      ],
-      "fuentes": [
-        {
-          "medio": "Teletica",
-          "url": "https://www.teletica.com/noticias/capturan-a-dos-sujetos-de-la-lista-de-los-mas-buscados-en-cartago_416322"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/golpe-a-familia-narco-detienen-a-madre-de-presunto/KZWQRMPET5FGROPY45VCUPFBKU/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Recapturan a los dos reos fugados de la cárcel Nelson Mandela (San Carlos)",
-      "resumen": [
-        "Justicia confirmó la recaptura de Geiner Steven Ordóñez Vargas (indiciado por violación), en Aguas Zarcas, y de Alfredo Castillo Páramo (robo simple), en Florencia de San Carlos. Irán a Máxima Seguridad de La Reforma. La Teja indica que habrían cortado malla de cordomex en el cielorraso."
-      ],
-      "fuentes": [
-        {
-          "medio": "Telediario",
-          "url": "https://www.telediario.cr/en-alerta/recapturan-privado-libertad-fugo-carcel-video"
-        },
-        {
-          "medio": "La Teja (primero)",
-          "url": "https://www.lateja.cr/sucesos/capturan-a-presunto-violador-que-huyo-de-la-carcel/PAHHFTQC6JC7NMDGVWBIWTWAPQ/story/"
-        },
-        {
-          "medio": "La Teja (segundo)",
-          "url": "https://www.lateja.cr/sucesos/cayo-el-segundo-recapturan-a-reo-fugado-de-la/CLAZMWIOLFG25ABGDLXTBMZQTQ/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Onda tropical N.° 38: alerta naranja en Caribe, Zona Norte y Turrialba; 46 personas en albergues",
-      "resumen": [
-        "La CNE advirtió que el sábado 29 la onda 38 reforzaría lluvias sobre suelos saturados. El viernes hubo inundaciones en Limón centro, Guápiles/Pococí y crecida del Bananito; se inundó la Escuela La Colina y Siquirres suspendió el desfile del Día de la Persona Negra. Siguen 46 personas en albergues (Los Chiles y Sarapiquí). Alerta naranja: Zona Norte, Caribe y Turrialba. Amarilla: Valle Central, Pacífico Central y Sur."
-      ],
-      "fuentes": [
-        {
-          "medio": "CRHoy",
-          "url": "https://crhoy.com/nacionales/video-fuertes-lluvias-causan-inundaciones-y-saturan-alcantarillado-en-limon-y-pococi/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/sucesos/cne-reporta-afectaciones-por-fuertes-lluvias-en/DG67M2R2VFGJBDDZI7TFZHR2UM/story/"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/onda-tropical-llegara-durante-el-fin-de-semana/4TOADZBL3NH3RH2GIAWJAGOREM/story/"
-        },
-        {
-          "medio": "Teletica (Limón)",
-          "url": "https://www.teletica.com/nacional/fuertes-lluvias-en-limon-inundan-calles-escuelas-y-obligan-a-suspender-desfile_416319"
-        },
-        {
-          "medio": "Teletica (Siquirres)",
-          "url": "https://www.teletica.com/nacional/vecina-de-siquirres-vive-con-angustia-ante-amenaza-de-lluvias-y-crecida-de-rio_416320"
-        }
-      ]
-    },
-    {
-      "titulo": "Salud aplaza al 1.° de octubre el requisito de vacuna contra fiebre amarilla para ocho destinos",
-      "resumen": [
-        "Un día después de anunciar vigencia el 31 de agosto, Salud lo pospuso al 1.° de octubre para Bolivia, Ecuador, Paraguay, Trinidad y Tobago, Venezuela, Surinam, Guyana y Guayana Francesa. La vacuna debe aplicarse al menos 10 días antes del viaje. Colombia, Brasil, Perú y países africanos de riesgo no cambian."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/salud-aplaza-hasta-octubre-nuevo-requisito-de-vacuna-contra-la-fiebre-amarilla-anunciado-un-dia-antes/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/el-pais/vacuna-contra-fiebre-amarilla-nueva-fecha-para/VJ2QHYM545GSNAG7G6NVYALYVM/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Listeria en vegetales empacados Pik Fácil: Salud ordena retiro de un lote",
-      "resumen": [
-        "Salud alertó por Listeria monocytogenes en mezcla Pik Fácil (zanahoria, chayote, zucchini, brócoli), lote con vencimiento 7 de setiembre de 2026, registro 2101-A-11674. Lo confirmó Crima-Inciensa en supermercados. No consumir (embarazadas, adultos mayores, inmunosuprimidos); desechar o devolver. Reportes: uvc.correspondencia@misalud.go.cr."
-      ],
-      "fuentes": [
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/sucesos/ministerio-de-salud-detecta-peligrosa-bacteria-en/D57BDH2BAZCDVIZVIXQYAR6T4A/story/"
-        },
-        {
-          "medio": "Telediario",
-          "url": "https://www.telediario.cr/nacional/alerta-por-vegetales-pik-facil-con-listeria"
-        }
-      ]
-    },
-    {
-      "titulo": "Junta de la CCSS aprueba estados con 13 meses de atraso y al día siguiente suspende a mandos financieros",
-      "resumen": [
-        "El 27 de agosto la Junta aprobó por unanimidad los estados del Seguro de Salud a junio 2025, primeros desde el ERP-SAP. Quedan 13 cierres pendientes; IVM y RNC siguen sin presentar.",
-        "Horas después suspendió con goce de salario (28 ago–28 dic) al gerente financiero Gustavo Picado, al director Andrey Sánchez y a Azyhadde Picado (Contabilidad de Costos); Nación también nombra a Adriana Gutiérrez. Nación lo liga a anuarios de costos 2022-2023 y al caso Barrenador (presunto sobreprecio de ¢12.400 millones anuales en 138 Ebáis). Teletica habla de atrasos en el Anuario de Costos 2024 y de una segunda suspensión de Picado (la anterior, febrero 2023)."
-      ],
-      "fuentes": [
-        {
-          "medio": "La Nación (estados)",
-          "url": "https://www.nacion.com/economia/tras-13-meses-de-retraso-la-ccss-aprueba-los/HXXE6WFGPFHEJCO2I3P4HA6PTE/story/"
-        },
-        {
-          "medio": "La Nación (suspensión)",
-          "url": "https://www.nacion.com/el-pais/junta-directiva-de-la-ccss-suspende-a-tres/MOKDUP4IQZBL5HYWB46ISKEQ7M/story/"
-        },
-        {
-          "medio": "Teletica",
-          "url": "https://www.teletica.com/nacional/gerente-financiero-de-ccss-suspendido-por-cuatro-meses_416294"
-        },
-        {
-          "medio": "El Mundo CR",
-          "url": "https://elmundo.cr/costa-rica/ccss-suspende-a-gerente-y-directora-de-area-de-contabilidad-que-denunciaron-supuesto-caso-barrenador-por-irregularidades-en-presentacion-de-estados-financieros/"
-        }
-      ]
-    },
-    {
-      "titulo": "La CCSS deposita hoy sábado la pensión de agosto",
-      "resumen": [
-        "IVM y Régimen No Contributivo quedan disponibles el sábado 29 en la cuenta registrada. El de setiembre: miércoles 30. NCR cita (a noviembre 2025) 393.837 pensionados IVM y 157.021 en RNC."
-      ],
-      "fuentes": [
-        {
-          "medio": "NCR Noticias",
-          "url": "https://ncrnoticias.com/sucesos/atencion-pensionados-ccss-confirma-cuando-depositara-la-pension-de-agosto/"
-        }
-      ]
-    },
-    {
-      "titulo": "Congreso (24-27 ago): ley de valores extranjeros, canon de radio/TV en primer debate y avanza el 4x3",
-      "resumen": [
-        "Delfino: segundo debate unánime del exp. 25.244 (valores extranjeros e intermediarios remotos) y del 24.547 (responsabilidad laboral de contratistas). En primer debate, 48-3 a favor del exp. 24.461 (canon de frecuencias). El oficialismo revirtió cambios al proyecto de jornadas 12 horas (4x3) y reiteró la exclusión del sector público.",
-        "Juan Carlos Hidalgo (PUSC) dijo el viernes que el canon no se cobra por espectro sino sobre la facturación, y que en televisión la tasa máxima llegaría al 7,73% de ingresos brutos. Advirtió amenaza a la libertad de prensa. Es reacción política, no columna."
-      ],
-      "fuentes": [
-        {
-          "medio": "Delfino",
-          "url": "https://delfino.cr/2026/08/que-hizo-el-congreso-esta-semana-del-24-al-27-de-agosto-de-2026"
-        },
-        {
-          "medio": "El Mundo CR (Hidalgo)",
-          "url": "https://elmundo.cr/costa-rica/juan-carlos-hidalgo-cuestiona-canon-por-el-uso-de-frecuencias-y-advierte-amenaza-para-la-libertad-de-prensa/"
-        }
-      ]
-    },
-    {
-      "titulo": "ICE demolerá su edificio de Sabana Norte y plantea uno de hasta 21 pisos",
-      "resumen": [
-        "El Consejo Directivo acordó demoler el Jorge Manuel Dengo Obregón, desocupado desde diciembre 2024 por vulnerabilidad sísmica, y construir en el mismo predio. Opción en análisis: hasta 21 pisos, ~1.100 personas, ~40.000 m². Fechas y presupuesto aún no están definidos. El personal está en la Torre Grupo ICE, Sabana Sur."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/ice-construira-nuevo-edificio-en-sabana-norte-de-hasta-21-pisos/"
-        },
-        {
-          "medio": "La República",
-          "url": "https://www.larepublica.net/ice-acuerda-demoler-edificio-historico-y-construir-uno-nuevo-de-21-pisos/"
-        },
-        {
-          "medio": "El Mundo CR",
-          "url": "https://elmundo.cr/costa-rica/ice-construira-nuevo-edificio-jorge-manuel-dengo-para-su-sede-en-sabana-norte/"
-        }
-      ]
-    },
-    {
-      "titulo": "Setena mantiene la viabilidad ambiental del embarcadero de Puerto Viejo; ya fue impugnada",
-      "resumen": [
-        "El 20 de agosto Setena rechazó 6-0 anular la viabilidad de octubre 2024 al Embarcadero Vecinal (MOPT). El 27 de agosto Walter Brenes Soto interpuso revocatoria con apelación: el área pasó de 820 m² a 1.040 m² (+26,8%, umbral 20%) y disputa si la cimentación apoya sobre lutita o arrecife coralino."
-      ],
-      "fuentes": [
-        {
-          "medio": "Delfino",
-          "url": "https://delfino.cr/2026/08/setena-mantiene-viabilidad-ambiental-del-embarcadero-de-puerto-viejo-decision-es-impugnada"
-        }
-      ]
-    },
-    {
-      "titulo": "PGR pidió en marzo un peritaje del OIJ sobre bosques de Gandoca-Manzanillo; la Sala IV aún no lo conoce",
-      "resumen": [
-        "La Procuraduría pidió el 9 de marzo (exp. 14-019174-0007-CO) que el OIJ perite extensión y ubicación de bosque y bosque anegado. La Sala confirmó a Delfino que el escrito llegó, pero los magistrados aún no lo conocen. Siguen las cautelares de 2025: moratoria de concesiones, tala y trámites posesorios en zonas boscosas del refugio."
-      ],
-      "fuentes": [
-        {
-          "medio": "Delfino",
-          "url": "https://delfino.cr/2026/08/pgr-pidio-desde-marzo-peritaje-del-oij-para-precisar-delimitacion-de-bosques-en-gandoca-manzanillo"
-        }
-      ]
-    },
-    {
-      "titulo": "754.510 hogares tienen algún deterioro habitacional",
-      "resumen": [
-        "Informe CFIA-UCR (datos ENAHO/INEC): 754.510 hogares con carencias en 2025, 161.667 más que en 2016. Como proporción del parque bajó de 51,9% a 40,3%. Franklin Solano cifra en ~150.000 las viviendas nuevas necesarias. En 2025 se tramitaron permisos para más de 26.000 viviendas."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/mas-de-754-000-hogares-en-costa-rica-tienen-algun-deterioro-en-sus-viviendas-revela-informe/"
-        }
-      ]
-    },
-    {
-      "titulo": "MEP alista reglamento para 605 centros privados",
-      "resumen": [
-        "Leonardo Sánchez anunció que en las próximas semanas se publicará un nuevo reglamento de centros educativos privados (consulta pública ya hecha). El Observador cuenta 605 privados frente a 4.681 públicos."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/nuevo-reglamento-centros-educativos-privados-mep/"
-        }
-      ]
-    },
-    {
-      "titulo": "Juzgado desestima la causa de Pilar Cisneros contra Ariel Robles por un WhatsApp legislativo",
-      "resumen": [
-        "El Juzgado Penal de la Zona Sur desestimó la causa contra el exdiputado Ariel Robles, denunciado por Pilar Cisneros por presunta violación de correspondencia (captura de un grupo de WhatsApp de diputaciones sobre el 4x3). El juez Fernando Mora Gutiérrez: la conducta es atípica; Robles era receptor legítimo."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Mundo CR",
-          "url": "https://elmundo.cr/costa-rica/juzgado-desestima-causa-penal-contra-ariel-robles/"
-        }
-      ]
-    }
-  ]
+ "fecha": "2026-08-30",
+ "fechaTexto": "domingo 30 de agosto de 2026",
+ "autor": "Ignacio Santos",
+ "hechos": [
+  {
+   "titulo": "Muere ahogado el c\u00f3nsul alem\u00e1n Mario Genz en R\u00edo Cuarto",
+   "resumen": [
+    "Mario Genz, c\u00f3nsul de Alemania en Costa Rica, de 53 a\u00f1os, falleci\u00f3 la tarde del s\u00e1bado 29 de agosto en el Centro Recreativo La Laguna, R\u00edo Cuarto de Alajuela. La Cruz Roja report\u00f3 la emergencia a las 2:23 p.m.; Bomberos indic\u00f3 que estuvo sumergido al menos 30 minutos. La reanimaci\u00f3n por m\u00e1s de una hora no tuvo resultado; fue declarado sin vida en el lugar.",
+    "La ADI de R\u00edo Cuarto dijo que era buzo certificado y visitante frecuente. Canciller\u00eda expres\u00f3 condolencias. Repretel y El Mundo CR recogen que volc\u00f3 un kayak; La Teja lo describe hallado en el agua. Teletica, a media tarde, a\u00fan no ten\u00eda confirmaci\u00f3n de la Embajada."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/muere-consul-de-alemania-en-costa-rica-mario-genz/H7QEMSKYI5EILBO65C2BFGC6ZM/story/"},
+    {"medio": "El Observador", "url": "https://observador.cr/cancilleria-lamenta-muerte-de-consul-de-alemania-ahogado-en-laguna-de-rio-cuarto/"},
+    {"medio": "El Observador", "url": "https://observador.cr/buzo-profesional-y-corredor-asi-era-mario-genz-el-consul-de-alemania-que-fallecio-ahogado-en-rio-cuarto/"},
+    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/hombre-que-murio-en-centro-recreativo-era-el-consul-de-alemania/"},
+    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/funcionario-consular-de-alemania-muere-en-laguna-de-alajuela_416337"},
+    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/mario-genz-consul-de-alemania-en-costa-rica-muere/U3ODZRALQBA7TJQKTNFAQU7YWA/story/"},
+    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/consul-de-alemania-muere-ahogado-tras-volcar-en-un-kayak-en-alajuela/"},
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/muere-consul-de-alemania-en-costa-rica-tras-caer-de-un-kayak-en-rio-cuarto/"}
+   ]
+  },
+  {
+   "titulo": "Incendio en bodegas del centro de San Jos\u00e9; Bomberos lo da por controlado",
+   "resumen": [
+    "La noche del s\u00e1bado 29, a unos 100 m al oeste de la Armer\u00eda Polini, Bomberos combati\u00f3 un incendio en bodegas del centro de San Jos\u00e9. El aviso fue a las 8:27 p.m. El Observador, pasadas las 11 p.m., lo dio por controlado: unos 4.100 m\u00b2 afectados y 6.200 m\u00b2 salvados, m\u00e1s de 100 bomberos, drone t\u00e9rmico y plataformas. El fuego se extendi\u00f3 a edificios usados como guarder\u00edas, que fueron evacuadas. No se reportaron heridos.",
+    "Las cifras iniciales variaron: CRHoy habl\u00f3 de ~3.250 m\u00b2 y unos 70 bomberos; Teletica, de unos 2.000 m\u00b2 y que a las 11:30 p.m. a\u00fan no estaba controlado; La Teja y Repretel, de ~1.200 m\u00b2. Causa no informada."
+   ],
+   "fuentes": [
+    {"medio": "El Observador", "url": "https://observador.cr/bomberos-logran-controlar-gran-incendio-en-almacenes-y-bodegas-en-san-jose-fuego-afecto-4-100-m2/"},
+    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/incendio-consume-mas-de-3-000-metros-cuadrados-en-san-jose/"},
+    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/bomberos-atiende-incendio-de-grandes-proporciones-en-el-corazon-de-san-jose_416348"},
+    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/voraz-incendio-consume-enorme-bodega-en-el-centro/RDODMZDEAFGLFAWFUR7L47UEMM/story/"},
+    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/incendio-de-gran-magnitud-consume-bodega-en-san-jose/"}
+   ]
+  },
+  {
+   "titulo": "Onda tropical N.\u00b0 38 refuerza lluvias en Caribe y Zona Norte",
+   "resumen": [
+    "El IMN report\u00f3 el ingreso de la onda 38 al Caribe la ma\u00f1ana del s\u00e1bado 29. Acumulados del viernes: 260 mm en Caribe norte. Este s\u00e1bado: Caribe 50\u201380 mm (posibles m\u00e1s de 100 mm en 6\u201312 h); Zona Norte 30\u201350 mm. Atenci\u00f3n en Turrialba, Sarapiqu\u00ed y Pococ\u00ed por suelos saturados. CNE: alerta naranja en Zona Norte, Caribe y Turrialba; amarilla en Central, Pac\u00edfico central y sur. El Observador a\u00f1adi\u00f3 que 46 personas segu\u00edan en dos albergues."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/onda-tropical-n-38-aumenta-las-lluvias-este-sabado/UP5GDNLLCRBEZB7YVR4DEQRRBQ/story/"},
+    {"medio": "El Observador", "url": "https://observador.cr/caribe-y-la-zona-norte-seguiran-bajo-lluvias-fuertes-este-fin-de-semana-por-onda-tropical/"}
+   ]
+  },
+  {
+   "titulo": "El Ni\u00f1o y lluvias ponen en vilo al banano del Caribe",
+   "resumen": [
+    "Corbana (Erick Bola\u00f1os) alerta por inundaciones (hasta 36 h en algunas fincas), sigatoka negra y derrumbes que impiden el acceso y el traslado por Ruta 32. El IMN proyecta 10\u201315% m\u00e1s de lluvia en el Caribe el resto del a\u00f1o y +0,5\u20131 \u00b0C. El 15\u201316 de agosto, Matina, Gu\u00e1cimo y Siquirres registraron hasta 280 mm en dos d\u00edas. Las exportaciones a junio iban +5%; el impacto del segundo semestre es a\u00fan incierto."
+   ],
+   "fuentes": [
+    {"medio": "CRHoy", "url": "https://crhoy.com/nacionales/plagas-e-inundaciones-por-el-nino-mantienen-en-vilo-a-productores-de-banano/"}
+   ]
+  },
+  {
+   "titulo": "Asamblea sesiona en Lim\u00f3n por el D\u00eda de la Persona Negra",
+   "resumen": [
+    "El s\u00e1bado 29 la Asamblea hizo la sesi\u00f3n extraordinaria n.\u00b0 20 en la Casa de la Cultura de Lim\u00f3n, con cu\u00f3rum completo (presidenta Yara Jim\u00e9nez). La alcaldesa Ana Matarrita agradeci\u00f3 proyectos del Gobierno de Laura Fern\u00e1ndez y de Rodrigo Chaves y dijo que en esa \u201cnueva era\u201d no hay espacio para \u201cla obstaculizaci\u00f3n mezquina\u201d.",
+    "Villalta (FA) pidi\u00f3 atender lluvias en Pococ\u00ed y Gu\u00e1cimo y fiscalizar APM Mo\u00edn. Gordienko (PUSC) habl\u00f3 de Ruta 32, seguridad, hospital y aeropuerto. Mangell McLean (PLN) reclam\u00f3 empleo antes de hablar de 4x3. La diputada Kattia Calvo (Pueblo Soberano) ret\u00f3 a ambientalistas del Pretil por las rutas alternas."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/politica/asamblea-legislativa-sesiona-en-limon-por-el-dia/E7AHABZ7DNAENNMIT7ZG4M67PU/story/"},
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/alcaldesa-el-gobierno-de-la-continuidad-acabo-con-decadas-de-olvido-en-limon/"},
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/kattia-calvo-desafia-a-ambientalistas-del-pretil-por-rutas-alternas-en-limon-ya-quiero-verlos-tirados-de-panza/"},
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/mangell-mclean-reclama-empleo-para-limon-y-advierte-primero-hay-que-tener-trabajo-para-hablar-de-4x3/"}
+   ]
+  },
+  {
+   "titulo": "Gremios cuestionan el proyecto de Esquivel para quitar la colegiatura obligatoria",
+   "resumen": [
+    "El expediente 25.747 (Pueblo Soberano, Marta Esquivel) har\u00eda voluntaria la colegiatura salvo ciertas \u00e1reas de salud, derecho e ingenier\u00eda, y except\u00faa a funcionarios p\u00fablicos. El s\u00e1bado, el Colegio de Ciencias Econ\u00f3micas pidi\u00f3 un an\u00e1lisis integral (\u00e9tica, fiscalizaci\u00f3n, inter\u00e9s p\u00fablico). Anny Chaves (Fecoprou) dijo que el ejercicio \u201cqueda degradado a una mera actividad mercantil\u201d."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/politica/colegio-de-ciencias-economicas-se-pronuncia-sobre/2G6RQ7HKTFCLNN4X2A3AZHBAKY/story/"},
+    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/gremios-profesionales-rechazan-eliminacion-de-colegiatura-obligatoria/"}
+   ]
+  },
+  {
+   "titulo": "CEN-CINAI niega cierres y despidos; anuncia ajustes temporales de horario",
+   "resumen": [
+    "Un comunicado institucional dijo que desde setiembre 2026 no podr\u00e1 seguir contratando personal y que habr\u00e1 ajustes temporales para no suspender del todo el servicio. Circul\u00f3 alarma de cierres (por ejemplo Venecia de San Carlos). El s\u00e1bado a las 8:00 p.m. la directora Mar\u00eda Marta Carballo desminti\u00f3 cierres y despidos, anunci\u00f3 ajustes de horarios ampliados o nocturnos por unos d\u00edas y dijo que esperan regularizar en la segunda semana de setiembre."
+   ],
+   "fuentes": [
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/falta-de-presupuesto-en-cen-cinai-causa-incertidumbre-por-posibles-despidos-y-cierre-de-servicios/"},
+    {"medio": "El Mundo CR", "url": "https://elmundo.cr/costa-rica/cen-cinai-niega-cierre-de-servicios-y-despidos-ante-dudas-por-ajustes-presupuestarios/"}
+   ]
+  },
+  {
+   "titulo": "OIJ compra software forense Cellebrite, distinto de Pegasus",
+   "resumen": [
+    "El OIJ contrat\u00f3 Cellebrite Inseyets, v\u00eda Sicop, para extraer datos de celulares incautados con orden judicial. Compras de setiembre 2025: casi US$700.000; en agosto 2026 otro contrato en tr\u00e1mite por US$382.700. A diferencia de Pegasus, requiere el aparato f\u00edsico y se usa en cadena de custodia del Poder Judicial."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/sucesos/oij-compra-software-israeli-para-desbloquear/WKRLJMYZYFDX3LIS4S4YYQZK6M/story/"}
+   ]
+  },
+  {
+   "titulo": "MP suma 57 procedimientos disciplinarios contra fiscales en seis a\u00f1os",
+   "resumen": [
+    "El Ministerio P\u00fablico dijo a Amelia Rueda que entre 2020 y 2026 abri\u00f3 57 procesos disciplinarios por no pedir pr\u00f3rroga de prisi\u00f3n preventiva. 19 fueron al Tribunal Administrativo Sancionador; en sede del MP se imputaron 24 sanciones, que son privadas. Un caso reciente: cuatro imputados por intento de homicidio contra un miembro de Los Maruja (Cartago, 2025) quedaron libres por omisi\u00f3n de la fiscal\u00eda."
+   ],
+   "fuentes": [
+    {"medio": "Amelia Rueda", "url": "https://ameliarueda.com/noticia/en-seis-anos-ministerio-publico-suma-57-procedimientos-disciplinarios-contra-fiscales-omitir-prorrogas-prision-preventiva-noticias-costa-rica"}
+   ]
+  },
+  {
+   "titulo": "Proyecto para limitar alzas de alquileres baratos si el salario queda bajo la inflaci\u00f3n",
+   "resumen": [
+    "El expediente 23.301 (Jonathan Acu\u00f1a, FA, 2022) recibi\u00f3 nuevo plazo cuatrienal. Si el alquiler es menor al salario m\u00ednimo de ocupaci\u00f3n no calificada (\u00a2373.092,30 en 2026) y ese salario creci\u00f3 menos que la inflaci\u00f3n, el tope del aumento ser\u00eda el crecimiento salarial, no el IPC. No aplica a alquileres en d\u00f3lares."
+   ],
+   "fuentes": [
+    {"medio": "La Naci\u00f3n", "url": "https://www.nacion.com/el-explicador/proyecto-de-ley-pretende-limitar-aumentos-de/B7H7IVB4YJHBBNJOBSS7Z6YS5M/story/"}
+   ]
+  },
+  {
+   "titulo": "CRECEX pide no restringir a transportistas extranjeros",
+   "resumen": [
+    "CRECEX (Rodney Salazar) pidi\u00f3 al Gobierno no imponer barreras por nacionalidad, por menos oferta y m\u00e1s costos para el comercio exterior. CCTU (Marjorie Lizano) reclama reciprocidad. El gremio afirma que placas extranjeras mueven el 72% de la carga originada en Costa Rica; Delfino advierte que ese dato no est\u00e1 verificado de forma independiente. El contexto es la negociaci\u00f3n CR\u2013Panam\u00e1 (COMEX) y SIECA."
+   ],
+   "fuentes": [
+    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/crecex-pide-evitar-restricciones-a-transportistas-extranjeros-ante-reclamos-del-sector-por-mayor-reciprocidad"}
+   ]
+  },
+  {
+   "titulo": "427.000 ni\u00f1os ticos con un mes extra de estr\u00e9s t\u00e9rmico, seg\u00fan estudio",
+   "resumen": [
+    "Un estudio de la Vrije Universiteit Brussel en Science Advances estima que 427.000 ni\u00f1os de 0 a 9 a\u00f1os en Costa Rica tienen un mes adicional de estr\u00e9s t\u00e9rmico por cambio clim\u00e1tico. Los expuestos a 5 meses o m\u00e1s de calor extremo pasaron de 54.000 a 108.000. Ariana Yock (Hospital Nacional de Ni\u00f1os) advirti\u00f3 deshidrataci\u00f3n e hipertermia m\u00e1s r\u00e1pida en menores."
+   ],
+   "fuentes": [
+    {"medio": "El Observador", "url": "https://observador.cr/cambio-climatico-expone-a-427-000-ninos-costarricenses-a-un-mes-adicional-de-estres-termico-segun-estudio-internacional/"}
+   ]
+  },
+  {
+   "titulo": "Ri\u00f1a en Guarar\u00ed deja un muerto de 18 a\u00f1os; hay detenido",
+   "resumen": [
+    "En la madrugada del s\u00e1bado, en Guarar\u00ed de San Francisco de Heredia, muri\u00f3 Le\u00f3n, de 18 a\u00f1os, por heridas de arma blanca. Salazar, de 28, result\u00f3 herido con objeto contundente. Detuvieron a Narv\u00e1ez, de 29 a\u00f1os. El OIJ investiga."
+   ],
+   "fuentes": [
+    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/rina-en-guarari-dejo-un-muerto-y-un-herido-la-madrugada-del-sabado_416331"},
+    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/la-madrugada-termino-en-violencia-en-guarari-dos/S7LXMOIJPFCKNIO27U3RW5PIUY/story/"}
+   ]
+  },
+  {
+   "titulo": "Ataque a una casa en Aranjuez, Puntarenas, deja un menor de 15 a\u00f1os muerto",
+   "resumen": [
+    "El viernes 28 cerca de las 8:00 p.m., dos hombres dispararon contra una vivienda en Aranjuez, Puntarenas; desde adentro se habr\u00eda respondido. Un menor de 15 a\u00f1os muri\u00f3 al ingresar al hospital de Puntarenas. Result\u00f3 herido Madrigal, de 49 a\u00f1os. Sospechosos: Lobo, de 20 (herido, hospitalizado) y un menor de 17 a\u00f1os detenido. El OIJ investiga. La nota se public\u00f3 el s\u00e1bado."
+   ],
+   "fuentes": [
+    {"medio": "Teletica", "url": "https://www.teletica.com/sucesos/ataque-a-balazos-contra-casa-deja-a-menor-de-15-anos-muerto_416332"}
+   ]
+  },
+  {
+   "titulo": "OIJ identifica a Romero, de 18 a\u00f1os, asesinado a balazos en Matina",
+   "resumen": [
+    "La Teja report\u00f3 el s\u00e1bado la identificaci\u00f3n: Romero, 18 a\u00f1os, muerto el viernes 28 cerca de las 8:22 p.m. en barrio Goly, Matina. Estaba en una motocicleta estacionada; dos hombres a pie le dispararon cuatro veces (tres en la cabeza, una en el t\u00f3rax) y huyeron. El OIJ busca a los dos sospechosos."
+   ],
+   "fuentes": [
+    {"medio": "La Teja", "url": "https://www.lateja.cr/sucesos/identifican-a-muchacho-asesinado-en-matina-esto/757SL32NHJEZXIXS562NPN2F2M/story/"}
+   ]
+  },
+  {
+   "titulo": "Setena mantiene la viabilidad ambiental del embarcadero de Puerto Viejo; hay recurso",
+   "resumen": [
+    "La Comisi\u00f3n Plenaria de Setena (20 de agosto, 6-0) rechaz\u00f3 anular la viabilidad ambiental de octubre 2024 del Embarcadero Vecinal (MOPT) en Puerto Viejo. El abogado Walter Brenes interpuso el 27 de agosto revocatoria con apelaci\u00f3n: el informe CIMAT habr\u00eda ingresado al expediente en abril 2026 y hay discrepancia de \u00e1rea 820 vs 1.040 m\u00b2."
+   ],
+   "fuentes": [
+    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/setena-mantiene-viabilidad-ambiental-del-embarcadero-de-puerto-viejo-decision-es-impugnada"}
+   ]
+  },
+  {
+   "titulo": "PGR pidi\u00f3 desde marzo un peritaje del OIJ en Gandoca-Manzanillo",
+   "resumen": [
+    "La Procuradur\u00eda pidi\u00f3 el 9 de marzo a la Sala IV un peritaje de Biolog\u00eda e Ingenier\u00eda Forense del OIJ sobre bosque y bosque anegado en el refugio (ejecuci\u00f3n de la sentencia 2019-012745). La Sala confirm\u00f3 a Delfino que recibi\u00f3 el escrito, pero los magistrados a\u00fan no lo conocen. Siguen las medidas cautelares de 2025."
+   ],
+   "fuentes": [
+    {"medio": "Delfino", "url": "https://delfino.cr/2026/08/pgr-pidio-desde-marzo-peritaje-del-oij-para-precisar-delimitacion-de-bosques-en-gandoca-manzanillo"}
+   ]
+  },
+  {
+   "titulo": "Hilton detalla Marav\u00e9 Manuel Antonio (LXR) para 2029",
+   "resumen": [
+    "Hilton y Ocean Cove anunciaron m\u00e1s de 16 ha, 198 m de costa y 173 alojamientos (57 de hotel y 116 residencias LXR, primer LXR Residences en Latinoam\u00e9rica). Apertura en 2029. Dise\u00f1o: Carazo Arquitectura."
+   ],
+   "fuentes": [
+    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/hilton-manuel-antonio-costa-rica/"}
+   ]
+  },
+  {
+   "titulo": "Nueva ruta ch\u00e1rter Rockford (Illinois)\u2013Guanacaste para 2027",
+   "resumen": [
+    "Del 5 de febrero al 2 de abril de 2027 habr\u00e1 un vuelo semanal Boeing 737-800NG de TUI Airways (189 pasajeros), comercializado por Apple Vacations. El ICT report\u00f3 1.853.430 turistas a\u00e9reos de enero a julio; Guanacaste concentr\u00f3 el 67,2% del crecimiento neto."
+   ],
+   "fuentes": [
+    {"medio": "La Rep\u00fablica", "url": "https://www.larepublica.net/nuevo-vuelo-guanacaste-illinois/"},
+    {"medio": "El Observador", "url": "https://observador.cr/aeropuerto-de-guanacaste-incorpora-nueva-ruta-desde-rockford-illinois-para-2027/"}
+   ]
+  },
+  {
+   "titulo": "CNFL anuncia corte el\u00e9ctrico el domingo en el distrito Hospital",
+   "resumen": [
+    "La CNFL anunci\u00f3 mantenimiento preventivo el domingo 30 de agosto, de 7:00 a.m. a 4:30 p.m., en el cant\u00f3n central de San Jos\u00e9, distrito Hospital. Unos 184 servicios podr\u00edan verse afectados."
+   ],
+   "fuentes": [
+    {"medio": "Repretel", "url": "https://www.repretel.com/noticia/cnfl-anuncia-suspension-electrica-este-domingo/"}
+   ]
+  }
+ ]
 }
