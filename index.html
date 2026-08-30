@@ -290,8 +290,6 @@
     </div>
 </div>
 <script>
-    // Icono alineado con el % de lluvia que se muestra (precipitation_probability).
-    // Tormenta y niebla siguen el weather_code; el resto no pone lluvia si el % es bajo.
     function getWeatherIcon(code, rain) {
         if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
         if (code >= 45 && code <= 48 && rain < 40) return 'bi-cloud-fog';
@@ -337,7 +335,9 @@
         const loader = document.getElementById('loader');
         loader.style.display = 'none';
         const now = new Date();
-        const startIndex = hourly.time.findIndex(t => new Date(t) >= now);
+        let startIndex = hourly.time.findIndex(t => new Date(t) > now);
+        if (startIndex === -1) startIndex = Math.max(0, hourly.time.length - 24);
+        else startIndex = Math.max(0, startIndex - 1);
         const nowHum = hourly.relative_humidity_2m[startIndex];
         const nowWind = hourly.wind_speed_10m[startIndex];
         document.getElementById('now-meta').textContent = nowHum + '% humedad · ' + nowWind + ' km/h';
