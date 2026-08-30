@@ -4,38 +4,32 @@
   "autor": "World News",
   "hechos": [
     {
-      "titulo": "Guinea-Bisáu cierra el referéndum con baja afluencia; el recuento sigue sin cifra oficial ni incidentes graves",
-      "agregado": "2026-08-30T13:01:20-06:00",
+      "titulo": "Siria reabre su embajada en Trípoli tras 14 años y pacta un consulado en Bengasi",
+      "agregado": "2026-08-30T14:49:00-06:00",
       "resumen": [
-        "Los colegios cerraron a las 17:00 GMT (11:00 hora de Costa Rica) y AFP, en un despacho actualizado por la tarde, constató el inicio del despojo en varios barrios de Bissau. No hay cifra oficial de participación: AFP describe afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y, según periodistas locales, mixta o débil en Tombali, Quinara (sur) y el este. El PAIGC llamó al boycot. AFP no reportó incidentes graves post-cierre. Primeros resultados provisionales, el martes.",
-        "La junta sometió una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. El general Horta N'Tam votó y pidió a los jóvenes que salieran. Hay unos 915.000 inscritos y elecciones generales previstas para el 6 de diciembre."
+        "El ministro de Exteriores sirio, Asaad Hassan al-Shaibani, llegó el domingo a Trípoli y acordó con el primer ministro del Gobierno de Unidad Nacional, Abdul Hamid Dbeibah, reabrir la embajada siria, cerrada desde 2012, y reactivar el Comité Conjunto Superior libio-sirio. También acordaron abrir un consulado sirio en Bengasi. Las conversaciones cubrieron cooperación en seguridad y antiterrorismo, servicios consulares, presos, detenidos y refugiados, y deudas financieras pendientes; al-Shaibani se reunió además con el ministro de Petróleo y el jefe de la autoridad de inversiones. Dbeibah habló de «un nuevo capítulo». La visita coincidió con la firma, el mismo día, de la hoja de ruta electoral 4+4 de la ONU."
       ],
       "fuentes": [
         {
-          "medio": "France 24",
-          "url": "https://www.france24.com/fr/info-en-continu/20260830-r%C3%A9f%C3%A9rendum-en-guin%C3%A9e-bissau-d%C3%A9but-du-vote-pour-passer-%C3%A0-un-r%C3%A9gime-pr%C3%A9sidentiel-fort"
-        },
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/guinea-bissau-referendum-elections-presidential-powers-e3596d7ae2ad62f6f380af99d5bfe9ce"
-        },
-        {
-          "medio": "DW",
-          "url": "https://www.dw.com/en/guinea-bissau-votes-to-reshape-presidency/a-78562523"
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/opening-a-new-chapter-syria-to-reopen-embassy-in-libya-after-talks"
         }
       ]
     },
     {
-      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
-      "agregado": "2026-08-30T13:01:20-06:00",
+      "titulo": "Ucrania: el ministro de Defensa Khmara busca adelantar un préstamo de la UE para cubrir 27.000 millones de dólares",
+      "agregado": "2026-08-30T14:49:00-06:00",
       "resumen": [
-        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021.",
-        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
+        "El nuevo ministro de Defensa, Yevhenii Khmara, dijo el domingo a periodistas que Kiev buscará adelantar parte del préstamo de 45.000 millones de euros de la UE previsto para 2027, además de pedir más aportes a aliados y a países que aún no han donado, para cubrir un agujero de 27.000 millones de dólares en el presupuesto militar. La UE ha comprometido 90.000 millones de euros hasta 2027 (45.000 por año). Zelenski dijo la semana pasada que el gasto del primer semestre superó lo previsto. Khmara, excomandante de fuerzas especiales, prometió una «visión clara» a los socios y dijo compartir criterio con el nuevo jefe militar, Mykhailo Drapatyi. AP confirmó las opciones para cerrar el hueco, incluida adelantar parte del préstamo europeo."
       ],
       "fuentes": [
         {
           "medio": "Reuters",
-          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
+          "url": "https://www.reuters.com/world/europe/ukraine-defence-chief-pledges-clear-war-plan-win-early-loan-release-2026-08-30/"
+        },
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/russia-ukraine-war-strikes-attacks-energy-oil-gas-drones-warehouse-5cfe71b2954a40489c070459ba82116e"
         }
       ]
     },
@@ -43,7 +37,7 @@
       "titulo": "Níger: el Ejército retoma la base aérea; decenas de amotinados muertos o detenidos; Tchiani sigue sin aparecer",
       "agregado": "2026-08-30T13:01:20-06:00",
       "resumen": [
-        "Niamey amaneció en calma el domingo tras el motín iniciado hacia la medianoche en la Base 101. AP y France 24 reportaron que decenas de soldados fueron muertos o detenidos y que algunos fueron exhibidos en televisión estatal; no se precisaron cargos. Tchiani aún no había hecho declaraciones ni aparición pública. AP vio retenes y camiones militares entre el aeropuerto y el distrito presidencial.",
+        "Niamey amaneció en calma el domingo tras el motín iniciado hacia la medianoche en la Base 101. AP y France 24 reportaron que decenas de soldados fueron muertos o detenidos y que algunos fueron exhibidos en televisión estatal; no se precisaron cargos. Tchiani aún no había hecho declaraciones ni aparición pública; Al Jazeera confirmó que su paradero no estaba confirmado. AP vio retenes y camiones militares entre el aeropuerto y el distrito presidencial.",
         "El embajador ruso Viktor Voropáyev dijo que el Africa Corps intervino a petición de Niamey; la Cancillería rusa lo confirmó el domingo, según BBC. AP reportó que el domingo llegó una delegación argelina con cuatro cazas y un avión de transporte, descrita por el consejo de gobierno como apoyo estratégico. La Alianza de Estados del Sahel calificó el intento de contenido y fallido."
       ],
       "fuentes": [
@@ -62,6 +56,24 @@
         {
           "medio": "BBC",
           "url": "https://www.bbc.com/news/articles/c5ye8egg596o"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next"
+        }
+      ]
+    },
+    {
+      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
+      "agregado": "2026-08-30T13:01:20-06:00",
+      "resumen": [
+        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021.",
+        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
         }
       ]
     },
@@ -69,12 +81,16 @@
       "titulo": "Moscú anuncia que prepara «ataques masivos» contra la energía de Ucrania",
       "agregado": "2026-08-30T12:02:00-06:00",
       "resumen": [
-        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendiado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial. El mismo día, Ozon dijo que un dron ucraniano incendió un centro logístico en la región fronteriza de Bélgorod y que temía varios heridos. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
+        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendiado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial, después extinguido según DW, y 62 drones derribados sobre la región. El mismo día, Ozon dijo que un dron ucraniano incendio un centro logístico en la región fronteriza de Bélgorod y que temía varios heridos. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
       ],
       "fuentes": [
         {
           "medio": "AP",
           "url": "https://apnews.com/article/russia-ukraine-war-strikes-attacks-energy-oil-gas-drones-warehouse-5cfe71b2954a40489c070459ba82116e"
+        },
+        {
+          "medio": "DW",
+          "url": "https://www.dw.com/es/rusia-anuncia-ataques-masivos-contra-sistema-energ%C3%A9tico-de-ucrania/a-78562348"
         }
       ]
     },
@@ -101,7 +117,7 @@
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
         "Zelenski mantuvo el domingo en 38 los muertos por el ataque con drones del viernes por la noche a un depósito de las fuerzas de defensa en Myla (distrito de Bucha), con 4 desaparecidos. El gobernador regional, Tymur Tkachenko, elevó los heridos a 52, según AP; Zelenski había hablado de 20, dos de ellos niños. Kiev investiga negligencia por almacenar explosivos junto a viviendas; la mayoría de las víctimas mortales eran residentes de un geriátrico.",
-        "En la última semana, según Zelenski, Moscú lanzó casi 2.000 drones de ataque, más de 1.600 bombas aéreas y 31 misiles. El domingo, el alcalde Vitali Klichkó dijo que un ataque del sábado en Kiev mató a una niña de 2 años."
+        "En la última semana, según Zelenski, Moscú lanzó casi 2.000 drones de ataque, más de 1.600 bombas aéreas y 31 misiles. El domingo, el alcalde Vitali Klichkó dijo que un ataque del sábado en Kiev mató a una niña de 2 años. AP añadió que en Bilbasivka, en el este, murieron un menor de 13 años y un adulto por bombas rusas el domingo."
       ],
       "fuentes": [
         {
@@ -115,6 +131,31 @@
         {
           "medio": "BBC",
           "url": "https://www.bbc.com/news/articles/c86xwqez4npo"
+        }
+      ]
+    },
+    {
+      "titulo": "Islandia rechaza reabrir negociaciones de adhesión a la UE",
+      "agregado": "2026-08-30T09:53:10-06:00",
+      "resumen": [
+        "El referéndum del sábado dio 52,8% no y 47,2% sí, con participación del 82,5%, la más alta desde 2009, según RÚV. Unos 12.600 votos los separaron, de más de 225.000 emitidos. La primera ministra Kristrún Frostadóttir dijo el domingo en rueda de prensa que no reabrirá la cuestión en este mandato, que termina en 2028, y que reforzará el vínculo con el Espacio Económico Europeo. La canciller Katrín Gunnarsdóttir dijo que buscará estrechar las relaciones de defensa. Bruselas dijo respetar el resultado. Reikiavik votó a favor; las zonas rurales, en contra."
+      ],
+      "fuentes": [
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum"
+        },
+        {
+          "medio": "BBC",
+          "url": "https://www.bbc.com/news/articles/c70le8ed1plo"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/"
+        },
+        {
+          "medio": "El País",
+          "url": "https://elpais.com/internacional/2026-08-30/el-no-de-islandia-debilita-a-la-ue-ante-trump-y-las-fuerzas-antieuropeas.html"
         }
       ]
     },
@@ -140,52 +181,6 @@
       ]
     },
     {
-      "titulo": "Islandia rechaza reabrir negociaciones de adhesión a la UE",
-      "agregado": "2026-08-30T09:53:10-06:00",
-      "resumen": [
-        "El referéndum del sábado dio 52,8% no y 47,2% sí, con participación del 82,5%, la más alta desde 2009, según RÚV. La primera ministra Kristrún Frostadóttir dijo el domingo que no reabrirá la cuestión en este mandato, que termina en 2028, y que reforzará el vínculo con el Espacio Económico Europeo. Bruselas dijo respetar el resultado."
-      ],
-      "fuentes": [
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/30/iceland-rejects-eu-membership-plan-in-referendum"
-        },
-        {
-          "medio": "BBC",
-          "url": "https://www.bbc.com/news/articles/c70le8ed1plo"
-        },
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/europe/iceland-votes-whether-start-eu-membership-talks-2026-08-29/"
-        }
-      ]
-    },
-    {
-      "titulo": "Tiroteo en un rave en Aarau, Suiza: muere una italiana de 22 años y hay 5 heridos",
-      "agregado": "2026-08-30T09:53:10-06:00",
-      "resumen": [
-        "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. Murió en el lugar una mujer italiana de 22 años; cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. En una rueda de prensa vespertina, la policía cantonal dijo que la cacería seguía «a toda velocidad», sin datos sobre el autor o autores ni el móvil; descartó que volvieran a ser una amenaza y consideró poco probable un atentado porque el rave ya se estaba cerrando."
-      ],
-      "fuentes": [
-        {
-          "medio": "The Guardian",
-          "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland"
-        },
-        {
-          "medio": "BBC",
-          "url": "https://www.bbc.com/news/articles/c9qr750je1go"
-        },
-        {
-          "medio": "DW",
-          "url": "https://www.dw.com/en/swiss-police-report-several-victims-in-aarau-shooting/a-78561106"
-        },
-        {
-          "medio": "AP",
-          "url": "https://apnews.com/article/switzerland-shooting-rave-aargau-843e1c1cc57e1a0cb379851007ea6ba8"
-        }
-      ]
-    },
-    {
       "titulo": "Zambia: el opositor Brian Mundubile y 17 más, acusados de traición",
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
@@ -203,11 +198,33 @@
       ]
     },
     {
+      "titulo": "Guinea-Bisáu: la CNE cifra la participación en más del 55%; el recuento sigue sin resultados oficiales",
+      "agregado": "2026-08-30T09:45:00-06:00",
+      "resumen": [
+        "Los colegios cerraron a las 17:00 GMT y el despojo seguía en Bissau. En un punto de prensa vespertino, Idrissa Djalo, secretario ejecutivo de la CNE, anunció un tasa de participación «que supera el 55%» y dijo que el voto se desarrolló de forma organizada, sin incidentes que pusieran en duda la credibilidad, según France 24/AFP (despacho modificado a las 22:08). AFP, en cambio, había descrito afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y, según periodistas locales, mixta o débil en Tombali, Quinara (sur) y el este. El PAIGC llamó al boycot. Primeros resultados provisionales, el martes.",
+        "La junta sometió una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. El general Horta N'Tam votó y pidió a los jóvenes que salieran. Hay unos 915.000 inscritos y elecciones generales previstas para el 6 de diciembre."
+      ],
+      "fuentes": [
+        {
+          "medio": "France 24",
+          "url": "https://www.france24.com/fr/info-en-continu/20260830-r%C3%A9f%C3%A9rendum-en-guin%C3%A9e-bissau-d%C3%A9but-du-vote-pour-passer-%C3%A0-un-r%C3%A9gime-pr%C3%A9sidentiel-fort"
+        },
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/guinea-bissau-referendum-elections-presidential-powers-e3596d7ae2ad62f6f380af99d5bfe9ce"
+        },
+        {
+          "medio": "DW",
+          "url": "https://www.dw.com/en/guinea-bissau-votes-to-reshape-presidency/a-78562523"
+        }
+      ]
+    },
+    {
       "titulo": "Ferry Filojet volcado frente a Kyrenia: 8 muertos; Reuters cifra 18 desaparecidos y 241 rescatados",
       "agregado": "2026-08-30T09:30:00-06:00",
       "resumen": [
-        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo de muertos se mantiene en al menos 8 (Reuters, AP, BBC, France 24/AFP). Reuters actualizó a 18 desaparecidos y 241 rescatados; AP mantiene 237 rescatados y la búsqueda de otros 22. France 24/AFP precisa que 161 rescatados fueron hospitalizados y 76 volvieron a casa, y la agencia chipriota TAK sigue en 17 desaparecidos. El pecio se hundió por completo a unos 514 metros, lo que complica el acceso.",
-        "Las autoridades turcochipriotas detuvieron al capitán y a siete tripulantes. BBC relató que la salida, prevista el sábado, se retrasó por mal tiempo y que el primer ministro Ünal Üstel dijo a TRT que dos olas golpearon el catamarán. Supervivientes dijeron a medios locales, según AFP, que hubo una explosión o rotura en la proa, que faltaban chalecos y que el capitán habría sido de los primeros en abandonar el barco. El operativo de búsqueda seguía abierto, con unidades de Turquía; Erdogan ofreció condolencias y el Gobierno chipriota reconocido internacionalmente ofreció ayuda."
+        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo de muertos se mantiene en al menos 8 (Reuters, AP, BBC, France 24/AFP, The Guardian). Reuters mantiene 18 desaparecidos y 241 rescatados; AP, 237 rescatados y búsqueda de otros 22. France 24/AFP precisa que 161 rescatados fueron hospitalizados y 76 volvieron a casa; la agencia chipriota TAK sigue en 17 desaparecidos. The Guardian añadió que tres niños rescatados estaban en cuidados intensivos, aparentemente fuera de peligro. El pecio se hundió por completo a unos 514 metros.",
+        "Las autoridades turcochipriotas detuvieron al capitán y a siete tripulantes. BBC relató que la salida, prevista el sábado, se retrasó por mal tiempo y que Ünal Üstel dijo a TRT que dos olas golpearon el catamarán. El rescatista Mustafa Koc, que sacó a unos 65 náufragos, dijo a la BBC que el mar estaba picado y que el barco había llegado el sábado con daños en la proa. Supervivientes dijeron a medios locales, según AFP, que hubo una explosión o rotura en la proa, que faltaban chalecos y que el capitán habría sido de los primeros en abandonar el barco. Diplomáticos de la UE en el sur, citados por The Guardian, sugirieron que el ferry podría no haber estado en condiciones de navegar. El operativo de búsqueda seguía abierto, con unidades de Turquía; Erdogan ofreció condolencias y el Gobierno chipriota reconocido internacionalmente ofreció ayuda."
       ],
       "fuentes": [
         {
@@ -225,6 +242,10 @@
         {
           "medio": "France 24",
           "url": "https://www.france24.com/en/europe/20260830-ferry-carrying-more-than-250-passengers-capsizes-off-northern-cyprus"
+        },
+        {
+          "medio": "The Guardian",
+          "url": "https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates"
         }
       ]
     },
@@ -232,8 +253,8 @@
       "titulo": "Nepal y Tíbet: 804 muertos y más de 3.000 desaparecidos; rescatistas llegan a la boca de un túnel",
       "agregado": "2026-08-30T09:30:00-06:00",
       "resumen": [
-        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters habla de 781 muertos en Nepal (cerca de 800 en total). Siguen las alertas por crecida del Bhotekoshi; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. Reuters añadió que drones detectaron un nuevo deslizamiento que formó otra presa. En Chitwan enterraron 96 cuerpos no identificados el sábado y planeaban más de 100 el domingo, con muestras de ADN.",
-        "Reuters reportó que el Ejército aerolanzó maquinaria pesada y que los rescatistas alcanzaron el domingo la entrada de un túnel y empezaron a despejar escombros; el Ejército publicó la foto de dos hombres extraídos de la boca. Un asesor en el sitio estimó 35-40 personas en el túnel 3A, cifra no confirmada. The Guardian: se inyecta aire por una tubería y sigue la excavación. Unos 10.000 soldados operan en cinco proyectos, con especialistas de India y China. Malasia anunció un equipo de búsqueda y 1 millón de dólares en ayuda."
+        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters habla de 781 muertos en Nepal (cerca de 800 en total). Siguen las alertas por crecida del Bhotekoshi y el Trishuli; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. Reuters añadió que drones detectaron un nuevo deslizamiento que formó otra presa. En Chitwan enterraron 96 cuerpos no identificados el sábado y planeaban más de 100 el domingo, con muestras de ADN. Al Jazeera citó al ministro de Finanzas nepalí: pérdidas de más de 4.000 millones de dólares.",
+        "Reuters reportó que el Ejército aerolanzó maquinaria pesada y que los rescatistas alcanzaron el domingo la entrada de un túnel y empezaron a despejar escombros; el Ejército publicó la foto de dos hombres extraídos de la boca. Un asesor en el sitio estimó 35-40 personas en el túnel 3A, cifra no confirmada. Al Jazeera: el sábado perforaron la parte alta, inyectaron aire y metieron una cámara; la lluvia nocturna inundó la excavación y el trabajo se reanudó al bajar el agua. The Guardian: se inyecta aire por una tubería y sigue la excavación; el Gobierno estima que más de 100 trabajadores podrían seguir vivos en varios túneles. Unos 10.000 soldados operan en cinco proyectos, con especialistas de India y China. Malasia anunció un equipo de búsqueda y 1 millón de dólares en ayuda. China dijo que 261 extranjeros de 23 países faltan en el Tíbet."
       ],
       "fuentes": [
         {
@@ -251,6 +272,36 @@
         {
           "medio": "Al Jazeera",
           "url": "https://www.aljazeera.com/news/2026/8/30/nepal-rescuers-drill-into-tunnels-in-bid-to-reach-trapped-workers"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/china/china-identifies-countries-261-foreigners-missing-himalayan-mudslide-2026-08-30/"
+        }
+      ]
+    },
+    {
+      "titulo": "Tiroteo en un rave en Aarau, Suiza: muere la italiana Maria Spinelli, de 22 años, y hay 5 heridos",
+      "agregado": "2026-08-30T09:30:00-06:00",
+      "resumen": [
+        "Disparos hacia las 02:30 del domingo en el hipódromo de Schachen, en Aarau, durante un techno rave. BBC identificó a la víctima mortal como Maria Spinelli, italiana de 22 años, muerta en el lugar. Cuatro hombres y otra mujer de 24 a 27 años, todos residentes en Suiza, resultaron heridos de leves a graves. El Ministerio de Exteriores italiano dijo que enviaba funcionarios a Zúrich y que otros dos italianos resultaron heridos leves y ya habían vuelto a casa. Giorgia Meloni dijo confiar en que Suiza esclarezca el caso.",
+        "En rueda de prensa vespertina, el portavoz cantonal Michael Leupold dijo que la cacería nacional seguía «en pleno operativo», sin pistas sobre si era uno o varios autores ni el móvil; consideró que ya no estaban en Aarau. DW y BBC: la policía de Friburgo (Alemania) colabora. La policía descartó que volvieran a ser una amenaza inmediata y consideró poco probable un atentado porque el rave ya se estaba cerrando."
+      ],
+      "fuentes": [
+        {
+          "medio": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/aug/30/shooting-rave-party-switzerland"
+        },
+        {
+          "medio": "BBC",
+          "url": "https://www.bbc.com/news/articles/c9qr750je1go"
+        },
+        {
+          "medio": "DW",
+          "url": "https://www.dw.com/en/swiss-police-report-several-victims-in-aarau-shooting/a-78561106"
+        },
+        {
+          "medio": "AP",
+          "url": "https://apnews.com/article/switzerland-shooting-rave-aargau-843e1c1cc57e1a0cb379851007ea6ba8"
         }
       ]
     }
