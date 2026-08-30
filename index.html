@@ -172,7 +172,8 @@
             color: #9aa3ad;
             display: block;
         }
-        .hour-slot .ahora-label {
+        .hour-slot .ahora-label,
+        .hour-slot .manana-label {
             font-size: 11px;
             color: #9aa3ad;
             display: block;
@@ -321,7 +322,7 @@
     async function fetchWeather() {
         const lat = 9.9781;
         const lon = -84.1879;
-        const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=2';
+        const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=3';
         try {
             const response = await fetch(url);
             const data = await response.json();
@@ -338,6 +339,9 @@
         let startIndex = hourly.time.findIndex(t => new Date(t) > now);
         if (startIndex === -1) startIndex = Math.max(0, hourly.time.length - 25);
         else startIndex = Math.max(0, startIndex - 1);
+        if (startIndex + 24 >= hourly.time.length) {
+            startIndex = Math.max(0, hourly.time.length - 25);
+        }
         const nowHum = hourly.relative_humidity_2m[startIndex];
         const nowWind = hourly.wind_speed_10m[startIndex];
         document.getElementById('now-meta').textContent = nowHum + '% humedad · ' + nowWind + ' km/h';
@@ -356,6 +360,7 @@
             slot.className = isCurrent ? 'hour-slot current' : 'hour-slot';
             let html = '<span class="time">' + hourLabel + '</span>';
             if (isCurrent) html += '<span class="ahora-label">ahora</span>';
+            else if (offset === 24) html += '<span class="manana-label">mañana</span>';
             html += '<i class="bi ' + getWeatherIcon(code, rain) + ' weather-icon"></i>' +
                 '<span class="temp">' + temp + '°C</span>';
             if (rain >= 40) {
