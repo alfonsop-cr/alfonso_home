@@ -4,6 +4,32 @@
   "autor": "Ignacio Santos",
   "hechos": [
     {
+      "titulo": "Atropello en Ciudad Colón deja a una niña de 8 años en politrauma crítico",
+      "agregado": "2026-08-30T15:50:00-06:00",
+      "resumen": [
+        "Una niña de 8 años quedó en condición crítica tras ser atropellada por un vehículo liviano alrededor de las 8:27 p.m. del sábado en Ciudad Colón, Mora. Sufrió un politrauma crítico y fue trasladada al Hospital Nacional de Niños. Cruz Roja desplegó una unidad de soporte básico y una de soporte avanzado. Lo reportó Repretel el domingo."
+      ],
+      "fuentes": [
+        {
+          "medio": "Repretel",
+          "url": "https://www.repretel.com/noticia/atropello-deja-nina-de-8-anos-luchando-por-su-vida/"
+        }
+      ]
+    },
+    {
+      "titulo": "AyA anuncia cortes de agua el lunes en Hatillo, San Sebastián, Hospital y Pavas",
+      "agregado": "2026-08-30T15:50:00-06:00",
+      "resumen": [
+        "El AyA programó interrupciones nocturnas el lunes 31 de agosto por maniobras operativas. Hatillo, San Sebastián y Hospital: de 10:00 p.m. a 4:00 a.m. del 1.° de setiembre. Pavas: de 11:00 p.m. a 4:00 a.m. Lo informó Repretel el domingo a las 2:07 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "Repretel",
+          "url": "https://www.repretel.com/noticia/lunes-sin-agua-aya-anuncia-suspension-en-sectores-de-san-jose/"
+        }
+      ]
+    },
+    {
       "titulo": "Chats de la hija de alias Macho Coca y su pareja revelan presunta logística de cocaína por APM Terminals",
       "agregado": "2026-08-30T15:50:00-06:00",
       "resumen": [
@@ -14,6 +40,19 @@
         {
           "medio": "El Observador",
           "url": "https://observador.cr/pellizquese-asi-bb-chats-revelan-presunto-trafico-de-drogas-de-hija-de-alias-macho-coca-y-su-pareja/"
+        }
+      ]
+    },
+    {
+      "titulo": "Defensoría alista un plan de acción para derechos afrodescendientes en el marco del 31 de agosto",
+      "agregado": "2026-08-30T15:50:00-06:00",
+      "resumen": [
+        "La Defensoría de los Habitantes prepara un plan de acción (salud, educación, empleo, justicia, territorio, cultura, niñez y juventud) para su Plan Operativo Anual, con organizaciones de la sociedad civil afrodescendiente. Incluye sensibilización, datos y coordinación institucional, además de violencia de género y participación cultural. El anuncio es por el Día de la Persona Negra y la Cultura Afrocostarricense el lunes 31, con el Grand Gala Parade en Limón (patrimonio cultural inmaterial)."
+      ],
+      "fuentes": [
+        {
+          "medio": "La República",
+          "url": "https://www.larepublica.net/poblacion-afrodescendiente/"
         }
       ]
     },
@@ -32,19 +71,6 @@
       ]
     },
     {
-      "titulo": "Atropello en Ciudad Colón deja a una niña de 8 años en politrauma crítico",
-      "agregado": "2026-08-30T15:50:00-06:00",
-      "resumen": [
-        "Una niña de 8 años quedó en condición crítica tras ser atropellada por un vehículo liviano alrededor de las 8:27 p.m. del sábado en Ciudad Colón, Mora. Sufrió un politrauma crítico y fue trasladada al Hospital Nacional de Niños. Cruz Roja desplegó una unidad de soporte básico y una de soporte avanzado. Lo reportó Repretel el domingo."
-      ],
-      "fuentes": [
-        {
-          "medio": "Repretel",
-          "url": "https://www.repretel.com/noticia/atropello-deja-nina-de-8-anos-luchando-por-su-vida/"
-        }
-      ]
-    },
-    {
       "titulo": "Hallan un cuerpo flotando en un río de San Antonio de Escazú",
       "agregado": "2026-08-30T15:50:00-06:00",
       "resumen": [
@@ -54,33 +80,6 @@
         {
           "medio": "Repretel",
           "url": "https://www.repretel.com/noticia/cuerpo-en-rio-escazu/"
-        }
-      ]
-    },
-    {
-      "titulo": "AyA anuncia cortes de agua el lunes en Hatillo, San Sebastián, Hospital y Pavas",
-      "agregado": "2026-08-30T15:50:00-06:00",
-      "resumen": [
-        "El AyA programó interrupciones nocturnas el lunes 31 de agosto por maniobras operativas. Hatillo, San Sebastián y Hospital: de 10:00 p.m. a 4:00 a.m. del 1.° de setiembre. Pavas: de 11:00 p.m. a 4:00 a.m. Lo informó Repretel el domingo a las 2:07 p.m."
-      ],
-      "fuentes": [
-        {
-          "medio": "Repretel",
-          "url": "https://www.repretel.com/noticia/lunes-sin-agua-aya-anuncia-suspension-en-sectores-de-san-jose/"
-        }
-      ]
-    },
-    {
-      "titulo": "Visión IA, de AInnova Tech, ofrece tamizaje de retina en ópticas y prepara un piloto con la CCSS",
-      "agregado": "2026-08-30T15:50:00-06:00",
-      "resumen": [
-        "El Financiero, a las 6:01 a.m. de este domingo, describe Visión IA: tamizaje de fondo de ojo con inteligencia artificial de la firma tica AInnova Tech (CEO Vinicio Vargas) para leer salud metabólica y cardiovascular. Está en ópticas Nova Vision, Preventiva Visual, Studio Visual y Dr.Med. La empresa iniciará un piloto con la CCSS para pacientes con diabetes (una o dos veces al año) y ya tiene otro en Clorito Picado para prediabetes.",
-        "La firma cita que el 40% de más de 500 millones de personas con diabetes en el mundo llegan a retinopatía diabética moderada o grave, principal causa de pérdida de visión en edad laboral, y que el 95% podría revertirse con detección temprana. También busca biomarcadores cardiovasculares, renales y de alzhéimer; vende en México y apunta a FDA."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Financiero",
-          "url": "https://www.elfinancierocr.com/tecnologia/con-la-ia-su-cita-medica-sera-distinta-vea-los/YQ7YGBKR2JAGPE5RURXX4J27HY/story/"
         }
       ]
     },
@@ -98,15 +97,16 @@
       ]
     },
     {
-      "titulo": "Defensoría alista un plan de acción para derechos afrodescendientes en el marco del 31 de agosto",
+      "titulo": "Visión IA, de AInnova Tech, ofrece tamizaje de retina en ópticas y prepara un piloto con la CCSS",
       "agregado": "2026-08-30T15:50:00-06:00",
       "resumen": [
-        "La Defensoría de los Habitantes prepara un plan de acción (salud, educación, empleo, justicia, territorio, cultura, niñez y juventud) para su Plan Operativo Anual, con organizaciones de la sociedad civil afrodescendiente. Incluye sensibilización, datos y coordinación institucional, además de violencia de género y participación cultural. El anuncio es por el Día de la Persona Negra y la Cultura Afrocostarricense el lunes 31, con el Grand Gala Parade en Limón (patrimonio cultural inmaterial)."
+        "El Financiero, a las 6:01 a.m. de este domingo, describe Visión IA: tamizaje de fondo de ojo con inteligencia artificial de la firma tica AInnova Tech (CEO Vinicio Vargas) para leer salud metabólica y cardiovascular. Está en ópticas Nova Vision, Preventiva Visual, Studio Visual y Dr.Med. La empresa iniciará un piloto con la CCSS para pacientes con diabetes (una o dos veces al año) y ya tiene otro en Clorito Picado para prediabetes.",
+        "La firma cita que el 40% de más de 500 millones de personas con diabetes en el mundo llegan a retinopatía diabética moderada o grave, principal causa de pérdida de visión en edad laboral, y que el 95% podría revertirse con detección temprana. También busca biomarcadores cardiovasculares, renales y de alzhéimer; vende en México y apunta a FDA."
       ],
       "fuentes": [
         {
-          "medio": "La República",
-          "url": "https://www.larepublica.net/poblacion-afrodescendiente/"
+          "medio": "El Financiero",
+          "url": "https://www.elfinancierocr.com/tecnologia/con-la-ia-su-cita-medica-sera-distinta-vea-los/YQ7YGBKR2JAGPE5RURXX4J27HY/story/"
         }
       ]
     },
@@ -137,36 +137,6 @@
         {
           "medio": "La Teja",
           "url": "https://www.lateja.cr/sucesos/esposa-de-pecho-de-rata-cayo-en-el-aeropuerto-juan/UQCA6C4I4VE2BJ3ZXCXBXZLATU/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "Socorristas mantienen búsqueda de dos personas arrastradas por cabeza de agua en Barú de Pérez Zeledón",
-      "agregado": "2026-08-30T13:48:00-06:00",
-      "resumen": [
-        "Alrededor de las 12:05 p.m. de este domingo 30, un grupo de unas 40 personas cruzaba un río en Barú de Pérez Zeledón cuando una cabeza de agua, por las lluvias, arrastró a dos de ellas, entre ellas la guía. La Cruz Roja reportó el grupo dividido y a varias personas al otro lado del río sin poder salir.",
-        "La Nación actualizó a las 3:19 p.m.: tres horas después, Cruz Roja y Bomberos mantienen la búsqueda. Minutos después de las 3:00 p.m., Cruz Roja tenía en el sitio dos unidades de soporte básico y la de Primera Intervención (rescate urbano); la de rescate acuático y más unidades básicas iban en camino. Bomberos reportó dos unidades en escena y cinco en camino. Se desconoce la identidad de los arrastrados. Sin confirmación pública de muertos ni del rescate."
-      ],
-      "fuentes": [
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/sucesos/cabeza-de-agua-arrastra-a-dos-personas-durante/RCTMX6SA55A3XLCO46IRTEPCW4/story/"
-        },
-        {
-          "medio": "CRHoy",
-          "url": "https://crhoy.com/nacionales/cabeza-de-agua-arrastra-a-dos-excursionistas/"
-        },
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/rio-en-perez-zeledon-arrastra-a-dos-personas-cruz-roja-atiende-rescate-de-otras-40-personas/"
-        },
-        {
-          "medio": "Teletica",
-          "url": "https://www.teletica.com/sucesos/cabeza-de-agua-que-arrastra-a-dos-personas-en-baru-de-perez-zeledon_416361"
-        },
-        {
-          "medio": "La Teja",
-          "url": "https://www.lateja.cr/sucesos/cabeza-de-agua-en-nuestro-pais-arrastra-a-dos/M5LUKB5HWJC4ZDN33ZLP3VPUQI/story/"
         }
       ]
     },
@@ -209,6 +179,36 @@
         {
           "medio": "CRHoy",
           "url": "https://crhoy.com/nacionales/hallan-cuerpo-envuelto-y-con-signos-de-violencia-en-edificio-abandonado-del-cnp/"
+        }
+      ]
+    },
+    {
+      "titulo": "Socorristas mantienen búsqueda de dos personas arrastradas por cabeza de agua en Barú de Pérez Zeledón",
+      "agregado": "2026-08-30T13:48:00-06:00",
+      "resumen": [
+        "Alrededor de las 12:05 p.m. de este domingo 30, un grupo de unas 40 personas cruzaba un río en Barú de Pérez Zeledón cuando una cabeza de agua, por las lluvias, arrastró a dos de ellas, entre ellas la guía. La Cruz Roja reportó el grupo dividido y a varias personas al otro lado del río sin poder salir.",
+        "La Nación actualizó a las 3:19 p.m.: tres horas después, Cruz Roja y Bomberos mantienen la búsqueda. Minutos después de las 3:00 p.m., Cruz Roja tenía en el sitio dos unidades de soporte básico y la de Primera Intervención (rescate urbano); la de rescate acuático y más unidades básicas iban en camino. Bomberos reportó dos unidades en escena y cinco en camino. Se desconoce la identidad de los arrastrados. Sin confirmación pública de muertos ni del rescate."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/cabeza-de-agua-arrastra-a-dos-personas-durante/RCTMX6SA55A3XLCO46IRTEPCW4/story/"
+        },
+        {
+          "medio": "CRHoy",
+          "url": "https://crhoy.com/nacionales/cabeza-de-agua-arrastra-a-dos-excursionistas/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/rio-en-perez-zeledon-arrastra-a-dos-personas-cruz-roja-atiende-rescate-de-otras-40-personas/"
+        },
+        {
+          "medio": "Teletica",
+          "url": "https://www.teletica.com/sucesos/cabeza-de-agua-que-arrastra-a-dos-personas-en-baru-de-perez-zeledon_416361"
+        },
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/cabeza-de-agua-en-nuestro-pais-arrastra-a-dos/M5LUKB5HWJC4ZDN33ZLP3VPUQI/story/"
         }
       ]
     },
