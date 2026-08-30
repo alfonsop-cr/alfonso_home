@@ -4,6 +4,23 @@
   "autor": "World News",
   "hechos": [
     {
+      "titulo": "Turquía, Arabia Saudí y Pakistán reúnen el lunes en Estambul el primer comité del pacto de defensa de La Meca",
+      "agregado": "2026-08-30T16:50:00-06:00",
+      "resumen": [
+        "Fuentes del Ministerio de Exteriores turco dijeron el domingo a Reuters que los ministros de Exteriores y Defensa y los jefes de Estado Mayor de Turquía, Arabia Saudí y Pakistán se reunirán el lunes en Estambul, primera sesión de comité del Acuerdo Conjunto de Defensa de La Meca, firmado el 7 de agosto. AFP, citada por Al Jazeera, precisó que el encuentro constituirá formalmente un «comité estratégico político y de defensa». La agenda, según Reuters, cubre seguridad internacional, interoperabilidad de las fuerzas armadas y cooperación industrial, incluida la producción conjunta. El pacto estipula que un ataque armado contra uno se considerará un ataque contra todos, a semejanza del artículo 5 de la OTAN. Erdogan dijo que Egipto podría sumarse; Bangladés estudia adherirse, y la India dijo que tomará las medidas necesarias para su seguridad."
+      ],
+      "fuentes": [
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/top-officials-from-turkiye-saudi-arabia-pakistan-to-meet-in-istanbul"
+        },
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/turkey-saudi-arabia-pakistan-hold-first-defence-pact-meeting-source-says-2026-08-30/"
+        }
+      ]
+    },
+    {
       "titulo": "Siria reabre su embajada en Trípoli tras 14 años y pacta un consulado en Bengasi",
       "agregado": "2026-08-30T14:49:00-06:00",
       "resumen": [
@@ -30,24 +47,6 @@
         {
           "medio": "AP",
           "url": "https://apnews.com/article/russia-ukraine-war-strikes-attacks-energy-oil-gas-drones-warehouse-5cfe71b2954a40489c070459ba82116e"
-        }
-      ]
-    },
-    {
-      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
-      "agregado": "2026-08-30T13:01:20-06:00",
-      "resumen": [
-        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021. Al Jazeera confirmó el acuerdo el domingo.",
-        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
-      ],
-      "fuentes": [
-        {
-          "medio": "Reuters",
-          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/30/rival-libya-factions-sign-deal-to-hold-national-elections-within-two-years"
         }
       ]
     },
@@ -82,10 +81,28 @@
       ]
     },
     {
+      "titulo": "Libia: rivales firman una hoja de ruta de la ONU para elecciones en 24 meses",
+      "agregado": "2026-08-30T13:01:20-06:00",
+      "resumen": [
+        "Representantes de las facciones libias firmaron el domingo en Trípoli, en la misión de la ONU (UNSMIL), un acuerdo para celebrar elecciones legislativas y presidenciales «en un plazo no superior a 24 meses», bajo una sola autoridad ejecutiva e instituciones nacionales unificadas. El pacto sale del formato 4+4 —dos delegados de cada uno de estos cuatro órganos: Gobierno de Unidad Nacional, Alto Consejo de Estado, Cámara de Representantes y Ejército Nacional Libio— y busca desbloquear leyes electorales y reformar la comisión electoral. El proceso está estancado desde el fracaso de los comicios de diciembre de 2021. Al Jazeera confirmó el acuerdo el domingo.",
+        "Walid Ellafi, ministro de Estado del Gobierno de Unidad Nacional, fijó ese techo de 24 meses. El acuerdo prevé que, si la Cámara y el Alto Consejo no lo aprueban en un mes, las partes intentarán adoptarlo como documento constitucional por mecanismos nacionales y buscar el respaldo del Consejo de Seguridad."
+      ],
+      "fuentes": [
+        {
+          "medio": "Reuters",
+          "url": "https://www.reuters.com/world/africa/libya-rivals-agree-roadmap-elections-within-24-months-un-led-talks-2026-08-30/"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/rival-libya-factions-sign-deal-to-hold-national-elections-within-two-years"
+        }
+      ]
+    },
+    {
       "titulo": "Moscú anuncia que prepara «ataques masivos» contra la energía de Ucrania",
       "agregado": "2026-08-30T12:02:00-06:00",
       "resumen": [
-        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial, después extinguido según DW, y 62 drones derribados sobre la región. El mismo día, Ozon dijo que un dron ucraniano incendió un centro logístico en la región fronteriza de Bélgorod y que temía varios heridos. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
+        "El Ministerio de Defensa ruso dijo el domingo que prepara «ataques masivos» contra la infraestructura energética ucraniana, en represalia por la campaña de drones de Kiev contra refinerías y los minoristas en línea Wildberries y Ozon. El portavoz del Kremlin, Dmitri Peskov, calificó los golpes a gran escala de «respuesta adecuada». AP reportó que drones ucranianos habrían incendiado el domingo la refinería de Kirishi, al sureste de San Petersburgo; el gobernador local confirmó un incendio en la zona industrial, después extinguido según DW, y 62 drones derribados sobre la región. El mismo día, Ozon dijo que un dron ucraniano incendió un centro logístico en la región fronteriza de Bélgorod y que temía varios heridos. Moscú afirmó haber derribado o neutralizado casi 500 drones ucranianos durante la noche."
       ],
       "fuentes": [
         {
@@ -139,27 +156,6 @@
       ]
     },
     {
-      "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
-      "agregado": "2026-08-30T09:53:10-06:00",
-      "resumen": [
-        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. Al Jazeera cifró el domingo 7 heridos en Qusra. En Jalud atacaron a una familia palestina y a un equipo de NBC, según Wafa y Al Jazeera. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. Al Jazeera reportó el domingo que no constaban detenciones pese a las imágenes."
-      ],
-      "fuentes": [
-        {
-          "medio": "France 24",
-          "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"
-        },
-        {
-          "medio": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/8/30/whats-behind-netanyahus-condemnation-of-settler-pogroms"
-        }
-      ]
-    },
-    {
       "titulo": "Islandia rechaza reabrir negociaciones de adhesión a la UE",
       "agregado": "2026-08-30T09:53:10-06:00",
       "resumen": [
@@ -181,6 +177,27 @@
         {
           "medio": "El País",
           "url": "https://elpais.com/internacional/2026-08-30/el-no-de-islandia-debilita-a-la-ue-ante-trump-y-las-fuerzas-antieuropeas.html"
+        }
+      ]
+    },
+    {
+      "titulo": "Colonos atacan Qusra y Jalud; Netanyahu condena la violencia",
+      "agregado": "2026-08-30T09:53:10-06:00",
+      "resumen": [
+        "Decenas de colonos israelíes atacaron el sábado la aldea palestina de Qusra, cerca de Nablús: lanzaron piedras y se atrincheraron en una vivienda con la familia dentro. Al Jazeera cifró el domingo 7 heridos en Qusra. En Jalud atacaron a una familia palestina y a un equipo de NBC, según Wafa y Al Jazeera. Benjamín Netanyahu condenó «actos criminales de violencia» de «un puñado de alborotadores» y pidió detenerlos; el Ejército dijo que confiscó vehículos y abrió investigación. Al Jazeera reportó el domingo que no constaban detenciones pese a las imágenes."
+      ],
+      "fuentes": [
+        {
+          "medio": "France 24",
+          "url": "https://www.france24.com/en/middle-east/20260829-netanyahu-condemns-criminal-acts-of-violence-by-settlers-in-west-bank-villages"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/29/israeli-settlers-surround-palestinian-home-in-occupied-west-banks-qusra"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/whats-behind-netanyahus-condemnation-of-settler-pogroms"
         }
       ]
     },
@@ -209,7 +226,7 @@
       "titulo": "Guinea-Bisáu: la CNE cifra la participación en más del 55%; el recuento sigue sin resultados oficiales",
       "agregado": "2026-08-30T09:45:00-06:00",
       "resumen": [
-        "Los colegios cerraron a las 17:00 GMT y el despojo seguía en Bissau. En un punto de prensa vespertino, Idrissa Djalo, secretario ejecutivo de la CNE, anunció un tasa de participación «que supera el 55%» y dijo que el voto se desarrolló de forma organizada, sin incidentes que pusieran en duda la credibilidad, según France 24/AFP (despacho modificado a las 22:08). AFP, en cambio, había descrito afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y, según periodistas locales, mixta o débil en Tombali, Quinara (sur) y el este. El PAIGC llamó al boycot. Primeros resultados provisionales, el martes. No había cifras de recuento ni ganador a media tarde (hora Costa Rica).",
+        "Los colegios cerraron a las 17:00 GMT y el despojo seguía en Bissau. En un punto de prensa vespertino, Idrissa Djalo, secretario ejecutivo de la CNE, anunció un tasa de participación «que supera el 55%» y dijo que el voto se desarrolló de forma organizada, sin incidentes que pusieran en duda la credibilidad, según France 24/AFP (despacho modificado a las 22:08). AFP, en cambio, había descrito afluencia baja o desigual —tímida por la lluvia, mayor a mediodía y floja por la tarde— y, según periodistas locales, mixta o débil en Tombali, Quinara (sur) y el este. El PAIGC llamó al boycot. Primeros resultados provisionales, el martes. No había cifras de recuento ni ganador a última hora del domingo (hora Costa Rica).",
         "La junta sometió una constitución que pasaría el país a un sistema presidencial: el jefe de Estado podría nombrar y destituir al primer ministro y disolver el Parlamento, y el hemiciclo bajaría de 102 a 65 escaños. El general Horta N'Tam votó y pidió a los jóvenes que salieran. Hay unos 915.000 inscritos y elecciones generales previstas para el 6 de diciembre."
       ],
       "fuentes": [
@@ -231,7 +248,7 @@
       "titulo": "Ferry Filojet volcado frente a Kyrenia: 8 muertos; Reuters cifra 18 desaparecidos y 241 rescatados",
       "agregado": "2026-08-30T09:30:00-06:00",
       "resumen": [
-        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo oficial de muertos se mantiene en al menos 8 (Reuters, AP, BBC, France 24/AFP, The Guardian). Reuters sigue en 18 desaparecidos y 241 rescatados; AP y Ünal Üstel, en 237 rescatados y búsqueda de otros 22. France 24/AFP precisa que 161 rescatados fueron hospitalizados y 76 volvieron a casa (237); la agencia chipriota TAK sigue en 17 desaparecidos. The Guardian añadió que tres niños rescatados estaban en cuidados intensivos, aparentemente fuera de peligro, y que el diputado turcochipriota Sami Ozuslu habló de «nueve o diez» muertos, sin confirmación oficial. El pecio se hundió por completo a unos 514 metros.",
+        "El transbordador privado Filojet, con 259 pasajeros y 8 tripulantes (267 ocupantes) en la ruta Kyrenia–Taşucu, empezó a hacer agua y volcó el domingo a unas 4 millas náuticas de la costa del norte de Chipre. El saldo oficial de muertos se mantiene en al menos 8 (Reuters, AP, BBC, France 24/AFP, The Guardian, Al Jazeera). Reuters sigue en 18 desaparecidos y 241 rescatados; AP y Ünal Üstel, en 237 rescatados y búsqueda de otros 22. France 24/AFP precisa que 161 rescatados fueron hospitalizados y 76 volvieron a casa (237); la agencia chipriota TAK sigue en 17 desaparecidos. The Guardian añadió que tres niños rescatados estaban en cuidados intensivos, aparentemente fuera de peligro, y que el diputado turcochipriota Sami Ozuslu habló de «nueve o diez» muertos, sin confirmación oficial. El pecio se hundió por completo a unos 514 metros.",
         "Las autoridades turcochipriotas detuvieron al capitán y a siete tripulantes y Üstel anunció una investigación, al describir el naufragio como el peor de la historia chipriota. BBC relató que la salida, prevista el sábado, se retrasó por mal tiempo y que Üstel dijo a TRT que dos olas golpearon el catamarán. El rescatista Mustafa Koc, que sacó a unos 65 náufragos, dijo a la BBC que el mar estaba picado y que el barco había llegado el sábado con daños en la proa. Supervivientes dijeron a medios locales, según AFP, que hubo una explosión o rotura en la proa, que faltaban chalecos —Efe Multici dijo a CNN Turk que algunos saltaron sin salvavidas— y que el capitán habría sido de los primeros en abandonar el barco. Diplomáticos de la UE en el sur, citados por The Guardian, sugirieron que el ferry podría no haber estado en condiciones de navegar. El operativo de búsqueda seguía abierto: el Ministerio del Interior turco dijo que se habían enviado seis buques de la Armada; Erdogan ofreció condolencias y el Gobierno chipriota reconocido internacionalmente ofreció ayuda."
       ],
       "fuentes": [
@@ -254,14 +271,18 @@
         {
           "medio": "The Guardian",
           "url": "https://www.theguardian.com/world/live/2026/aug/30/northern-cyprus-ferry-capsizes-latest-news-updates"
+        },
+        {
+          "medio": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/8/30/ferry-carrying-260-people-capsizes-off-northern-cyprus-coast"
         }
       ]
     },
     {
-      "titulo": "Nepal y Tíbet: 804 muertos y más de 3.000 desaparecidos; en el túnel 3A no hay respuesta",
+      "titulo": "Nepal y Tíbet: 804 muertos y más de 3.000 desaparecidos; la policía nepalí cifra 794 cuerpos; en el túnel 3A no hay respuesta",
       "agregado": "2026-08-30T09:30:00-06:00",
       "resumen": [
-        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters habla de 781 muertos en Nepal. Siguen las alertas por crecida del Bhotekoshi y el Trishuli —The Guardian reportó alerta máxima en Trishuli Bazaar, Nuwakot—; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. En Chitwan siguen los enterramientos masivos de cuerpos no identificados, con muestras de ADN. Al Jazeera citó al ministro de Finanzas nepalí: pérdidas de más de 4.000 millones de dólares. China dijo que 261 extranjeros de 23 países faltan en el Tíbet.",
+        "AP y The Guardian cifran el domingo 788 muertos y 2.502 desaparecidos en Nepal, y 16 muertos y 546 desaparecidos en el Tíbet chino (804 y 3.048 combinados). Reuters y la NDRRMA hablan de 781 muertos en Nepal. La Policía nepalí, citada por la BBC, elevó a 794 los cuerpos recuperados a las 17:45 hora local. Siguen las alertas por crecida del Bhotekoshi y el Trishuli —The Guardian reportó alerta máxima en Trishuli Bazaar, Nuwakot—; China dijo que el lago de barrera se había drenado en gran parte, pero un cráter aguas arriba con unos 1,4 millones de m³ de agua exige vigilancia. En Chitwan siguen los enterramientos masivos de cuerpos no identificados, con muestras de ADN. Al Jazeera citó al ministro de Finanzas nepalí: pérdidas de más de 4.000 millones de dólares. China dijo que 261 extranjeros de 23 países faltan en el Tíbet. El corresponsal de la BBC en China citó a funcionarios de Shigatse: los equipos de rescate no están encontrando a nadie con vida. La Junta de Turismo de Nepal dijo que 289 extranjeros habían sido rescatados y 591 seguían incomunicados a las 18:00 hora local.",
         "France 24/AFP y BBC: el domingo un equipo de unos 90 militares y policías perforó agujeros, usó explosivos y descendió con cuerdas por un hueco de unos 60×90 cm en la coronación del túnel de Upper Trishuli 3A; al gritar, no hubo respuesta, según la oficina del primer ministro. El ministerio de Energía dijo que la boca está a unos 180 metros del espacio de trabajo y que se prepara el envío de rescatistas con oxígeno y cámara. Hay 933 trabajadores hidroeléctricos entre los desaparecidos; el Gobierno estima que más de 100 podrían seguir vivos en varios túneles. Un asesor en el sitio estimó 35-40 personas en el 3A, cifra no confirmada. Al Jazeera: el sábado perforaron la parte alta, inyectaron aire y metieron una cámara; la lluvia nocturna inundó la excavación. Equipos de India, China y Corea del Sur se sumaron. Malasia anunció un equipo de búsqueda y 1 millón de dólares en ayuda."
       ],
       "fuentes": [
