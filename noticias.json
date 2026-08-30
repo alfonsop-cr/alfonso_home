@@ -1,1 +1,21 @@
-PLACEHOLDER_USE_FILE
+{
+  "fecha": "2026-08-30",
+  "fechaTexto": "domingo 30 de agosto de 2026",
+  "autor": "Ignacio Santos",
+  "hechos": [
+    {
+      "titulo": "Auditoría de San José investiga orden vía WhatsApp de Diego Miranda sobre parquímetros nocturnos",
+      "agregado": "2026-08-30T13:48:00-06:00",
+      "resumen": [
+        "La Auditoría de la Municipalidad de San José abrió una pesquisa por una presunta orden informal del alcalde Diego Miranda, vía WhatsApp, para cancelar los operativos nocturnos de parquímetros y suspender el horario ampliado de 8:00 p.m. a 2:00 a.m. (publicado en La Gaceta el 6 de mayo). El auditor Israel Barrantes dijo que la investigación es sobre los hechos, no contra una persona en particular.",
+        "El disparador fue un oficio del 12 de agosto de Ana Lorena Gil Chavarría, jefa de la Sección de Parquímetros: ese día Miranda habría ordenado a un funcionario detener los operativos; Gil pidió una resolución formal porque la empresa y el personal ya se habían adaptado. La ampliación habría recaudado unos ₡116 millones. La Nación no obtuvo respuesta de Miranda. La nota salió el domingo a la 1:30 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/el-pais/auditoria-de-san-jose-investiga-orden-via-whatsapp/XBBIJQVFHZDRBPVEYKLJPWTSEI/story/"
+        }
+      ]
+    }
+  ]
+}
