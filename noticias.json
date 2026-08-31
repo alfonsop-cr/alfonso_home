@@ -661,6 +661,32 @@
       ]
     },
     {
+      "titulo": "FILCR 2026 cierra en la Antigua Aduana con más de 43.000 visitas en nueve días",
+      "agregado": "2026-08-30T09:04:54-06:00",
+      "resumen": [
+        "La Feria Internacional del Libro 2026 terminó el domingo 30 de agosto en la Antigua Aduana, con entrada gratuita. El Observador, a las 6:09 p.m., reportó más de 43.000 asistentes en nueve días, el doble que el año pasado en el Centro de Convenciones. El sábado había contado más de 22.000 en siete días y unos 4.000 estudiantes por un acuerdo con el MEP; hay 129 stands y 68 editoriales, librerías y emprendimientos.",
+        "La Nación detalló la agenda del domingo: cómic europeo a las 11:00 a.m., taller gráfico a las 2:00 p.m. con Maurane Mazars y Edo Brenes, concierto de Luis Enrique Mejía Godoy a las 4:00 p.m. y premiación del VI Concurso Centroamericano de Cómic a las 4:30 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/ultimos-dias-de-la-feria-internacional-del-libro-evento-ya-convoco-a-mas-de-22-000-personas-en-la-aduana/"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/viva/la-feria-del-libro-llega-a-su-recta-final-que/RARAAT7RAZEVHGLL3H2VJGEROM/story/"
+        },
+        {
+          "medio": "La República",
+          "url": "https://www.larepublica.net/feria-del-libro-ultimo-dia/"
+        },
+        {
+          "medio": "El Observador",
+          "url": "https://observador.cr/costa-rica-lee-menos-pero-jovenes-y-adultos-mayores-aumentan-su-consumo-de-libros-por-ano/"
+        }
+      ]
+    },
+    {
       "titulo": "Fiscalía Anticorrupción investiga a un exsubdirector del MEP contratado por la empresa que ganó una licitación de ₡4.250 millones",
       "agregado": "2026-08-30T09:04:54-06:00",
       "resumen": [
@@ -731,32 +757,6 @@
         {
           "medio": "La Nación",
           "url": "https://www.nacion.com/politica/colegio-de-medicos-expresa-profunda-preocupacion/FRZL3ANGUVBH3MD55QX7FDIRZM/story/"
-        }
-      ]
-    },
-    {
-      "titulo": "FILCR 2026 cierra en la Antigua Aduana con más de 43.000 visitas en nueve días",
-      "agregado": "2026-08-30T09:04:54-06:00",
-      "resumen": [
-        "La Feria Internacional del Libro 2026 terminó el domingo 30 de agosto en la Antigua Aduana, con entrada gratuita. El Observador, a las 6:09 p.m., reportó más de 43.000 asistentes en nueve días, el doble que el año pasado en el Centro de Convenciones. El sábado había contado más de 22.000 en siete días y unos 4.000 estudiantes por un acuerdo con el MEP; hay 129 stands y 68 editoriales, librerías y emprendimientos.",
-        "La Nación detalló la agenda del domingo: cómic europeo a las 11:00 a.m., taller gráfico a las 2:00 p.m. con Maurane Mazars y Edo Brenes, concierto de Luis Enrique Mejía Godoy a las 4:00 p.m. y premiación del VI Concurso Centroamericano de Cómic a las 4:30 p.m."
-      ],
-      "fuentes": [
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/ultimos-dias-de-la-feria-internacional-del-libro-evento-ya-convoco-a-mas-de-22-000-personas-en-la-aduana/"
-        },
-        {
-          "medio": "La Nación",
-          "url": "https://www.nacion.com/viva/la-feria-del-libro-llega-a-su-recta-final-que/RARAAT7RAZEVHGLL3H2VJGEROM/story/"
-        },
-        {
-          "medio": "La República",
-          "url": "https://www.larepublica.net/feria-del-libro-ultimo-dia/"
-        },
-        {
-          "medio": "El Observador",
-          "url": "https://observador.cr/costa-rica-lee-menos-pero-jovenes-y-adultos-mayores-aumentan-su-consumo-de-libros-por-ano/"
         }
       ]
     },
