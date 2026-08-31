@@ -4,6 +4,33 @@
   "autor": "Ignacio Santos",
   "hechos": [
     {
+      "titulo": "IMN pronostica más lluvias el lunes 31, con variación por zona y hora",
+      "agregado": "2026-08-30T18:55:00-06:00",
+      "resumen": [
+        "El Instituto Meteorológico Nacional pronostica nuevas precipitaciones el lunes 31 de agosto. En la mañana, vientos alisios moderados en el norte favorecen lluvias y chubascos ocasionales en el Caribe Sur y las montañas de la Zona Norte. Por la tarde los alisios bajan: el Valle Central tendría precipitaciones ocasionales al inicio de la tarde, y luego aguaceros con posible actividad eléctrica en Pacífico Central, Pacífico Sur y la península de Nicoya. La Teja lo publicó el domingo a las 6:47 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/sucesos/llovera-este-lunes-imn-dice-esto-sobre-el-tiempo/B3WPZ5PX2NAUBJQVKXORLOOWPU/story/"
+        }
+      ]
+    },
+    {
+      "titulo": "Independientes denuncian cobros retroactivos millonarios de la CCSS",
+      "agregado": "2026-08-30T18:55:00-06:00",
+      "resumen": [
+        "La Teja documentó cobros retroactivos de la CCSS a trabajadores independientes. El soldador Gabriel Chacón dice que en 2020 tramitó una planilla provisional por un colaborador de pocos meses y en 2023 le notificaron más de ₡30 millones, como si hubiera tenido empleados desde 2010; la Caja solo rebajó periodos prescritos posteriores a 2017. Ese año le diagnosticaron cáncer de tiroides y afirma que, pese a estar al día en su seguro personal, le pretenden cobrar la cirugía oncológica y una operación previa de su esposa. Una familia de Pérez Zeledón (dueño de un bazar, 84 años) recibió más de ₡4 millones por un cruce con declaraciones de renta; al quedar morosos no pueden tramitar permisos ni licitar con juntas de educación.",
+        "El abogado tributario Gabriel Zamora Baudrit reiteró que la información tributaria no puede convertirse automáticamente en facturas retroactivas de seguridad social. Citó un fallo de la Sala IV de enero (cuotas según la Ley Constitutiva y cálculos actuariales), un Tribunal Contencioso que anuló un cobro sobre renta bruta y la confirmación de la Sala Primera. Recomendó exigir desglose escrito, revisar prescripción y no firmar convenios a ciegas. La Teja lo publicó el domingo a las 5:34 p.m."
+      ],
+      "fuentes": [
+        {
+          "medio": "La Teja",
+          "url": "https://www.lateja.cr/nacional/caso-de-soldador-revela-cobros-millonarios-de-la/KZPCHD7YMJGABKGYUX2AZIVOBE/story/"
+        }
+      ]
+    },
+    {
       "titulo": "Inauguran en El Guarco el primer laboratorio de manufactura de cannabis medicinal",
       "agregado": "2026-08-30T18:45:00-06:00",
       "resumen": [
@@ -523,6 +550,10 @@
         {
           "medio": "La Nación",
           "url": "https://www.nacion.com/sucesos/hombre-de-30-anos-asesinado-dentro-de-su-casa-en/ITFJTZYHQFFCNJ6DHR6S3RSJTA/story/"
+        },
+        {
+          "medio": "La Nación",
+          "url": "https://www.nacion.com/sucesos/hombre-muere-tras-ser-atacado-a-balazos-en/Q7NQOV7LJJD2PKHOBUPWYNRDGA/story/"
         }
       ]
     },
