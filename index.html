@@ -500,6 +500,19 @@
             return 0;
         });
     }
+    var NEWS_WINDOW_MS = 24 * 60 * 60 * 1000;
+    function isWithinLast24h(item) {
+        const ms = parseAgregadoMs(item && item.agregado);
+        if (isNaN(ms)) return false;
+        return Date.now() - ms <= NEWS_WINDOW_MS;
+    }
+    function filterLast24h(items, keepIfMissing) {
+        return (items || []).filter(function (item) {
+            const ms = parseAgregadoMs(item && item.agregado);
+            if (isNaN(ms)) return !!keepIfMissing;
+            return isWithinLast24h(item);
+        });
+    }
     function renderHechos(container, items) {
         container.replaceChildren();
         if (!items || !items.length) {
@@ -537,7 +550,7 @@
             const res = await fetch(jsonUrl('./noticias.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('noticias.json');
             const d = await res.json();
-            renderHechos(document.getElementById('noticias'), d.hechos);
+            renderHechos(document.getElementById('noticias'), filterLast24h(d.hechos));
         } catch (e) {
             document.getElementById('noticias').textContent = 'No se pudieron cargar las noticias.';
         }
@@ -547,8 +560,8 @@
             const res = await fetch(jsonUrl('./leo.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('leo.json');
             const d = await res.json();
-            renderHechos(document.getElementById('leo-hechos'), d.hechos);
-            renderHechos(document.getElementById('leo-columnas'), d.columnas);
+            renderHechos(document.getElementById('leo-hechos'), filterLast24h(d.hechos));
+            renderHechos(document.getElementById('leo-columnas'), filterLast24h(d.columnas, true));
         } catch (e) {
             document.getElementById('leo-hechos').textContent = 'No se pudieron cargar las noticias.';
         }
@@ -558,7 +571,7 @@
             const res = await fetch(jsonUrl(path), { cache: 'no-store' });
             if (!res.ok) throw new Error(path);
             const d = await res.json();
-            renderHechos(document.getElementById(targetId), d.hechos);
+            renderHechos(document.getElementById(targetId), filterLast24h(d.hechos));
         } catch (e) {
             document.getElementById(targetId).textContent = 'No se pudieron cargar las noticias.';
         }
