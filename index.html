@@ -547,7 +547,7 @@
     }
     async function fetchNoticias() {
         try {
-            const res = await fetch(jsonUrl('./noticias.json'), { cache: 'no-store' });
+            const res = await fetch(jsonUrl('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/noticias.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('noticias.json');
             const d = await res.json();
             renderHechos(document.getElementById('noticias'), filterLast24h(d.hechos));
@@ -557,7 +557,7 @@
     }
     async function fetchLeo() {
         try {
-            const res = await fetch(jsonUrl('./leo.json'), { cache: 'no-store' });
+            const res = await fetch(jsonUrl('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/leo.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('leo.json');
             const d = await res.json();
             renderHechos(document.getElementById('leo-hechos'), filterLast24h(d.hechos));
@@ -579,8 +579,8 @@
     function loadTab(id) {
         if (id === 'cr') fetchNoticias();
         else if (id === 'ai') fetchLeo();
-        else if (id === 'us') fetchFeed('./us.json', 'us-hechos');
-        else if (id === 'world') fetchFeed('./world.json', 'world-hechos');
+        else if (id === 'us') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/us.json', 'us-hechos');
+        else if (id === 'world') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/world.json', 'world-hechos');
     }
     function setupNewsTabs() {
         const tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
