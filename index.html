@@ -123,6 +123,9 @@
             margin: 0;
         }
         .vistas-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
             margin: 0 0 16px;
         }
         .vistas-toggle {
@@ -141,17 +144,17 @@
             cursor: pointer;
         }
         .vistas-legend {
-            display: flex;
-            justify-content: center;
             width: 36px;
+            margin-left: auto;
+            text-align: center;
             font-family: "IBM Plex Sans", sans-serif;
             font-size: 11px;
             font-weight: 500;
             line-height: 1.2;
             color: var(--muted);
             white-space: nowrap;
-            margin-top: 2px;
             pointer-events: none;
+            flex: 0 0 36px;
         }
         .vistas-toggle[aria-checked="true"] { color: var(--text); }
         .vistas-track {
