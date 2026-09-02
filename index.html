@@ -305,30 +305,17 @@
         }
         .hecho-meta {
             display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 10px;
+            align-items: center;
+            gap: 8px;
             margin: -6px 0 10px;
             min-width: 0;
         }
-        .hecho-meta .hora-agregado {
-            margin: 0;
-            min-height: 36px;
-            display: flex;
-            align-items: center;
-        }
+        .hecho-meta .hora-agregado { margin: 0; }
         .hora-agregado {
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
             font-variant-numeric: tabular-nums;
-        }
-        .visto-stack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: auto;
-            flex: 0 0 auto;
         }
         .visto-btn {
             display: inline-flex;
@@ -355,17 +342,6 @@
             background: var(--accent);
             border-color: var(--accent);
         }
-        .visto-caption {
-            font-family: "IBM Plex Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--muted);
-            white-space: nowrap;
-            margin-top: -4px;
-            pointer-events: none;
-        }
-        .hecho.is-visto .visto-caption { color: var(--accent); }
         .hecho.is-visto h3 { color: var(--muted); }
         .hecho p {
             margin: 0 0 8px;
@@ -714,11 +690,11 @@
             article.className = seen ? 'hecho is-visto' : 'hecho';
             let html = '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
             html += '<div class="hecho-meta">';
+            html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             const hora = formatHoraAgregado(hecho.agregado);
             if (hora) {
                 html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
             }
-            html += '<div class="visto-stack"><button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button><span class="visto-caption">ya lo vi</span></div>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
