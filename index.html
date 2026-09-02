@@ -297,25 +297,29 @@
             border-top: 1px solid #f3f1ea22;
         }
         .hecho:first-child { border-top: none; padding-top: 0; }
+        .hecho-titulo {
+            display: flex;
+            align-items: flex-start;
+            min-width: 0;
+            margin: 0 0 2px;
+        }
+        .hecho-titulo .visto-btn { flex: 0 0 auto; }
         .hecho h3 {
-            margin: 0 0 10px;
+            margin: 0;
+            flex: 1 1 auto;
+            min-width: 0;
             font-size: 1.05rem;
             font-weight: 500;
             line-height: 1.35;
+            overflow-wrap: anywhere;
         }
-        .hecho-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin: -6px 0 10px;
-            min-width: 0;
-        }
-        .hecho-meta .hora-agregado { margin: 0; }
         .hora-agregado {
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
             font-variant-numeric: tabular-nums;
+            margin: 0 0 10px;
+            padding-left: 36px;
         }
         .visto-btn {
             display: inline-flex;
@@ -688,14 +692,14 @@
             const seen = isHechoSeen(tabId, hecho);
             const article = document.createElement('article');
             article.className = seen ? 'hecho is-visto' : 'hecho';
-            let html = '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
-            html += '<div class="hecho-meta">';
+            let html = '<div class="hecho-titulo">';
             html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
+            html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
+            html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
             if (hora) {
                 html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
             }
-            html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
                 html += '<p>' + escapeHtml(p) + '</p>';
