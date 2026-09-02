@@ -122,11 +122,14 @@
             font-size: 13px;
             margin: 0;
         }
+        .vistas-block {
+            margin: 0 0 16px;
+        }
         .vistas-toggle {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin: 0 0 16px;
+            margin: 0;
             padding: 0;
             background: none;
             border: 0;
@@ -136,6 +139,19 @@
             font-weight: 500;
             min-height: 36px;
             cursor: pointer;
+        }
+        .vistas-legend {
+            display: flex;
+            justify-content: center;
+            width: 36px;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--muted);
+            white-space: nowrap;
+            margin-top: 2px;
+            pointer-events: none;
         }
         .vistas-toggle[aria-checked="true"] { color: var(--text); }
         .vistas-track {
@@ -305,35 +321,24 @@
         }
         .hecho-meta {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
             gap: 10px;
             margin: -6px 0 10px;
             min-width: 0;
         }
-        .hecho-meta .hora-agregado {
-            margin: 0;
-            min-height: 36px;
-            display: flex;
-            align-items: center;
-        }
+        .hecho-meta .hora-agregado { margin: 0; }
         .hora-agregado {
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
             font-variant-numeric: tabular-nums;
         }
-        .visto-stack {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-left: auto;
-            flex: 0 0 auto;
-        }
         .visto-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            margin-left: auto;
             min-width: 36px;
             min-height: 36px;
             padding: 0;
@@ -355,17 +360,6 @@
             background: var(--accent);
             border-color: var(--accent);
         }
-        .visto-caption {
-            font-family: "IBM Plex Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--muted);
-            white-space: nowrap;
-            margin-top: -4px;
-            pointer-events: none;
-        }
-        .hecho.is-visto .visto-caption { color: var(--accent); }
         .hecho.is-visto h3 { color: var(--muted); }
         .hecho p {
             margin: 0 0 8px;
@@ -435,10 +429,13 @@
             <button type="button" class="tab" role="tab" id="tab-world" aria-controls="panel-world" aria-selected="false" tabindex="-1">World News</button>
         </div>
         <div class="news-panel">
-            <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
-                <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
-                <span>Mostrar vistas</span>
-            </button>
+            <div class="vistas-block">
+                <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
+                    <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
+                    <span>Mostrar vistas</span>
+                </button>
+                <span class="vistas-legend" aria-hidden="true">ya lo vi</span>
+            </div>
             <div id="panel-cr" role="tabpanel" aria-labelledby="tab-cr">
                 <div id="noticias"></div>
             </div>
@@ -718,7 +715,7 @@
             if (hora) {
                 html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
             }
-            html += '<div class="visto-stack"><button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button><span class="visto-caption">ya lo vi</span></div>';
+            html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
