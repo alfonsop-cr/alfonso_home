@@ -122,17 +122,11 @@
             font-size: 13px;
             margin: 0;
         }
-        .vistas-block {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin: 0 0 16px;
-        }
         .vistas-toggle {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin: 0;
+            margin: 0 0 16px;
             padding: 0;
             background: none;
             border: 0;
@@ -142,19 +136,6 @@
             font-weight: 500;
             min-height: 36px;
             cursor: pointer;
-        }
-        .vistas-legend {
-            width: 36px;
-            margin-left: auto;
-            text-align: center;
-            font-family: "IBM Plex Sans", sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            line-height: 1.2;
-            color: var(--muted);
-            white-space: nowrap;
-            pointer-events: none;
-            flex: 0 0 36px;
         }
         .vistas-toggle[aria-checked="true"] { color: var(--text); }
         .vistas-track {
@@ -325,8 +306,7 @@
         .hecho-meta {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 10px;
+            gap: 8px;
             margin: -6px 0 10px;
             min-width: 0;
         }
@@ -341,7 +321,6 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-left: auto;
             min-width: 36px;
             min-height: 36px;
             padding: 0;
@@ -432,13 +411,10 @@
             <button type="button" class="tab" role="tab" id="tab-world" aria-controls="panel-world" aria-selected="false" tabindex="-1">World News</button>
         </div>
         <div class="news-panel">
-            <div class="vistas-block">
-                <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
-                    <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
-                    <span>Mostrar vistas</span>
-                </button>
-                <span class="vistas-legend" aria-hidden="true">ya lo vi</span>
-            </div>
+            <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
+                <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
+                <span>Mostrar vistas</span>
+            </button>
             <div id="panel-cr" role="tabpanel" aria-labelledby="tab-cr">
                 <div id="noticias"></div>
             </div>
@@ -714,11 +690,11 @@
             article.className = seen ? 'hecho is-visto' : 'hecho';
             let html = '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
             html += '<div class="hecho-meta">';
+            html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             const hora = formatHoraAgregado(hecho.agregado);
             if (hora) {
                 html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
             }
-            html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
