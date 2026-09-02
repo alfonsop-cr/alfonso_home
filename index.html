@@ -122,6 +122,47 @@
             font-size: 13px;
             margin: 0;
         }
+        .vistas-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 16px;
+            padding: 0;
+            background: none;
+            border: 0;
+            color: var(--muted);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .vistas-toggle[aria-checked="true"] { color: var(--text); }
+        .vistas-track {
+            position: relative;
+            width: 32px;
+            height: 18px;
+            flex: 0 0 auto;
+            border-radius: 999px;
+            background: #1a2330;
+            border: 1px solid var(--line);
+        }
+        .vistas-knob {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--muted);
+            transition: transform 0.15s ease;
+        }
+        .vistas-toggle[aria-checked="true"] .vistas-track {
+            border-color: #e8b86d66;
+        }
+        .vistas-toggle[aria-checked="true"] .vistas-knob {
+            transform: translateX(14px);
+            background: var(--accent);
+        }
         @media (max-width: 800px) {
             .ahora { grid-template-columns: 1fr; }
             .masthead {
@@ -261,15 +302,51 @@
             font-weight: 500;
             line-height: 1.35;
         }
-        .hecho h3 + .hora-agregado {
+        .hecho-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
             margin: -6px 0 10px;
+            min-width: 0;
         }
+        .hecho-meta .hora-agregado { margin: 0; }
         .hora-agregado {
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
             font-variant-numeric: tabular-nums;
         }
+        .visto-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: auto;
+            padding: 0;
+            background: none;
+            border: 0;
+            color: var(--muted);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .visto-btn:hover { color: var(--text); }
+        .visto-mark {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid currentColor;
+            flex: 0 0 auto;
+        }
+        .visto-btn[aria-pressed="true"] { color: var(--accent); }
+        .visto-btn[aria-pressed="true"] .visto-mark {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .hecho.is-visto h3 { color: var(--muted); }
         .hecho p {
             margin: 0 0 8px;
             font-size: 0.92rem;
@@ -338,6 +415,10 @@
             <button type="button" class="tab" role="tab" id="tab-world" aria-controls="panel-world" aria-selected="false" tabindex="-1">World News</button>
         </div>
         <div class="news-panel">
+            <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
+                <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
+                <span>Mostrar vistas</span>
+            </button>
             <div id="panel-cr" role="tabpanel" aria-labelledby="tab-cr">
                 <div id="noticias"></div>
             </div>
@@ -513,7 +594,84 @@
             return isWithinLast24h(item);
         });
     }
-    function renderHechos(container, items) {
+    var SEEN_STORAGE_KEY = 'alfonso.news.seen';
+    var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
+    var newsCache = {};
+    var seenState = null;
+    function emptyTabSeen() {
+        return { showVistas: false, titulos: [], urls: [] };
+    }
+    function loadSeenState() {
+        var fresh = {
+            cr: emptyTabSeen(),
+            ai: emptyTabSeen(),
+            us: emptyTabSeen(),
+            world: emptyTabSeen()
+        };
+        try {
+            var raw = localStorage.getItem(SEEN_STORAGE_KEY);
+            if (!raw) return fresh;
+            var parsed = JSON.parse(raw);
+            SEEN_TAB_IDS.forEach(function (id) {
+                var tab = parsed && parsed[id];
+                if (!tab) return;
+                fresh[id].showVistas = !!tab.showVistas;
+                fresh[id].titulos = Array.isArray(tab.titulos) ? tab.titulos.filter(function (x) { return typeof x === 'string'; }) : [];
+                fresh[id].urls = Array.isArray(tab.urls) ? tab.urls.filter(function (x) { return typeof x === 'string'; }) : [];
+            });
+        } catch (e) {}
+        return fresh;
+    }
+    function getSeenState() {
+        if (!seenState) seenState = loadSeenState();
+        return seenState;
+    }
+    function saveSeenState() {
+        try {
+            localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(getSeenState()));
+        } catch (e) {}
+    }
+    function hechoTitulo(hecho) {
+        return hecho && hecho.titulo != null ? String(hecho.titulo) : '';
+    }
+    function hechoFuenteUrl(hecho) {
+        var f0 = hecho && hecho.fuentes && hecho.fuentes[0];
+        return f0 && f0.url ? String(f0.url) : '';
+    }
+    function isHechoSeen(tabId, hecho) {
+        var tab = getSeenState()[tabId];
+        if (!tab) return false;
+        var titulo = hechoTitulo(hecho);
+        if (titulo && tab.titulos.indexOf(titulo) !== -1) return true;
+        var url = hechoFuenteUrl(hecho);
+        return !!(url && tab.urls.indexOf(url) !== -1);
+    }
+    function setHechoSeen(tabId, hecho, seen) {
+        var tab = getSeenState()[tabId];
+        if (!tab) return;
+        var titulo = hechoTitulo(hecho);
+        var url = hechoFuenteUrl(hecho);
+        function add(list, value) {
+            if (value && list.indexOf(value) === -1) list.push(value);
+        }
+        function remove(list, value) {
+            var i = list.indexOf(value);
+            if (i !== -1) list.splice(i, 1);
+        }
+        if (seen) {
+            add(tab.titulos, titulo);
+            add(tab.urls, url);
+        } else {
+            remove(tab.titulos, titulo);
+            remove(tab.urls, url);
+        }
+        saveSeenState();
+    }
+    function visibleHechos(tabId, items) {
+        if (getSeenState()[tabId] && getSeenState()[tabId].showVistas) return items;
+        return (items || []).filter(function (item) { return !isHechoSeen(tabId, item); });
+    }
+    function renderHechos(container, items, tabId) {
         container.replaceChildren();
         if (!items || !items.length) {
             const empty = document.createElement('p');
@@ -522,14 +680,26 @@
             container.appendChild(empty);
             return;
         }
-        sortHechos(items).forEach(function (hecho) {
+        const shown = visibleHechos(tabId, items);
+        if (!shown.length) {
+            const empty = document.createElement('p');
+            empty.className = 'news-empty';
+            empty.textContent = 'No hay hechos sin marcar.';
+            container.appendChild(empty);
+            return;
+        }
+        sortHechos(shown).forEach(function (hecho) {
+            const seen = isHechoSeen(tabId, hecho);
             const article = document.createElement('article');
-            article.className = 'hecho';
+            article.className = seen ? 'hecho is-visto' : 'hecho';
             let html = '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
+            html += '<div class="hecho-meta">';
             const hora = formatHoraAgregado(hecho.agregado);
             if (hora) {
                 html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
             }
+            html += '<button type="button" class="visto-btn" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span>ya la vi</button>';
+            html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
                 html += '<p>' + escapeHtml(p) + '</p>';
@@ -545,12 +715,29 @@
             container.appendChild(article);
         });
     }
+    function cacheAndRender(tabId, containerId, items) {
+        if (!newsCache[tabId]) newsCache[tabId] = {};
+        newsCache[tabId][containerId] = items;
+        renderHechos(document.getElementById(containerId), items, tabId);
+    }
+    function rerenderTab(tabId) {
+        const cached = newsCache[tabId];
+        if (!cached) return;
+        Object.keys(cached).forEach(function (containerId) {
+            renderHechos(document.getElementById(containerId), cached[containerId], tabId);
+        });
+    }
+    function syncVistasToggle(tabId) {
+        const btn = document.getElementById('vistas-toggle');
+        const on = !!(getSeenState()[tabId] && getSeenState()[tabId].showVistas);
+        btn.setAttribute('aria-checked', on ? 'true' : 'false');
+    }
     async function fetchNoticias() {
         try {
             const res = await fetch(jsonUrl('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/noticias.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('noticias.json');
             const d = await res.json();
-            renderHechos(document.getElementById('noticias'), filterLast24h(d.hechos));
+            cacheAndRender('cr', 'noticias', filterLast24h(d.hechos));
         } catch (e) {
             document.getElementById('noticias').textContent = 'No se pudieron cargar las noticias.';
         }
@@ -560,18 +747,18 @@
             const res = await fetch(jsonUrl('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/leo.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('leo.json');
             const d = await res.json();
-            renderHechos(document.getElementById('leo-hechos'), filterLast24h(d.hechos));
-            renderHechos(document.getElementById('leo-columnas'), filterLast24h(d.columnas, true));
+            cacheAndRender('ai', 'leo-hechos', filterLast24h(d.hechos));
+            cacheAndRender('ai', 'leo-columnas', filterLast24h(d.columnas, true));
         } catch (e) {
             document.getElementById('leo-hechos').textContent = 'No se pudieron cargar las noticias.';
         }
     }
-    async function fetchFeed(path, targetId) {
+    async function fetchFeed(path, targetId, tabId) {
         try {
             const res = await fetch(jsonUrl(path), { cache: 'no-store' });
             if (!res.ok) throw new Error(path);
             const d = await res.json();
-            renderHechos(document.getElementById(targetId), filterLast24h(d.hechos));
+            cacheAndRender(tabId, targetId, filterLast24h(d.hechos));
         } catch (e) {
             document.getElementById(targetId).textContent = 'No se pudieron cargar las noticias.';
         }
@@ -579,8 +766,8 @@
     function loadTab(id) {
         if (id === 'cr') fetchNoticias();
         else if (id === 'ai') fetchLeo();
-        else if (id === 'us') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/us.json', 'us-hechos');
-        else if (id === 'world') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/world.json', 'world-hechos');
+        else if (id === 'us') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/us.json', 'us-hechos', 'us');
+        else if (id === 'world') fetchFeed('https://gist.githubusercontent.com/alfonsop-cr/d2fbaafff3792aad2dc64ae37d9db88d/raw/world.json', 'world-hechos', 'world');
     }
     function setupNewsTabs() {
         const tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
@@ -595,6 +782,7 @@
             document.querySelectorAll('[role="tabpanel"]').forEach(function (p) {
                 p.hidden = (p.id !== panelId);
             });
+            syncVistasToggle(id);
             if (!skipFetch) loadTab(id);
         }
         tabs.forEach(function (tab, i) {
@@ -614,9 +802,34 @@
         const initial = tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0] || tabs[0];
         if (initial) selectTab(initial);
     }
+    function setupVistasControls() {
+        document.getElementById('vistas-toggle').addEventListener('click', function () {
+            const selected = document.querySelector('.tab[aria-selected="true"]');
+            if (!selected) return;
+            const tabId = selected.getAttribute('aria-controls').replace('panel-', '');
+            const tab = getSeenState()[tabId];
+            if (!tab) return;
+            tab.showVistas = !tab.showVistas;
+            saveSeenState();
+            syncVistasToggle(tabId);
+            rerenderTab(tabId);
+        });
+        document.querySelector('.news-panel').addEventListener('click', function (e) {
+            const btn = e.target.closest('.visto-btn');
+            if (!btn) return;
+            const tabId = btn.getAttribute('data-tab');
+            const hecho = {
+                titulo: btn.getAttribute('data-titulo') || '',
+                fuentes: btn.getAttribute('data-url') ? [{ url: btn.getAttribute('data-url') }] : []
+            };
+            setHechoSeen(tabId, hecho, !isHechoSeen(tabId, hecho));
+            rerenderTab(tabId);
+        });
+    }
     updateClock();
     setInterval(updateClock, 15000);
     setupNewsTabs();
+    setupVistasControls();
     fetchWeather();
     fetchMonex();
     fetchBac();
