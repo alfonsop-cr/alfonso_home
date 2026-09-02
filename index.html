@@ -164,6 +164,88 @@
             transform: translateX(16px);
             background: var(--accent);
         }
+        .sync-vistos {
+            margin: 0 0 12px;
+            max-width: 420px;
+        }
+        .sync-vistos-lead {
+            margin: 0 0 8px;
+            font-size: 13px;
+            line-height: 1.35;
+            color: var(--muted);
+        }
+        .sync-vistos-lead strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .sync-vistos-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            min-width: 0;
+        }
+        .sync-vistos-row input {
+            flex: 1 1 auto;
+            min-width: 0;
+            height: 36px;
+            padding: 0 10px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #1a2330;
+            color: var(--text);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 14px;
+        }
+        .sync-vistos-row input:focus {
+            outline: none;
+            border-color: #e8b86d66;
+        }
+        .sync-vistos-btn {
+            flex: 0 0 auto;
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #1a2330;
+            color: var(--text);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .sync-vistos-btn.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #121820;
+        }
+        .sync-vistos-btn:disabled { opacity: 0.55; cursor: default; }
+        .sync-vistos-link {
+            display: inline-flex;
+            align-items: center;
+            background: none;
+            border: 0;
+            padding: 0;
+            color: var(--muted);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            min-height: 36px;
+            cursor: pointer;
+        }
+        .sync-vistos-link:hover { color: var(--text); }
+        .sync-vistos-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            min-width: 0;
+        }
+        .sync-vistos-status {
+            margin: 6px 0 0;
+            font-size: 12px;
+            line-height: 1.35;
+            color: var(--muted);
+        }
+        .sync-vistos-status.is-error { color: #c9a3a3; }
         @media (max-width: 800px) {
             .ahora { grid-template-columns: 1fr; }
             .masthead {
@@ -180,6 +262,10 @@
             .monex .rate { font-size: 32px; }
             .hecho h3 { font-size: 16px; }
             .fuentes { overflow-wrap: anywhere; }
+            .sync-vistos { max-width: none; }
+            .sync-vistos-row { flex-wrap: wrap; }
+            .sync-vistos-row input { flex: 1 1 100%; }
+            .sync-vistos-btn.primary { width: 100%; }
         }
         .fx-panel {
             background: #1a2330;
@@ -415,6 +501,7 @@
             <button type="button" class="tab" role="tab" id="tab-world" aria-controls="panel-world" aria-selected="false" tabindex="-1">World News</button>
         </div>
         <div class="news-panel">
+            <div class="sync-vistos" id="sync-vistos"></div>
             <button type="button" class="vistas-toggle" id="vistas-toggle" role="switch" aria-checked="false">
                 <span class="vistas-track" aria-hidden="true"><span class="vistas-knob"></span></span>
                 <span>Mostrar vistas</span>
@@ -595,11 +682,28 @@
         });
     }
     var SEEN_STORAGE_KEY = 'alfonso.news.seen';
+    var SEEN_TOKEN_KEY = 'alfonso.news.seen.token';
+    var SEEN_SYNC_DISMISS_KEY = 'alfonso.news.seen.sync.dismissed';
+    var SEEN_GIST_ID = '78e4f6f3a1f689e2683ea000688a50c9';
+    var SEEN_GIST_FILE = 'seen.json';
+    var SEEN_GIST_API = 'https://api.github.com/gists/' + SEEN_GIST_ID;
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
     var newsCache = {};
     var seenState = null;
+    var seenGistTail = Promise.resolve();
+    var syncVistosUi = { formOpen: false, busy: false, message: '', error: false };
     function emptyTabSeen() {
         return { showVistas: false, titulos: [], urls: [] };
+    }
+    function emptyGistTab() {
+        return { titulos: [], urls: [] };
+    }
+    function cleanStringList(list) {
+        var out = [];
+        (Array.isArray(list) ? list : []).forEach(function (x) {
+            if (typeof x === 'string' && x && out.indexOf(x) === -1) out.push(x);
+        });
+        return out;
     }
     function loadSeenState() {
         var fresh = {
@@ -616,8 +720,8 @@
                 var tab = parsed && parsed[id];
                 if (!tab) return;
                 fresh[id].showVistas = !!tab.showVistas;
-                fresh[id].titulos = Array.isArray(tab.titulos) ? tab.titulos.filter(function (x) { return typeof x === 'string'; }) : [];
-                fresh[id].urls = Array.isArray(tab.urls) ? tab.urls.filter(function (x) { return typeof x === 'string'; }) : [];
+                fresh[id].titulos = cleanStringList(tab.titulos);
+                fresh[id].urls = cleanStringList(tab.urls);
             });
         } catch (e) {}
         return fresh;
@@ -630,6 +734,347 @@
         try {
             localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(getSeenState()));
         } catch (e) {}
+    }
+    function getSeenToken() {
+        try {
+            var t = localStorage.getItem(SEEN_TOKEN_KEY);
+            return (t && typeof t === 'string') ? t.trim() : '';
+        } catch (e) {
+            return '';
+        }
+    }
+    function setSeenToken(token) {
+        try {
+            var value = (token && typeof token === 'string') ? token.trim() : '';
+            if (value) localStorage.setItem(SEEN_TOKEN_KEY, value);
+            else localStorage.removeItem(SEEN_TOKEN_KEY);
+        } catch (e) {}
+    }
+    function isSyncDismissed() {
+        try {
+            return localStorage.getItem(SEEN_SYNC_DISMISS_KEY) === '1';
+        } catch (e) {
+            return false;
+        }
+    }
+    function setSyncDismissed(on) {
+        try {
+            if (on) localStorage.setItem(SEEN_SYNC_DISMISS_KEY, '1');
+            else localStorage.removeItem(SEEN_SYNC_DISMISS_KEY);
+        } catch (e) {}
+    }
+    function parseGistSeen(content) {
+        var fresh = {
+            cr: emptyGistTab(),
+            ai: emptyGistTab(),
+            us: emptyGistTab(),
+            world: emptyGistTab()
+        };
+        if (!content) return fresh;
+        try {
+            var parsed = typeof content === 'string' ? JSON.parse(content) : content;
+            SEEN_TAB_IDS.forEach(function (id) {
+                var tab = parsed && parsed[id];
+                if (!tab) return;
+                fresh[id].titulos = cleanStringList(tab.titulos);
+                fresh[id].urls = cleanStringList(tab.urls);
+            });
+        } catch (e) {}
+        return fresh;
+    }
+    function gistPayloadFromState(state) {
+        var out = {};
+        SEEN_TAB_IDS.forEach(function (id) {
+            var tab = (state && state[id]) || emptyTabSeen();
+            out[id] = {
+                titulos: cleanStringList(tab.titulos),
+                urls: cleanStringList(tab.urls)
+            };
+        });
+        return out;
+    }
+    function listHasExtras(localList, remoteList) {
+        return (localList || []).some(function (x) {
+            return x && (remoteList || []).indexOf(x) === -1;
+        });
+    }
+    function unionStringLists(a, b) {
+        return cleanStringList([].concat(a || [], b || []));
+    }
+    function unionSeenFromGist(localState, gistState) {
+        var localHadExtras = false;
+        SEEN_TAB_IDS.forEach(function (id) {
+            var local = localState[id] || emptyTabSeen();
+            var remote = (gistState && gistState[id]) || emptyGistTab();
+            if (listHasExtras(local.titulos, remote.titulos) || listHasExtras(local.urls, remote.urls)) {
+                localHadExtras = true;
+            }
+            local.titulos = unionStringLists(local.titulos, remote.titulos);
+            local.urls = unionStringLists(local.urls, remote.urls);
+        });
+        return localHadExtras;
+    }
+    function seenGistHeaders(token) {
+        return {
+            Accept: 'application/vnd.github+json',
+            Authorization: 'Bearer ' + token,
+            'X-GitHub-Api-Version': '2022-11-28'
+        };
+    }
+    async function fetchSeenGistRemote(token) {
+        var res = await fetch(SEEN_GIST_API, {
+            headers: seenGistHeaders(token),
+            cache: 'no-store'
+        });
+        if (res.status === 401 || res.status === 403) {
+            var err = new Error('gist-auth');
+            err.code = 'auth';
+            throw err;
+        }
+        if (!res.ok) throw new Error('gist-get');
+        var data = await res.json();
+        var file = data.files && data.files[SEEN_GIST_FILE];
+        return parseGistSeen(file && file.content);
+    }
+    async function patchSeenGistRemote(token, payload) {
+        var res = await fetch(SEEN_GIST_API, {
+            method: 'PATCH',
+            headers: Object.assign({
+                'Content-Type': 'application/json'
+            }, seenGistHeaders(token)),
+            body: JSON.stringify({
+                files: {
+                    'seen.json': { content: JSON.stringify(payload) }
+                }
+            })
+        });
+        if (res.status === 401 || res.status === 403) {
+            var err = new Error('gist-auth');
+            err.code = 'auth';
+            throw err;
+        }
+        if (!res.ok) throw new Error('gist-patch');
+    }
+    function rerenderAllSeenTabs() {
+        SEEN_TAB_IDS.forEach(function (id) { rerenderTab(id); });
+    }
+    function enqueueSeenGistTask(task) {
+        seenGistTail = seenGistTail.then(task, task).catch(function () {});
+        return seenGistTail;
+    }
+    function unionGistPayload(localState, gistState) {
+        var payload = gistPayloadFromState(localState);
+        SEEN_TAB_IDS.forEach(function (id) {
+            var remote = (gistState && gistState[id]) || emptyGistTab();
+            payload[id].titulos = unionStringLists(payload[id].titulos, remote.titulos);
+            payload[id].urls = unionStringLists(payload[id].urls, remote.urls);
+        });
+        return payload;
+    }
+    async function syncSeenWithGist(options) {
+        var token = getSeenToken();
+        if (!token) return { ok: true, skipped: true };
+        try {
+            var remote = await fetchSeenGistRemote(token);
+            var local = getSeenState();
+            var extras = unionSeenFromGist(local, remote);
+            saveSeenState();
+            rerenderAllSeenTabs();
+            if (extras || (options && options.forcePatch)) {
+                await patchSeenGistRemote(token, gistPayloadFromState(local));
+            }
+            return { ok: true };
+        } catch (e) {
+            if (e && e.code === 'auth') {
+                return { ok: false, auth: true };
+            }
+            return { ok: false };
+        }
+    }
+    async function pushSeenToGist() {
+        var token = getSeenToken();
+        if (!token) return { ok: true, skipped: true };
+        try {
+            var remote = await fetchSeenGistRemote(token);
+            var payload = unionGistPayload(getSeenState(), remote);
+            await patchSeenGistRemote(token, payload);
+            return { ok: true };
+        } catch (e) {
+            if (e && e.code === 'auth') {
+                return { ok: false, auth: true };
+            }
+            return { ok: false };
+        }
+    }
+    function queueSeenGistPush() {
+        if (!getSeenToken()) return;
+        enqueueSeenGistTask(function () {
+            return pushSeenToGist();
+        });
+    }
+    function renderSyncVistos() {
+        var root = document.getElementById('sync-vistos');
+        if (!root) return;
+        root.replaceChildren();
+        var token = getSeenToken();
+        if (token) {
+            var row = document.createElement('div');
+            row.className = 'sync-vistos-actions';
+            var status = document.createElement('span');
+            status.className = 'sync-vistos-lead';
+            status.style.margin = '0';
+            status.textContent = syncVistosUi.busy ? 'Sincronizando vistos…' : 'Vistos en sync';
+            var disconnect = document.createElement('button');
+            disconnect.type = 'button';
+            disconnect.className = 'sync-vistos-link';
+            disconnect.textContent = 'Desconectar';
+            disconnect.addEventListener('click', function () {
+                setSeenToken('');
+                syncVistosUi.formOpen = false;
+                syncVistosUi.message = '';
+                syncVistosUi.error = false;
+                renderSyncVistos();
+            });
+            row.appendChild(status);
+            row.appendChild(disconnect);
+            root.appendChild(row);
+            if (syncVistosUi.message) {
+                var note = document.createElement('p');
+                note.className = 'sync-vistos-status' + (syncVistosUi.error ? ' is-error' : '');
+                note.textContent = syncVistosUi.message;
+                root.appendChild(note);
+            }
+            return;
+        }
+        if (!syncVistosUi.formOpen && isSyncDismissed()) {
+            var open = document.createElement('button');
+            open.type = 'button';
+            open.className = 'sync-vistos-link';
+            open.textContent = 'Conectar vistos';
+            open.addEventListener('click', function () {
+                syncVistosUi.formOpen = true;
+                syncVistosUi.message = '';
+                syncVistosUi.error = false;
+                renderSyncVistos();
+                var input = document.getElementById('sync-vistos-token');
+                if (input) input.focus();
+            });
+            root.appendChild(open);
+            return;
+        }
+        var lead = document.createElement('p');
+        lead.className = 'sync-vistos-lead';
+        lead.innerHTML = '<strong>Conectar vistos</strong> entre Mac y PC. Pegá un token de GitHub con alcance gist. Queda solo en este aparato.';
+        root.appendChild(lead);
+        var formRow = document.createElement('div');
+        formRow.className = 'sync-vistos-row';
+        var input = document.createElement('input');
+        input.id = 'sync-vistos-token';
+        input.type = 'password';
+        input.autocomplete = 'off';
+        input.spellcheck = false;
+        input.placeholder = 'token con alcance gist';
+        input.setAttribute('aria-label', 'Token de GitHub con alcance gist');
+        var connect = document.createElement('button');
+        connect.type = 'button';
+        connect.className = 'sync-vistos-btn primary';
+        connect.textContent = syncVistosUi.busy ? 'Conectando…' : 'Conectar';
+        connect.disabled = !!syncVistosUi.busy;
+        var skip = document.createElement('button');
+        skip.type = 'button';
+        skip.className = 'sync-vistos-link';
+        skip.textContent = 'Ahora no';
+        skip.disabled = !!syncVistosUi.busy;
+        function submitToken() {
+            var value = input.value;
+            input.value = '';
+            connectSeenToken(value);
+        }
+        connect.addEventListener('click', submitToken);
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                submitToken();
+            }
+        });
+        skip.addEventListener('click', function () {
+            setSyncDismissed(true);
+            syncVistosUi.formOpen = false;
+            syncVistosUi.message = '';
+            syncVistosUi.error = false;
+            renderSyncVistos();
+        });
+        formRow.appendChild(input);
+        formRow.appendChild(connect);
+        root.appendChild(formRow);
+        var skipRow = document.createElement('div');
+        skipRow.className = 'sync-vistos-actions';
+        skipRow.appendChild(skip);
+        root.appendChild(skipRow);
+        if (syncVistosUi.message) {
+            var err = document.createElement('p');
+            err.className = 'sync-vistos-status' + (syncVistosUi.error ? ' is-error' : '');
+            err.textContent = syncVistosUi.message;
+            root.appendChild(err);
+        }
+    }
+    function connectSeenToken(raw) {
+        var token = (raw && typeof raw === 'string') ? raw.trim() : '';
+        if (!token) {
+            syncVistosUi.message = 'Pegá un token para conectar.';
+            syncVistosUi.error = true;
+            renderSyncVistos();
+            return;
+        }
+        setSeenToken(token);
+        setSyncDismissed(false);
+        syncVistosUi.busy = true;
+        syncVistosUi.message = '';
+        syncVistosUi.error = false;
+        renderSyncVistos();
+        enqueueSeenGistTask(function () {
+            return syncSeenWithGist({ forcePatch: true }).then(function (result) {
+                syncVistosUi.busy = false;
+                if (result && result.ok) {
+                    syncVistosUi.message = '';
+                    syncVistosUi.error = false;
+                } else if (result && result.auth) {
+                    setSeenToken('');
+                    syncVistosUi.formOpen = true;
+                    syncVistosUi.message = 'Token inválido o sin acceso. Los vistos siguen en este aparato.';
+                    syncVistosUi.error = true;
+                } else {
+                    syncVistosUi.message = 'No se pudieron sync los vistos. Siguen en este aparato.';
+                    syncVistosUi.error = true;
+                }
+                renderSyncVistos();
+            });
+        });
+    }
+    function setupSyncVistos() {
+        syncVistosUi.formOpen = !getSeenToken() && !isSyncDismissed();
+        renderSyncVistos();
+    }
+    function syncSeenOnLoad() {
+        if (!getSeenToken()) return;
+        syncVistosUi.busy = true;
+        renderSyncVistos();
+        enqueueSeenGistTask(function () {
+            return syncSeenWithGist({ forcePatch: false }).then(function (result) {
+                syncVistosUi.busy = false;
+                if (result && result.ok) {
+                    syncVistosUi.message = '';
+                    syncVistosUi.error = false;
+                } else if (result && result.auth) {
+                    syncVistosUi.message = 'No se pudo sync. Revisá el token o desconectá.';
+                    syncVistosUi.error = true;
+                } else {
+                    syncVistosUi.message = 'No se pudieron sync los vistos. Siguen en este aparato.';
+                    syncVistosUi.error = true;
+                }
+                renderSyncVistos();
+            });
+        });
     }
     function hechoTitulo(hecho) {
         return hecho && hecho.titulo != null ? String(hecho.titulo) : '';
@@ -666,6 +1111,7 @@
             remove(tab.urls, url);
         }
         saveSeenState();
+        queueSeenGistPush();
     }
     function visibleHechos(tabId, items) {
         if (getSeenState()[tabId] && getSeenState()[tabId].showVistas) return items;
@@ -830,6 +1276,8 @@
     setInterval(updateClock, 15000);
     setupNewsTabs();
     setupVistasControls();
+    setupSyncVistos();
+    syncSeenOnLoad();
     fetchWeather();
     fetchMonex();
     fetchBac();
