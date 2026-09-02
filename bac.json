@@ -1,11 +1,11 @@
 {
   "banco": "BAC San José",
-  "compra": 442.0,
-  "venta": 456.0,
-  "fecha": "2026-09-01",
-  "fechaTexto": "1 set 2026",
-  "horaTexto": "08:38 a.m.",
+  "compra": 444.0,
+  "venta": 458.0,
+  "fecha": "2026-09-02",
+  "fechaTexto": "2 set 2026",
+  "horaTexto": "01:39 p.m.",
   "fuente": "Ventanilla BAC San José (anunciada al BCCR)",
   "fuenteUrl": "https://gee.bccr.fi.cr/IndicadoresEconomicos/Cuadros/frmConsultaTCVentanilla.aspx",
-  "actualizado": "2026-09-02T01:23:00Z"
+  "actualizado": "2026-09-02T21:50:05Z"
 }
