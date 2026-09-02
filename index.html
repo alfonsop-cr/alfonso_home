@@ -132,15 +132,16 @@
             border: 0;
             color: var(--muted);
             font-family: "IBM Plex Sans", sans-serif;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
+            min-height: 36px;
             cursor: pointer;
         }
         .vistas-toggle[aria-checked="true"] { color: var(--text); }
         .vistas-track {
             position: relative;
-            width: 32px;
-            height: 18px;
+            width: 36px;
+            height: 22px;
             flex: 0 0 auto;
             border-radius: 999px;
             background: #1a2330;
@@ -150,8 +151,8 @@
             position: absolute;
             top: 1px;
             left: 1px;
-            width: 14px;
-            height: 14px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             background: var(--muted);
             transition: transform 0.15s ease;
@@ -160,7 +161,7 @@
             border-color: #e8b86d66;
         }
         .vistas-toggle[aria-checked="true"] .vistas-knob {
-            transform: translateX(14px);
+            transform: translateX(16px);
             background: var(--accent);
         }
         @media (max-width: 800px) {
@@ -322,7 +323,8 @@
             align-items: center;
             gap: 6px;
             margin-left: auto;
-            padding: 0;
+            min-height: 36px;
+            padding: 8px 0 8px 10px;
             background: none;
             border: 0;
             color: var(--muted);
