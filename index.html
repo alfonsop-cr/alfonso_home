@@ -76,11 +76,16 @@
             display: flex;
             gap: 28px;
             align-items: flex-end;
-            padding: 0 0 14px;
+            padding: 0 0 16px;
             border-bottom: 1px solid var(--line);
-            overflow-x: auto;
-            overflow-y: visible;
-            scrollbar-width: thin;
+            overflow: hidden;
+            min-width: 0;
+            scrollbar-width: none;
+        }
+        .tablist::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
         }
         .tab {
             background: none;
@@ -254,6 +259,7 @@
                 gap: 12px;
             }
             .masthead-right { text-align: left; }
+            .tablist { gap: 16px; }
         }
         @media (max-width: 430px) {
             .page { padding: 20px 16px 48px; }
@@ -266,6 +272,14 @@
             .sync-vistos-row { flex-wrap: wrap; }
             .sync-vistos-row input { flex: 1 1 100%; }
             .sync-vistos-btn.primary { width: 100%; }
+            .tablist {
+                gap: 12px;
+                justify-content: space-between;
+            }
+            .tab { font-size: 13px; }
+            .timeline { gap: 2px; }
+            .hour-slot .temp { font-size: 15px; }
+            .hour-slot .time { font-size: 11px; }
         }
         .fx-panel {
             background: #1a2330;
@@ -315,6 +329,7 @@
         .monex a { color: #8ec8e8; text-decoration: none; }
         .weather {
             min-width: 0;
+            overflow: hidden;
         }
         .weather-title {
             margin: 0 0 4px;
@@ -555,24 +570,39 @@
             hour12: false
         }, opts));
     }
+    function parseCrHour(t) {
+        if (typeof t === 'string' && t.indexOf('T') !== -1 && !/[zZ]|[+-]\d{2}:\d{2}$/.test(t)) {
+            return new Date(t + '-06:00');
+        }
+        return new Date(t);
+    }
     async function fetchWeather() {
         const lat = 9.9781;
         const lon = -84.1879;
         const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=3';
+        const loader = document.getElementById('loader');
         try {
-            const response = await fetch(url);
+            const response = await fetch(url, {
+                cache: 'no-store',
+                mode: 'cors',
+                credentials: 'omit',
+                referrerPolicy: 'no-referrer'
+            });
+            if (!response.ok) throw new Error('weather');
             const data = await response.json();
+            if (!data || !data.hourly || !Array.isArray(data.hourly.time) || !data.hourly.time.length) {
+                throw new Error('weather-empty');
+            }
             renderForecast(data.hourly);
         } catch (error) {
-            document.getElementById('loader').innerText = 'Error al obtener datos.';
+            loader.innerText = 'Error al obtener datos.';
         }
     }
     function renderForecast(hourly) {
         const container = document.getElementById('forecast');
         const loader = document.getElementById('loader');
-        loader.style.display = 'none';
         const now = new Date();
-        let startIndex = hourly.time.findIndex(t => new Date(t) > now);
+        let startIndex = hourly.time.findIndex(t => parseCrHour(t) > now);
         if (startIndex === -1) startIndex = Math.max(0, hourly.time.length - 25);
         else startIndex = Math.max(0, startIndex - 1);
         if (startIndex + 24 >= hourly.time.length) {
@@ -581,11 +611,12 @@
         const nowHum = hourly.relative_humidity_2m[startIndex];
         const nowWind = hourly.wind_speed_10m[startIndex];
         document.getElementById('now-meta').textContent = nowHum + '% humedad · ' + nowWind + ' km/h';
+        container.innerHTML = '';
         const offsets = [0, 3, 6, 12, 18, 24];
         offsets.forEach(function (offset, n) {
             const i = startIndex + offset;
             if (i >= hourly.time.length) return;
-            const date = new Date(hourly.time[i]);
+            const date = parseCrHour(hourly.time[i]);
             let hourLabel = new Intl.DateTimeFormat('es-CR', { timeZone: 'America/Costa_Rica', hour: '2-digit', hour12: false }).format(date);
             if (hourLabel.indexOf(':') === -1) hourLabel = hourLabel.replace(/\D/g, '') + ':00';
             const temp = Math.round(hourly.temperature_2m[i]);
@@ -607,6 +638,8 @@
             slot.innerHTML = html;
             container.appendChild(slot);
         });
+        if (!container.children.length) throw new Error('weather-slots');
+        loader.style.display = 'none';
     }
     async function fetchMonex() {
         try {
