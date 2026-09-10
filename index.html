@@ -576,35 +576,47 @@
         }
         return new Date(t);
     }
+    var weatherMemory = null;
+    var WEATHER_LAST_KEY = 'clima-belen:clima.json';
+    function readLastGoodWeather() {
+        if (weatherMemory && weatherMemory.time && weatherMemory.time.length) return weatherMemory;
+        try {
+            var raw = localStorage.getItem(WEATHER_LAST_KEY);
+            if (!raw) return null;
+            var parsed = JSON.parse(raw);
+            if (!parsed || !Array.isArray(parsed.time) || !parsed.time.length) return null;
+            weatherMemory = parsed;
+            return parsed;
+        } catch (e) {
+            return null;
+        }
+    }
+    function writeLastGoodWeather(hourly) {
+        weatherMemory = hourly;
+        try {
+            localStorage.setItem(WEATHER_LAST_KEY, JSON.stringify(hourly));
+        } catch (e) { /* quota / private mode */ }
+    }
     async function fetchWeather() {
-        const lat = 9.9781;
-        const lon = -84.1879;
-        const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&hourly=temperature_2m,relative_humidity_2m,precipitation_probability,weather_code,wind_speed_10m&timezone=America%2FCosta_Rica&forecast_days=3';
         const loader = document.getElementById('loader');
-        const maxAttempts = 3;
-        for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-            try {
-                const response = await fetch(url, {
-                    cache: 'no-store',
-                    mode: 'cors',
-                    credentials: 'omit',
-                    referrerPolicy: 'no-referrer',
-                    signal: AbortSignal.timeout(4000)
-                });
-                if (!response.ok) throw new Error('weather');
-                const data = await response.json();
-                if (!data || !data.hourly || !Array.isArray(data.hourly.time) || !data.hourly.time.length) {
-                    throw new Error('weather-empty');
-                }
-                renderForecast(data.hourly);
-                return;
-            } catch (error) {
-                if (attempt === maxAttempts) {
-                    loader.innerText = 'Error al obtener datos.';
-                    return;
-                }
-                await new Promise(function (resolve) { setTimeout(resolve, 400 * attempt); });
+        const lastGood = readLastGoodWeather();
+        try {
+            const res = await fetch(jsonUrl('./clima.json'), { cache: 'no-store' });
+            if (!res.ok) throw new Error('clima.json');
+            const data = await res.json();
+            if (!data || !data.hourly || !Array.isArray(data.hourly.time) || !data.hourly.time.length) {
+                throw new Error('weather-empty');
             }
+            writeLastGoodWeather(data.hourly);
+            renderForecast(data.hourly);
+        } catch (error) {
+            if (lastGood) {
+                try {
+                    renderForecast(lastGood);
+                    return;
+                } catch (e) { /* fall through */ }
+            }
+            loader.innerText = 'Pronóstico no disponible.';
         }
     }
     function renderForecast(hourly) {
