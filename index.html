@@ -280,9 +280,9 @@
             .timeline { gap: 2px; }
             .hour-slot .temp { font-size: 15px; }
             .hour-slot .time { font-size: 11px; }
-            .hora-agregado {
-                flex-direction: column;
-                align-items: flex-start;
+            .estudiar-btn {
+                min-width: 44px;
+                min-height: 44px;
             }
         }
         .fx-panel {
@@ -408,7 +408,8 @@
             min-width: 0;
             margin: 0 0 2px;
         }
-        .hecho-titulo .visto-btn { flex: 0 0 auto; }
+        .hecho-titulo .visto-btn,
+        .hecho-titulo .estudiar-btn { flex: 0 0 auto; }
         .hecho h3 {
             margin: 0;
             flex: 1 1 auto;
@@ -419,10 +420,6 @@
             overflow-wrap: anywhere;
         }
         .hora-agregado {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px 12px;
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
@@ -430,7 +427,6 @@
             margin: 0 0 10px;
             padding-left: 36px;
         }
-        .hora-agregado time { flex: 0 1 auto; }
         .visto-btn {
             display: inline-flex;
             align-items: center;
@@ -461,32 +457,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            flex: 0 0 auto;
             min-width: 36px;
             min-height: 36px;
             margin: 0;
-            padding: 0 8px;
+            padding: 0;
             background: none;
             border: 0;
             color: var(--muted);
             font-family: "IBM Plex Sans", sans-serif;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 500;
-            letter-spacing: 0.01em;
-            white-space: nowrap;
+            line-height: 1;
             cursor: pointer;
         }
-        @media (max-width: 430px) {
-            .estudiar-btn {
-                min-height: 44px;
-                padding-top: 12px;
-                padding-bottom: 12px;
-            }
-        }
+        .estudiar-btn:hover { color: var(--text); }
         .estudiar-btn:active,
         .estudiar-btn.is-ok { color: var(--accent); }
         .estudiar-btn:disabled { cursor: default; }
         .estudiar-btn.is-ok:disabled { opacity: 1; }
+        .estudiar-mark { pointer-events: none; }
         .estudiar-toast {
             position: fixed;
             left: 50%;
@@ -803,8 +792,7 @@
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
     // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
     var ESTUDIAR_API_URL = '/api/estudiar';
-    var ESTUDIAR_LABEL = '☆ Estudiar';
-    var ESTUDIAR_SENT_LABEL = 'Enviado';
+    var ESTUDIAR_ICON = '☆';
     var ESTUDIAR_TOAST_MS = 3500;
     var estudiarToastTimer = null;
     var estudiarSent = {};
@@ -1249,21 +1237,30 @@
             toast.hidden = true;
         }, ESTUDIAR_TOAST_MS);
     }
+    function setEstudiarIcon(btn) {
+        var mark = btn.querySelector('.estudiar-mark');
+        if (!mark) {
+            btn.textContent = '';
+            mark = document.createElement('span');
+            mark.className = 'estudiar-mark';
+            mark.setAttribute('aria-hidden', 'true');
+            btn.appendChild(mark);
+        }
+        mark.textContent = ESTUDIAR_ICON;
+    }
     function setEstudiarButtonState(btn, state) {
+        setEstudiarIcon(btn);
         if (state === 'busy') {
             btn.disabled = true;
-            btn.textContent = ESTUDIAR_LABEL;
             btn.classList.remove('is-ok');
             return;
         }
         if (state === 'ok') {
             btn.disabled = true;
-            btn.textContent = ESTUDIAR_SENT_LABEL;
             btn.classList.add('is-ok');
             return;
         }
         btn.disabled = false;
-        btn.textContent = ESTUDIAR_LABEL;
         btn.classList.remove('is-ok');
     }
     function requestEstudiar(btn) {
@@ -1359,19 +1356,17 @@
             const seen = isHechoSeen(tabId, hecho);
             const article = document.createElement('article');
             article.className = seen ? 'hecho is-visto' : 'hecho';
+            const sent = isEstudiarSent(tabId, hechoTitulo(hecho), hechoFuenteUrl(hecho));
             let html = '<div class="hecho-titulo">';
             html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
+            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '><span class="estudiar-mark" aria-hidden="true">' + ESTUDIAR_ICON + '</span></button>';
             html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
-            const sent = isEstudiarSent(tabId, hechoTitulo(hecho), hechoFuenteUrl(hecho));
             html += '<div class="hora-agregado">';
             if (hora) {
                 html += '<time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time>';
-            } else {
-                html += '<span></span>';
             }
-            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '>' + (sent ? ESTUDIAR_SENT_LABEL : ESTUDIAR_LABEL) + '</button>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
