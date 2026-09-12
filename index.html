@@ -280,6 +280,11 @@
             .timeline { gap: 2px; }
             .hour-slot .temp { font-size: 15px; }
             .hour-slot .time { font-size: 11px; }
+            .hora-agregado {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .estudiar-btn { min-height: 44px; }
         }
         .fx-panel {
             background: #1a2330;
@@ -415,6 +420,10 @@
             overflow-wrap: anywhere;
         }
         .hora-agregado {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px 12px;
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
@@ -422,6 +431,7 @@
             margin: 0 0 10px;
             padding-left: 36px;
         }
+        .hora-agregado time { flex: 0 1 auto; }
         .visto-btn {
             display: inline-flex;
             align-items: center;
@@ -448,6 +458,48 @@
             border-color: var(--accent);
         }
         .hecho.is-visto h3 { color: var(--muted); }
+        .estudiar-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            min-width: 36px;
+            min-height: 36px;
+            margin: 0;
+            padding: 0 8px;
+            background: none;
+            border: 0;
+            color: var(--muted);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .estudiar-btn:active,
+        .estudiar-btn.is-ok { color: var(--accent); }
+        .estudiar-btn:disabled { cursor: default; }
+        .estudiar-btn.is-ok:disabled { opacity: 1; }
+        .estudiar-toast {
+            position: fixed;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            z-index: 20;
+            max-width: min(420px, calc(100vw - 32px));
+            padding: 10px 14px;
+            border: 1px solid var(--line, rgba(243,241,234,0.12));
+            border-radius: 8px;
+            background: #1a2330;
+            color: #f3f1ea;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+        .estudiar-toast[hidden] { display: none; }
+        .estudiar-toast.is-error { color: #c9a3a3; }
         .hecho p {
             margin: 0 0 8px;
             font-size: 0.92rem;
@@ -538,6 +590,7 @@
         </div>
     </div>
 </div>
+<div id="estudiar-toast" class="estudiar-toast" hidden role="status" aria-live="polite"></div>
 <script>
     function getWeatherIcon(code, rain) {
         if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
@@ -742,6 +795,13 @@
     var SEEN_GIST_FILE = 'seen.json';
     var SEEN_GIST_API = 'https://api.github.com/gists/' + SEEN_GIST_ID;
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
+    // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
+    var ESTUDIAR_API_URL = '/api/estudiar';
+    var ESTUDIAR_LABEL = '☆ Estudiar';
+    var ESTUDIAR_SENT_LABEL = 'Enviado';
+    var ESTUDIAR_TOAST_MS = 3500;
+    var estudiarToastTimer = null;
+    var estudiarSent = {};
     var newsCache = {};
     var seenState = null;
     var seenGistTail = Promise.resolve();
@@ -1137,6 +1197,107 @@
         var f0 = hecho && hecho.fuentes && hecho.fuentes[0];
         return f0 && f0.url ? String(f0.url) : '';
     }
+    function hechoResumenText(hecho) {
+        var resumen = hecho && hecho.resumen;
+        if (resumen == null) return '';
+        if (typeof resumen === 'string') return resumen;
+        if (Array.isArray(resumen)) return resumen.slice(0, 2).join(' ').trim();
+        return String(resumen);
+    }
+    function findCachedHecho(tabId, titulo, url) {
+        var cached = newsCache[tabId];
+        if (!cached) return null;
+        var keys = Object.keys(cached);
+        for (var i = 0; i < keys.length; i++) {
+            var items = cached[keys[i]] || [];
+            for (var j = 0; j < items.length; j++) {
+                var hecho = items[j];
+                if (hechoTitulo(hecho) === titulo && hechoFuenteUrl(hecho) === url) return hecho;
+            }
+        }
+        return null;
+    }
+    function estudiarKey(tabId, titulo, url) {
+        return String(tabId || '') + '\0' + String(titulo || '') + '\0' + String(url || '');
+    }
+    function isEstudiarSent(tabId, titulo, url) {
+        return !!estudiarSent[estudiarKey(tabId, titulo, url)];
+    }
+    function markEstudiarSent(tabId, titulo, url) {
+        estudiarSent[estudiarKey(tabId, titulo, url)] = true;
+    }
+    function configuredEstudiarApiUrl() {
+        var url = (ESTUDIAR_API_URL && String(ESTUDIAR_API_URL).trim()) || '';
+        if (!url) return '';
+        if (/placeholder|example\.com|your_api|YOUR_/i.test(url)) return '';
+        return url;
+    }
+    function showEstudiarToast(message, isError) {
+        var toast = document.getElementById('estudiar-toast');
+        if (!toast) return;
+        toast.hidden = false;
+        toast.textContent = message;
+        toast.classList.toggle('is-error', !!isError);
+        if (estudiarToastTimer) clearTimeout(estudiarToastTimer);
+        estudiarToastTimer = setTimeout(function () {
+            toast.hidden = true;
+        }, ESTUDIAR_TOAST_MS);
+    }
+    function setEstudiarButtonState(btn, state) {
+        if (state === 'busy') {
+            btn.disabled = true;
+            btn.textContent = ESTUDIAR_LABEL;
+            btn.classList.remove('is-ok');
+            return;
+        }
+        if (state === 'ok') {
+            btn.disabled = true;
+            btn.textContent = ESTUDIAR_SENT_LABEL;
+            btn.classList.add('is-ok');
+            return;
+        }
+        btn.disabled = false;
+        btn.textContent = ESTUDIAR_LABEL;
+        btn.classList.remove('is-ok');
+    }
+    function requestEstudiar(btn) {
+        if (!btn || btn.disabled) return;
+        var apiUrl = configuredEstudiarApiUrl();
+        var tabId = btn.getAttribute('data-tab') || '';
+        var titulo = btn.getAttribute('data-titulo') || '';
+        var url = btn.getAttribute('data-url') || '';
+        if (isEstudiarSent(tabId, titulo, url)) {
+            setEstudiarButtonState(btn, 'ok');
+            return;
+        }
+        if (!apiUrl) {
+            showEstudiarToast('No se pudo enviar', true);
+            return;
+        }
+        var hecho = findCachedHecho(tabId, titulo, url);
+        var payload = {
+            name: titulo,
+            status: 'New',
+            sourceUrl: url,
+            tab: tabId,
+            resumen: hechoResumenText(hecho),
+            requestedAt: new Date().toISOString()
+        };
+        setEstudiarButtonState(btn, 'busy');
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function (res) {
+            if (!res.ok) throw new Error('estudiar ' + res.status);
+            markEstudiarSent(tabId, titulo, url);
+            setEstudiarButtonState(btn, 'ok');
+            showEstudiarToast('Tema enviado a Sheldon');
+        }).catch(function () {
+            setEstudiarButtonState(btn, 'error');
+            showEstudiarToast('No se pudo enviar', true);
+        });
+    }
     function isHechoSeen(tabId, hecho) {
         var tab = getSeenState()[tabId];
         if (!tab) return false;
@@ -1197,9 +1358,15 @@
             html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
             html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
+            const sent = isEstudiarSent(tabId, hechoTitulo(hecho), hechoFuenteUrl(hecho));
+            html += '<div class="hora-agregado">';
             if (hora) {
-                html += '<div class="hora-agregado"><time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time></div>';
+                html += '<time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time>';
+            } else {
+                html += '<span></span>';
             }
+            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar:' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '>' + (sent ? ESTUDIAR_SENT_LABEL : ESTUDIAR_LABEL) + '</button>';
+            html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
                 html += '<p>' + escapeHtml(p) + '</p>';
@@ -1315,6 +1482,11 @@
             rerenderTab(tabId);
         });
         document.querySelector('.news-panel').addEventListener('click', function (e) {
+            const estudiarBtn = e.target.closest('.estudiar-btn');
+            if (estudiarBtn) {
+                requestEstudiar(estudiarBtn);
+                return;
+            }
             const btn = e.target.closest('.visto-btn');
             if (!btn) return;
             const tabId = btn.getAttribute('data-tab');
