@@ -408,7 +408,7 @@
         .hecho-titulo .estudiar-btn { flex: 0 0 auto; }
         .hecho h3 {
             margin: 0;
-            flex: 1 1 auto;
+            flex: 1;
             min-width: 0;
             font-size: 1.05rem;
             font-weight: 500;
@@ -459,16 +459,16 @@
             padding: 0;
             background: none;
             border: 0;
-            color: #6dbf8a;
+            color: var(--muted);
             font-family: "IBM Plex Sans", sans-serif;
             font-size: 16px;
             font-weight: 500;
             line-height: 1;
             cursor: pointer;
         }
-        .estudiar-btn:hover { color: #6dbf8a; }
+        .estudiar-btn:hover { color: var(--text); }
         .estudiar-btn:active,
-        .estudiar-btn.is-ok { color: #6dbf8a; }
+        .estudiar-btn.is-ok { color: var(--accent); }
         .estudiar-btn:disabled { cursor: default; }
         .estudiar-btn.is-ok:disabled { opacity: 1; }
         .estudiar-mark { pointer-events: none; }
@@ -795,6 +795,7 @@
     // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
     var ESTUDIAR_API_URL = '/api/estudiar';
     var ESTUDIAR_ICON = '☆';
+    var ESTUDIAR_OK_ICON = '★';
     var ESTUDIAR_TOAST_MS = 3500;
     var estudiarToastTimer = null;
     var estudiarSent = {};
@@ -1239,7 +1240,7 @@
             toast.hidden = true;
         }, ESTUDIAR_TOAST_MS);
     }
-    function setEstudiarIcon(btn) {
+    function setEstudiarIcon(btn, filled) {
         var mark = btn.querySelector('.estudiar-mark');
         if (!mark) {
             btn.textContent = '';
@@ -1248,20 +1249,22 @@
             mark.setAttribute('aria-hidden', 'true');
             btn.appendChild(mark);
         }
-        mark.textContent = ESTUDIAR_ICON;
+        mark.textContent = filled ? ESTUDIAR_OK_ICON : ESTUDIAR_ICON;
     }
     function setEstudiarButtonState(btn, state) {
-        setEstudiarIcon(btn);
         if (state === 'busy') {
+            setEstudiarIcon(btn, false);
             btn.disabled = true;
             btn.classList.remove('is-ok');
             return;
         }
         if (state === 'ok') {
+            setEstudiarIcon(btn, true);
             btn.disabled = true;
             btn.classList.add('is-ok');
             return;
         }
+        setEstudiarIcon(btn, false);
         btn.disabled = false;
         btn.classList.remove('is-ok');
     }
@@ -1362,7 +1365,7 @@
             let html = '<div class="hecho-titulo">';
             html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
-            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '><span class="estudiar-mark" aria-hidden="true">' + ESTUDIAR_ICON + '</span></button>';
+            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '><span class="estudiar-mark" aria-hidden="true">' + (sent ? ESTUDIAR_OK_ICON : ESTUDIAR_ICON) + '</span></button>';
             html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
             html += '<div class="hora-agregado">';
