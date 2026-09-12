@@ -1,0 +1,4 @@
+# Copy to .dev.vars (gitignored). Never commit the token.
+NOTION_TOKEN=
+# Optional override; wrangler.toml already sets the default.
+# NOTION_DATABASE_ID=e407609f-7e65-4551-863d-ee4809d0b73c

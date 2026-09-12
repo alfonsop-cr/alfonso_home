@@ -4,13 +4,15 @@ Página estática de Alfonso: tipo de cambio, clima Belén y briefing de noticia
 
 **Live:** https://news.fut5belen.com
 
-Host: GitHub Pages (`index.html`). Sin build, sin dependencias, sin secretos en el cliente.
+Host: GitHub Pages (`index.html`) + Cloudflare Worker para `POST /api/estudiar`. Sin Notion token en el cliente.
 
 ## Estudiar → Notion
 
-Cada hecho tiene **Estudiar** (acción secundaria, al lado de **visto**). Al tocarlo, el navegador hace `POST` a un webhook público. **El token de Notion nunca va en este repo ni en el JS del cliente.**
+Cada hecho tiene **☆ Estudiar** (acción secundaria, al lado de **visto**). Un toque envía el hecho al Worker; el Worker crea la fila en Notion. **El token nunca va en este repo ni en el JS del cliente.**
 
-### Destino Notion (locked)
+Toasts (Almina): éxito `Tema enviado a Sheldon` · error `No se pudo enviar`. One-shot por hecho.
+
+### Destino Notion
 
 - Base: [Temas de estudio](https://app.notion.com/p/e407609f7e654551863dee4809d0b73c)
 - Database id: `e407609f-7e65-4551-863d-ee4809d0b73c`
@@ -21,47 +23,64 @@ Cada hecho tiene **Estudiar** (acción secundaria, al lado de **visto**). Al toc
 | Name | título del hecho |
 | Status | `New` |
 | Source URL | URL de la primera fuente (si hay) |
-| Tab | select Notion: `Costa Rica` / `AI` / `US` / `World` |
+| Tab | `Costa Rica` / `AI` / `US` / `World` |
 | Resumen | texto corto del card (si hay) |
 | Briefing | vacío |
 | Created | default de Notion |
 
-### Qué debe cablear Nora / Zapier
+Mapeo `tab` del cliente → select de Notion: `cr`→Costa Rica, `ai`→AI, `us`→US, `world`→World.
 
-En `index.html`, constante `ESTUDIAR_WEBHOOK_URL` (arriba del JS). Hoy está vacía: el botón falla con un mensaje claro en español hasta que haya un Catch Hook.
+### Client
 
-1. Crear un **Zapier Catch Hook** (o webhook equivalente) y pegar la URL en `ESTUDIAR_WEBHOOK_URL`.
-2. El hook debe aceptar `POST` desde el navegador en `https://news.fut5belen.com` (**CORS** + `Content-Type: application/json`).
-3. Crear una fila en Temas de estudio con el mapeo de abajo.
-4. **Ping Sheldon:** no se puede hacer desde GitHub Pages hacia Grok Bot. Opciones:
-   - (preferida) automatización de Notion cuando Status = `New` notifica a Sheldon, **o**
-   - el Zap lee `"notify": "sheldon"` y hace fan-out (Slack / el canal que usen).
+`index.html` → `ESTUDIAR_API_URL = '/api/estudiar'` (same-origin). Si el route de Cloudflare aún no está, el `POST` falla y el toast es `No se pudo enviar`.
 
-Payload que envía el cliente:
+Si hace falta un host Worker aparte (temporal), cambiá esa constante a la URL absoluta (`https://alfonso-estudiar.<ACCOUNT>.workers.dev/api/estudiar`).
+
+Payload:
 
 ```json
 {
   "name": "…",
-  "status": "New",
   "sourceUrl": "…",
   "tab": "cr|ai|us|world",
-  "tabLabel": "Costa Rica|AI|US|World",
   "resumen": "…",
-  "requestedAt": "ISO-8601",
-  "notify": "sheldon"
+  "requestedAt": "ISO-8601"
 }
 ```
 
-Mapeo `tab` (id de la UI) → select de Notion:
+### Cloudflare Worker — route y secretos (Alfonso / Nora)
 
-| `tab` | Tab en Notion |
-| --- | --- |
-| `cr` | Costa Rica |
-| `ai` | AI |
-| `us` | US |
-| `world` | World |
+Código: `workers/estudiar/`. Route locked:
 
-Doble tap puede crear dos filas (scaffold; no hay idempotencia).
+```
+news.fut5belen.com/api/estudiar*
+zone: fut5belen.com
+```
+
+(`wrangler.toml` ya lo declara.) El resto de `news.fut5belen.com` sigue en GitHub Pages.
+
+1. En Notion: integración interna → copiar el token. Compartir **Temas de estudio** con esa integración.
+2. `news.fut5belen.com` tiene que estar en la zona `fut5belen.com` y **proxied** (nube naranja). Si el CNAME a GitHub Pages no pasa por Cloudflare, el Worker no ve `/api/estudiar`.
+3. Desde `workers/estudiar`:
+
+```bash
+npx wrangler login
+npx wrangler secret put NOTION_TOKEN
+# opcional; el default ya es e407609f-7e65-4551-863d-ee4809d0b73c
+# npx wrangler secret put NOTION_DATABASE_ID
+npx wrangler deploy
+```
+
+4. Confirmar en el dashboard: Worker `alfonso-estudiar`, route `news.fut5belen.com/api/estudiar*`.
+5. Probar: `POST https://news.fut5belen.com/api/estudiar` con el JSON de arriba debe devolver `{ "ok": true, "id": "…" }` y crear la fila en Status=`New`.
+
+CORS: `https://news.fut5belen.com` y localhost (`8080` / `8787`).
+
+Local: copiar `.dev.vars.example` → `.dev.vars` (gitignored) y `npx wrangler dev`. Tests: `npm test` en `workers/estudiar`.
+
+### Sheldon
+
+El Worker **no** pinea a Sheldon. Nora: automatización de Notion cuando Status = `New` (fila nueva en Temas de estudio).
 
 ## Vistos
 
@@ -77,4 +96,4 @@ Abrí `index.html` en el navegador, o visitá la versión publicada.
 
 ## Stack
 
-HTML estático + JavaScript. Sin build, sin dependencias.
+HTML estático + JavaScript (Pages). Cloudflare Worker solo para Estudiar → Notion.
