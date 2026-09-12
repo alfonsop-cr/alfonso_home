@@ -280,10 +280,6 @@
             .timeline { gap: 2px; }
             .hour-slot .temp { font-size: 15px; }
             .hour-slot .time { font-size: 11px; }
-            .hora-agregado {
-                flex-direction: column;
-                align-items: flex-start;
-            }
         }
         .fx-panel {
             background: #1a2330;
@@ -408,10 +404,11 @@
             min-width: 0;
             margin: 0 0 2px;
         }
-        .hecho-titulo .visto-btn { flex: 0 0 auto; }
+        .hecho-titulo .visto-btn,
+        .hecho-titulo .estudiar-btn { flex: 0 0 auto; }
         .hecho h3 {
             margin: 0;
-            flex: 1 1 auto;
+            flex: 1;
             min-width: 0;
             font-size: 1.05rem;
             font-weight: 500;
@@ -419,10 +416,6 @@
             overflow-wrap: anywhere;
         }
         .hora-agregado {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px 12px;
             font-size: 12px;
             line-height: 1.4;
             color: var(--muted);
@@ -430,7 +423,6 @@
             margin: 0 0 10px;
             padding-left: 36px;
         }
-        .hora-agregado time { flex: 0 1 auto; }
         .visto-btn {
             display: inline-flex;
             align-items: center;
@@ -440,10 +432,10 @@
             padding: 0;
             background: none;
             border: 0;
-            color: var(--muted);
+            color: #e07a7a;
             cursor: pointer;
         }
-        .visto-btn:hover { color: var(--text); }
+        .visto-btn:hover { color: #e07a7a; }
         .visto-mark {
             width: 12px;
             height: 12px;
@@ -451,42 +443,41 @@
             border: 1px solid currentColor;
             flex: 0 0 auto;
         }
-        .visto-btn[aria-pressed="true"] { color: var(--accent); }
+        .visto-btn[aria-pressed="true"] { color: #e07a7a; }
         .visto-btn[aria-pressed="true"] .visto-mark {
-            background: var(--accent);
-            border-color: var(--accent);
+            background: #e07a7a;
+            border-color: #e07a7a;
         }
         .hecho.is-visto h3 { color: var(--muted); }
         .estudiar-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            flex: 0 0 auto;
             min-width: 36px;
             min-height: 36px;
             margin: 0;
-            padding: 0 8px;
+            padding: 0;
             background: none;
             border: 0;
-            color: var(--muted);
+            color: #6dbf8a;
             font-family: "IBM Plex Sans", sans-serif;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: 500;
-            letter-spacing: 0.01em;
-            white-space: nowrap;
+            line-height: 1;
             cursor: pointer;
         }
-        @media (max-width: 430px) {
-            .estudiar-btn {
-                min-height: 44px;
-                padding-top: 12px;
-                padding-bottom: 12px;
-            }
-        }
+        .estudiar-btn:hover { color: #6dbf8a; }
         .estudiar-btn:active,
-        .estudiar-btn.is-ok { color: var(--accent); }
+        .estudiar-btn.is-ok { color: #6dbf8a; }
         .estudiar-btn:disabled { cursor: default; }
         .estudiar-btn.is-ok:disabled { opacity: 1; }
+        .estudiar-mark { pointer-events: none; }
+        @media (max-width: 430px) {
+            .estudiar-btn {
+                min-width: 44px;
+                min-height: 44px;
+            }
+        }
         .estudiar-toast {
             position: fixed;
             left: 50%;
@@ -803,8 +794,8 @@
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
     // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
     var ESTUDIAR_API_URL = '/api/estudiar';
-    var ESTUDIAR_LABEL = '☆ Estudiar';
-    var ESTUDIAR_SENT_LABEL = 'Enviado';
+    var ESTUDIAR_ICON = '☆';
+    var ESTUDIAR_OK_ICON = '★';
     var ESTUDIAR_TOAST_MS = 3500;
     var estudiarToastTimer = null;
     var estudiarSent = {};
@@ -1249,21 +1240,32 @@
             toast.hidden = true;
         }, ESTUDIAR_TOAST_MS);
     }
+    function setEstudiarIcon(btn, filled) {
+        var mark = btn.querySelector('.estudiar-mark');
+        if (!mark) {
+            btn.textContent = '';
+            mark = document.createElement('span');
+            mark.className = 'estudiar-mark';
+            mark.setAttribute('aria-hidden', 'true');
+            btn.appendChild(mark);
+        }
+        mark.textContent = filled ? ESTUDIAR_OK_ICON : ESTUDIAR_ICON;
+    }
     function setEstudiarButtonState(btn, state) {
         if (state === 'busy') {
+            setEstudiarIcon(btn, false);
             btn.disabled = true;
-            btn.textContent = ESTUDIAR_LABEL;
             btn.classList.remove('is-ok');
             return;
         }
         if (state === 'ok') {
+            setEstudiarIcon(btn, true);
             btn.disabled = true;
-            btn.textContent = ESTUDIAR_SENT_LABEL;
             btn.classList.add('is-ok');
             return;
         }
+        setEstudiarIcon(btn, false);
         btn.disabled = false;
-        btn.textContent = ESTUDIAR_LABEL;
         btn.classList.remove('is-ok');
     }
     function requestEstudiar(btn) {
@@ -1359,19 +1361,17 @@
             const seen = isHechoSeen(tabId, hecho);
             const article = document.createElement('article');
             article.className = seen ? 'hecho is-visto' : 'hecho';
+            const sent = isEstudiarSent(tabId, hechoTitulo(hecho), hechoFuenteUrl(hecho));
             let html = '<div class="hecho-titulo">';
             html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
+            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '><span class="estudiar-mark" aria-hidden="true">' + (sent ? ESTUDIAR_OK_ICON : ESTUDIAR_ICON) + '</span></button>';
             html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
-            const sent = isEstudiarSent(tabId, hechoTitulo(hecho), hechoFuenteUrl(hecho));
             html += '<div class="hora-agregado">';
             if (hora) {
                 html += '<time datetime="' + escapeHtml(hecho.agregado) + '">' + escapeHtml(hora) + '</time>';
-            } else {
-                html += '<span></span>';
             }
-            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '>' + (sent ? ESTUDIAR_SENT_LABEL : ESTUDIAR_LABEL) + '</button>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {

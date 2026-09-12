@@ -8,9 +8,9 @@ Host: GitHub Pages (`index.html`) + Cloudflare Worker para `POST /api/estudiar`.
 
 ## Estudiar → Cloudflare Worker → Notion
 
-**☆ Estudiar** vive en la fila meta (`[hora] … [Estudiar]`, `padding-left: 36px`). En ~390 va debajo de la hora. No está dentro de `.visto-btn`. One-shot, sin modal.
+**☆** (icono, sin texto «Estudiar») vive a la derecha de `.hecho-titulo`: `[visto ○] [h3 flex:1] [☆]`. `.hora-agregado` solo muestra la hora (`padding-left: 36px`). Estrella `#6dbf8a` (idle, hover, press, `.is-ok`; sin amber). One-shot, sin modal.
 
-Toasts: éxito `Tema enviado a Sheldon` (3–4 s) · error `No se pudo enviar`. Tras éxito el botón muestra `Enviado` y queda deshabilitado.
+Toasts: éxito `Tema enviado a Sheldon` (3–4 s) · error `No se pudo enviar`. Tras éxito la estrella se llena (`★`) y queda `is-ok` deshabilitada.
 
 El navegador hace `POST /api/estudiar`. El Worker crea la fila en Notion. **No hay Zapier Catch Hook.**
 
