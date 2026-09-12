@@ -8,7 +8,7 @@ Host: GitHub Pages (`index.html`) + Cloudflare Worker para `POST /api/estudiar`.
 
 ## Estudiar → Cloudflare Worker → Notion
 
-**☆** (icono, sin texto «Estudiar») vive a la derecha de `.hecho-titulo`: `[visto ○] [h3 flex:1] [☆]`. `.hora-agregado` solo muestra la hora (`padding-left: 36px`). Idle muted · press / `.is-ok` usa `--accent`. One-shot, sin modal.
+**☆** (icono, sin texto «Estudiar») vive a la derecha de `.hecho-titulo`: `[visto ○] [h3 flex:1] [☆]`. `.hora-agregado` solo muestra la hora (`padding-left: 36px`). Estrella `#6dbf8a` (idle, hover, press, `.is-ok`; sin amber). One-shot, sin modal.
 
 Toasts: éxito `Tema enviado a Sheldon` (3–4 s) · error `No se pudo enviar`. Tras éxito la estrella se llena (`★`) y queda `is-ok` deshabilitada.
 
