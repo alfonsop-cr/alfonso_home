@@ -404,7 +404,8 @@
             min-width: 0;
             margin: 0 0 2px;
         }
-        .hecho-titulo .visto-btn { flex: 0 0 auto; }
+        .hecho-titulo .visto-btn,
+        .hecho-titulo .estudiar-btn { flex: 0 0 auto; }
         .hecho h3 {
             margin: 0;
             flex: 1 1 auto;
@@ -448,6 +449,50 @@
             border-color: var(--accent);
         }
         .hecho.is-visto h3 { color: var(--muted); }
+        .estudiar-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            min-height: 36px;
+            margin-left: 8px;
+            padding: 0 8px;
+            background: none;
+            border: 0;
+            color: var(--muted);
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .estudiar-btn:hover { color: var(--text); }
+        .estudiar-btn:disabled {
+            opacity: 0.55;
+            cursor: default;
+        }
+        .estudiar-btn.is-ok { color: var(--accent); }
+        .estudiar-btn.is-error { color: #c9a3a3; }
+        .estudiar-toast {
+            position: fixed;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            z-index: 20;
+            max-width: min(420px, calc(100vw - 32px));
+            padding: 10px 14px;
+            border: 1px solid var(--line, rgba(243,241,234,0.12));
+            border-radius: 8px;
+            background: #1a2330;
+            color: #f3f1ea;
+            font-family: "IBM Plex Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+        }
+        .estudiar-toast[hidden] { display: none; }
+        .estudiar-toast.is-error { color: #c9a3a3; }
         .hecho p {
             margin: 0 0 8px;
             font-size: 0.92rem;
@@ -538,6 +583,7 @@
         </div>
     </div>
 </div>
+<div id="estudiar-toast" class="estudiar-toast" hidden role="status" aria-live="polite"></div>
 <script>
     function getWeatherIcon(code, rain) {
         if (code >= 95 && code <= 99) return 'bi-cloud-lightning-rain';
@@ -742,6 +788,10 @@
     var SEEN_GIST_FILE = 'seen.json';
     var SEEN_GIST_API = 'https://api.github.com/gists/' + SEEN_GIST_ID;
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
+    // Public Catch Hook only — never a Notion token. Empty until Nora/Zapier wires it.
+    var ESTUDIAR_WEBHOOK_URL = '';
+    var ESTUDIAR_TAB_LABELS = { cr: 'Costa Rica', ai: 'AI', us: 'US', world: 'World' };
+    var estudiarToastTimer = null;
     var newsCache = {};
     var seenState = null;
     var seenGistTail = Promise.resolve();
@@ -1137,6 +1187,105 @@
         var f0 = hecho && hecho.fuentes && hecho.fuentes[0];
         return f0 && f0.url ? String(f0.url) : '';
     }
+    function hechoResumenText(hecho) {
+        var resumen = hecho && hecho.resumen;
+        if (resumen == null) return '';
+        if (typeof resumen === 'string') return resumen;
+        if (Array.isArray(resumen)) return resumen.slice(0, 2).join(' ').trim();
+        return String(resumen);
+    }
+    function findCachedHecho(tabId, titulo, url) {
+        var cached = newsCache[tabId];
+        if (!cached) return null;
+        var keys = Object.keys(cached);
+        for (var i = 0; i < keys.length; i++) {
+            var items = cached[keys[i]] || [];
+            for (var j = 0; j < items.length; j++) {
+                var hecho = items[j];
+                if (hechoTitulo(hecho) === titulo && hechoFuenteUrl(hecho) === url) return hecho;
+            }
+        }
+        return null;
+    }
+    function configuredEstudiarWebhookUrl() {
+        var url = (ESTUDIAR_WEBHOOK_URL && String(ESTUDIAR_WEBHOOK_URL).trim()) || '';
+        if (!url) return '';
+        if (/placeholder|your_webhook|example\.com|hooks\.zapier\.com\/hooks\/catch\/xxxx/i.test(url)) return '';
+        return url;
+    }
+    function showEstudiarToast(message, isError) {
+        var toast = document.getElementById('estudiar-toast');
+        if (!toast) return;
+        toast.hidden = false;
+        toast.textContent = message;
+        toast.classList.toggle('is-error', !!isError);
+        if (estudiarToastTimer) clearTimeout(estudiarToastTimer);
+        estudiarToastTimer = setTimeout(function () {
+            toast.hidden = true;
+        }, 4200);
+    }
+    function setEstudiarButtonState(btn, state) {
+        var idle = 'Estudiar';
+        if (state === 'busy') {
+            btn.disabled = true;
+            btn.textContent = 'Enviando…';
+            btn.classList.remove('is-ok', 'is-error');
+            return;
+        }
+        if (state === 'ok') {
+            btn.disabled = false;
+            btn.textContent = 'Listo';
+            btn.classList.add('is-ok');
+            btn.classList.remove('is-error');
+            return;
+        }
+        if (state === 'error') {
+            btn.disabled = false;
+            btn.textContent = idle;
+            btn.classList.add('is-error');
+            btn.classList.remove('is-ok');
+            return;
+        }
+        btn.disabled = false;
+        btn.textContent = idle;
+        btn.classList.remove('is-ok', 'is-error');
+    }
+    function requestEstudiar(btn) {
+        if (!btn || btn.disabled) return;
+        var webhook = configuredEstudiarWebhookUrl();
+        if (!webhook) {
+            setEstudiarButtonState(btn, 'error');
+            showEstudiarToast('Estudiar no está conectado. Falta configurar ESTUDIAR_WEBHOOK_URL.', true);
+            return;
+        }
+        var tabId = btn.getAttribute('data-tab') || '';
+        var titulo = btn.getAttribute('data-titulo') || '';
+        var url = btn.getAttribute('data-url') || '';
+        var hecho = findCachedHecho(tabId, titulo, url);
+        var payload = {
+            name: titulo,
+            status: 'New',
+            sourceUrl: url,
+            tab: tabId,
+            tabLabel: ESTUDIAR_TAB_LABELS[tabId] || tabId,
+            resumen: hechoResumenText(hecho),
+            requestedAt: new Date().toISOString(),
+            notify: 'sheldon'
+        };
+        setEstudiarButtonState(btn, 'busy');
+        fetch(webhook, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function (res) {
+            if (!res.ok) throw new Error('webhook ' + res.status);
+            setEstudiarButtonState(btn, 'ok');
+            showEstudiarToast('Listo. Quedó en Temas de estudio.');
+        }).catch(function () {
+            setEstudiarButtonState(btn, 'error');
+            showEstudiarToast('No se pudo enviar a estudiar. Probá de nuevo.', true);
+        });
+    }
     function isHechoSeen(tabId, hecho) {
         var tab = getSeenState()[tabId];
         if (!tab) return false;
@@ -1195,6 +1344,7 @@
             let html = '<div class="hecho-titulo">';
             html += '<button type="button" class="visto-btn" aria-label="ya lo vi" aria-pressed="' + (seen ? 'true' : 'false') + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"><span class="visto-mark" aria-hidden="true"></span></button>';
             html += '<h3>' + escapeHtml(hecho.titulo) + '</h3>';
+            html += '<button type="button" class="estudiar-btn" aria-label="Estudiar este hecho" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '">Estudiar</button>';
             html += '</div>';
             const hora = formatHoraAgregado(hecho.agregado);
             if (hora) {
@@ -1315,6 +1465,11 @@
             rerenderTab(tabId);
         });
         document.querySelector('.news-panel').addEventListener('click', function (e) {
+            const estudiarBtn = e.target.closest('.estudiar-btn');
+            if (estudiarBtn) {
+                requestEstudiar(estudiarBtn);
+                return;
+            }
             const btn = e.target.closest('.visto-btn');
             if (!btn) return;
             const tabId = btn.getAttribute('data-tab');
