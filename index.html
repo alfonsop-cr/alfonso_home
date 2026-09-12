@@ -1281,8 +1281,7 @@
             sourceUrl: url,
             tab: tabId,
             resumen: hechoResumenText(hecho),
-            requestedAt: new Date().toISOString(),
-            notify: 'sheldon'
+            requestedAt: new Date().toISOString()
         };
         setEstudiarButtonState(btn, 'busy');
         fetch(webhook, {
