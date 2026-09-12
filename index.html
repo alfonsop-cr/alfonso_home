@@ -284,7 +284,6 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .estudiar-btn { min-height: 44px; }
         }
         .fx-panel {
             background: #1a2330;
@@ -476,6 +475,13 @@
             letter-spacing: 0.01em;
             white-space: nowrap;
             cursor: pointer;
+        }
+        @media (max-width: 430px) {
+            .estudiar-btn {
+                min-height: 44px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
         }
         .estudiar-btn:active,
         .estudiar-btn.is-ok { color: var(--accent); }
@@ -1365,7 +1371,7 @@
             } else {
                 html += '<span></span>';
             }
-            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar:' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '>' + (sent ? ESTUDIAR_SENT_LABEL : ESTUDIAR_LABEL) + '</button>';
+            html += '<button type="button" class="estudiar-btn' + (sent ? ' is-ok' : '') + '" aria-label="Estudiar: ' + escapeHtml(hechoTitulo(hecho)) + '" data-tab="' + escapeHtml(tabId) + '" data-titulo="' + escapeHtml(hechoTitulo(hecho)) + '" data-url="' + escapeHtml(hechoFuenteUrl(hecho)) + '"' + (sent ? ' disabled' : '') + '>' + (sent ? ESTUDIAR_SENT_LABEL : ESTUDIAR_LABEL) + '</button>';
             html += '</div>';
             const paras = (hecho.resumen || []).slice(0, 2);
             paras.forEach(function (p) {
