@@ -1,0 +1,13 @@
+name = "alfonso-estudiar"
+main = "src/index.js"
+compatibility_date = "2026-09-12"
+workers_dev = true
+
+# Same DNS family as news.fut5belen.com. news.* must be proxied (orange cloud)
+# so this path hits the Worker while the rest of the host stays on GitHub Pages.
+routes = [
+  { pattern = "news.fut5belen.com/api/estudiar*", zone_name = "fut5belen.com" }
+]
+
+[vars]
+NOTION_DATABASE_ID = "e407609f-7e65-4551-863d-ee4809d0b73c"

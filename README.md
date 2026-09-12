@@ -4,43 +4,39 @@ Página estática de Alfonso: tipo de cambio, clima Belén y briefing de noticia
 
 **Live:** https://news.fut5belen.com
 
-Host: GitHub Pages (`index.html`). Sin backend propio. Sin token de Notion en el cliente.
+Host: GitHub Pages (`index.html`) + Cloudflare Worker para `POST /api/estudiar`. El token de Notion no va en el cliente.
 
-## Estudiar → Zapier Catch Hook → Notion
+## Estudiar → Cloudflare Worker → Notion
 
 **☆ Estudiar** vive en la fila meta (`[hora] … [Estudiar]`, `padding-left: 36px`). En ~390 va debajo de la hora. No está dentro de `.visto-btn`. One-shot, sin modal.
 
 Toasts: éxito `Tema enviado a Sheldon` (3–4 s) · error `No se pudo enviar`. Tras éxito el botón muestra `Enviado` y queda deshabilitado.
 
-El navegador hace `POST` a `ESTUDIAR_WEBHOOK_URL` (Catch Hook de Zapier). El Zap crea la fila en Notion. **No hay Cloudflare Worker ni `NOTION_TOKEN` en este repo.**
+El navegador hace `POST /api/estudiar`. El Worker crea la fila en Notion. **No hay Zapier Catch Hook.**
 
-### Destino Notion (el Zap lo escribe)
+### Destino Notion
 
 - Base: [Temas de estudio](https://app.notion.com/p/e407609f7e654551863dee4809d0b73c)
 - Database id: `e407609f-7e65-4551-863d-ee4809d0b73c`
-- Status = `New`
-- Props: Name, Source URL, Tab, Resumen (Briefing vacío; Created = default)
+- Data source: `collection://c65e34d4-0d4a-4d8d-aff1-4f4094ffd106`
 
-Mapeo `tab` del cliente → select de Notion: `cr`→Costa Rica, `ai`→AI, `us`→US, `world`→World.
+| Propiedad | Valor al crear |
+| --- | --- |
+| Name | título del hecho |
+| Status | `New` |
+| Source URL | URL de la primera fuente (si hay) |
+| Tab | `Costa Rica` / `AI` / `US` / `World` |
+| Resumen | texto corto del card (si hay) |
+| Briefing | vacío |
+| Created | default de Notion |
 
-### Cómo cablear `ESTUDIAR_WEBHOOK_URL`
+Mapeo `tab`: `cr`→Costa Rica, `ai`→AI, `us`→US, `world`→World.
 
-En `index.html`, arriba del JS:
+### Client
 
-```js
-var ESTUDIAR_WEBHOOK_URL = '';
-```
+`index.html` → `ESTUDIAR_API_URL = '/api/estudiar'` (same-origin). Si el route de Cloudflare aún no está, el `POST` falla y el toast es `No se pudo enviar`.
 
-Hoy está vacío a propósito (la URL del Catch Hook llega por canal secreto). Mientras esté vacío o sea un placeholder, Estudiar muestra `No se pudo enviar` — no hay no-op silencioso.
-
-Cuando Zapier entregue la URL:
-
-1. Pegala en `ESTUDIAR_WEBHOOK_URL` (string entre comillas). Ejemplo: `https://hooks.zapier.com/hooks/catch/…/…/`.
-2. Commit + deploy de Pages (este repo).
-3. El Zap debe crear la página en Temas de estudio con Status=`New` y mapear el JSON de abajo. CORS: `POST` + `application/json` desde `https://news.fut5belen.com`.
-4. Sheldon: que el Zap o una automatización de Notion en Status=`New` avise. Pages no pinea al bot.
-
-Payload que envía el cliente:
+Payload:
 
 ```json
 {
@@ -52,6 +48,37 @@ Payload que envía el cliente:
   "requestedAt": "ISO-8601"
 }
 ```
+
+### Worker — route y secretos (Alfonso / Nora)
+
+Código: `workers/estudiar/`. Route:
+
+```
+news.fut5belen.com/api/estudiar*
+zona: fut5belen.com
+```
+
+(`wrangler.toml` ya lo declara.) El resto de `news.fut5belen.com` sigue en GitHub Pages. `news.*` tiene que estar **proxied** (nube naranja).
+
+1. Notion: integración interna → copiar el token. Compartir **Temas de estudio** con esa integración.
+2. Desde `workers/estudiar`:
+
+```bash
+npx wrangler login
+npx wrangler secret put NOTION_TOKEN
+# opcional; el default ya es e407609f-7e65-4551-863d-ee4809d0b73c
+# npx wrangler secret put NOTION_DATABASE_ID
+npx wrangler deploy
+```
+
+3. Confirmar: Worker `alfonso-estudiar`, route `news.fut5belen.com/api/estudiar*`.
+4. Nunca commitear el token. Local: copiar `.dev.vars.example` → `.dev.vars` (gitignored). Tests: `npm test` en `workers/estudiar`.
+
+CORS: `https://news.fut5belen.com` y localhost (`8080` / `8787`).
+
+### Sheldon
+
+Fuera de alcance. Nora: automatización de Notion cuando Status = `New`.
 
 ## Vistos
 
@@ -67,4 +94,4 @@ Abrí `index.html` en el navegador, o visitá la versión publicada.
 
 ## Stack
 
-HTML estático + JavaScript. Sin build, sin dependencias.
+HTML estático + JavaScript (Pages). Cloudflare Worker solo para Estudiar → Notion.

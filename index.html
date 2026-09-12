@@ -795,8 +795,8 @@
     var SEEN_GIST_FILE = 'seen.json';
     var SEEN_GIST_API = 'https://api.github.com/gists/' + SEEN_GIST_ID;
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
-    // Zapier Catch Hook (Nora). Empty until wired. Never a Notion token.
-    var ESTUDIAR_WEBHOOK_URL = '';
+    // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
+    var ESTUDIAR_API_URL = '/api/estudiar';
     var ESTUDIAR_LABEL = '☆ Estudiar';
     var ESTUDIAR_SENT_LABEL = 'Enviado';
     var ESTUDIAR_TOAST_MS = 3500;
@@ -1226,10 +1226,10 @@
     function markEstudiarSent(tabId, titulo, url) {
         estudiarSent[estudiarKey(tabId, titulo, url)] = true;
     }
-    function configuredEstudiarWebhookUrl() {
-        var url = (ESTUDIAR_WEBHOOK_URL && String(ESTUDIAR_WEBHOOK_URL).trim()) || '';
+    function configuredEstudiarApiUrl() {
+        var url = (ESTUDIAR_API_URL && String(ESTUDIAR_API_URL).trim()) || '';
         if (!url) return '';
-        if (/placeholder|example\.com|your_webhook|YOUR_/i.test(url)) return '';
+        if (/placeholder|example\.com|your_api|YOUR_/i.test(url)) return '';
         return url;
     }
     function showEstudiarToast(message, isError) {
@@ -1262,7 +1262,7 @@
     }
     function requestEstudiar(btn) {
         if (!btn || btn.disabled) return;
-        var webhook = configuredEstudiarWebhookUrl();
+        var apiUrl = configuredEstudiarApiUrl();
         var tabId = btn.getAttribute('data-tab') || '';
         var titulo = btn.getAttribute('data-titulo') || '';
         var url = btn.getAttribute('data-url') || '';
@@ -1270,7 +1270,7 @@
             setEstudiarButtonState(btn, 'ok');
             return;
         }
-        if (!webhook) {
+        if (!apiUrl) {
             showEstudiarToast('No se pudo enviar', true);
             return;
         }
@@ -1284,7 +1284,7 @@
             requestedAt: new Date().toISOString()
         };
         setEstudiarButtonState(btn, 'busy');
-        fetch(webhook, {
+        fetch(apiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
