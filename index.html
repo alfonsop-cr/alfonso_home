@@ -280,6 +280,8 @@
             .timeline { gap: 2px; }
             .hour-slot .temp { font-size: 15px; }
             .hour-slot .time { font-size: 11px; }
+            .monex .bac-meta,
+            .monex .session-line { gap: 4px 8px; }
         }
         .fx-panel {
             background: #1a2330;
@@ -325,7 +327,30 @@
             color: #9aa3ad;
         }
         .monex .bac-note { margin-top: 6px; }
-        .monex .session { margin-top: 10px; }
+        .monex .bac-meta,
+        .monex .session-line {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px 8px;
+            margin-top: 6px;
+            font-size: 11px;
+            color: #9aa3ad;
+            line-height: 1.35;
+        }
+        .monex .session-line { margin-top: 10px; }
+        .monex .session-line .session { margin-top: 0; }
+        .monex .stale-flag {
+            color: #e4b56a;
+            background: rgba(228, 181, 106, 0.12);
+            border: 1px solid rgba(228, 181, 106, 0.45);
+            border-radius: 999px;
+            padding: 0 7px;
+            font-size: 10px;
+            letter-spacing: 0.03em;
+            line-height: 1.7;
+            white-space: nowrap;
+        }
         .monex a { color: #8ec8e8; text-decoration: none; }
         .weather {
             min-width: 0;
@@ -545,8 +570,15 @@
                     <div><span>Compra BAC</span><strong id="bac-compra">—</strong></div>
                     <div><span>Venta BAC</span><strong id="bac-venta">—</strong></div>
                 </div>
-                <div class="bac-note">Ventanilla <a id="bac-fuente" href="https://gee.bccr.fi.cr/IndicadoresEconomicos/Cuadros/frmConsultaTCVentanilla.aspx" target="_blank" rel="noopener">BAC San José</a></div>
-                <div class="session" id="monex-session"></div>
+                <div class="bac-meta" id="bac-meta">
+                    <span id="bac-actualizado"></span>
+                    <span class="stale-flag" id="bac-stale" hidden>Desactualizado</span>
+                </div>
+                <div class="bac-note">Ventanilla <a id="bac-fuente" href="https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Personalizado/2039" target="_blank" rel="noopener">BAC San José</a></div>
+                <div class="session-line">
+                    <div class="session" id="monex-session"></div>
+                    <span class="stale-flag" id="monex-stale" hidden>Desactualizado</span>
+                </div>
                 <div class="fuente">Fuente MONEX: <a id="monex-fuente" href="https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1" target="_blank" rel="noopener">BCCR / MONEX</a></div>
             </div>
         </div>
@@ -712,17 +744,80 @@
         if (!container.children.length) throw new Error('weather-slots');
         loader.style.display = 'none';
     }
+    function crTodayIso() {
+        return new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'America/Costa_Rica',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).format(new Date());
+    }
+    function daysBetweenIso(earlier, later) {
+        var a = String(earlier || '').split('-').map(Number);
+        var b = String(later || '').split('-').map(Number);
+        if (a.length !== 3 || b.length !== 3 || a.some(isNaN) || b.some(isNaN)) return NaN;
+        return Math.round((Date.UTC(b[0], b[1] - 1, b[2]) - Date.UTC(a[0], a[1] - 1, a[2])) / 86400000);
+    }
+    function parseHoraCr(hora) {
+        var m = String(hora || '').match(/(\d{1,2}):(\d{2})\s*([ap])\.?\s*m\.?/i);
+        if (!m) return null;
+        var h = parseInt(m[1], 10);
+        var min = parseInt(m[2], 10);
+        var ap = m[3].toLowerCase();
+        if (ap === 'p' && h < 12) h += 12;
+        if (ap === 'a' && h === 12) h = 0;
+        if (h > 23 || min > 59) return null;
+        return { h: h, min: min };
+    }
+    function bacUpdatedMs(d) {
+        if (d && /^\d{4}-\d{2}-\d{2}$/.test(d.fecha || '')) {
+            var hm = parseHoraCr(d.horaTexto);
+            if (hm) {
+                var iso = d.fecha + 'T' + String(hm.h).padStart(2, '0') + ':' + String(hm.min).padStart(2, '0') + ':00-06:00';
+                var ms = Date.parse(iso);
+                if (!isNaN(ms)) return ms;
+            }
+        }
+        var act = Date.parse((d && d.actualizado) || '');
+        return isNaN(act) ? NaN : act;
+    }
+    function bacStampText(d) {
+        if (d.fechaTexto || d.horaTexto) {
+            return 'Actualizado ' + [d.fechaTexto, d.horaTexto].filter(Boolean).join(' · ');
+        }
+        var ms = Date.parse(d.actualizado || '');
+        if (isNaN(ms)) return '';
+        var formatted = new Date(ms).toLocaleString('es-CR', {
+            timeZone: 'America/Costa_Rica',
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true
+        });
+        return 'Actualizado ' + formatted;
+    }
+    function setStaleFlag(id, stale) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (stale) el.removeAttribute('hidden');
+        else el.setAttribute('hidden', '');
+    }
     async function fetchMonex() {
         try {
             const res = await fetch(jsonUrl('./monex.json'), { cache: 'no-store' });
             if (!res.ok) throw new Error('monex.json');
             const d = await res.json();
             document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
-            document.getElementById('monex-session').textContent = 'Sesión MONEX ' + (d.fechaTexto || d.fecha);
+            document.getElementById('monex-session').textContent = 'Sesión MONEX ' + (d.fechaTexto || d.fecha || 'sesión no identificada');
             if (d.fuenteUrl) document.getElementById('monex-fuente').href = d.fuenteUrl;
+            var sessionAge = daysBetweenIso(d.fecha, crTodayIso());
+            setStaleFlag('monex-stale', !isNaN(sessionAge) && sessionAge > 4);
         } catch (e) {
             document.getElementById('monex-rate').textContent = 'No disponible';
             document.getElementById('monex-session').textContent = 'No se pudo leer el dato oficial';
+            setStaleFlag('monex-stale', false);
         }
     }
     async function fetchBac() {
@@ -732,10 +827,15 @@
             const d = await res.json();
             document.getElementById('bac-compra').textContent = colon(d.compra);
             document.getElementById('bac-venta').textContent = colon(d.venta);
+            document.getElementById('bac-actualizado').textContent = bacStampText(d);
             if (d.fuenteUrl) document.getElementById('bac-fuente').href = d.fuenteUrl;
+            var ageMs = bacUpdatedMs(d);
+            setStaleFlag('bac-stale', !isNaN(ageMs) && (Date.now() - ageMs) > 36 * 60 * 60 * 1000);
         } catch (e) {
             document.getElementById('bac-compra').textContent = '—';
             document.getElementById('bac-venta').textContent = '—';
+            document.getElementById('bac-actualizado').textContent = '';
+            setStaleFlag('bac-stale', false);
         }
     }
     function escapeHtml(s) {

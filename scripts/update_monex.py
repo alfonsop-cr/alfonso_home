@@ -100,20 +100,22 @@ def extract(html: str) -> dict:
     parser = TableParser()
     parser.feed(html)
 
-    dates: list[tuple[str, str]] = []
+    # Keep every header cell, including the blank spacer column and weekend
+    # columns with no session. Dropping empties shifts the index of the last
+    # weighted average off the date that belongs to that column.
+    date_cells: list[tuple[str, str] | None] | None = None
     rows_by_label: dict[str, list[float | None]] = {}
 
     for row in parser.rows:
-        if not dates:
-            found = [parse_date(c) for c in row]
-            found = [d for d in found if d]
-            if len(found) >= 2:
-                dates = found
+        if date_cells is None:
+            parsed = [parse_date(c) for c in row]
+            if sum(1 for d in parsed if d) >= 2:
+                date_cells = parsed
                 continue
         label = re.sub(r"\s+", " ", row[0]).strip().lower()
         if label.startswith("monto negociado") or label.startswith("mejores ofertas"):
             break
-        nums = [parse_cr_number(c) for c in row[1:]]
+        nums = [parse_cr_number(c) for c in row]
         if any(n is not None for n in nums) and label not in rows_by_label:
             rows_by_label[label] = nums
 
@@ -139,10 +141,10 @@ def extract(html: str) -> dict:
     if minimo is None or maximo is None:
         raise SystemExit("No encontré mínimo/máximo de tipo de cambio")
 
-    if idx < len(dates):
-        fecha, fecha_texto = dates[idx]
-    else:
-        fecha, fecha_texto = datetime.now(timezone.utc).strftime("%Y-%m-%d"), "sesión reciente"
+    fecha: str | None = None
+    fecha_texto = "sesión no identificada"
+    if date_cells and idx < len(date_cells) and date_cells[idx]:
+        fecha, fecha_texto = date_cells[idx]
 
     return {
         "fecha": fecha,
