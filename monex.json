@@ -1,10 +1,10 @@
 {
-  "fecha": "2026-10-01",
-  "fechaTexto": "1 oct 2026",
-  "promedioPonderado": 460.45,
-  "minimo": 459.0,
-  "maximo": 462.0,
+  "fecha": "2026-10-02",
+  "fechaTexto": "2 oct 2026",
+  "promedioPonderado": 458.67,
+  "minimo": 457.75,
+  "maximo": 460.95,
   "fuente": "BCCR / MONEX",
   "fuenteUrl": "https://gee.bccr.fi.cr/indicadoreseconomicos/Cuadros/frmVerCatCuadro.aspx?CodCuadro=770&idioma=1",
-  "actualizado": "2026-10-02T02:33:48Z"
+  "actualizado": "2026-10-02T22:58:00Z"
 }
