@@ -316,7 +316,7 @@
       95,
       80,
       53,
-      81,
+      95,
       55,
       53,
       51,
@@ -450,5 +450,5 @@
   },
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com",
-  "actualizado": "2026-10-18T20:33:13Z"
+  "actualizado": "2026-10-18T23:02:05Z"
 }
