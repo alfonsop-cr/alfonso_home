@@ -57,19 +57,14 @@ assert.equal(blocked, '<a href="#">');
 const kept = '<a href="' + escapeHtml(safeUrl('https://nacion.com/a?x=1&y=2')) + '">';
 assert.equal(kept, '<a href="https://nacion.com/a?x=1&amp;y=2">');
 
-const propAssigns = [...html.matchAll(/\.href\s*=\s*([^;\n]+)/g)].map((m) => m[1]);
-assert.ok(propAssigns.length >= 2);
-for (const expr of propAssigns) {
-  assert.match(expr, /safeUrl\(/, expr);
-}
-const builtHrefs = [...html.matchAll(/href="' \+ (.+?) \+ '"/g)].map((m) => m[1]);
-assert.ok(builtHrefs.length >= 1);
-for (const expr of builtHrefs) {
-  assert.match(expr, /safeUrl\(/, expr);
-}
+assert.match(html, /var monexHref = safeUrl\(d\.fuenteUrl\);\s*if \(monexHref !== '#'\) document\.getElementById\('monex-fuente'\)\.href = monexHref;/);
+assert.match(html, /var bacHref = safeUrl\(d\.fuenteUrl\);\s*if \(bacHref !== '#'\) document\.getElementById\('bac-fuente'\)\.href = bacHref;/);
+assert.match(html, /if \(href === '#'\)/);
+assert.match(html, /<span class="fuente-invalida" title="Enlace no válido">/);
+assert.match(html, /href="' \+ escapeHtml\(href\) \+ '"/);
 assert.match(html, /alfonso\.news\.estudiar\.key/);
-assert.match(html, /'X-Estudiar-Key': estudiarKey/);
-assert.match(html, /estudiarKeyPrompted/);
+assert.match(html, /'X-Estudiar-Key': clave/);
+assert.match(html, /estudiarKeyPrompted = false/);
 
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
 assert.equal(scripts.length, 1);

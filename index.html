@@ -541,9 +541,12 @@
             border-radius: 0;
             padding: 0;
         }
-        .fuentes a + a::before {
+        .fuentes > * + *::before {
             content: " · ";
             color: #9aa3ad;
+        }
+        .fuentes .fuente-invalida {
+            color: var(--muted);
         }
         #loader { color: #9aa3ad; }
     </style>
@@ -811,7 +814,10 @@
             const d = await res.json();
             document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
             document.getElementById('monex-session').textContent = 'Sesión MONEX ' + (d.fechaTexto || d.fecha || 'sesión no identificada');
-            if (d.fuenteUrl) document.getElementById('monex-fuente').href = safeUrl(d.fuenteUrl);
+            if (d.fuenteUrl) {
+                var monexHref = safeUrl(d.fuenteUrl);
+                if (monexHref !== '#') document.getElementById('monex-fuente').href = monexHref;
+            }
             var sessionAge = daysBetweenIso(d.fecha, crTodayIso());
             setStaleFlag('monex-stale', !isNaN(sessionAge) && sessionAge > 4);
         } catch (e) {
@@ -828,7 +834,10 @@
             document.getElementById('bac-compra').textContent = colon(d.compra);
             document.getElementById('bac-venta').textContent = colon(d.venta);
             document.getElementById('bac-actualizado').textContent = bacStampText(d);
-            if (d.fuenteUrl) document.getElementById('bac-fuente').href = safeUrl(d.fuenteUrl);
+            if (d.fuenteUrl) {
+                var bacHref = safeUrl(d.fuenteUrl);
+                if (bacHref !== '#') document.getElementById('bac-fuente').href = bacHref;
+            }
             var ageMs = bacUpdatedMs(d);
             setStaleFlag('bac-stale', !isNaN(ageMs) && (Date.now() - ageMs) > 36 * 60 * 60 * 1000);
         } catch (e) {
@@ -1412,7 +1421,10 @@
             entered = null;
         }
         var value = (entered && typeof entered === 'string') ? entered.trim() : '';
-        if (!value) return '';
+        if (!value) {
+            estudiarKeyPrompted = false;
+            return '';
+        }
         setEstudiarKey(value);
         return value;
     }
@@ -1430,9 +1442,9 @@
             showEstudiarToast('No se pudo enviar', true);
             return;
         }
-        var estudiarKey = ensureEstudiarKey();
-        if (!estudiarKey) {
-            showEstudiarToast('No se pudo enviar', true);
+        var clave = ensureEstudiarKey();
+        if (!clave) {
+            showEstudiarToast('Falta la clave. Tocá ☆ para cargarla.', false);
             return;
         }
         var hecho = findCachedHecho(tabId, titulo, url);
@@ -1449,20 +1461,27 @@
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Estudiar-Key': estudiarKey
+                'X-Estudiar-Key': clave
             },
             body: JSON.stringify(payload)
         }).then(function (res) {
             if (res.status === 401) {
                 setEstudiarKey('');
                 estudiarKeyPrompted = false;
+                var authErr = new Error('estudiar 401');
+                authErr.code = 'unauthorized';
+                throw authErr;
             }
             if (!res.ok) throw new Error('estudiar ' + res.status);
             markEstudiarSent(tabId, titulo, url);
             setEstudiarButtonState(btn, 'ok');
             showEstudiarToast('Tema enviado a Sheldon');
-        }).catch(function () {
+        }).catch(function (err) {
             setEstudiarButtonState(btn, 'error');
+            if (err && err.code === 'unauthorized') {
+                showEstudiarToast('Clave incorrecta. Tocá ☆ para cargarla de nuevo.', true);
+                return;
+            }
             showEstudiarToast('No se pudo enviar', true);
         });
     }
@@ -1540,7 +1559,12 @@
             if (hecho.fuentes && hecho.fuentes.length) {
                 html += '<div class="fuentes">';
                 hecho.fuentes.forEach(function (f) {
-                    html += '<a href="' + escapeHtml(safeUrl(f.url)) + '" target="_blank" rel="noopener">' + escapeHtml(f.medio) + '</a>';
+                    var href = safeUrl(f.url);
+                    if (href === '#') {
+                        html += '<span class="fuente-invalida" title="Enlace no válido">' + escapeHtml(f.medio) + '</span>';
+                    } else {
+                        html += '<a href="' + escapeHtml(href) + '" target="_blank" rel="noopener">' + escapeHtml(f.medio) + '</a>';
+                    }
                 });
                 html += '</div>';
             }
