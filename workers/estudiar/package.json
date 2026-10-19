@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node src/estudiar.test.js",
+    "test": "node src/estudiar.test.js && node ../../safe-url.test.js",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   }

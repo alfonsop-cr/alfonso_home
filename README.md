@@ -12,7 +12,7 @@ Host: GitHub Pages (`index.html`) + Cloudflare Worker para `POST /api/estudiar`.
 
 Toasts: éxito `Tema enviado a Sheldon` (3–4 s) · error `No se pudo enviar`. Tras éxito la estrella se llena (`★`) y queda `is-ok` deshabilitada.
 
-El navegador hace `POST /api/estudiar`. El Worker crea la fila en Notion. **No hay Zapier Catch Hook.**
+El navegador hace `POST /api/estudiar` con el header `X-Estudiar-Key`. El Worker crea la fila en Notion. **No hay Zapier Catch Hook.**
 
 ### Destino Notion
 
@@ -66,13 +66,19 @@ zona: fut5belen.com
 ```bash
 npx wrangler login
 npx wrangler secret put NOTION_TOKEN
+npx wrangler secret put ESTUDIAR_KEY
 # opcional; el default ya es e407609f-7e65-4551-863d-ee4809d0b73c
 # npx wrangler secret put NOTION_DATABASE_ID
 npx wrangler deploy
 ```
 
+`workers_dev = false`: el POST solo entra por la ruta custom, no por `*.workers.dev`.
+
+Sin `ESTUDIAR_KEY`, o si el header falta o no coincide, el Worker responde 401. La comparación es en tiempo constante.
+
 3. Confirmar: Worker `alfonso-estudiar`, route `news.fut5belen.com/api/estudiar*`.
-4. Nunca commitear el token. Local: copiar `.dev.vars.example` → `.dev.vars` (gitignored). Tests: `npm test` en `workers/estudiar`.
+4. Nunca commitear el token ni la clave. Local: copiar `.dev.vars.example` → `.dev.vars` (gitignored). Tests: `npm test` en `workers/estudiar`.
+5. En la página, la clave vive en `localStorage` (`alfonso.news.estudiar.key`), igual que el token del gist. Si no está, se pide una sola vez al pulsar ☆. Un 401 la borra para poder cargarla de nuevo.
 
 CORS: `https://news.fut5belen.com` y localhost (`8080` / `8787`).
 
