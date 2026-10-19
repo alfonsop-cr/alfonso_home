@@ -79,11 +79,31 @@ export function buildNotionPage(databaseId, value) {
   };
 }
 
+export function timingSafeEqualString(a, b) {
+  const enc = new TextEncoder();
+  const left = enc.encode(String(a));
+  const right = enc.encode(String(b));
+  const length = Math.max(left.length, right.length);
+  let mismatch = left.length === right.length ? 0 : 1;
+  for (let i = 0; i < length; i++) {
+    const lb = i < left.length ? left[i] : 0;
+    const rb = i < right.length ? right[i] : 0;
+    mismatch |= lb ^ rb;
+  }
+  return mismatch === 0;
+}
+
+export function hasValidEstudiarKey(provided, secret) {
+  if (typeof secret !== 'string' || secret.length === 0) return false;
+  const header = typeof provided === 'string' ? provided : '';
+  return timingSafeEqualString(header, secret);
+}
+
 export function corsHeaders(request) {
   const origin = request.headers.get('Origin') || '';
   const headers = {
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Estudiar-Key',
     Vary: 'Origin'
   };
   if (ALLOWED_ORIGINS.has(origin)) {
@@ -113,6 +133,12 @@ export async function handleEstudiar(request, env, fetchImpl) {
   const path = new URL(request.url).pathname;
   if (path !== '/' && path !== '/api/estudiar') {
     return json(404, { ok: false, error: 'not_found' }, cors);
+  }
+
+  const providedKey = request.headers.get('X-Estudiar-Key');
+  const expectedKey = env && env.ESTUDIAR_KEY;
+  if (!hasValidEstudiarKey(providedKey, expectedKey)) {
+    return json(401, { ok: false, error: 'unauthorized' }, cors);
   }
 
   let body;

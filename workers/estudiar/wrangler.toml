@@ -1,7 +1,8 @@
 name = "alfonso-estudiar"
 main = "src/index.js"
 compatibility_date = "2026-09-12"
-workers_dev = true
+# Custom route only. A workers.dev host would expose POST /api/estudiar publicly.
+workers_dev = false
 
 # Same DNS family as news.fut5belen.com. news.* must be proxied (orange cloud)
 # so this path hits the Worker while the rest of the host stays on GitHub Pages.
@@ -9,5 +10,6 @@ routes = [
   { pattern = "news.fut5belen.com/api/estudiar*", zone_name = "fut5belen.com" }
 ]
 
+# Secrets (wrangler secret put, never in this file): NOTION_TOKEN, ESTUDIAR_KEY
 [vars]
 NOTION_DATABASE_ID = "e407609f-7e65-4551-863d-ee4809d0b73c"

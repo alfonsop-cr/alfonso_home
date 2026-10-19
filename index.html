@@ -811,7 +811,7 @@
             const d = await res.json();
             document.getElementById('monex-rate').textContent = colon(d.promedioPonderado);
             document.getElementById('monex-session').textContent = 'Sesión MONEX ' + (d.fechaTexto || d.fecha || 'sesión no identificada');
-            if (d.fuenteUrl) document.getElementById('monex-fuente').href = d.fuenteUrl;
+            if (d.fuenteUrl) document.getElementById('monex-fuente').href = safeUrl(d.fuenteUrl);
             var sessionAge = daysBetweenIso(d.fecha, crTodayIso());
             setStaleFlag('monex-stale', !isNaN(sessionAge) && sessionAge > 4);
         } catch (e) {
@@ -828,7 +828,7 @@
             document.getElementById('bac-compra').textContent = colon(d.compra);
             document.getElementById('bac-venta').textContent = colon(d.venta);
             document.getElementById('bac-actualizado').textContent = bacStampText(d);
-            if (d.fuenteUrl) document.getElementById('bac-fuente').href = d.fuenteUrl;
+            if (d.fuenteUrl) document.getElementById('bac-fuente').href = safeUrl(d.fuenteUrl);
             var ageMs = bacUpdatedMs(d);
             setStaleFlag('bac-stale', !isNaN(ageMs) && (Date.now() - ageMs) > 36 * 60 * 60 * 1000);
         } catch (e) {
@@ -837,6 +837,21 @@
             document.getElementById('bac-actualizado').textContent = '';
             setStaleFlag('bac-stale', false);
         }
+    }
+    function safeUrl(u) {
+        if (u == null) return '#';
+        var s = String(u);
+        if (/[\u0000-\u001F\u007F]/.test(s)) return '#';
+        s = s.replace(/^[ \u00A0]+|[ \u00A0]+$/g, '');
+        if (!s) return '#';
+        var match = /^([a-zA-Z][a-zA-Z0-9+.-]*):/.exec(s);
+        if (match) {
+            var scheme = match[1].toLowerCase();
+            if (scheme === 'http' || scheme === 'https' || scheme === 'mailto') return s;
+            return '#';
+        }
+        if (s.indexOf('\\') !== -1) return '#';
+        return s;
     }
     function escapeHtml(s) {
         return String(s)
@@ -894,6 +909,7 @@
     var SEEN_TAB_IDS = ['cr', 'ai', 'us', 'world'];
     // Same-origin CF Worker on news.fut5belen.com. Never a Notion token.
     var ESTUDIAR_API_URL = '/api/estudiar';
+    var ESTUDIAR_KEY_STORAGE = 'alfonso.news.estudiar.key';
     var ESTUDIAR_ICON = '☆';
     var ESTUDIAR_OK_ICON = '★';
     var ESTUDIAR_TOAST_MS = 3500;
@@ -1368,6 +1384,38 @@
         btn.disabled = false;
         btn.classList.remove('is-ok');
     }
+    var estudiarKeyPrompted = false;
+    function getEstudiarKey() {
+        try {
+            var t = localStorage.getItem(ESTUDIAR_KEY_STORAGE);
+            return (t && typeof t === 'string') ? t.trim() : '';
+        } catch (e) {
+            return '';
+        }
+    }
+    function setEstudiarKey(key) {
+        try {
+            var value = (key && typeof key === 'string') ? key.trim() : '';
+            if (value) localStorage.setItem(ESTUDIAR_KEY_STORAGE, value);
+            else localStorage.removeItem(ESTUDIAR_KEY_STORAGE);
+        } catch (e) {}
+    }
+    function ensureEstudiarKey() {
+        var existing = getEstudiarKey();
+        if (existing) return existing;
+        if (estudiarKeyPrompted) return '';
+        estudiarKeyPrompted = true;
+        var entered = null;
+        try {
+            entered = window.prompt('Pegá la clave de Estudiar. Queda solo en este aparato.');
+        } catch (e) {
+            entered = null;
+        }
+        var value = (entered && typeof entered === 'string') ? entered.trim() : '';
+        if (!value) return '';
+        setEstudiarKey(value);
+        return value;
+    }
     function requestEstudiar(btn) {
         if (!btn || btn.disabled) return;
         var apiUrl = configuredEstudiarApiUrl();
@@ -1379,6 +1427,11 @@
             return;
         }
         if (!apiUrl) {
+            showEstudiarToast('No se pudo enviar', true);
+            return;
+        }
+        var estudiarKey = ensureEstudiarKey();
+        if (!estudiarKey) {
             showEstudiarToast('No se pudo enviar', true);
             return;
         }
@@ -1394,9 +1447,16 @@
         setEstudiarButtonState(btn, 'busy');
         fetch(apiUrl, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Estudiar-Key': estudiarKey
+            },
             body: JSON.stringify(payload)
         }).then(function (res) {
+            if (res.status === 401) {
+                setEstudiarKey('');
+                estudiarKeyPrompted = false;
+            }
             if (!res.ok) throw new Error('estudiar ' + res.status);
             markEstudiarSent(tabId, titulo, url);
             setEstudiarButtonState(btn, 'ok');
@@ -1480,7 +1540,7 @@
             if (hecho.fuentes && hecho.fuentes.length) {
                 html += '<div class="fuentes">';
                 hecho.fuentes.forEach(function (f) {
-                    html += '<a href="' + escapeHtml(f.url) + '" target="_blank" rel="noopener">' + escapeHtml(f.medio) + '</a>';
+                    html += '<a href="' + escapeHtml(safeUrl(f.url)) + '" target="_blank" rel="noopener">' + escapeHtml(f.medio) + '</a>';
                 });
                 html += '</div>';
             }
