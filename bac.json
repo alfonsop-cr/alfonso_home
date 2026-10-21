@@ -2,10 +2,10 @@
   "banco": "BAC San José",
   "compra": 449.0,
   "venta": 463.0,
-  "fecha": "2026-10-20",
-  "fechaTexto": "20 oct 2026",
-  "horaTexto": "01:33 p.m.",
+  "fecha": "2026-10-21",
+  "fechaTexto": "21 oct 2026",
+  "horaTexto": "08:08 a.m.",
   "fuente": "Ventanilla BAC San José (BCCR SDDE)",
   "fuenteUrl": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Personalizado/2039",
-  "actualizado": "2026-10-21T01:59:34Z"
+  "actualizado": "2026-10-21T22:22:14Z"
 }
