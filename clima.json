@@ -226,7 +226,7 @@
       97
     ],
     "precipitation_probability": [
-      2,
+      4,
       1,
       1,
       2,
@@ -450,5 +450,5 @@
   },
   "fuente": "Open-Meteo",
   "fuenteUrl": "https://open-meteo.com",
-  "actualizado": "2026-10-25T16:03:30Z"
+  "actualizado": "2026-10-25T18:56:36Z"
 }
